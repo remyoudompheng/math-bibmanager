@@ -3,10 +3,12 @@
 
 AC_PREREQ([2.65])
 AC_INIT([math-bibmanager], [0.1], [oudomphe@math.unice.fr])
+AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([src/main.cpp])
 AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
+AC_PROG_CC
 AC_PROG_CXX
 
 # Checks for libraries.
