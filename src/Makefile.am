@@ -8,3 +8,6 @@ mathbib_SOURCES = main.cpp UIDefinition.h
 mathbib_CPPFLAGS = $(GTKMM_CFLAGS)
 
 mathbib_LDADD = $(GTKMM_LIBS)
+
+clean-local:
+	rm -f UIDefinition.h

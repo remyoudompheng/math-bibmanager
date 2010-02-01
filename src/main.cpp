@@ -23,11 +23,35 @@
 #include <config.h>
 #endif
 
+#include <gtkmm.h>
 #include "UIDefinition.h"
+
+#include <iostream>
+using namespace std;
 
 int
 main (int argc, char *argv[])
 {
+  Gtk::Main kit(argc, argv);
+  Glib::RefPtr<Gtk::Builder> refGlade = Gtk::Builder::create();
+  try {
+    refGlade->add_from_string(uidef_xml);
+  }
+  catch(const Gtk::BuilderError& ex)
+    {
+      std::cerr << "BuilderError: " << ex.what() << std::endl;
+      return 1;
+    }
+
+  Gtk::Window *window_main = 0;
+  refGlade->get_widget("window_main", window_main);
+  if (window_main) {
+    window_main->show_all();
+    kit.run(*window_main);
+  }
+
+  delete window_main;
+
   return 0;
 }
 
