@@ -25,6 +25,7 @@
 
 #include <gtkmm.h>
 #include "UIDefinition.h"
+#include "MainWindow.hpp"
 
 #include <iostream>
 using namespace std;
@@ -43,8 +44,8 @@ main (int argc, char *argv[])
       return 1;
     }
 
-  Gtk::Window *window_main = 0;
-  refGlade->get_widget("window_main", window_main);
+  MainWindow *window_main = 0;
+  refGlade->get_widget_derived("window_main", window_main);
   if (window_main) {
     window_main->show_all();
     kit.run(*window_main);

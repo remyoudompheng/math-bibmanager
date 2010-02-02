@@ -39,7 +39,7 @@ MainWindow::~MainWindow()
 {
 }
 
-// File Menu item callbacks                                                                                            
+// File Menu item callbacks
 void MainWindow::_on_quit_activate()
 {
   Gtk::Main::quit();
