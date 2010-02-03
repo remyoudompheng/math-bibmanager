@@ -3,7 +3,7 @@
  * A Bibliography manager for mathematicians
  *
  * Copyright (C) 2010 Rémy Oudompheng
-
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -20,3 +20,39 @@
  */
 
 #include "library.hpp"
+#include <iostream>
+
+#define DEPTHBUF 10
+
+set<BibEntry>* entries_ptr;
+
+// Initialise a library from the zb files in a directory
+MathLibrary::MathLibrary(const char* path)
+{
+  entries_ptr = &(this->entries);
+  ftw(path, read_entry, DEPTHBUF);
+}
+
+// Helper function
+extern "C" int read_entry(const char *path,
+		      const struct stat *sb,
+		      int typeflag)
+{
+  string spath = path;
+  if (spath.compare(spath.size() - 3, 3, ".zb") == 0) {
+    cout << spath << endl;
+    entries_ptr->insert(BibEntry(path));
+  }
+  return 0;
+}
+
+MathLibrary::~MathLibrary() {}
+
+void MathLibrary::print_me()
+{
+  set<BibEntry>::iterator iter;
+  for (iter = entries.begin(); iter != entries.end(); iter++)
+    {
+      iter->print_me();
+    }
+}

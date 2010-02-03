@@ -25,6 +25,7 @@ PKG_CHECK_MODULES([GTK2], [gtk+-2.0 >= 2.12])
 PKG_CHECK_MODULES([GTKMM], [gtkmm-2.4 >= 2.12])
 
 # Checks for header files.
+AC_CHECK_HEADER(ftw.h)
 
 # Checks for typedefs, structures, and compiler characteristics.
 

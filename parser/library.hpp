@@ -28,11 +28,21 @@
 
 #include "parser.hpp"
 #include <set>
+#include <ftw.h>
+
+extern "C" int read_entry(const char *path,
+		      const struct stat *sb,
+		      int typeflag);
 
 class MathLibrary
 {
 public:
-  set<BibEntry> contents;
+  MathLibrary(const char* path);
+  virtual ~MathLibrary();
+  set<BibEntry> entries;
+
+  void print_me();
+private:
 };
 
 #endif //!LIBRARY_H
