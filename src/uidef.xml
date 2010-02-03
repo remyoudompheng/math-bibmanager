@@ -54,6 +54,30 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="model">list_docs</property>
+            <child>
+              <object class="GtkTreeViewColumn" id="treecol_author">
+                <property name="resizable">True</property>
+                <property name="title">Author</property>
+		<child>
+		  <object class="GtkCellRendererText" id="treerender_author"/>
+		  <attributes>
+		    <attribute name="text">0</attribute>
+		  </attributes>
+		</child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkTreeViewColumn" id="treecol_title">
+                <property name="resizable">True</property>
+                <property name="title">Title</property>
+		<child>
+		  <object class="GtkCellRendererText" id="treerender_title"/>
+		  <attributes>
+		    <attribute name="text">1</attribute>
+		  </attributes>
+		</child>
+	      </object>
+            </child>
           </object>
           <packing>
             <property name="position">1</property>

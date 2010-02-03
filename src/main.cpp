@@ -52,6 +52,11 @@ main (int argc, char *argv[])
       std::cerr << "BuilderError: " << ex.what() << std::endl;
       return 1;
     }
+  catch(const Glib::MarkupError& ex)
+    {
+      std::cerr << "MarkupError: " << ex.what() << std::endl;
+      return 1;
+    }
 
   MainWindow *window_main = 0;
   refGlade->get_widget_derived("window_main", window_main);
