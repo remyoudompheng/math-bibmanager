@@ -25,6 +25,21 @@
 
 using namespace std;
 
+bool get_field(string line, string & field, string delim, string* & tmp)
+{
+  size_t t = delim.length();
+  if ( (line.length() >= t) && !line.compare(0, t, delim) )
+    {
+      field = line.substr(t);
+      tmp = &field;
+      return true;
+    }
+  else
+    {
+      return false;
+    }
+}
+
 BibEntry::BibEntry(const char* filename)
 {
   // Initialise fields
@@ -35,40 +50,22 @@ BibEntry::BibEntry(const char* filename)
   source.open(filename, ifstream::in);
   while(source.good()) {
     getline(source, l);
-    if( (l.length() >= 4) && !(l.compare(0, 4, "an: ")) ) {
-      an = l.substr(4);
-#ifdef DEBUG
-      cout << "an = " << an << endl;
-#endif
-      current = &an;
-      continue;
-    }
-    if( (l.length() >= 4) && !(l.compare(0, 4, "au: ")) ) {
-      author = l.substr(4);
-      current = &author;
-      continue;
-    }
-    if( (l.length() >= 4) && !(l.compare(0, 4, "ti: ")) ) {
-      title = l.substr(4);
-      current = &title;
-      continue;
-    }
-    if( (l.length() >= 4) && !(l.compare(0, 4, "la: ")) ) {
-      la = l.substr(4);
-      current = &la;
-      continue;
-    }
-    if( (l.length() >= 4) && !(l.compare(0, 4, "so: ")) ) {
-      so = l.substr(4);
-      current = &so;
-      continue;
-    }
-    if( (l.length() >= 4) && !(l.compare(0, 4, "py: ")) ) {
-      year = l.substr(4);
-      current = &year;
-      continue;
-    }
-    
+
+    if (get_field(l, an, "an: ", current)) continue;
+    if (get_field(l, author, "au: ", current)) continue;
+    if (get_field(l, title, "ti: ", current)) continue;
+    if (get_field(l, la, "la: ", current)) continue;
+    if (get_field(l, so, "so: ", current)) continue;
+    if (get_field(l, year, "py: ", current)) continue;
+    if (get_field(l, dt, "dt: ", current)) continue;
+    if (get_field(l, cc, "cc: ", current)) continue;
+    if (get_field(l, ab, "ab: ", current)) continue;
+
+    if (get_field(l, doi, "doi: ", current)) continue;
+    if (get_field(l, url, "url: ", current)) continue;
+    if (get_field(l, arxiv, "arxiv: ", current)) continue;
+    // could not find the beginning of a field, this is probably
+    // the continuation of the previous one
     size_t start = l.find_first_not_of(" ");
     if (current && (start != string::npos))
       current->append(" " + l.substr(start));
@@ -85,4 +82,11 @@ void BibEntry::print_me()
   cout << "Lang: " << la << endl;
   cout << "Source: " << so << endl;
   cout << "Year: " << year << endl;
+  cout << "Type: " << dt << endl;
+  cout << "AMS Cl.: " << cc << endl;
+  cout << "Abstract: " << ab << endl;
+
+  cout << "DOI: " << doi << endl;
+  cout << "URL: " << url << endl;
+  cout << "arXiv: " << arxiv << endl;
 }
