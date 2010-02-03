@@ -10,6 +10,7 @@ AC_CONFIG_HEADERS([config.h])
 # Checks for programs.
 AC_PROG_CC
 AC_PROG_CXX
+AC_PROG_RANLIB
 AC_PATH_PROG(XXD, xxd)
 AC_PATH_PROG(SED, sed)
 
@@ -30,5 +31,6 @@ PKG_CHECK_MODULES([GTKMM], [gtkmm-2.4 >= 2.12])
 # Checks for library functions.
 
 AC_CONFIG_FILES([Makefile
-                 src/Makefile])
+                 src/Makefile
+                 parser/Makefile])
 AC_OUTPUT
