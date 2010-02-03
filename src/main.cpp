@@ -30,9 +30,18 @@
 #include <iostream>
 using namespace std;
 
+string notice = PACKAGE_STRING "\n"
+  "Copyright (C) 2010 Rémy Oudompheng\n"
+  "This program comes with ABSOLUTELY NO WARRANTY.\n"
+  "This is free software, and you are welcome to redistribute it\n"
+  "under certain conditions. See COPYING file for details.\n";
+
 int
 main (int argc, char *argv[])
 {
+  // Output copyright notice
+  cout << notice;
+
   Gtk::Main kit(argc, argv);
   Glib::RefPtr<Gtk::Builder> refGlade = Gtk::Builder::create();
   try {
