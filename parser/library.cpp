@@ -26,6 +26,11 @@
 
 set<BibEntry>* entries_ptr;
 
+MathLibrary::MathLibrary()
+{
+  entries = set<BibEntry>();
+}
+
 // Initialise a library from the zb files in a directory
 MathLibrary::MathLibrary(const char* path)
 {

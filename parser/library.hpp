@@ -37,6 +37,7 @@ extern "C" int read_entry(const char *path,
 class MathLibrary
 {
 public:
+  MathLibrary();
   MathLibrary(const char* path);
   virtual ~MathLibrary();
   set<BibEntry> entries;
