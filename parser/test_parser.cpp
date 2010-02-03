@@ -20,12 +20,16 @@
  */
 
 #include "parser.hpp"
+#include "library.hpp"
 #include <iostream>
 
 int main(int argc, char *argv[])
 {
   BibEntry test("test.zb");
   test.print_me();
+
+  MathLibrary testlib("/home/oudomphe/textes/articles");
+  testlib.print_me();
 
   return 0;
 }
