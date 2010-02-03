@@ -43,7 +43,8 @@ bool get_field(string line, string & field, string delim, string* & tmp)
 BibEntry::BibEntry(const char* filename)
 {
   // Initialise fields
-  an = author = title = la = so = year = dt = cc = url = doi = arxiv = "";
+  an = author = title = la = so = year = dt = cc = ut = ci = "";
+  url = doi = arxiv = "";
 
   ifstream source;
   string l; string *current = NULL;
@@ -60,6 +61,8 @@ BibEntry::BibEntry(const char* filename)
     if (get_field(l, dt, "dt: ", current)) continue;
     if (get_field(l, cc, "cc: ", current)) continue;
     if (get_field(l, ab, "ab: ", current)) continue;
+    if (get_field(l, ci, "ci: ", current)) continue;
+    if (get_field(l, ut, "ut: ", current)) continue;
 
     if (get_field(l, doi, "doi: ", current)) continue;
     if (get_field(l, url, "url: ", current)) continue;
@@ -74,7 +77,7 @@ BibEntry::BibEntry(const char* filename)
 
 BibEntry::~BibEntry() {}
 
-void BibEntry::print_me()
+void BibEntry::print_me() const
 {
   cout << "Zbl entry: " << an << endl;
   cout << "Author: " << author << endl;
@@ -91,7 +94,7 @@ void BibEntry::print_me()
   cout << "arXiv: " << arxiv << endl;
 }
 
-bool BibEntry::operator<(BibEntry b)
+bool BibEntry::operator<(const BibEntry b) const
 {
   return (an < b.an);
 }

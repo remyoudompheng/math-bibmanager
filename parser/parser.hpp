@@ -36,11 +36,12 @@ public:
   BibEntry(const char *filename);
   virtual ~BibEntry();
 
-  string an, author, title, la, so, year, dt, cc, ci, ab;
+  string an, author, title, la, so, year, dt, cc, ut, ci, ab;
   string url, doi, arxiv;
-  void print_me();
-
-  bool operator< (BibEntry b);
+  void print_me() const;
+  bool operator< (const BibEntry b) const;
 };
+
+
 
 #endif //!PARSER_H
