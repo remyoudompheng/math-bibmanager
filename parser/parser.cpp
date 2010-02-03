@@ -90,3 +90,8 @@ void BibEntry::print_me()
   cout << "URL: " << url << endl;
   cout << "arXiv: " << arxiv << endl;
 }
+
+bool BibEntry::operator<(BibEntry b)
+{
+  return (an < b.an);
+}

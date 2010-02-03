@@ -39,6 +39,8 @@ public:
   string an, author, title, la, so, year, dt, cc, ci, ab;
   string url, doi, arxiv;
   void print_me();
+
+  bool operator< (BibEntry b);
 };
 
 #endif //!PARSER_H
