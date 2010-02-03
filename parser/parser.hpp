@@ -36,7 +36,9 @@ public:
   BibEntry(const char *filename);
   virtual ~BibEntry();
 
-  string an, au, ti, la, so, py, dt, cc, url, doi, arxiv;
+  string an, author, title, la, so, year, dt, cc, ci, ab;
+  string url, doi, arxiv;
+  void print_me();
 };
 
 #endif //!PARSER_H

@@ -20,31 +20,69 @@
  */
 
 #include "parser.hpp"
-#include <ifstream>
-
-#ifdef DEBUG
+#include <fstream>
 #include <iostream>
-#endif
 
 using namespace std;
 
 BibEntry::BibEntry(const char* filename)
 {
   // Initialise fields
-  an = au = ti = la = so = py = dt = cc = url = doi = arxiv = "";
+  an = author = title = la = so = year = dt = cc = url = doi = arxiv = "";
 
   ifstream source;
-  string l;
+  string l; string *current = NULL;
   source.open(filename, ifstream::in);
   while(source.good()) {
     getline(source, l);
-    if(l.compare(0, 4, "an: ")) {
+    if( (l.length() >= 4) && !(l.compare(0, 4, "an: ")) ) {
       an = l.substr(4);
 #ifdef DEBUG
-      cout << "an = " << an;
+      cout << "an = " << an << endl;
 #endif
+      current = &an;
+      continue;
     }
+    if( (l.length() >= 4) && !(l.compare(0, 4, "au: ")) ) {
+      author = l.substr(4);
+      current = &author;
+      continue;
+    }
+    if( (l.length() >= 4) && !(l.compare(0, 4, "ti: ")) ) {
+      title = l.substr(4);
+      current = &title;
+      continue;
+    }
+    if( (l.length() >= 4) && !(l.compare(0, 4, "la: ")) ) {
+      la = l.substr(4);
+      current = &la;
+      continue;
+    }
+    if( (l.length() >= 4) && !(l.compare(0, 4, "so: ")) ) {
+      so = l.substr(4);
+      current = &so;
+      continue;
+    }
+    if( (l.length() >= 4) && !(l.compare(0, 4, "py: ")) ) {
+      year = l.substr(4);
+      current = &year;
+      continue;
+    }
+    
+    size_t start = l.find_first_not_of(" ");
+    if (current && (start != string::npos))
+      current->append(" " + l.substr(start));
   }
 }
 
 BibEntry::~BibEntry() {}
+
+void BibEntry::print_me()
+{
+  cout << "Zbl entry: " << an << endl;
+  cout << "Author: " << author << endl;
+  cout << "Title: " << title << endl;
+  cout << "Lang: " << la << endl;
+  cout << "Source: " << so << endl;
+  cout << "Year: " << year << endl;
+}

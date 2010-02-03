@@ -20,8 +20,12 @@
  */
 
 #include "parser.hpp"
+#include <iostream>
 
 int main(int argc, char *argv[])
 {
+  BibEntry test("test.zb");
+  test.print_me();
+
   return 0;
 }
