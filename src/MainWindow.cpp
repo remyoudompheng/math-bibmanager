@@ -23,6 +23,9 @@
 #include <config.h>
 #endif
 
+#define LIBRARY_PATH "/home/oudomphe/textes/articles"
+const char library_path[] = LIBRARY_PATH;
+
 #include "MainWindow.hpp"
 
 MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade)
@@ -33,10 +36,37 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
   Gtk::MenuItem* mi_quit = 0;
   uidef->get_widget("mi_quit", mi_quit);
   mi_quit->signal_activate().connect( sigc::mem_fun(*this, &MainWindow::_on_quit_activate) );
+
+  // Tree View
+  Gtk::TreeView* treev = 0;
+  uidef->get_widget("tree_docs", treev);
+  Glib::RefPtr<Glib::Object> obj = uidef->get_object("list_docs");
+  list_widget = Glib::RefPtr<Gtk::ListStore>::cast_static(obj);
+  library = MathLibrary(library_path);
+  update_tree();
 }
 
 MainWindow::~MainWindow()
 {
+}
+
+void MainWindow::fill_tree(MathLibrary source)
+{
+  library = source;
+  update_tree();
+}
+
+void MainWindow::update_tree()
+{
+  list_widget->clear();
+  set<BibEntry>::iterator it;
+  Gtk::TreeIter itt;
+  for(it = library.entries.begin(); it != library.entries.end(); it++)
+    {
+      itt = list_widget->append();
+      itt->set_value(COL_AUTHOR, it->author);
+      itt->set_value(COL_TITLE, it->title);
+    }
 }
 
 // File Menu item callbacks

@@ -2,6 +2,14 @@
 <interface>
   <requires lib="gtk+" version="2.16"/>
   <!-- interface-naming-policy project-wide -->
+  <object class="GtkListStore" id="list_docs">
+    <columns>
+      <!-- column-name author -->
+      <column type="gchararray"/>
+      <!-- column-name title -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
   <object class="GtkWindow" id="window_main">
     <property name="title" translatable="yes">Math Bibliography Manager</property>
     <child>
@@ -45,6 +53,7 @@
           <object class="GtkTreeView" id="tree_docs">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="model">list_docs</property>
           </object>
           <packing>
             <property name="position">1</property>

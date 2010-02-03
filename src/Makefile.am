@@ -7,7 +7,7 @@ main.cpp: UIDefinition.h
 mathbib_SOURCES = main.cpp UIDefinition.h \
 	MainWindow.cpp MainWindow.hpp
 
-mathbib_CPPFLAGS = $(GTKMM_CFLAGS)
+mathbib_CPPFLAGS = $(GTKMM_CFLAGS) -I../parser
 
 mathbib_LDADD = $(GTKMM_LIBS) \
 	$(top_srcdir)/parser/libparser.a

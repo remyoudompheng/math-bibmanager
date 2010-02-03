@@ -27,15 +27,26 @@
 #endif
 
 #include <gtkmm.h>
+#include <library.hpp>
+
+enum display_columns {
+  COL_AUTHOR,
+  COL_TITLE
+};
 
 class MainWindow : public Gtk::Window
 {
 public:
   MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade);
   virtual ~MainWindow();
+  void fill_tree(MathLibrary source);
+  void update_tree();
 
 protected:
   Glib::RefPtr<Gtk::Builder> uidef;
+  Glib::RefPtr<Gtk::ListStore> list_widget;
+
+  MathLibrary library;
 
   void _on_quit_activate();
 };
