@@ -19,32 +19,24 @@
  *
  */
 
-#include "parser.hpp"
-#include <ifstream>
+#ifndef PARSER_H
+#define PARSER_H
 
-#ifdef DEBUG
-#include <iostream>
+#ifdef HAVE_CONFIG_H
+#include <config.h>
 #endif
+
+#include <string>
 
 using namespace std;
 
-BibEntry::BibEntry(const char* filename)
+class BibEntry
 {
-  // Initialise fields
-  an = au = ti = la = so = py = dt = cc = url = doi = arxiv = "";
+public:
+  BibEntry(const char *filename);
+  virtual ~BibEntry();
 
-  ifstream source;
-  string l;
-  source.open(filename, ifstream::in);
-  while(source.good()) {
-    getline(source, l);
-    if(l.compare(0, 4, "an: ")) {
-      an = l.substr(4);
-#ifdef DEBUG
-      cout << "an = " << an;
-#endif
-    }
-  }
-}
+  string an, au, ti, la, so, py, dt, cc, url, doi, arxiv;
+};
 
-BibEntry::~BibEntry() {}
+#endif //!PARSER_H
