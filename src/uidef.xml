@@ -4,6 +4,8 @@
   <!-- interface-naming-policy project-wide -->
   <object class="GtkWindow" id="window_main">
     <property name="title" translatable="yes">Math Bibliography Manager</property>
+    <property name="default_width">800</property>
+    <property name="default_height">600</property>
     <child>
       <object class="GtkVBox" id="vbox_big">
         <property name="visible">True</property>
@@ -42,52 +44,87 @@
           </packing>
         </child>
         <child>
-          <object class="GtkTreeView" id="tree_docs">
+          <object class="GtkScrolledWindow" id="scroll">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="reorderable">True</property>
+            <property name="hscrollbar_policy">automatic</property>
+            <property name="vscrollbar_policy">automatic</property>
             <child>
-              <object class="GtkTreeViewColumn" id="treecol_author">
-                <property name="resizable">True</property>
-                <property name="title">Author</property>
-                <property name="reorderable">True</property>
-                <property name="sort_indicator">True</property>
-                <property name="sort_column_id">0</property>
+              <object class="GtkViewport" id="viewport">
+                <property name="visible">True</property>
+                <property name="resize_mode">queue</property>
+                <property name="shadow_type">none</property>
                 <child>
-                  <object class="GtkCellRendererText" id="treerender_author"/>
-                  <attributes>
-                    <attribute name="text">0</attribute>
-                  </attributes>
-                </child>
-              </object>
-            </child>
-            <child>
-              <object class="GtkTreeViewColumn" id="treecol_title">
-                <property name="resizable">True</property>
-                <property name="title">Title</property>
-                <property name="reorderable">True</property>
-                <property name="sort_indicator">True</property>
-                <property name="sort_column_id">1</property>
-                <child>
-                  <object class="GtkCellRendererText" id="treerender_title"/>
-                  <attributes>
-                    <attribute name="text">1</attribute>
-                  </attributes>
-                </child>
-              </object>
-            </child>
-            <child>
-              <object class="GtkTreeViewColumn" id="treecol_msc">
-                <property name="resizable">True</property>
-                <property name="title">MSC</property>
-                <property name="reorderable">True</property>
-                <property name="sort_indicator">True</property>
-                <property name="sort_column_id">2</property>
-                <child>
-                  <object class="GtkCellRendererText" id="treerender_msc"/>
-                  <attributes>
-                    <attribute name="text">2</attribute>
-                  </attributes>
+                  <object class="GtkTreeView" id="tree_docs">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="reorderable">True</property>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="treecol_author">
+                        <property name="resizable">True</property>
+                        <property name="title">Author</property>
+                        <property name="clickable">True</property>
+                        <property name="reorderable">True</property>
+                        <property name="sort_indicator">True</property>
+                        <property name="sort_column_id">0</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="treerender_author"/>
+                          <attributes>
+                            <attribute name="text">0</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="treecol_title">
+                        <property name="resizable">True</property>
+                        <property name="title">Title</property>
+                        <property name="clickable">True</property>
+                        <property name="reorderable">True</property>
+                        <property name="sort_indicator">True</property>
+                        <property name="sort_column_id">1</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="treerender_title"/>
+                          <attributes>
+                            <attribute name="text">1</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="treecol_msc">
+                        <property name="resizable">True</property>
+                        <property name="title">MSC</property>
+                        <property name="clickable">True</property>
+                        <property name="reorderable">True</property>
+                        <property name="sort_indicator">True</property>
+                        <property name="sort_column_id">3</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="treerender_msc"/>
+                          <attributes>
+                            <attribute name="text">3</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="treecol_source">
+                        <property name="sizing">autosize</property>
+                        <property name="title">Source</property>
+                        <property name="clickable">True</property>
+                        <property name="reorderable">True</property>
+                        <property name="sort_indicator">True</property>
+                        <property name="sort_order">descending</property>
+                        <property name="sort_column_id">2</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="treerender_source"/>
+                          <attributes>
+                            <attribute name="text">2</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
                 </child>
               </object>
             </child>
