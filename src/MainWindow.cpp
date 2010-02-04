@@ -66,6 +66,8 @@ void MainWindow::update_tree()
       itt = list_widget->append();
       itt->set_value(COL_AUTHOR, it->author);
       itt->set_value(COL_TITLE, it->title);
+      itt->set_value(COL_MSC, it->msc);
+      itt->set_value(COL_BIBENTRY, (gpointer)it);
     }
 }
 

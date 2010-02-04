@@ -31,7 +31,9 @@
 
 enum display_columns {
   COL_AUTHOR,
-  COL_TITLE
+  COL_TITLE,
+  COL_MSC,
+  COL_BIBENTRY
 };
 
 class MainWindow : public Gtk::Window

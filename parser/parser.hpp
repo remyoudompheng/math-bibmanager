@@ -36,7 +36,7 @@ public:
   BibEntry(const char *filename);
   virtual ~BibEntry();
 
-  string an, author, title, la, so, year, dt, cc, ut, ci, ab;
+  string an, author, title, la, so, year, dt, msc, ut, ci, ab, rv;
   string url, doi, arxiv;
   void print_me() const;
   bool operator< (const BibEntry b) const;

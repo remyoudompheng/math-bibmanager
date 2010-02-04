@@ -8,7 +8,17 @@
       <column type="gchararray"/>
       <!-- column-name title -->
       <column type="gchararray"/>
+      <!-- column-name msc -->
+      <column type="gchararray"/>
     </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes"></col>
+        <col id="1" translatable="yes"></col>
+        <col id="2" translatable="yes"></col>
+        <col id="3"/>
+      </row>
+    </data>
   </object>
   <object class="GtkWindow" id="window_main">
     <property name="title" translatable="yes">Math Bibliography Manager</property>
@@ -54,29 +64,51 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="model">list_docs</property>
+            <property name="reorderable">True</property>
             <child>
               <object class="GtkTreeViewColumn" id="treecol_author">
                 <property name="resizable">True</property>
                 <property name="title">Author</property>
-		<child>
-		  <object class="GtkCellRendererText" id="treerender_author"/>
-		  <attributes>
-		    <attribute name="text">0</attribute>
-		  </attributes>
-		</child>
+                <property name="reorderable">True</property>
+                <property name="sort_indicator">True</property>
+                <property name="sort_column_id">0</property>
+                <child>
+                  <object class="GtkCellRendererText" id="treerender_author"/>
+                  <attributes>
+                    <attribute name="text">0</attribute>
+                  </attributes>
+                </child>
               </object>
             </child>
             <child>
               <object class="GtkTreeViewColumn" id="treecol_title">
                 <property name="resizable">True</property>
                 <property name="title">Title</property>
-		<child>
-		  <object class="GtkCellRendererText" id="treerender_title"/>
-		  <attributes>
-		    <attribute name="text">1</attribute>
-		  </attributes>
-		</child>
-	      </object>
+                <property name="reorderable">True</property>
+                <property name="sort_indicator">True</property>
+                <property name="sort_column_id">1</property>
+                <child>
+                  <object class="GtkCellRendererText" id="treerender_title"/>
+                  <attributes>
+                    <attribute name="text">1</attribute>
+                  </attributes>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkTreeViewColumn" id="treecol_msc">
+                <property name="resizable">True</property>
+                <property name="title">MSC</property>
+                <property name="reorderable">True</property>
+                <property name="sort_indicator">True</property>
+                <property name="sort_column_id">2</property>
+                <child>
+                  <object class="GtkCellRendererText" id="treerender_msc"/>
+                  <attributes>
+                    <attribute name="text">2</attribute>
+                  </attributes>
+                </child>
+              </object>
             </child>
           </object>
           <packing>

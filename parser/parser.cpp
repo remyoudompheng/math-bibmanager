@@ -43,7 +43,7 @@ bool get_field(string line, string & field, string delim, string* & tmp)
 BibEntry::BibEntry(const char* filename)
 {
   // Initialise fields
-  an = author = title = la = so = year = dt = cc = ut = ci = "";
+  an = author = title = la = so = year = dt = msc = ut = ci = "";
   url = doi = arxiv = "";
 
   ifstream source;
@@ -59,10 +59,11 @@ BibEntry::BibEntry(const char* filename)
     if (get_field(l, so, "so: ", current)) continue;
     if (get_field(l, year, "py: ", current)) continue;
     if (get_field(l, dt, "dt: ", current)) continue;
-    if (get_field(l, cc, "cc: ", current)) continue;
+    if (get_field(l, msc, "cc: ", current)) continue;
     if (get_field(l, ab, "ab: ", current)) continue;
     if (get_field(l, ci, "ci: ", current)) continue;
     if (get_field(l, ut, "ut: ", current)) continue;
+    if (get_field(l, rv, "rv: ", current)) continue;
 
     if (get_field(l, doi, "doi: ", current)) continue;
     if (get_field(l, url, "url: ", current)) continue;
@@ -86,8 +87,9 @@ void BibEntry::print_me() const
   cout << "Source: " << so << endl;
   cout << "Year: " << year << endl;
   cout << "Type: " << dt << endl;
-  cout << "AMS Cl.: " << cc << endl;
+  cout << "AMS Cl.: " << msc << endl;
   cout << "Abstract: " << ab << endl;
+  cout << "Reviewer: " << rv << endl;
 
   cout << "DOI: " << doi << endl;
   cout << "URL: " << url << endl;
