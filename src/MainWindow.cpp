@@ -40,8 +40,9 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
   // Tree View
   Gtk::TreeView* treev = 0;
   uidef->get_widget("tree_docs", treev);
-  Glib::RefPtr<Glib::Object> obj = uidef->get_object("list_docs");
-  list_widget = Glib::RefPtr<Gtk::ListStore>::cast_static(obj);
+  cols_proto = new LibColumns();
+  list_widget = Gtk::ListStore::create(*cols_proto);
+  treev->set_model(list_widget);
   library = MathLibrary(library_path);
   update_tree();
 }
@@ -64,10 +65,10 @@ void MainWindow::update_tree()
   for(it = library.entries.begin(); it != library.entries.end(); it++)
     {
       itt = list_widget->append();
-      itt->set_value(COL_AUTHOR, it->author);
-      itt->set_value(COL_TITLE, it->title);
-      itt->set_value(COL_MSC, it->msc);
-      itt->set_value(COL_BIBENTRY, (gpointer)it);
+      (*itt)[cols_proto->author] = it->author;
+      (*itt)[cols_proto->title] = it->title;
+      (*itt)[cols_proto->msc] = it->msc;
+      (*itt)[cols_proto->bibentry] = (*it);
     }
 }
 

@@ -40,6 +40,13 @@ bool get_field(string line, string & field, string delim, string* & tmp)
     }
 }
 
+BibEntry::BibEntry()
+{
+  // Initialise fields
+  an = author = title = la = so = year = dt = msc = ut = ci = "";
+  url = doi = arxiv = "";
+}
+
 BibEntry::BibEntry(const char* filename)
 {
   // Initialise fields

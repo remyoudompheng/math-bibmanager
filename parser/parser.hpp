@@ -33,6 +33,7 @@ using namespace std;
 class BibEntry
 {
 public:
+  BibEntry();
   BibEntry(const char *filename);
   virtual ~BibEntry();
 

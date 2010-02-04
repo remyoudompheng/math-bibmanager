@@ -29,11 +29,15 @@
 #include <gtkmm.h>
 #include <library.hpp>
 
-enum display_columns {
-  COL_AUTHOR,
-  COL_TITLE,
-  COL_MSC,
-  COL_BIBENTRY
+class LibColumns : public Gtk::TreeModel::ColumnRecord
+{
+public:
+  LibColumns() { add(author); add(title); add(msc); add(bibentry); }
+
+  Gtk::TreeModelColumn<Glib::ustring> author;
+  Gtk::TreeModelColumn<Glib::ustring> title;
+  Gtk::TreeModelColumn<Glib::ustring> msc;
+  Gtk::TreeModelColumn<BibEntry> bibentry;
 };
 
 class MainWindow : public Gtk::Window
@@ -49,8 +53,9 @@ protected:
   Glib::RefPtr<Gtk::ListStore> list_widget;
 
   MathLibrary library;
+  LibColumns *cols_proto;
 
   void _on_quit_activate();
 };
 
-#endif //!MAIN_WINDOW_H       
+#endif //!MAIN_WINDOW_H
