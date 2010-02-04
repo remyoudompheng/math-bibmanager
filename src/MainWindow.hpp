@@ -32,11 +32,15 @@
 class LibColumns : public Gtk::TreeModel::ColumnRecord
 {
 public:
-  LibColumns() { add(author); add(title); add(msc); add(bibentry); }
+  LibColumns() {
+    add(author); add(title); add(source);
+    add(msc); add(bibentry);
+  }
 
-  Gtk::TreeModelColumn<Glib::ustring> author;
-  Gtk::TreeModelColumn<Glib::ustring> title;
-  Gtk::TreeModelColumn<Glib::ustring> msc;
+  Gtk::TreeModelColumn<Glib::ustring> author; // 0
+  Gtk::TreeModelColumn<Glib::ustring> title;  // 1
+  Gtk::TreeModelColumn<Glib::ustring> source; // 2
+  Gtk::TreeModelColumn<Glib::ustring> msc;    // 3
   Gtk::TreeModelColumn<BibEntry> bibentry;
 };
 

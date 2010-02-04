@@ -68,6 +68,7 @@ void MainWindow::update_tree()
       (*itt)[cols_proto->author] = it->author;
       (*itt)[cols_proto->title] = it->title;
       (*itt)[cols_proto->msc] = it->msc;
+      (*itt)[cols_proto->source] = it->so;
       (*itt)[cols_proto->bibentry] = (*it);
     }
 }
