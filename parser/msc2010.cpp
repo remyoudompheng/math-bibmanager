@@ -123,6 +123,60 @@ string MSC2010Entry::print_major() const
     case 93: return "Systems theory; control";
     case 94: return "Information and communication, circuits";
     case 97: return "Mathematics education";
+
     default: return "Category not implemented";
+    }
+}
+
+string MSC2010Entry::print_med() const
+{
+  switch(maj)
+    {
+    case 14: // Algebraic geometry
+      switch (med)
+	{
+	case 'A': return "Foundations";
+	case 'B': return "Local theory";
+	case 'C': return "Cycles and subschemes";
+	case 'D': return "Families, fibrations";
+	case 'E': return "Birational geometry";
+	case 'F': return "(Co)homology theory";
+	case 'G': return "Arithmetic problems. Diophantine geometry";
+	case 'H': return "Curves";
+	case 'J': return "Surfaces and higher-dimensional varieties";
+	case 'K': return "Abelian varieties and schemes";
+	case 'L': return "Algebraic groups";
+	case 'M': return "Special varieties";
+	case 'N': return "Projective and enumerative geometry";
+	case 'P': return "Real algebraic and real analytic geometry";
+	case 'Q': return "Computational aspects in algebraic geometry";
+	case 'R': return "Affine geometry";
+	case 'T': return "Tropical geometry";
+	}
+    case 32: // Several complex variables
+      switch (med)
+	{
+	case 'A': return "Holomorphic functions of several complex variables";
+	case 'B': return "Local analytic geometry";
+	case 'C': return "Analytic spaces";
+	case 'D': return "Analytic continuation";
+	case 'E': return "Holomorphic convexity";
+	case 'F': return "Geometric convexity";
+	case 'G': return "Deformations of analytic structures";
+	case 'H': return "Holomorphic mappings and correspondences";
+	case 'J': return "Compact analytic spaces";
+	case 'K': return "Generalizations of analytic spaces";
+	case 'L': return "Holomorphic fiber spaces";
+	case 'M': return "Complex spaces with a group of automorphisms";
+	case 'N': return "Automorphic functions";
+	case 'P': return "Non-Archimedean analysis";
+	case 'Q': return "Complex manifolds";
+	case 'S': return "Singularities";
+	case 'T': return "Pseudoconvex domains";
+	case 'U': return "Pluripotential theory";
+	case 'V': return "CR manifolds";
+	case 'W': return "Differential operators in several variables";
+	}
+    default: return "Subcategory not implemented";
     }
 }
