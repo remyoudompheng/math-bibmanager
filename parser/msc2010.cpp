@@ -38,16 +38,16 @@ MSC2010Entry::MSC2010Entry(string str)
   s >> maj >> med >> min;
 }
 
-strign MSC2010Entry::print_major()
+string MSC2010Entry::print_major()
 {
   switch(maj)
     {
-    case 00: return "General";
-    case 01: return "History and biography";
-    case 03: return "Mathematical logic and foundations";
-    case 05: return "Combinatorics";
-    case 06: return "Order, lattices, ordered algebraic structures";
-    case 08: return "General algebraic systems";
+    case  0: return "General";
+    case  1: return "History and biography";
+    case  3: return "Mathematical logic and foundations";
+    case  5: return "Combinatorics";
+    case  6: return "Order, lattices, ordered algebraic structures";
+    case  8: return "General algebraic systems";
     case 11: return "Number theory";
     case 12: return "Field theory and polynomials";
     case 13: return "Commutative algebra";
