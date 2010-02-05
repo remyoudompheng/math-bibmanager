@@ -25,6 +25,10 @@
 
 using namespace std;
 
+MSC2010Entry::MSC2010Entry()
+{
+}
+
 MSC2010Entry::MSC2010Entry(int min, char med, int maj)
   : min(min),
     med(med),
@@ -36,6 +40,20 @@ MSC2010Entry::MSC2010Entry(string str)
 {
   stringstream s (str.substr(0,2) + " " + str[2] + " " + str.substr(3,2));
   s >> maj >> med >> min;
+
+}
+
+void MSC2010Entry::assign(string str)
+{
+  stringstream s (str.substr(0,2) + " " + str[2] + " " + str.substr(3,2));
+  s >> maj >> med >> min;
+}
+
+istream& operator>> (istream &in, MSC2010Entry & ent)
+{
+  string token;
+  in >> token;
+  ent.assign(token);
 }
 
 string MSC2010Entry::print_major()

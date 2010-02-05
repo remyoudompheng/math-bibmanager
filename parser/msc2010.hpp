@@ -27,10 +27,12 @@
 #endif
 
 #include <string>
+#include <iostream>
 
 class MSC2010Entry
 {
 public:
+  MSC2010Entry();
   MSC2010Entry(std::string str);
   MSC2010Entry(int maj, char med, int min);
   int maj;
@@ -40,6 +42,12 @@ public:
   std::string print_major();
   std::string print_med();
   std::string print_minor();
+
+  friend std::istream& operator>> (std::istream &in, MSC2010Entry & ent);
+
+  void assign(std::string str);
 };
+
+std::istream& operator>> (std::istream &in, MSC2010Entry & ent);
 
 #endif //!MSC2010_H
