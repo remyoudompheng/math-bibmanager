@@ -22,6 +22,7 @@
 #include "parser.hpp"
 #include <fstream>
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -45,6 +46,7 @@ BibEntry::BibEntry()
   // Initialise fields
   an = author = title = la = so = year = dt = msc = ut = ci = "";
   url = doi = arxiv = "";
+  msc_list.clear();
 }
 
 BibEntry::BibEntry(const char* filename)
@@ -52,6 +54,7 @@ BibEntry::BibEntry(const char* filename)
   // Initialise fields
   an = author = title = la = so = year = dt = msc = ut = ci = "";
   url = doi = arxiv = "";
+  msc_list.clear();
 
   ifstream source;
   string l; string *current = NULL;
@@ -81,9 +84,35 @@ BibEntry::BibEntry(const char* filename)
     if (current && (start != string::npos))
       current->append(" " + l.substr(start));
   }
+
+  parse_msc_entries();
 }
 
 BibEntry::~BibEntry() {}
+
+void BibEntry::parse_msc_entries()
+{
+  size_t start = msc.find_first_not_of(" *");
+  stringstream s;
+  MSC2010Entry ent;
+  if (start != string::npos) {
+    s.str(msc.substr(start));
+    while (s.good())
+      {
+	s >> ent;
+	msc_list.push_back(ent);
+      }
+  }
+}
+
+string print_msc_list(list<MSC2010Entry> l)
+{
+  ostringstream s(ostringstream::out);
+  list<MSC2010Entry>::iterator i;
+  for(i = l.begin(); i != l.end(); i++)
+    s << i->print_major() << endl;
+  return s.str();
+}
 
 void BibEntry::print_me() const
 {
@@ -101,6 +130,9 @@ void BibEntry::print_me() const
   cout << "DOI: " << doi << endl;
   cout << "URL: " << url << endl;
   cout << "arXiv: " << arxiv << endl;
+
+  cout << print_msc_list(msc_list);
+  cout << endl;
 }
 
 bool BibEntry::operator<(const BibEntry b) const
