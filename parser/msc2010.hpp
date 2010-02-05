@@ -39,9 +39,9 @@ public:
   char med;
   int min;
 
-  std::string print_major();
-  std::string print_med();
-  std::string print_minor();
+  std::string print_major() const;
+  std::string print_med() const;
+  std::string print_minor() const;
 
   friend std::istream& operator>> (std::istream &in, MSC2010Entry & ent);
 

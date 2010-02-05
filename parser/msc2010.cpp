@@ -56,7 +56,7 @@ istream& operator>> (istream &in, MSC2010Entry & ent)
   ent.assign(token);
 }
 
-string MSC2010Entry::print_major()
+string MSC2010Entry::print_major() const
 {
   switch(maj)
     {
