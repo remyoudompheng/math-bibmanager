@@ -23,9 +23,6 @@
 #include <config.h>
 #endif
 
-#define LIBRARY_PATH "/home/oudomphe/textes/articles"
-const char library_path[] = LIBRARY_PATH;
-
 #include "MainWindow.hpp"
 
 MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade)
@@ -43,12 +40,16 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
   cols_proto = new LibColumns();
   list_widget = Gtk::ListStore::create(*cols_proto);
   treev->set_model(list_widget);
-  library = MathLibrary(library_path);
-  update_tree();
 }
 
 MainWindow::~MainWindow()
 {
+}
+
+void MainWindow::open_library(string dirpath)
+{
+  library = MathLibrary(dirpath.c_str());
+  update_tree();
 }
 
 void MainWindow::fill_tree(MathLibrary source)

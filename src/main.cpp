@@ -27,8 +27,13 @@
 #include "UIDefinition.h"
 #include "MainWindow.hpp"
 
+#include <getopt.h>
+
 #include <iostream>
+#include <string>
 using namespace std;
+
+#define LIBRARY_PATH "/home/oudomphe/textes/articles"
 
 string notice = PACKAGE_STRING "\n"
   "Copyright (C) 2010 Rémy Oudompheng\n"
@@ -39,8 +44,26 @@ string notice = PACKAGE_STRING "\n"
 int
 main (int argc, char *argv[])
 {
-  // Output copyright notice
-  cout << notice;
+  // Options
+  static option longopts[] = {
+    { "library", 1, 0, 'd' },
+    { "version", no_argument, 0, 'V' },
+    {0, 0, 0, 0}
+  };
+  char c;
+  string library_dir = LIBRARY_PATH;
+  c = getopt_long(argc, argv, "d:V", longopts, &optind);
+
+  switch(c) {
+  case 'd':
+    library_dir = optarg;
+    cout << "Library folder is " << library_dir << endl;
+    break;
+  case 'V': // Output copyright notice
+    cout << notice;
+    return 0;
+    break;
+  }
 
   Gtk::Main kit(argc, argv);
   Glib::RefPtr<Gtk::Builder> refGlade = Gtk::Builder::create();
@@ -60,6 +83,7 @@ main (int argc, char *argv[])
 
   MainWindow *window_main = 0;
   refGlade->get_widget_derived("window_main", window_main);
+  window_main->open_library(library_dir);
   if (window_main) {
     window_main->show_all();
     kit.run(*window_main);
@@ -69,4 +93,3 @@ main (int argc, char *argv[])
 
   return 0;
 }
-

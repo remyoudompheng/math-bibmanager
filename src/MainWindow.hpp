@@ -27,6 +27,7 @@
 #endif
 
 #include <gtkmm.h>
+#include <string>
 #include <library.hpp>
 
 class LibColumns : public Gtk::TreeModel::ColumnRecord
@@ -49,6 +50,7 @@ class MainWindow : public Gtk::Window
 public:
   MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade);
   virtual ~MainWindow();
+  void open_library(std::string dirpath);
   void fill_tree(MathLibrary source);
   void update_tree();
 
