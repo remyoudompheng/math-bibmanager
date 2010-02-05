@@ -43,6 +43,4 @@ public:
   bool operator< (const BibEntry b) const;
 };
 
-
-
 #endif //!PARSER_H
