@@ -28,8 +28,11 @@ PKG_CHECK_MODULES([GTKMM], [gtkmm-2.4 >= 2.12])
 AC_CHECK_HEADER(ftw.h)
 
 # Checks for typedefs, structures, and compiler characteristics.
+AC_HEADER_STDBOOL
+AC_TYPE_SIZE_T
 
 # Checks for library functions.
+AC_HEADER_MAJOR
 
 AC_CONFIG_FILES([Makefile
                  src/Makefile

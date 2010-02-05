@@ -2,7 +2,8 @@ noinst_LIBRARIES = libparser.a
 
 libparser_a_SOURCES = \
 	parser.cpp parser.hpp \
-	library.cpp library.hpp
+	library.cpp library.hpp \
+	msc2010.cpp msc2010.hpp
 
 bin_PROGRAMS = test_parser
 test_parser_SOURCES = test_parser.cpp parser.hpp
