@@ -25,6 +25,8 @@
 
 #include "MainWindow.hpp"
 
+using namespace std;
+
 MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade)
   : Gtk::Window(cobject),
     uidef(refGlade)
