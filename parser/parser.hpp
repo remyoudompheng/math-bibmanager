@@ -1,3 +1,5 @@
+
+
 /*
  * math-bibmanager
  * A Bibliography manager for mathematicians
@@ -26,10 +28,9 @@
 #include <config.h>
 #endif
 
-#include <msc2010.hpp>
 #include <string>
 #include <list>
-using namespace std;
+#include "msc2010.hpp"
 
 class BibEntry
 {
@@ -38,9 +39,9 @@ public:
   BibEntry(const char *filename);
   virtual ~BibEntry();
 
-  string an, author, title, la, so, year, dt, msc, ut, ci, ab, rv;
-  string url, doi, arxiv;
-  list<MSC2010Entry> msc_list;
+  std::string an, author, title, la, so, year, dt, msc, ut, ci, ab, rv;
+  std::string url, doi, arxiv;
+  std::list<MSC2010Entry> msc_list;
   void print_me() const;
   bool operator< (const BibEntry b) const;
 

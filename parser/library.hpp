@@ -27,7 +27,9 @@
 #endif
 
 #include "parser.hpp"
+#include "msc2010.hpp"
 #include <set>
+#include <map>
 #include <ftw.h>
 
 extern "C" int read_entry(const char *path,
@@ -40,10 +42,21 @@ public:
   MathLibrary();
   MathLibrary(const char* path);
   virtual ~MathLibrary();
-  set<BibEntry> entries;
+  std::set<BibEntry> entries;
 
   void print_me();
 private:
+};
+
+class LibraryMSC
+{
+public:
+  LibraryMSC();
+  LibraryMSC(MathLibrary library);
+
+  std::map<int, BibEntry> msc_tree;
+
+  void insert(const BibEntry entry);
 };
 
 #endif //!LIBRARY_H

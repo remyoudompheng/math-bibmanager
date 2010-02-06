@@ -22,6 +22,8 @@
 #include "library.hpp"
 #include <iostream>
 
+using namespace std;
+
 #define DEPTHBUF 10
 
 set<BibEntry>* entries_ptr;
@@ -60,4 +62,15 @@ void MathLibrary::print_me()
     {
       iter->print_me();
     }
+}
+
+LibraryMSC::LibraryMSC()
+{
+  msc_tree.clear();
+}
+
+// Create a list of tags fom a library
+LibraryMSC::LibraryMSC(MathLibrary library)
+{
+  msc_tree.clear();
 }
