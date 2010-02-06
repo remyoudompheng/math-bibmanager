@@ -54,9 +54,13 @@ public:
   LibraryMSC();
   LibraryMSC(MathLibrary library);
 
-  std::map<int, BibEntry> msc_tree;
+  std::map<int, std::map<char, std::map<int,MSC2010Entry> > > msc_tree;
 
-  void insert(const BibEntry entry);
+  void insert_from_bibentry(const BibEntry entry);
+
+  typedef std::map<int, std::map<char, std::map<int,MSC2010Entry> > >::iterator iteratori;
+  typedef std::map<char, std::map<int,MSC2010Entry> >::iterator iteratorii;
+  typedef std::map<int,MSC2010Entry>::iterator iteratoriii;
 };
 
 #endif //!LIBRARY_H

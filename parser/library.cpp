@@ -73,4 +73,22 @@ LibraryMSC::LibraryMSC()
 LibraryMSC::LibraryMSC(MathLibrary library)
 {
   msc_tree.clear();
+
+  set<BibEntry>::iterator iter;
+  for (iter = library.entries.begin();
+       iter != library.entries.end();
+       iter++)
+    {
+      insert_from_bibentry(*iter);
+    }
+}
+
+void LibraryMSC::insert_from_bibentry(const BibEntry entry)
+{
+  list<MSC2010Entry> l = entry.msc_list;
+  list<MSC2010Entry>::iterator it;
+  for(it = l.begin(); it != l.end(); it++)
+    {
+      msc_tree[it->maj][it->med][it->min] = *it;
+    }
 }
