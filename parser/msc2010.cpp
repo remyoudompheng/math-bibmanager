@@ -132,6 +132,47 @@ string MSC2010Entry::print_med() const
 {
   switch(maj)
     {
+    case 11: // Number theory
+      switch (med)
+	{
+       	case 'A': return "Elementary number theory";
+	case 'B': return "Sequences and sets";
+	case 'C': return "Polynomials and matrices";
+	case 'D': return "Diophantine equations";
+	case 'E': return "Forms and linear algebraic groups";
+	case 'F': return "Discontinuous groups and automorphic forms";
+	case 'G': return "Arithmetic algebraic geometry (Diophantine geometry)";
+	case 'H': return "Geometry of numbers";
+	case 'J': return "Diophantine approximation, transcendental number theory";
+	case 'K': return "Probabilistic theory: distribution modulo 1; metric theory of algorithms";
+	case 'L': return "Exponential sums and character sums";
+	case 'M': return "Zeta and L-functions: analytic theory";
+	case 'N': return "Multiplicative number theory";
+	case 'P': return "Additive number theory; partitions";
+	case 'R': return "Algebraic number theory: global fields";
+	case 'S': return "Algebraic number theory: local and p-adic fields";
+	case 'T': return "Finite fields and commutative rings (number-theoretic aspects)";
+	case 'U': return "Connections with logic";
+	case 'Y': return "Computational number theory";
+	case 'Z': return "Miscellaneous applications of number theory";
+	}
+    case 13: // Commutative algebra
+      switch(med)
+	{
+	case 'A': return "General commutative ring theory";
+	case 'B': return "Ring extensions and related topics";
+	case 'C': return "Theory of modules and ideals";
+	case 'D': return "Homological methods";
+	case 'E': return "Chain conditions, finiteness conditions";
+	case 'F': return "Arithmetic rings and other special rings";
+	case 'G': return "Integral domains";
+	case 'H': return "Local rings and semilocal rings";
+	case 'J': return "Topological rings and modules";
+	case 'L': return "Applications of logic to commutative algebra";
+	case 'M': return "Finite commutative rings";
+	case 'N': return "Differential algebra";
+	case 'P': return "Computational aspects and applications";
+	}
     case 14: // Algebraic geometry
       switch (med)
 	{
