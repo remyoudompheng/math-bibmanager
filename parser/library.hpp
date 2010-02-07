@@ -61,6 +61,9 @@ public:
   typedef std::map<int, std::map<char, std::map<int,MSC2010Entry> > >::iterator iteratori;
   typedef std::map<char, std::map<int,MSC2010Entry> >::iterator iteratorii;
   typedef std::map<int,MSC2010Entry>::iterator iteratoriii;
+
+  iteratori begin() { return msc_tree.begin(); }
+  iteratori end() { return msc_tree.end(); }
 };
 
 #endif //!LIBRARY_H

@@ -88,6 +88,29 @@ void MainWindow::update_tree()
 
 void MainWindow::fill_msc(LibraryMSC source)
 {
+  Gtk::TreeIter prow, prow2;
+  LibraryMSC::iteratori   it1;
+  LibraryMSC::iteratorii  it2;
+  LibraryMSC::iteratoriii it3;
+  MSC2010Entry ploum;
+  stringstream s;
+  for(it1 = source.begin(); it1 != source.end(); it1++)
+    {
+      ploum.maj = it1->first;
+      prow = msc_store->append();
+      s.str(""); s << ploum.maj << " " << ploum.print_major();
+      (*prow)[msccols_proto->caption] = s.str();
+      (*prow)[msccols_proto->entry] = ploum;
+
+      for(it2 = it1->second.begin(); it2 != it1->second.end(); it2++)
+	{
+	  ploum.med = it2->first;
+	  prow2 = msc_store->append(prow->children());
+	  s.str(""); s << ploum.maj << ploum.med << " " << ploum.print_med();
+	  (*prow2)[msccols_proto->caption] = s.str();
+	  (*prow2)[msccols_proto->entry] = ploum;
+	}
+    }
 }
 
 // File Menu item callbacks
