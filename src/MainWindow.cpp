@@ -42,6 +42,13 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
   cols_proto = new LibColumns();
   list_widget = Gtk::ListStore::create(*cols_proto);
   treev->set_model(list_widget);
+
+  // MSC Classification
+  Gtk::TreeView* treemsc = 0;
+  uidef->get_widget("tree_msc", treemsc);
+  msccols_proto = new MscColumns();
+  msc_store = Gtk::TreeStore::create(*msccols_proto);
+  treemsc->set_model(msc_store);
 }
 
 MainWindow::~MainWindow()
@@ -74,6 +81,13 @@ void MainWindow::update_tree()
       (*itt)[cols_proto->source] = it->so;
       (*itt)[cols_proto->bibentry] = (*it);
     }
+
+  LibraryMSC msc_tags(library);
+  fill_msc(msc_tags);
+}
+
+void MainWindow::fill_msc(LibraryMSC source)
+{
 }
 
 // File Menu item callbacks

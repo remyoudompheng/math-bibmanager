@@ -29,6 +29,7 @@
 #include <gtkmm.h>
 #include <string>
 #include <library.hpp>
+#include <msc2010.hpp>
 
 class LibColumns : public Gtk::TreeModel::ColumnRecord
 {
@@ -45,6 +46,17 @@ public:
   Gtk::TreeModelColumn<BibEntry> bibentry;
 };
 
+class MscColumns : public Gtk::TreeModel::ColumnRecord
+{
+public:
+  MscColumns() {
+    add(caption); add(entry);
+  }
+
+  Gtk::TreeModelColumn<Glib::ustring> caption; // 0
+  Gtk::TreeModelColumn<MSC2010Entry> entry;    // 1
+};
+
 class MainWindow : public Gtk::Window
 {
 public:
@@ -52,14 +64,17 @@ public:
   virtual ~MainWindow();
   void open_library(std::string dirpath);
   void fill_tree(MathLibrary source);
+  void fill_msc(LibraryMSC source);
   void update_tree();
 
 protected:
   Glib::RefPtr<Gtk::Builder> uidef;
   Glib::RefPtr<Gtk::ListStore> list_widget;
+  Glib::RefPtr<Gtk::TreeStore> msc_store;
 
   MathLibrary library;
   LibColumns *cols_proto;
+  MscColumns *msccols_proto;
 
   void _on_quit_activate();
 };
