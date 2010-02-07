@@ -52,20 +52,26 @@
               <object class="GtkScrolledWindow" id="scroll_tree">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="hscrollbar_policy">automatic</property>
+                <property name="hscrollbar_policy">never</property>
                 <property name="vscrollbar_policy">automatic</property>
                 <child>
                   <object class="GtkViewport" id="viewport_tree">
                     <property name="visible">True</property>
                     <property name="resize_mode">queue</property>
+                    <property name="shadow_type">none</property>
                     <child>
                       <object class="GtkTreeView" id="tree_msc">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <child>
-                          <object class="GtkTreeViewColumn" id="treecol_msc1">
+                          <object class="GtkTreeViewColumn" id="treecol_msc2">
                             <property name="title">MSC Classification</property>
-                            <property name="expand">True</property>
+                            <child>
+                              <object class="GtkCellRendererText" id="treerender_msc2"/>
+                              <attributes>
+                                <attribute name="text">0</attribute>
+                              </attributes>
+                            </child>
                           </object>
                         </child>
                       </object>
