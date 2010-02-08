@@ -72,6 +72,9 @@ protected:
   Glib::RefPtr<Gtk::ListStore> list_widget;
   Glib::RefPtr<Gtk::TreeStore> msc_store;
 
+  std::string msc_filter;
+  bool tree_filter_by_msc(Gtk::TreeModel::const_iterator iter);
+
   MathLibrary library;
   LibColumns *cols_proto;
   MscColumns *msccols_proto;

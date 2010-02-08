@@ -29,7 +29,8 @@ using namespace std;
 
 MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade)
   : Gtk::Window(cobject),
-    uidef(refGlade)
+    uidef(refGlade),
+    msc_filter("")
 {
   // File Menu item callbacks
   Gtk::MenuItem* mi_quit = 0;
@@ -41,7 +42,12 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
   uidef->get_widget("tree_docs", treev);
   cols_proto = new LibColumns();
   list_widget = Gtk::ListStore::create(*cols_proto);
-  treev->set_model(list_widget);
+
+  // Filters for the bibliography list
+  Glib::RefPtr<Gtk::TreeModelFilter> list_filtered;
+  list_filtered = Gtk::TreeModelFilter::create(list_widget);
+  list_filtered->set_visible_func( sigc::mem_fun(*this, &MainWindow::tree_filter_by_msc) );
+  treev->set_model(list_filtered);
 
   // MSC Classification
   Gtk::TreeView* treemsc = 0;
@@ -111,6 +117,11 @@ void MainWindow::fill_msc(LibraryMSC source)
 	  (*prow2)[msccols_proto->entry] = ploum;
 	}
     }
+}
+
+bool MainWindow::tree_filter_by_msc(Gtk::TreeModel::const_iterator iter)
+{
+  return true;
 }
 
 // File Menu item callbacks
