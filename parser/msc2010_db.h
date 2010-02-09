@@ -220,9 +220,9 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'S': return "Operations and obstructions";
 	case 'T': return "Spectral sequences";
 	case 'U': return "Applied homological algebra and category theory";
-	default: return "Subcategory not implemented";
 	}
     }
+  return "Subcategory not implemented";
 }
 
 static char* msc2010_print_minor(int maj, char med, int min)
