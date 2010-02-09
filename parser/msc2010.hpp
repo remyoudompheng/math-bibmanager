@@ -39,6 +39,8 @@ public:
   char med;
   int min;
 
+  std::string str;
+
   std::string print_major() const;
   std::string print_med() const;
   std::string print_minor() const;
