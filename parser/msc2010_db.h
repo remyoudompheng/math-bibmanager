@@ -1,3 +1,4 @@
+
 /*
  * math-bibmanager
  * A Bibliography manager for mathematicians
@@ -127,6 +128,7 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'U': return "Connections with logic";
 	case 'Y': return "Computational number theory";
 	case 'Z': return "Miscellaneous applications of number theory";
+	default: return "Subcategory not implemented";
 	}
     case 13: // Commutative algebra
       switch(med)
@@ -144,6 +146,7 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'M': return "Finite commutative rings";
 	case 'N': return "Differential algebra";
 	case 'P': return "Computational aspects and applications";
+	default: return "Subcategory not implemented";
 	}
     case 14: // Algebraic geometry
       switch (med)
@@ -165,6 +168,7 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'Q': return "Computational aspects in algebraic geometry";
 	case 'R': return "Affine geometry";
 	case 'T': return "Tropical geometry";
+	default: return "Subcategory not implemented";
 	}
     case 17: // Nonassociative rings and algebras
       switch (med)
@@ -173,6 +177,7 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'B': return "Lie algebras and Lie superalgebras";
 	case 'C': return "Jordan algebras (algebras, triples and pairs)";
 	case 'D': return "Other nonassociative rings and algebras";
+	default: return "Subcategory not implemented";
 	}
     case 18: // Category theory, homological algebra
       switch (med)
@@ -184,6 +189,7 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'E': return "Abelian categories";
 	case 'F': return "Categories and geometry";
 	case 'G': return "Homological algebra";
+	default: return "Subcategory not implemented";
 	}
     case 32: // Several complex variables
       switch (med)
@@ -208,6 +214,7 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'U': return "Pluripotential theory";
 	case 'V': return "CR manifolds";
 	case 'W': return "Differential operators in several variables";
+	default: return "Subcategory not implemented";
 	}
     case 55: // Algebraic topology
       switch (med)
@@ -220,12 +227,48 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'S': return "Operations and obstructions";
 	case 'T': return "Spectral sequences";
 	case 'U': return "Applied homological algebra and category theory";
+	default: return "Subcategory not implemented";
 	}
+    default: return "Subcategory not implemented";
     }
-  return "Subcategory not implemented";
+
 }
 
 static char* msc2010_print_minor(int maj, char med, int min)
 {
-  return "Subcategory not implemented";
+  switch(maj)
+    {
+    case 14: // Algebraic geometry
+      switch (med)
+	{
+	case 'J': // Surfaces and higher-dimensional varieties
+	  switch(min)
+	    {
+	    case '10': return "Families, moduli, classification: algebraic theory";
+	    case '15': return "Moduli, classification: analytic theory; relations with modular forms";
+	    case '17': return "Singularities";
+	    case '20': return "Arithmetic ground fields";
+	    case '25': return "Special surfaces";
+	    case '26': return "Rational and ruled surfaces";
+	    case '27': return "Elliptic surfaces";
+	    case '28': return "K3 surfaces and Enriques surfaces";
+	    case '29': return "Surfaces of general type";
+	    case '30': return "3-folds";
+	    case '32': return "Calabi-Yau manifolds";
+	    case '33': return "Mirror symmetry";
+	    case '35': return "4-folds";
+	    case '40': return "n-folds (n>4)";
+	    case '45': return "Fano varieties";
+	    case '50': return "Automorphisms of surfaces and higher-dimensional varieties";
+	    case '60': return "Vector bundles on surfaces and higher-dimensional varieties, and their moduli";
+	    case '70': return "Hypersurfaces";
+	    case '80': return "Topology of surfaces (Donaldson polynomials, Seiberg-Witten invariants)";
+	    case '81': return "Relationships with physics";
+	    case '99': return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    default: return "Subcategory not implemented";
+    }
 }
