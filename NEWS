@@ -1,3 +1,7 @@
+version 0.1.1:
+ + support more MSC categories
+ + make article list sortable
+
 version 0.1:
  + support for exploring a hierarchy of files
  + selective display based on MSC classification
