@@ -44,23 +44,24 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
   list_widget = Gtk::ListStore::create(*cols_proto);
 
   // Filters for the bibliography list
-  Glib::RefPtr<Gtk::TreeModelFilter> list_filtered;
   list_filtered = Gtk::TreeModelFilter::create(list_widget);
   list_filtered->set_visible_func( sigc::mem_fun(*this, &MainWindow::tree_filter_by_msc) );
   treev->set_model(list_filtered);
 
   // MSC Classification
-  Gtk::TreeView* treemsc = 0;
   uidef->get_widget("tree_msc", treemsc);
   msccols_proto = new MscColumns();
   msc_store = Gtk::TreeStore::create(*msccols_proto);
   treemsc->set_model(msc_store);
+
+  treemsc->signal_cursor_changed().connect( sigc::mem_fun(*this, &MainWindow::_on_treemsc_cursor_changed) );
 }
 
 MainWindow::~MainWindow()
 {
 }
 
+// Bibliography tree
 void MainWindow::open_library(string dirpath)
 {
   library = MathLibrary(dirpath.c_str());
@@ -92,6 +93,7 @@ void MainWindow::update_tree()
   fill_msc(msc_tags);
 }
 
+// MSC tree
 void MainWindow::fill_msc(LibraryMSC source)
 {
   Gtk::TreeIter prow, prow2;
@@ -100,11 +102,20 @@ void MainWindow::fill_msc(LibraryMSC source)
   LibraryMSC::iteratoriii it3;
   MSC2010Entry ploum;
   stringstream s;
+
+  // Root node
+  prow = msc_store->append();
+  (*prow)[msccols_proto->filter] = "";
+  (*prow)[msccols_proto->caption] = "All categories";
+  (*prow)[msccols_proto->entry] = ploum;
+  // Other nodes
   for(it1 = source.begin(); it1 != source.end(); it1++)
     {
       ploum.maj = it1->first;
       prow = msc_store->append();
-      s.str(""); s << ploum.maj << " " << ploum.print_major();
+      s.str(""); s << ploum.maj;
+      (*prow)[msccols_proto->filter] = s.str();
+      s << " " << ploum.print_major();
       (*prow)[msccols_proto->caption] = s.str();
       (*prow)[msccols_proto->entry] = ploum;
 
@@ -112,7 +123,9 @@ void MainWindow::fill_msc(LibraryMSC source)
 	{
 	  ploum.med = it2->first;
 	  prow2 = msc_store->append(prow->children());
-	  s.str(""); s << ploum.maj << ploum.med << " " << ploum.print_med();
+	  s.str(""); s << ploum.maj << ploum.med;
+	  (*prow)[msccols_proto->filter] = s.str();
+	  s << " " << ploum.print_med();
 	  (*prow2)[msccols_proto->caption] = s.str();
 	  (*prow2)[msccols_proto->entry] = ploum;
 	}
@@ -121,7 +134,25 @@ void MainWindow::fill_msc(LibraryMSC source)
 
 bool MainWindow::tree_filter_by_msc(Gtk::TreeModel::const_iterator iter)
 {
-  return true;
+  BibEntry b = (*iter)[cols_proto->bibentry];
+  list<MSC2010Entry> l = b.msc_list;
+  for(list<MSC2010Entry>::iterator i = l.begin(); i != l.end(); i++)
+    {
+      if(!i->str.compare(0, msc_filter.length(), msc_filter))
+	return true;
+    }
+  return false;
+}
+
+void MainWindow::_on_treemsc_cursor_changed()
+{
+  Gtk::TreeModel::Path path;
+  Gtk::TreeViewColumn* focus_column;
+  treemsc->get_cursor(path, focus_column);
+  Gtk::TreeIter iter = msc_store->get_iter(path);
+  // Set filter appropriately
+  msc_filter = (*iter)[msccols_proto->filter];
+  list_filtered->refilter();
 }
 
 // File Menu item callbacks
