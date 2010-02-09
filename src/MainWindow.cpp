@@ -124,7 +124,7 @@ void MainWindow::fill_msc(LibraryMSC source)
 	  ploum.med = it2->first;
 	  prow2 = msc_store->append(prow->children());
 	  s.str(""); s << ploum.maj << ploum.med;
-	  (*prow)[msccols_proto->filter] = s.str();
+	  (*prow2)[msccols_proto->filter] = s.str();
 	  s << " " << ploum.print_med();
 	  (*prow2)[msccols_proto->caption] = s.str();
 	  (*prow2)[msccols_proto->entry] = ploum;

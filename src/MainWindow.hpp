@@ -50,7 +50,7 @@ class MscColumns : public Gtk::TreeModel::ColumnRecord
 {
 public:
   MscColumns() {
-    add(caption); add(entry);
+    add(caption); add(entry); add(filter);
   }
 
   Gtk::TreeModelColumn<Glib::ustring> caption; // 0
