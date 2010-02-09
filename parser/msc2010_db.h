@@ -107,7 +107,7 @@ static char* msc2010_print_medium(int maj, char med)
     case 11: // Number theory
       switch (med)
 	{
-       	case 'A': return "Elementary number theory";
+	case 'A': return "Elementary number theory";
 	case 'B': return "Sequences and sets";
 	case 'C': return "Polynomials and matrices";
 	case 'D': return "Diophantine equations";
@@ -166,6 +166,25 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'R': return "Affine geometry";
 	case 'T': return "Tropical geometry";
 	}
+    case 17: // Nonassociative rings and algebras
+      switch (med)
+	{
+	case 'A': return "General nonassociative rings";
+	case 'B': return "Lie algebras and Lie superalgebras";
+	case 'C': return "Jordan algebras (algebras, triples and pairs)";
+	case 'D': return "Other nonassociative rings and algebras";
+	}
+    case 18: // Category theory, homological algebra
+      switch (med)
+	{
+	case 'A': return "General theory of categories and functors";
+	case 'B': return "Special categories";
+	case 'C': return "Categories and theories";
+	case 'D': return "Categories with structure";
+	case 'E': return "Abelian categories";
+	case 'F': return "Categories and geometry";
+	case 'G': return "Homological algebra";
+	}
     case 32: // Several complex variables
       switch (med)
 	{
@@ -190,7 +209,19 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'V': return "CR manifolds";
 	case 'W': return "Differential operators in several variables";
 	}
-    default: return "Subcategory not implemented";
+    case 55: // Algebraic topology
+      switch (med)
+	{
+	case 'M': return "Classical topics";
+	case 'N': return "Homology and cohomology theories";
+	case 'P': return "Homotopy theory";
+	case 'Q': return "Homotopy groups";
+	case 'R': return "Fiber spaces and bundles";
+	case 'S': return "Operations and obstructions";
+	case 'T': return "Spectral sequences";
+	case 'U': return "Applied homological algebra and category theory";
+	default: return "Subcategory not implemented";
+	}
     }
 }
 
