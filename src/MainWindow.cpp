@@ -95,7 +95,7 @@ void MainWindow::update_tree()
 // MSC tree
 void MainWindow::fill_msc(LibraryMSC source)
 {
-  Gtk::TreeIter prow, prow2;
+  Gtk::TreeIter prow, prow2, prow3;
   LibraryMSC::iteratori   it1;
   LibraryMSC::iteratorii  it2;
   LibraryMSC::iteratoriii it3;
@@ -127,6 +127,17 @@ void MainWindow::fill_msc(LibraryMSC source)
 	  s << " " << ploum.print_med();
 	  (*prow2)[msccols_proto->caption] = s.str();
 	  (*prow2)[msccols_proto->entry] = ploum;
+
+	  for(it3 = it2->second.begin(); it3 != it2->second.end(); it3++)
+	    {
+	      ploum.min = it3->first;
+	      prow3 = msc_store->append(prow2->children());
+	      s.str(""); s << ploum.maj << ploum.med << ploum.min;
+	      (*prow3)[msccols_proto->filter] = s.str();
+	      s << " " << ploum.print_minor();
+	      (*prow3)[msccols_proto->caption] = s.str();
+	      (*prow3)[msccols_proto->entry] = ploum;
+	    }
 	}
     }
 }
