@@ -46,14 +46,13 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
   // Filters for the bibliography list
   list_filtered = Gtk::TreeModelFilter::create(list_widget);
   list_filtered->set_visible_func( sigc::mem_fun(*this, &MainWindow::tree_filter_by_msc) );
-  treev->set_model(list_filtered);
+  treev->set_model(Gtk::TreeModelSort::create(list_filtered));
 
   // MSC Classification
   uidef->get_widget("tree_msc", treemsc);
   msccols_proto = new MscColumns();
   msc_store = Gtk::TreeStore::create(*msccols_proto);
   treemsc->set_model(msc_store);
-
   treemsc->signal_cursor_changed().connect( sigc::mem_fun(*this, &MainWindow::_on_treemsc_cursor_changed) );
 }
 
