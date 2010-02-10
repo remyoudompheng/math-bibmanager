@@ -130,6 +130,20 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'Z': return "Miscellaneous applications of number theory";
 	default: return "Subcategory not implemented";
 	}
+    case 12: // Field theory and polynomials
+      switch(med)
+	{
+	case 'D': return "Real and complex fields";
+	case 'E': return "General field theory";
+	case 'F': return "Field extensions";
+	case 'G': return "Homological methods (field theory)";
+	case 'H': return "Differential and difference algebra";
+	case 'J': return "Topological fields";
+	case 'K': return "Generalizations of fields";
+	case 'L': return "Connections with logic";
+	case 'Y': return "Computational aspects of field theory and polynomials";
+	default: return "Subcategory not implemented";
+	}
     case 13: // Commutative algebra
       switch(med)
 	{
@@ -170,6 +184,27 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'T': return "Tropical geometry";
 	default: return "Subcategory not implemented";
 	}
+    case 16: // Associative rings and algebras
+      switch (med)
+	{
+	case 'B': return "General and miscellaneous";
+	case 'D': return "Modules, bimodules and ideals";
+	case 'E': return "Homological methods";
+	case 'G': return "Representation theory of rings and algebras";
+	case 'H': return "Algebras and orders";
+	case 'K': return "Division rings and semisimple Artin rings";
+	case 'L': return "Local rings and generalizations";
+	case 'N': return "Radicals and radical properties of rings";
+	case 'P': return "Chain conditions, growth conditions, and other forms of finiteness";
+	case 'R': return "Rings with polynomial identity";
+	case 'S': return "Rings and algebras arising under various constructions";
+	case 'T': return "Hopf algebras, quantum groups and related topics";
+	case 'U': return "Conditions on elements";
+	case 'W': return "Rings and algebras with additional structure";
+	case 'Y': return "Generalizations";
+	case 'Z': return "Computational aspects of associative rings";
+  	default: return "Subcategory not implemented";
+	}
     case 17: // Nonassociative rings and algebras
       switch (med)
 	{
@@ -189,6 +224,36 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'E': return "Abelian categories";
 	case 'F': return "Categories and geometry";
 	case 'G': return "Homological algebra";
+	default: return "Subcategory not implemented";
+	}
+    case 20: // Group theory and generalizations
+      switch (med)
+	{
+	case 'A': return "Foundations";
+	case 'B': return "Permutation groups";
+	case 'C': return "Representation theory of groups";
+	case 'D': return "Abstract finite groups";
+	case 'E': return "Structure and classification of infinite or finite groups";
+	case 'F': return "Special aspects of infinite or finite groups";
+	case 'G': return "Linear algebraic groups and related topics";
+	case 'H': return "Other groups of matrices";
+	case 'J': return "Connections with homological algebra and category theory";
+	case 'K': return "Abelian groups";
+	case 'L': return "Groupoids (i.e. small categories in which all morphisms are isomorphisms)";
+	case 'M': return "Semigroups";
+	case 'N': return "Other generalizations of groups";
+	case 'P': return "Probabilistic methods in group theory";
+	default: return "Subcategory not implemented";
+	}
+    case 22: // Topological groups, Lie groups
+      switch (med)
+	{
+	case 'A': return "Topological and differentiable algebraic systems";
+	case 'B': return "Locally compact abelian groups (LCA groups)";
+	case 'C': return "Compact groups";
+	case 'D': return "Locally compact groups and their algebras";
+	case 'E': return "Lie groups";
+	case 'F': return "Noncompact transformation groups";
 	default: return "Subcategory not implemented";
 	}
     case 32: // Several complex variables
@@ -216,6 +281,16 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'W': return "Differential operators in several variables";
 	default: return "Subcategory not implemented";
 	}
+    case 53: // Differential geometry
+      switch (med)
+	{
+	case 'A': return "Classical differential geometry";
+	case 'B': return "Local differential geometry";
+	case 'C': return "Global differential geometry";
+	case 'D': return "Symplectic geometry, contact geometry";
+	case 'Z': return "Applications to physics";
+	default: return "Subcategory not implemented";
+	}
     case 55: // Algebraic topology
       switch (med)
 	{
@@ -227,6 +302,18 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'S': return "Operations and obstructions";
 	case 'T': return "Spectral sequences";
 	case 'U': return "Applied homological algebra and category theory";
+	default: return "Subcategory not implemented";
+	}
+    case 57: // Manifolds and cell complexes
+      switch (med)
+	{
+	case 'M': return "Low-dimensional topology";
+	case 'N': return "Topological manifolds";
+        case 'P': return "Generalized manifolds";
+        case 'Q': return "PL-topology";
+	case 'R': return "Differential topology";
+        case 'S': return "Topological transformation groups";
+        case 'T': return "Homology and homotopy of topological groups and related structures";
 	default: return "Subcategory not implemented";
 	}
     default: return "Subcategory not implemented";
