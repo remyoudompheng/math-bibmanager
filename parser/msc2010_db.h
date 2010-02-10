@@ -328,6 +328,74 @@ static char* msc2010_print_minor(int maj, char med, int min)
     case 14: // Algebraic geometry
       switch (med)
 	{
+	case 'C': // Cycles and subschemes
+	  switch(min)
+	    {
+	    case  5: return "Parametrization (Chow and Hilbert schemes)";
+	    case 15: return "(Equivariant) Chow groups and rings; motives";
+	    case 17: return "Intersection theory, characteristic classes, intersection multiplicities";
+	    case 20: return "Divisors, linear systems, invertible sheaves";
+	    case 21: return "Pencils, nets, webs";
+	    case 22: return "Picard groups";
+	    case 25: return "Algebraic cycles";
+	    case 30: return "Transcendental methods, Hodge theory";
+	    case 34: return "Torelli problem";
+	    case 35: return "Applications of methods of algebraic K-theory";
+	    case 40: return "Riemann-Roch theorems";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Families and fibrations
+	  switch(min)
+	    {
+	    case  5: return "Structure of families (Picard-Lefschetz, monodromy, etc.)";
+	    case  6: return "Fibrations, degenerations";
+	    case  7: return "Variation of Hodge structures";
+	    case 10: return "Arithmetic ground fields (finite, local, global)";
+	    case 15: return "Formal methods; deformations";
+	    case 20: return "Algebraic moduli problems, moduli of vector bundles";
+	    case 21: return "Applications of vector bundles and moduli spaces in mathematical physics (twistor theory, instantons, quantum field theory)";
+	    case 22: return "Fine and coarse moduli spaces";
+	    case 23: return "Stacks and moduli problems";
+	    case 24: return "Geometric Langlands program: algebro-geometric aspects";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Birational geometry
+	  switch(min)
+	    {
+	    case  5: return "Rational and birational maps";
+	    case  7: return "Birational automorphisms, Cremona group and generalizations";
+	    case  8: return "Rationality questions";
+	    case 15: return "Global theory and resolution of singularities";
+	    case 16: return "McKay correspondence";
+	    case 18: return "Arcs and motivic integration";
+	    case 20: return "Coverings";
+	    case 22: return "Ramification problems";
+	    case 25: return "Embeddings";
+	    case 30: return "Minimal model program (Mori theory, extremal rays)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // (Co)homology theory
+	  switch(min)
+	    {
+	    case  5: return "Sheaves, derived categories of sheaves and related constructions";
+	    case 10: return "Differentials and other special sheaves; D-modules; Bernstein-Sato ideals and polynomials";
+	    case 17: return "Vanishing theorems";
+	    case 18: return "Multiplier ideals";
+	    case 20: return "Étale and other Grothendieck topologies and (co)homologies";
+	    case 22: return "Brauer groups of schemes";
+	    case 25: return "Classical real and complex (co)homology";
+	    case 30: return "p-adic cohomology, crystalline cohomology";
+	    case 35: return "Homotopy theory; fundamental groups";
+	    case 40: return "de Rham cohomology";
+	    case 42: return "Motivic cohomology; motivic homotopy theory";
+	    case 43: return "Other algebro-geometric (co)homologies (e.g., intersection, equivariant, Lawson, Deligne (co)homologies)";
+	    case 45: return "Topological properties";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'J': // Surfaces and higher-dimensional varieties
 	  switch(min)
 	    {
