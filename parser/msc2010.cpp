@@ -35,13 +35,9 @@ MSC2010Entry::MSC2010Entry(int min, char med, int maj)
     med(med),
     maj(maj)
 {
-  stringstream s;
-  s << maj << med << min;
-  str = s.str();
 }
 
 MSC2010Entry::MSC2010Entry(string str)
-  : str(str)
 {
   stringstream s (str.substr(0,2) + " " + str[2] + " " + str.substr(3,2));
   s >> maj >> med >> min;
@@ -49,7 +45,6 @@ MSC2010Entry::MSC2010Entry(string str)
 
 void MSC2010Entry::assign(string str)
 {
-  this->str = str;
   stringstream s (str.substr(0,2) + " " + str[2] + " " + str.substr(3,2));
   s >> maj >> med >> min;
 }
@@ -59,6 +54,15 @@ istream& operator>> (istream &in, MSC2010Entry & ent)
   string token;
   in >> token;
   ent.assign(token);
+}
+
+std::string MSC2010Entry::str() const
+{
+  stringstream s;
+  s.fill('0'); s.width(2); s << right << maj;
+  s.width(1); s << med;
+  s.width(2); s << right << min;
+  return s.str();
 }
 
 std::string MSC2010Entry::print_major() const

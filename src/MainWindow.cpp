@@ -100,7 +100,7 @@ void MainWindow::fill_msc(LibraryMSC source)
   LibraryMSC::iteratorii  it2;
   LibraryMSC::iteratoriii it3;
   MSC2010Entry ploum;
-  stringstream s;
+  stringstream s; s.fill('0');
 
   // Root node
   prow = msc_store->append();
@@ -112,7 +112,7 @@ void MainWindow::fill_msc(LibraryMSC source)
     {
       ploum.maj = it1->first;
       prow = msc_store->append();
-      s.str(""); s << ploum.maj;
+      s.str(""); s.width(2); s << right << ploum.maj;
       (*prow)[msccols_proto->filter] = s.str();
       s << " " << ploum.print_major();
       (*prow)[msccols_proto->caption] = s.str();
@@ -122,7 +122,8 @@ void MainWindow::fill_msc(LibraryMSC source)
 	{
 	  ploum.med = it2->first;
 	  prow2 = msc_store->append(prow->children());
-	  s.str(""); s << ploum.maj << ploum.med;
+	  s.str(""); s.width(2); s << right << ploum.maj;
+	  s.width(1); s << ploum.med;
 	  (*prow2)[msccols_proto->filter] = s.str();
 	  s << " " << ploum.print_med();
 	  (*prow2)[msccols_proto->caption] = s.str();
@@ -132,7 +133,7 @@ void MainWindow::fill_msc(LibraryMSC source)
 	    {
 	      ploum.min = it3->first;
 	      prow3 = msc_store->append(prow2->children());
-	      s.str(""); s << ploum.maj << ploum.med << ploum.min;
+	      s.str(""); s << ploum.str();
 	      (*prow3)[msccols_proto->filter] = s.str();
 	      s << " " << ploum.print_minor();
 	      (*prow3)[msccols_proto->caption] = s.str();
@@ -148,7 +149,7 @@ bool MainWindow::tree_filter_by_msc(Gtk::TreeModel::const_iterator iter)
   list<MSC2010Entry> l = b.msc_list;
   for(list<MSC2010Entry>::iterator i = l.begin(); i != l.end(); i++)
     {
-      if(!i->str.compare(0, msc_filter.length(), msc_filter))
+      if(!i->str().compare(0, msc_filter.length(), msc_filter))
 	return true;
     }
   return false;
