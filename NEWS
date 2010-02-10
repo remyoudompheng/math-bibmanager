@@ -1,6 +1,7 @@
 version 0.1.1:
  + support more MSC categories
- + make article list sortable
+ + fix: make article list sortable
+ + fix: processing of one-digit MSC tags
 
 version 0.1:
  + support for exploring a hierarchy of files
