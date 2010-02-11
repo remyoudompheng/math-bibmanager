@@ -28,7 +28,7 @@
  * Additional terms may apply.
  */
 
-static char* msc2010_print_major(int maj)
+static const char* msc2010_print_major(const int maj)
 {
   switch(maj)
     {
@@ -100,7 +100,7 @@ static char* msc2010_print_major(int maj)
     }
 }
 
-static char* msc2010_print_medium(int maj, char med)
+static const char* msc2010_print_medium(const int maj, const char med)
 {
   switch(maj)
     {
@@ -161,6 +161,7 @@ static char* msc2010_print_medium(int maj, char med)
 	}
     case 11: // Number theory
       switch (med)
+	{
 	case 'A': return "Elementary number theory";
 	case 'B': return "Sequences and sets";
 	case 'C': return "Polynomials and matrices";
@@ -417,7 +418,7 @@ static char* msc2010_print_medium(int maj, char med)
 
 }
 
-static char* msc2010_print_minor(int maj, char med, int min)
+static const char* msc2010_print_minor(const int maj, const char med, const int min)
 {
   switch(maj)
     {
