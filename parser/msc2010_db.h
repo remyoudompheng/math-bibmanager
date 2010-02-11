@@ -1,4 +1,3 @@
-
 /*
  * math-bibmanager
  * A Bibliography manager for mathematicians
@@ -105,9 +104,63 @@ static char* msc2010_print_medium(int maj, char med)
 {
   switch(maj)
     {
-    case 11: // Number theory
+    case 0: // General
+      switch(med)
+	{
+	case 'A': return "General and miscellaneous specific topics";
+	case 'B': return "Conference proceedings and collections of papers";
+	default: return "Subcategory not implemented";
+	}
+    case 1: // History and biography
+      switch(med)
+	{
+	case 'A': return "History of mathematics and mathematicians";
+	default: return "Subcategory not implemented";
+	}
+    case 3: // Mathematical logic and foundations
+      switch(med)
+	{
+	case 'A': return "Philosophical aspects of logic and foundations";
+	case 'B': return "General logic";
+	case 'C': return "Model theory";
+	case 'D': return "Computability and recursion theory";
+	case 'E': return "Set theory";
+	case 'F': return "Proof theory and constructive mathematics";
+	case 'G': return "Algebraic logic";
+	case 'H': return "Nonstandard models";
+	default: return "Subcategory not implemented";
+	}
+    case 5: // Combinatorics
+      switch(med)
+	{
+	case 'A': return "Enumerative combinatorics";
+	case 'B': return "Designs and configurations";
+	case 'C': return "Graph theory";
+	case 'D': return "Extremal combinatorics";
+	case 'E': return "Algebraic combinatorics";
+	default: return "Subcategory not implemented";
+	}
+    case 6: // Order, lattices, ordered algebraic structures
+      switch(med)
+	{
+	case 'A': return "Ordered sets";
+	case 'B': return "Lattices";
+	case 'C': return "Modular lattices, complemented lattices";
+	case 'D': return "Distributive lattices";
+	case 'E': return "Boolean algebras (Boolean rings)";
+	case 'F': return "Ordered structures";
+	default: return "Subcategory not implemented";
+	}
+    case 8: // General algebraic systems
       switch (med)
 	{
+	case 'A': return "Algebraic structures";
+	case 'B': return "Varieties";
+	case 'C': return "Other classes of algebras";
+	default: return "Subcategory not implemented";
+	}
+    case 11: // Number theory
+      switch (med)
 	case 'A': return "Elementary number theory";
 	case 'B': return "Sequences and sets";
 	case 'C': return "Polynomials and matrices";
@@ -203,7 +256,7 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'W': return "Rings and algebras with additional structure";
 	case 'Y': return "Generalizations";
 	case 'Z': return "Computational aspects of associative rings";
-  	default: return "Subcategory not implemented";
+	default: return "Subcategory not implemented";
 	}
     case 17: // Nonassociative rings and algebras
       switch (med)
@@ -309,11 +362,11 @@ static char* msc2010_print_medium(int maj, char med)
 	{
 	case 'M': return "Low-dimensional topology";
 	case 'N': return "Topological manifolds";
-        case 'P': return "Generalized manifolds";
-        case 'Q': return "PL-topology";
+	case 'P': return "Generalized manifolds";
+	case 'Q': return "PL-topology";
 	case 'R': return "Differential topology";
-        case 'S': return "Topological transformation groups";
-        case 'T': return "Homology and homotopy of topological groups and related structures";
+	case 'S': return "Topological transformation groups";
+	case 'T': return "Homology and homotopy of topological groups and related structures";
 	default: return "Subcategory not implemented";
 	}
     default: return "Subcategory not implemented";
