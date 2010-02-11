@@ -540,6 +540,55 @@ static const char* msc2010_print_medium(const int maj, const char med)
 	case 'R': return "Random integral equations";
 	default: return "Subcategory not implemented";
 	}
+    case 46: // Functional analysis
+      switch (med)
+	{
+	case 'A': return "Topological linear spaces and related structures";
+	case 'B': return "Normed linear spaces and Banach spaces; Banach lattices";
+	case 'C': return "Inner product spaces and their generalizations, Hilbert spaces";
+	case 'E': return "Linear function spaces and their duals";
+	case 'F': return "Distributions, generalized functions, distribution spaces";
+	case 'G': return "Measures, integration, derivative, holomorphy (all involving infinite-dimensional spaces)";
+	case 'H': return "Topological algebras, normed rings and algebras, Banach algebras";
+	case 'J': return "Commutative Banach algebras and commutative topological algebras";
+	case 'K': return "Topological (rings and) algebras with an involution";
+	case 'L': return "Selfadjoint operator algebras (C*-algebras, von Neumann (W*-) algebras, etc.)";
+	case 'M': return "Methods of category theory in functional analysis";
+	case 'N': return "Miscellaneous applications of functional analysis";
+	case 'S': return "Other (nonclassical) types of functional analysis";
+	case 'T': return "Nonlinear functional analysis";
+	default: return "Subcategory not implemented";
+	}
+    case 47: // Operator theory
+      switch (med)
+	{
+	case 'A': return "General theory of linear operators";
+	case 'B': return "Special classes of linear operators";
+	case 'C': return "Individual linear operators as elements of algebraic systems";
+	case 'D': return "Groups and semigroups of linear operators, their generalizations and applications";
+	case 'E': return "Ordinary differential operators";
+	case 'F': return "Partial differential operators";
+	case 'G': return "Integral, integro-differential, and pseudodifferential operators";
+	case 'H': return "Nonlinear operators and their properties";
+	case 'J': return "Equations and inequalities involving nonlinear operators";
+	case 'L': return "Linear spaces and algebras of operators";
+	case 'N': return "Miscellaneous applications of operator theory";
+	case 'S': return "Other (nonclassical) types of operator theory";
+	default: return "Subcategory not implemented";
+	}
+    case 49: // Calculus of variations and optimal control; optimization
+      switch (med)
+	{
+	case 'J': return "Existence theories";
+	case 'K': return "Optimality conditions";
+	case 'L': return "Hamilton-Jacobi theories, including dynamic programming";
+	case 'M': return "Numerical methods";
+	case 'N': return "Miscellaneous topics";
+	case 'Q': return "Manifolds";
+	case 'R': return "Variational methods for eigenvalues of operators";
+	case 'S': return "Variational principles of physics";
+	default: return "Subcategory not implemented";
+	}
     case 51: // Geometry
       switch (med)
 	{
@@ -630,9 +679,207 @@ static const char* msc2010_print_medium(const int maj, const char med)
 	case 'Z': return "Applications to physics";
 	default: return "Subcategory not implemented";
 	}
+    case 60: // Probability theory and stochastic processes
+      switch (med)
+	{
+	case 'A': return "Foundations of probability theory";
+	case 'B': return "Probability theory on algebraic and topological structures";
+	case 'C': return "Combinatorial probability";
+	case 'D': return "Geometric probability and stochastic geometry";
+	case 'E': return "Distribution theory";
+	case 'F': return "Limit theorems";
+	case 'G': return "Stochastic processes";
+	case 'H': return "Stochastic analysis";
+	case 'J': return "Markov processes";
+	case 'K': return "Special processes";
+	default: return "Subcategory not implemented";
+	}
+    case 62: // Statistics
+      switch (med)
+	{
+	case 'A': return "Foundational and philosophical topics";
+	case 'B': return "Sufficiency and information";
+	case 'C': return "Decision theory";
+	case 'D': return "Sampling theory, sample surveys";
+	case 'E': return "Distribution theory";
+	case 'F': return "Parametric inference";
+	case 'G': return "Nonparametric inference";
+	case 'H': return "Multivariate analysis";
+	case 'J': return "Linear inference, regression";
+	case 'K': return "Design of experiments";
+	case 'L': return "Sequential methods";
+	case 'M': return "Inference from stochastic processes";
+	case 'N': return "Survival analysis and censored data";
+	case 'P': return "Applications";
+	case 'Q': return "Statistical tables";
+	default: return "Subcategory not implemented";
+	}
+    case 65: // Numerical analysis
+      switch (med)
+	{
+	case 'A': return "Tables";
+	case 'B': return "Acceleration of convergence";
+	case 'C': return "Probabilistic methods, simulation and stochastic differential equations";
+	case 'D': return "Numerical approximation and computational geometry (primarily algorithms)";
+	case 'E': return "Numerical methods in complex analysis (potential theory, etc.)";
+	case 'F': return "Numerical linear algebra";
+	case 'G': return "Error analysis and interval analysis";
+	case 'H': return "Nonlinear algebraic or transcendental equations";
+	case 'J': return "Numerical analysis in abstract spaces";
+	case 'K': return "Mathematical programming, optimization and variational techniques";
+	case 'L': return "Ordinary differential equations";
+	case 'M': return "Partial differential equations, initial value and time-dependent initial-boundary value problems";
+	case 'N': return "Partial differential equations, boundary value problems";
+	case 'P': return "Numerical problems in dynamical systems";
+	case 'Q': return "Difference and functional equations, recurrence relations";
+	case 'R': return "Integral equations, integral transforms";
+	case 'S': return "Graphical methods";
+	case 'T': return "Numerical methods in Fourier analysis";
+	case 'Y': return "Computer aspects of numerical algorithms";
+	case 'Z': return "Applications to physics";
+	default: return "Subcategory not implemented";
+	}
+    case 68: // Computer science
+      switch (med)
+	{
+	case 'M': return "Computer system organization";
+	case 'N': return "Software";
+	case 'P': return "Theory of data";
+	case 'Q': return "Theory of computing";
+	case 'R': return "Discrete mathematics in relation to computer science";
+	case 'T': return "Artificial intelligence";
+	case 'U': return "Computing methodologies and applications";
+	case 'W': return "Algorithms";
+	default: return "Subcategory not implemented";
+	}
+    case 70: // Mechanics of particles and systems
+      switch (med)
+	{
+	case 'A': return "Axiomatics, foundations";
+	case 'B': return "Kinematics";
+	case 'C': return "Statics";
+	case 'E': return "Dynamics of a rigid body and of multibody systems";
+	case 'F': return "Dynamics of a system of particles, including celestial mechanics";
+	case 'G': return "General models, approaches, and methods";
+	case 'H': return "Hamiltonian and Lagrangian mechanics";
+	case 'J': return "Linear vibration theory";
+	case 'K': return "Nonlinear dynamics";
+	case 'L': return "Random vibrations";
+	case 'M': return "Orbital mechanics";
+	case 'P': return "Variable mass, rockets";
+	case 'Q': return "Control of mechanical systems";
+	case 'S': return "Classical field theories";
+	default: return "Subcategory not implemented";
+	}
+    case 74: // Mechanics of deformable solids
+      switch (med)
+	{
+	case 'A': return "Generalities, axiomatics, foundations of continuum mechanics of solids";
+	case 'B': return "Elastic materials";
+	case 'C': return "Plastic materials, materials of stress-rate and internal-variable type";
+	case 'D': return "Materials of strain-rate type and history type, other materials with memory (including elastic materials with viscous damping, various viscoelastic materials)";
+	case 'E': return "Material properties given special treatment";
+	case 'F': return "Coupling of solid mechanics with other effects";
+	case 'G': return "Equilibrium (steady-state) problems";
+	case 'H': return "Dynamical problems";
+	case 'J': return "Waves";
+	case 'K': return "Thin bodies, structures";
+	case 'L': return "Special subfields of solid mechanics";
+	case 'M': return "Special kinds of problems";
+	case 'N': return "Phase transformations in solids";
+	case 'P': return "Optimization";
+	case 'Q': return "Homogenization, determination of effective properties";
+	case 'R': return "Fracture and damage";
+	case 'S': return "Numerical methods";
+	default: return "Subcategory not implemented";
+	}
+    case 76: // Fluid mechanics
+      switch (med)
+	{
+	case 'A': return "Foundations, constitutive equations, rheology";
+	case 'B': return "Incompressible inviscid fluids";
+	case 'D': return "Incompressible viscous fluids";
+	case 'E': return "Hydrodynamic stability";
+	case 'F': return "Turbulence";
+	case 'G': return "General aerodynamics and subsonic flows";
+	case 'H': return "Transonic flows";
+	case 'J': return "Supersonic flows";
+	case 'K': return "Hypersonic flows";
+	case 'L': return "Shock waves and blast waves";
+	case 'M': return "Basic methods in fluid mechanics";
+	case 'N': return "Compressible fluids and gas dynamics, general";
+	case 'P': return "Rarefied gas flows, Boltzmann equation";
+	case 'Q': return "Hydro- and aero-acoustics";
+	case 'R': return "Diffusion and convection";
+	case 'S': return "Flows in porous media; filtration; seepage";
+	case 'T': return "Two-phase and multiphase flows";
+	case 'U': return "Rotating fluids";
+	case 'V': return "Reaction effects in flows";
+	case 'W': return "Magnetohydrodynamics and electrohydrodynamics";
+	case 'X': return "Ionized gas flow in electromagnetic fields; plasmic flow";
+	case 'Y': return "Quantum hydrodynamics and relativistic hydrodynamics";
+	case 'Z': return "Biological fluid mechanics";
+	default: return "Subcategory not implemented";
+	}
+    case 78: // Optics, electromagnetic theory
+      switch (med)
+	{
+	case 'A': return "General";
+	case 'M': return "Basic methods";
+	default: return "Subcategory not implemented";
+	}
+    case 80: // Classical thermodynamics, heat transfer
+      switch (med)
+	{
+	case 'A': return "Thermodynamics and heat transfer";
+	case 'M': return "Basic methods";
+	default: return "Subcategory not implemented";
+	}
+    case 81: // Quantum theory
+      switch (med)
+	{
+	case 'P': return "Axiomatics, foundations, philosophy";
+	case 'Q': return "General mathematical topics and methods in quantum theory";
+	case 'R': return "Groups and algebras in quantum theory";
+	case 'S': return "General quantum mechanics and problems of quantization";
+	case 'T': return "Quantum field theory; related classical field theories";
+	case 'U': return "Scattering theory";
+	case 'V': return "Applications to specific physical systems";
+	default: return "Subcategory not implemented";
+	}
+    case 82: // Statistical mechanics, structure of matter
+      switch (med)
+	{
+	case 'B': return "Equilibrium statistical mechanics";
+	case 'C': return "Time-dependent statistical mechanics (dynamic and nonequilibrium)";
+	case 'D': return "Applications to specific types of physical systems";
+	default: return "Subcategory not implemented";
+	}
+    case 83: // Relativity and gravitational theory
+      switch (med)
+	{
+	case 'A': return "Special relativity";
+	case 'B': return "Observational and experimental questions";
+	case 'C': return "General relativity";
+	case 'D': return "Relativistic gravitational theories other than Einstein's, including asymmetric field theories";
+	case 'E': return "Unified, higher-dimensional and super field theories";
+	case 'F': return "Cosmology";
+	default: return "Subcategory not implemented";
+	}
+    case 85: // Astronomy and astrophysics
+      switch (med)
+	{
+	case 'A': return "Astronomy and astrophysics";
+	default: return "Subcategory not implemented";
+	}
+    case 86: // Geophysics
+      switch (med)
+	{
+	case 'A': return "Geophysics";
+	default: return "Subcategory not implemented";
+	}
     default: return "Subcategory not implemented";
     }
-
 }
 
 static const char* msc2010_print_minor(const int maj, const char med, const int min)
