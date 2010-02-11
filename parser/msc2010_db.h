@@ -396,6 +396,30 @@ static char* msc2010_print_minor(int maj, char med, int min)
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
+	case 'H': // Curves
+	  switch(min)
+	    {
+	    case  5: return "Algebraic functions; function fields";
+	    case 10: return "Families, moduli (algebraic)";
+	    case 15: return "Families, moduli (analytic)";
+	    case 20: return "Singularities, local rings";
+	    case 25: return "Arithmetic ground fields";
+	    case 30: return "Coverings, fundamental group";
+	    case 37: return "Automorphisms";
+	    case 40: return "Jacobians, Prym varieties";
+	    case 42: return "Theta functions; Schottky problem";
+	    case 45: return "Special curves and curves of low genus";
+	    case 50: return "Plane and space curves";
+	    case 51: return "Special divisors (gonality, Brill-Noether theory)";
+	    case 52: return "Elliptic curves";
+	    case 55: return "Riemann surfaces; Weierstrass points; gap sequences";
+	    case 57: return "Dessins d'enfants theory";
+	    case 60: return "Vector bundles on curves and their moduli";
+	    case 70: return "Relationships with integrable systems";
+	    case 81: return "Relationships with physics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'J': // Surfaces and higher-dimensional varieties
 	  switch(min)
 	    {
@@ -419,6 +443,21 @@ static char* msc2010_print_minor(int maj, char med, int min)
 	    case 70: return "Hypersurfaces";
 	    case 80: return "Topology of surfaces (Donaldson polynomials, Seiberg-Witten invariants)";
 	    case 81: return "Relationships with physics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'K': // Abelian varieties and schemes
+	  switch(min)
+	    {
+	    case  2: return "Isogeny";
+	    case  5: return "Algebraic theory";
+	    case 10: return "Algebraic moduli, classification";
+	    case 12: return "Subvarieties";
+	    case 15: return "Arithmetic ground fields";
+	    case 20: return "Analytic theory; abelian integrals and differentials";
+	    case 22: return "Complex multiplication";
+	    case 25: return "Theta functions";
+	    case 30: return "Picard schemes, higher Jacobians";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
