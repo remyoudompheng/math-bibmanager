@@ -237,6 +237,13 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'T': return "Tropical geometry";
 	default: return "Subcategory not implemented";
 	}
+    case 15: // Linear and multilinear algebra; matrix theory
+      switch (med)
+	{
+	case 'A': return "Basic linear algebra";
+	case 'B': return "Special matrices";
+	default: return "Subcategory not implemented";
+	}
     case 16: // Associative rings and algebras
       switch (med)
 	{
@@ -279,6 +286,22 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'G': return "Homological algebra";
 	default: return "Subcategory not implemented";
 	}
+    case 19: // K-theory
+      switch (med)
+	{
+	case 'A': return "Grothendieck groups and K0";
+	case 'B': return "Whitehead groups and K1";
+	case 'C': return "Steinberg groups and K2";
+	case 'D': return "Higher algebraic K-theory";
+	case 'E': return "K-theory in geometry";
+	case 'F': return "K-theory in number theory";
+	case 'G': return "K-theory of forms";
+	case 'J': return "Obstructions from topology";
+	case 'K': return "K-theory and operator algebras";
+	case 'L': return "Topological K-theory";
+	case 'M': return "Miscellaneous applications of K-theory";
+	default: return "Subcategory not implemented";
+	}
     case 20: // Group theory and generalizations
       switch (med)
 	{
@@ -307,6 +330,26 @@ static char* msc2010_print_medium(int maj, char med)
 	case 'D': return "Locally compact groups and their algebras";
 	case 'E': return "Lie groups";
 	case 'F': return "Noncompact transformation groups";
+	default: return "Subcategory not implemented";
+	}
+    case 26: // Real functions
+      switch (med)
+	{
+	case 'A': return "Functions of one variable";
+	case 'B': return "Functions of several variables";
+	case 'C': return "Polynomials, rational functions";
+	case 'D': return "Inequalities";
+	case 'E': return "Miscellaneous topics";
+	default: return "Subcategory not implemented";
+	}
+    case 28: // Measure and integration
+      switch (med)
+	{
+	case 'A': return "Classical measure theory";
+	case 'B': return "Set functions, measures and integrals with values in abstract spaces";
+	case 'C': return "Set functions and measures on spaces with additional structure";
+	case 'D': return "Measure-theoretic ergodic theory";
+	case 'E': return "Miscellaneous topics in measure theory";
 	default: return "Subcategory not implemented";
 	}
     case 32: // Several complex variables
