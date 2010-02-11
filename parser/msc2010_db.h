@@ -479,6 +479,94 @@ static const char* msc2010_print_medium(const int maj, const char med)
 	case 'B': return "Functional equations and inequalities";
 	default: return "Subcategory not implemented";
 	}
+    case 40: // Sequences, series, summability
+      switch (med)
+	{
+	case 'A': return "Convergence and divergence of infinite limiting processes";
+	case 'B': return "Multiple sequences and series";
+	case 'C': return "General summability methods";
+	case 'D': return "Direct theorems on summability";
+	case 'E': return "Inversion theorems";
+	case 'F': return "Absolute and strong summability";
+	case 'G': return "Special methods of summability";
+	case 'H': return "Functional analytic methods in summability";
+	case 'J': return "Summability in abstract structures";
+	default: return "Subcategory not implemented";
+	}
+    case 41: // Approximations and expansions
+      switch (med)
+	{
+	case 'A': return "Approximations and expansions";
+	default: return "Subcategory not implemented";
+	}
+    case 42: // Harmonic analysis on Euclidean spaces
+      switch (med)
+	{
+	case 'A': return "Harmonic analysis in one variable";
+	case 'B': return "Harmonic analysis in several variables";
+	case 'C': return "Nontrigonometric harmonic analysis";
+	default: return "Subcategory not implemented";
+	}
+    case 43: // Abstract harmonic analysis
+      switch (med)
+	{
+	case 'A': return "Abstract harmonic analysis";
+	default: return "Subcategory not implemented";
+	}
+    case 44: // Integral transforms, operational calculus
+      switch (med)
+	{
+	case 'A': return "Integral transforms, operational calculus";
+	default: return "Subcategory not implemented";
+	}
+    case 45: // Integral equations
+      switch (med)
+	{
+	case 'A': return "Linear integral equations";
+	case 'B': return "Fredholm integral equations";
+	case 'C': return "Eigenvalue problems";
+	case 'D': return "Volterra integral equations";
+	case 'E': return "Singular integral equations";
+	case 'F': return "Systems of linear integral equations";
+	case 'G': return "Nonlinear integral equations";
+	case 'H': return "Miscellaneous special kernels";
+	case 'J': return "Integro-ordinary differential equations";
+	case 'K': return "Integro-partial differential equations";
+	case 'L': return "Theoretical approximation of solutions";
+	case 'M': return "Qualitative behavior";
+	case 'N': return "Abstract integral equations, integral equations in abstract spaces";
+	case 'P': return "Integral operators";
+	case 'Q': return "Inverse problems";
+	case 'R': return "Random integral equations";
+	default: return "Subcategory not implemented";
+	}
+    case 51: // Geometry
+      switch (med)
+	{
+	case 'A': return "Linear incidence geometry";
+	case 'B': return "Nonlinear incidence geometry";
+	case 'C': return "Ring geometry (Hjelmslev, Barbilian, etc.)";
+	case 'D': return "Geometric closure systems";
+	case 'E': return "Finite geometry and special incidence structures";
+	case 'F': return "Metric geometry";
+	case 'G': return "Ordered geometries (ordered incidence structures, etc.)";
+	case 'H': return "Topological geometry";
+	case 'J': return "Incidence groups";
+	case 'K': return "Distance geometry";
+	case 'L': return "Geometric order structures";
+	case 'M': return "Real and complex geometry";
+	case 'N': return "Analytic and descriptive geometry";
+	case 'P': return "Geometry and physics";
+	default: return "Subcategory not implemented";
+	}
+    case 52: // Convex and discrete geometry
+      switch (med)
+	{
+	case 'A': return "General convexity";
+	case 'B': return "Polytopes and polyhedra";
+	case 'C': return "Discrete geometry";
+	default: return "Subcategory not implemented";
+	}
     case 53: // Differential geometry
       switch (med)
 	{
@@ -487,6 +575,20 @@ static const char* msc2010_print_medium(const int maj, const char med)
 	case 'C': return "Global differential geometry";
 	case 'D': return "Symplectic geometry, contact geometry";
 	case 'Z': return "Applications to physics";
+	default: return "Subcategory not implemented";
+	}
+    case 54: // General topology
+      switch (med)
+	{
+	case 'A': return "Generalities";
+	case 'B': return "Basic constructions";
+	case 'C': return "Maps and general types of spaces defined by maps";
+	case 'D': return "Fairly general properties";
+	case 'E': return "Spaces with richer structures";
+	case 'F': return "Special properties";
+	case 'G': return "Peculiar spaces";
+	case 'H': return "Connections with other structures, applications";
+	case 'J': return "Nonstandard topology";
 	default: return "Subcategory not implemented";
 	}
     case 55: // Algebraic topology
@@ -512,6 +614,20 @@ static const char* msc2010_print_medium(const int maj, const char med)
 	case 'R': return "Differential topology";
 	case 'S': return "Topological transformation groups";
 	case 'T': return "Homology and homotopy of topological groups and related structures";
+	default: return "Subcategory not implemented";
+	}
+    case 58: // Global analysis, analysis on manifolds
+      switch (med)
+	{
+	case 'A': return "General theory of differentiable manifolds";
+	case 'B': return "Infinite-dimensional manifolds";
+	case 'C': return "Calculus on manifolds; nonlinear operators";
+	case 'D': return "Spaces and manifolds of mappings (including nonlinear versions of 46Exx)";
+	case 'E': return "Variational problems in infinite-dimensional spaces";
+	case 'H': return "Pseudogroups, differentiable groupoids and general structures on manifolds";
+	case 'J': return "Partial differential equations on manifolds; differential operators";
+	case 'K': return "Theory of singularities and catastrophe theory";
+	case 'Z': return "Applications to physics";
 	default: return "Subcategory not implemented";
 	}
     default: return "Subcategory not implemented";
