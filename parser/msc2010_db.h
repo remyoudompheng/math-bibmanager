@@ -353,6 +353,32 @@ static const char* msc2010_print_medium(const int maj, const char med)
 	case 'E': return "Miscellaneous topics in measure theory";
 	default: return "Subcategory not implemented";
 	}
+    case 30: // Functions of a complex variable
+      switch (med)
+	{
+	case 'A': return "General properties";
+	case 'B': return "Series expansions";
+	case 'C': return "Geometric function theory";
+	case 'D': return "Entire and meromorphic functions, and related topics";
+	case 'E': return "Miscellaneous topics of analysis in the complex domain";
+	case 'F': return "Riemann surfaces";
+	case 'G': return "Generalized function theory";
+	case 'H': return "Spaces and algebras of analytic functions";
+	case 'J': return "Function theory on the disc";
+	case 'K': return "Universal holomorphic functions";
+	case 'L': return "Analysis on metric spaces";
+	default: return "Subcategory not implemented";
+	}
+    case 31: // Potential theory
+      switch (med)
+	{
+	case 'A': return "Two-dimensional theory";
+	case 'B': return "Higher-dimensional theory";
+	case 'C': return "Other generalizations";
+	case 'D': return "Axiomatic potential theory";
+	case 'E': return "Potential theory on metric spaces";
+	default: return "Subcategory not implemented";
+	}
     case 32: // Several complex variables
       switch (med)
 	{
@@ -376,6 +402,81 @@ static const char* msc2010_print_medium(const int maj, const char med)
 	case 'U': return "Pluripotential theory";
 	case 'V': return "CR manifolds";
 	case 'W': return "Differential operators in several variables";
+	default: return "Subcategory not implemented";
+	}
+    case 33: // Special functions
+      switch (med)
+	{
+	case 'B': return "Elementary classical functions";
+	case 'C': return "Hypergeometric functions";
+	case 'D': return "Basic hypergeometric functions";
+	case 'E': return "Other special functions";
+	case 'F': return "Computational aspects";
+	default: return "Subcategory not implemented";
+	}
+    case 34: // Ordinary differential equations
+      switch (med)
+	{
+	case 'A': return "General theory";
+	case 'B': return "Boundary value problems";
+	case 'C': return "Qualitative theory";
+	case 'D': return "Stability theory";
+	case 'E': return "Asymptotic theory";
+	case 'F': return "Equations and systems with randomness";
+	case 'G': return "Differential equations in abstract spaces";
+	case 'H': return "Control problems";
+	case 'K': return "Functional-differential and differential-difference equations";
+	case 'L': return "Ordinary differential operators";
+	case 'M': return "Differential equations in the complex domain";
+	case 'N': return "Dynamic equations on time scales or measure chains";
+	default: return "Subcategory not implemented";
+	}
+    case 35: // Partial differential equations
+      switch (med)
+	{
+	case 'A': return "General topics";
+	case 'B': return "Qualitative properties of solutions";
+	case 'C': return "Representations of solutions";
+	case 'D': return "Generalized solutions";
+	case 'E': return "Equations and systems with constant coefficients";
+	case 'F': return "General first-order equations and systems";
+	case 'G': return "General higher-order equations and systems";
+	case 'H': return "Close-to-elliptic equations and systems";
+	case 'J': return "Elliptic equations and systems";
+	case 'K': return "Parabolic equations and systems";
+	case 'L': return "Hyperbolic equations and systems";
+	case 'M': return "Equations and systems of special type (mixed, composite, etc.)";
+	case 'N': return "Overdetermined systems";
+	case 'P': return "Spectral theory and eigenvalue problems";
+	case 'Q': return "Equations of mathematical physics and other areas of application";
+	case 'R': return "Miscellaneous topics";
+	case 'S': return "Pseudodifferential operators and other generalizations of partial differential operators";
+	default: return "Subcategory not implemented";
+	}
+    case 37: // Dynamical systems and ergodic theory
+      switch (med)
+	{
+	case 'A': return "Ergodic theory";
+	case 'B': return "Topological dynamics";
+	case 'C': return "Smooth dynamical systems: general theory";
+	case 'D': return "Dynamical systems with hyperbolic behavior";
+	case 'E': return "Low-dimensional dynamical systems";
+	case 'F': return "Complex dynamical systems";
+	case 'G': return "Local and nonlocal bifurcation theory";
+	case 'H': return "Random dynamical systems";
+	case 'J': return "Finite-dimensional Hamiltonian, Lagrangian, contact, and nonholonomic systems";
+	case 'K': return "Infinite-dimensional Hamiltonian systems";
+	case 'L': return "Infinite-dimensional dissipative dynamical systems";
+	case 'M': return "Approximation methods and numerical treatment of dynamical systems";
+	case 'N': return "Applications";
+	case 'P': return "Arithmetic and non-Archimedean dynamical systems";
+	default: return "Subcategory not implemented";
+	}
+    case 39: // Difference and functional equations
+      switch (med)
+	{
+	case 'A': return "Difference equations";
+	case 'B': return "Functional equations and inequalities";
 	default: return "Subcategory not implemented";
 	}
     case 53: // Differential geometry
