@@ -878,6 +878,73 @@ static const char* msc2010_print_medium(const int maj, const char med)
 	case 'A': return "Geophysics";
 	default: return "Subcategory not implemented";
 	}
+    case 90: // Operations research, mathematical programming
+      switch (med)
+	{
+	case 'A': return "Game theory";
+	case 'B': return "Mathematical economics";
+	case 'C': return "Social and behavioral sciences: general topics";
+	case 'D': return "Mathematical sociology (including anthropology)";
+	case 'E': return "Mathematical psychology";
+	case 'F': return "Other social and behavioral sciences (mathematical treatment)";
+	case 'G': return "Mathematical finance";
+	default: return "Subcategory not implemented";
+	}
+    case 91: // Game theory, economics, social and behavioral sciences
+      switch (med)
+	{
+	default: return "Subcategory not implemented";
+	}
+    case 92: // Biology and other natural sciences
+      switch (med)
+	{
+	case 'B': return "Mathematical biology in general";
+	case 'C': return "Physiological, cellular and medical topics";
+	case 'D': return "Genetics and population dynamics";
+	case 'E': return "Chemistry";
+	case 'F': return "Other natural sciences";
+	default: return "Subcategory not implemented";
+	}
+    case 93: // Systems theory; control
+      switch (med)
+	{
+	case 'A': return "General";
+	case 'B': return "Controllability, observability, and system structure";
+	case 'C': return "Control systems";
+	case 'D': return "Stability";
+	case 'E': return "Stochastic systems and control";
+	default: return "Subcategory not implemented";
+	}
+    case 94: // Information and communication, circuits
+      switch (med)
+	{
+	case 'A': return "Communication, information";
+	case 'B': return "Theory of error-correcting codes and error-detecting codes";
+	case 'C': return "Circuits, networks";
+	case 'D': return "Fuzzy sets and logic (in connection with questions of Section 94)";
+	default: return "Subcategory not implemented";
+	}
+    case 97: // Mathematics education
+      switch (med)
+	{
+	case 'A': return "General, mathematics and education";
+	case 'B': return "Educational policy and systems";
+	case 'C': return "Psychology of mathematics education, research in mathematics education";
+	case 'D': return "Education and instruction in mathematics";
+	case 'E': return "Foundations of mathematics";
+	case 'F': return "Arithmetic, number theory";
+	case 'G': return "Geometry";
+	case 'H': return "Algebra";
+	case 'I': return "Analysis";
+	case 'K': return "Combinatorics, graph theory, probability theory, statistics";
+	case 'M': return "Mathematical modeling, applications of mathematics";
+	case 'N': return "Numerical mathematics";
+	case 'P': return "Computer science";
+	case 'Q': return "Computer science education";
+	case 'R': return "Computer science applications";
+	case 'U': return "Educational material and media, educational technology";
+	default: return "Subcategory not implemented";
+	}
     default: return "Subcategory not implemented";
     }
 }
