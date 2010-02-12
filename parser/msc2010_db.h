@@ -953,6 +953,135 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 {
   switch(maj)
     {
+    case  0: // General
+      switch (med)
+	{
+	case 'A': // General and miscellaneous specific topics
+	  switch(min)
+	    {
+	    case  5: return "General mathematics";
+	    case  6: return "Mathematics for nonmathematicians (engineering, social sciences, etc.)";
+	    case  7: return "Problem books";
+	    case  8: return "Recreational mathematics";
+	    case  9: return "Popularization of mathematics";
+	    case 15: return "Bibliographies";
+	    case 17: return "External book reviews";
+	    case 20: return "Dictionaries and other general reference works";
+	    case 22: return "Formularies";
+	    case 30: return "Philosophy of mathematics";
+	    case 35: return "Methodology of mathematics, didactics";
+	    case 65: return "Mathematics and music";
+	    case 66: return "Mathematics and visual arts, visualization";
+	    case 67: return "Mathematics and architecture";
+	    case 69: return "General applied mathematics";
+	    case 71: return "Theory of mathematical modeling";
+	    case 72: return "General methods of simulation";
+	    case 73: return "Dimensional analysis";
+	    case 79: return "Physics";
+	    case 99: return "Miscellaneous topics";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Conference proceedings and collections of papers
+	  switch(min)
+	    {
+	    case  5: return "Collections of abstracts of lectures";
+	    case 10: return "Collections of articles of general interest";
+	    case 15: return "Collections of articles of miscellaneous specific content";
+	    case 20: return "Proceedings of conferences of general interest";
+	    case 25: return "Proceedings of conferences of miscellaneous specific interest";
+	    case 30: return "Festschriften";
+	    case 50: return "Volumes of selected translations";
+	    case 55: return "Miscellaneous volumes of translations";
+	    case 60: return "Collections of reprinted articles";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case  1: // History and biography
+      switch (med)
+	{
+	case 'A': // History of mathematics and mathematicians
+	  switch(min)
+	    {
+	    case  5: return "General histories, source books";
+	    case  7: return "Ethnomathematics, general";
+	    case 10: return "Paleolithic, Neolithic";
+	    case 12: return "Indigenous cultures of the Americas";
+	    case 13: return "Other indigenous cultures (non-European)";
+	    case 15: return "Indigenous European cultures (pre-Greek, etc.)";
+	    case 16: return "Egyptian";
+	    case 17: return "Babylonian";
+	    case 20: return "Greek, Roman";
+	    case 25: return "China";
+	    case 27: return "Japan";
+	    case 29: return "Southeast Asia";
+	    case 30: return "Islam (Medieval)";
+	    case 32: return "India";
+	    case 35: return "Medieval";
+	    case 40: return "15th and 16th centuries, Renaissance";
+	    case 45: return "17th century";
+	    case 50: return "18th century";
+	    case 55: return "19th century";
+	    case 60: return "20th century";
+	    case 61: return "Twenty-first century";
+	    case 65: return "Contemporary";
+	    case 67: return "Future prospectives";
+	    case 70: return "Biographies, obituaries, personalia, bibliographies";
+	    case 72: return "Schools of mathematics";
+	    case 73: return "Universities";
+	    case 74: return "Other institutions and academies";
+	    case 75: return "Collected or selected works; reprintings or translations of classics";
+	    case 80: return "Sociology (and profession) of mathematics";
+	    case 85: return "Historiography";
+	    case 90: return "Bibliographic studies";
+	    case 99: return "Miscellaneous topics";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case  3: // Mathematical logic and foundations
+      switch (med)
+	{
+	case 'A': // Philosophical aspects of logic and foundations
+	  switch(min)
+	    {
+	    case  5: return "Philosophical and critical";
+	    case 10: return "Logic in the philosophy of science";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // General logic
+          switch(min)
+            {
+	    case  5: return "Classical propositional logic";
+	    case 10: return "Classical first-order logic";
+	    case 15: return "Higher-order logic and type theory";
+	    case 20: return "Subsystems of classical logic (including intuitionistic logic)";
+	    case 22: return "Abstract deductive systems";
+	    case 25: return "Decidability of theories and sets of sentences";
+	    case 30: return "Foundations of classical theories (including reverse mathematics)";
+	    case 35: return "Mechanization of proofs and logical operations";
+	    case 40: return "Combinatory logic and lambda-calculus";
+	    case 42: return "Logics of knowledge and belief (including belief change)";
+	    case 44: return "Temporal logic";
+	    case 45: return "Modal logic (including the logic of norms)";
+	    case 47: return "Substructural logics (including relevance, entailment, linear logic, Lambek calculus, BCK and BCI logics)";
+	    case 48: return "Probability and inductive logic";
+	    case 50: return "Many-valued logic";
+	    case 52: return "Fuzzy logic; logic of vagueness";
+	    case 53: return "Paraconsistent logics";
+	    case 55: return "Intermediate logics";
+	    case 60: return "Other nonclassical logic";
+	    case 62: return "Combined logics";
+	    case 65: return "Logic of natural languages";
+	    case 70: return "Logic in computer science";
+	    case 80: return "Other applications of logic";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
     case 14: // Algebraic geometry
       switch (med)
 	{
