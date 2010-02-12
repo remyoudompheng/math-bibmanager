@@ -956,6 +956,31 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
     case 14: // Algebraic geometry
       switch (med)
 	{
+	case 'A': // Foundations
+	  switch(min)
+	    {
+	    case  5: return "Relevant commutative algebra";
+	    case 10: return "Varieties and morphisms";
+	    case 15: return "Schemes and morphisms";
+	    case 20: return "Generalizations (algebraic spaces, stacks)";
+	    case 22: return "Noncommutative algebraic geometry";
+	    case 25: return "Elementary questions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Local theory
+	  switch(min)
+	    {
+	    case  5: return "Singularities";
+	    case  7: return "Deformations of singularities";
+	    case 10: return "Infinitesimal methods";
+	    case 12: return "Local deformation theory, Artin approximation, etc.";
+	    case 15: return "Local cohomology";
+	    case 20: return "Formal neighborhoods";
+	    case 25: return "Local structure of morphisms: étale, flat, etc.";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'C': // Cycles and subschemes
 	  switch(min)
 	    {
@@ -1024,6 +1049,24 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
+	case 'G': // Arithmetic problems. Diophantine geometry
+	  switch(min)
+	    {
+	    case  5: return "Rational points";
+	    case 10: return "Zeta-functions and related questions (Birch-Swinnerton-Dyer conjecture)";
+	    case 15: return "Finite ground fields";
+	    case 17: return "Positive characteristic ground fields";
+	    case 20: return "Local ground fields";
+	    case 22: return "Rigid analytic geometry";
+	    case 25: return "Global ground fields";
+	    case 27: return "Other nonalgebraically closed ground fields";
+	    case 32: return "Universal profinite groups (relationship to moduli spaces, projective and moduli towers, Galois theory)";
+	    case 35: return "Modular and Shimura varieties";
+	    case 40: return "Arithmetic varieties and schemes; Arakelov theory; heights";
+	    case 50: return "Applications to coding theory and cryptography";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'H': // Curves
 	  switch(min)
 	    {
@@ -1086,6 +1129,90 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 22: return "Complex multiplication";
 	    case 25: return "Theta functions";
 	    case 30: return "Picard schemes, higher Jacobians";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'L': // Algebraic groups
+	  switch(min)
+	    {
+	    case 05: return "Formal groups, p-divisible groups";
+	    case 10: return "Group varieties";
+	    case 15: return "Group schemes";
+	    case 17: return "Affine algebraic groups, hyperalgebra constructions";
+	    case 24: return "Geometric invariant theory";
+	    case 30: return "Group actions on varieties or schemes (quotients)";
+	    case 35: return "Classical groups (geometric aspects)";
+	    case 40: return "Other algebraic groups (geometric aspects)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'M': // Special varieties
+	  switch(min)
+	    {
+	    case 05: return "Varieties defined by ring conditions (factorial, Cohen-Macaulay, seminormal)";
+	    case 06: return "Linkage";
+	    case  7: return "Low codimension problems";
+	    case 10: return "Complete intersections";
+	    case 12: return "Determinantal varieties";
+	    case 15: return "Grassmannians, Schubert varieties, flag manifolds";
+	    case 17: return "Homogeneous spaces and generalizations";
+	    case 20: return "Rational and unirational varieties";
+	    case 22: return "Rationally connected varieties";
+	    case 25: return "Toric varieties, Newton polyhedra";
+	    case 27: return "Compactifications; symmetric and spherical varieties";
+	    case 30: return "Supervarieties";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'N': // Projective and enumerative geometry
+	  switch(min)
+	    {
+	    case  5: return "Projective techniques";
+	    case 10: return "Enumerative problems (combinatorial problems)";
+	    case 15: return "Classical problems, Schubert calculus";
+	    case 20: return "Configurations and arrangements of linear subspaces";
+	    case 25: return "Varieties of low degree";
+	    case 30: return "Adjunction problems";
+	    case 35: return "Gromov-Witten invariants, quantum cohomology, Gopakumar-Vafa invariants, Donaldson-Thomas invariants";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'P': // Real algebraic and real analytic geometry
+	  switch(min)
+	    {
+	    case  5: return "Real algebraic sets";
+	    case 10: return "Semialgebraic sets and related spaces";
+	    case 15: return "Real analytic and semianalytic sets";
+	    case 20: return "Nash functions and manifolds";
+	    case 25: return "Topology of real algebraic varieties";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'Q': // Computational aspects in algebraic geometry
+	  switch(min)
+	    {
+	    case  5: return "Curves";
+	    case 10: return "Surfaces, hypersurfaces";
+	    case 15: return "Higher-dimensional varieties";
+	    case 20: return "Effectivity, complexity";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'R': // Affine geometry
+	  switch(min)
+	    {
+	    case  5: return "Classification of affine varieties";
+	    case 10: return "Affine spaces (automorphisms, embeddings, exotic structures, cancellation problem)";
+	    case 15: return "Jacobian problem";
+	    case 20: return "Group actions on affine varieties";
+	    case 25: return "Affine fibrations";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'T': // Tropical geometry
+	  switch(min)
+	    {
+	    case  5: return "Tropical geometry";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
