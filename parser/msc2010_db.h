@@ -1080,6 +1080,138 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
+	case 'C': // Model theory
+          switch(min)
+            {
+	    case  5: return "Equational classes, universal algebra";
+	    case  7: return "Basic properties of first-order languages and structures";
+	    case 10: return "Quantifier elimination, model completeness and related topics";
+	    case 13: return "Finite structures";
+	    case 15: return "Denumerable structures";
+	    case 20: return "Ultraproducts and related constructions";
+	    case 25: return "Model-theoretic forcing";
+	    case 30: return "Other model constructions";
+	    case 35: return "Categoricity and completeness of theories";
+	    case 40: return "Interpolation, preservation, definability";
+	    case 45: return "Classification theory, stability and related concepts";
+	    case 48: return "Abstract elementary classes and related topics";
+	    case 50: return "Models with special properties (saturated, rigid, etc.)";
+	    case 52: return "Properties of classes of models";
+	    case 55: return "Set-theoretic model theory";
+	    case 57: return "Effective and recursion-theoretic model theory";
+	    case 60: return "Model-theoretic algebra";
+	    case 62: return "Models of arithmetic and set theory";
+	    case 64: return "Model theory of ordered structures; o-minimality";
+	    case 65: return "Models of other mathematical theories";
+	    case 68: return "Other classical first-order model theory";
+	    case 70: return "Logic on admissible sets";
+	    case 75: return "Other infinitary logic";
+	    case 80: return "Logic with extra quantifiers and operators";
+	    case 85: return "Second- and higher-order model theory";
+	    case 90: return "Nonclassical models (Boolean-valued, sheaf, etc.)";
+	    case 95: return "Abstract model theory";
+	    case 98: return "Applications of model theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Computability and recursion theory
+          switch(min)
+            {
+	    case  3: return "Thue and Post systems, etc.";
+	    case  5: return "Automata and formal grammars in connection with logical questions";
+	    case 10: return "Turing machines and related notions";
+	    case 15: return "Complexity of computation (including implicit computational complexity)";
+	    case 20: return "Recursive functions and relations, subrecursive hierarchies";
+	    case 25: return "Recursively (computably) enumerable sets and degrees";
+	    case 28: return "Other Turing degree structures";
+	    case 30: return "Other degrees and reducibilities";
+	    case 32: return "Algorithmic randomness and dimension";
+	    case 35: return "Undecidability and degrees of sets of sentences";
+	    case 40: return "Word problems, etc.";
+	    case 45: return "Theory of numerations, effectively presented structures";
+	    case 50: return "Recursive equivalence types of sets and structures, isols";
+	    case 55: return "Hierarchies";
+	    case 60: return "Computability and recursion theory on ordinals, admissible sets, etc.";
+	    case 65: return "Higher-type and set recursion theory";
+	    case 70: return "Inductive definability";
+	    case 75: return "Abstract and axiomatic computability and recursion theory";
+	    case 78: return "Computation over the reals";
+	    case 80: return "Applications of computability and recursion theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Set theory
+          switch(min)
+            {
+	    case  2: return "Partition relations";
+	    case  4: return "Ordered sets and their cofinalities; pcf theory";
+	    case  5: return "Other combinatorial set theory";
+	    case 10: return "Ordinal and cardinal numbers";
+	    case 15: return "Descriptive set theory";
+	    case 17: return "Cardinal characteristics of the continuum";
+	    case 20: return "Other classical set theory (including functions, relations, and set algebra)";
+	    case 25: return "Axiom of choice and related propositions";
+	    case 30: return "Axiomatics of classical set theory and its fragments";
+	    case 35: return "Consistency and independence results";
+	    case 40: return "Other aspects of forcing and Boolean-valued models";
+	    case 45: return "Inner models, including constructibility, ordinal definability, and core models";
+	    case 47: return "Other notions of set-theoretic definability";
+	    case 50: return "Continuum hypothesis and Martin's axiom";
+	    case 55: return "Large cardinals";
+	    case 57: return "Generic absoluteness and forcing axioms";
+	    case 60: return "Determinacy principles";
+	    case 65: return "Other hypotheses and axioms";
+	    case 70: return "Nonclassical and second-order set theories";
+	    case 72: return "Fuzzy set theory";
+	    case 75: return "Applications of set theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Proof theory and constructive mathematics
+          switch(min)
+            {
+	    case  3: return "Proof theory, general";
+	    case  5: return "Cut-elimination and normal-form theorems";
+	    case  7: return "Structure of proofs";
+	    case 10: return "Functionals in proof theory";
+	    case 15: return "Recursive ordinals and ordinal notations";
+	    case 20: return "Complexity of proofs";
+	    case 25: return "Relative consistency and interpretations";
+	    case 30: return "First-order arithmetic and fragments";
+	    case 35: return "Second- and higher-order arithmetic and fragments";
+	    case 40: return "Gödel numberings and issues of incompleteness";
+	    case 45: return "Provability logics and related algebras (e.g., diagonalizable algebras)";
+	    case 50: return "Metamathematics of constructive systems";
+	    case 52: return "Linear logic and other substructural logics";
+	    case 55: return "Intuitionistic mathematics";
+	    case 60: return "Constructive and recursive analysis";
+	    case 65: return "Other constructive mathematics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // Algebraic logic
+	  switch(min)
+            {
+	    case  5: return "Boolean algebras";
+	    case 10: return "Lattices and related structures";
+	    case 12: return "Quantum logic";
+	    case 15: return "Cylindric and polyadic algebras; relation algebras";
+	    case 20: return "Łukasiewicz and Post algebras";
+	    case 25: return "Other algebras related to logic";
+	    case 27: return "Abstract algebraic logic";
+	    case 30: return "Categorical logic, topoi";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+            }
+	case 'H': // Nonstandard models
+	  switch(min)
+            {
+	    case  5: return "Nonstandard models in mathematics";
+	    case 10: return "Other applications of nonstandard models (economics, physics, etc.)";
+	    case 15: return "Nonstandard models of arithmetic";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+            }
 	default: return "Subcategory not implemented";
 	}
     case 14: // Algebraic geometry
