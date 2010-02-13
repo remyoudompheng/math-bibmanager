@@ -1468,7 +1468,8 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 55: return "Continued fractions";
 	    case 63: return "Radix representation; digital problems";
 	    case 67: return "Other representations";
-	    case 99: return "None of the above, but in this section	    default: return "Subcategory not implemented";";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
 	    }
 	case 'B': // Sequences and sets
 	  switch(min)
