@@ -1052,8 +1052,8 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    default: return "Subcategory not implemented";
 	    }
 	case 'B': // General logic
-          switch(min)
-            {
+	  switch(min)
+	    {
 	    case  5: return "Classical propositional logic";
 	    case 10: return "Classical first-order logic";
 	    case 15: return "Higher-order logic and type theory";
@@ -1081,8 +1081,8 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    default: return "Subcategory not implemented";
 	    }
 	case 'C': // Model theory
-          switch(min)
-            {
+	  switch(min)
+	    {
 	    case  5: return "Equational classes, universal algebra";
 	    case  7: return "Basic properties of first-order languages and structures";
 	    case 10: return "Quantifier elimination, model completeness and related topics";
@@ -1115,8 +1115,8 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    default: return "Subcategory not implemented";
 	    }
 	case 'D': // Computability and recursion theory
-          switch(min)
-            {
+	  switch(min)
+	    {
 	    case  3: return "Thue and Post systems, etc.";
 	    case  5: return "Automata and formal grammars in connection with logical questions";
 	    case 10: return "Turing machines and related notions";
@@ -1141,8 +1141,8 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    default: return "Subcategory not implemented";
 	    }
 	case 'E': // Set theory
-          switch(min)
-            {
+	  switch(min)
+	    {
 	    case  2: return "Partition relations";
 	    case  4: return "Ordered sets and their cofinalities; pcf theory";
 	    case  5: return "Other combinatorial set theory";
@@ -1168,8 +1168,8 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    default: return "Subcategory not implemented";
 	    }
 	case 'F': // Proof theory and constructive mathematics
-          switch(min)
-            {
+	  switch(min)
+	    {
 	    case  3: return "Proof theory, general";
 	    case  5: return "Cut-elimination and normal-form theorems";
 	    case  7: return "Structure of proofs";
@@ -1191,7 +1191,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    }
 	case 'G': // Algebraic logic
 	  switch(min)
-            {
+	    {
 	    case  5: return "Boolean algebras";
 	    case 10: return "Lattices and related structures";
 	    case 12: return "Quantum logic";
@@ -1202,16 +1202,629 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 30: return "Categorical logic, topoi";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
-            }
+	    }
 	case 'H': // Nonstandard models
 	  switch(min)
-            {
+	    {
 	    case  5: return "Nonstandard models in mathematics";
 	    case 10: return "Other applications of nonstandard models (economics, physics, etc.)";
 	    case 15: return "Nonstandard models of arithmetic";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
-            }
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case  5: // Combinatorics
+      switch (med)
+	{
+	case 'A': // Enumerative combinatorics
+	  switch(min)
+	    {
+	    case  5: return "Permutations, words, matrices";
+	    case 10: return "Factorials, binomial coefficients, combinatorial functions";
+	    case 15: return "Exact enumeration problems, generating functions";
+	    case 16: return "Asymptotic enumeration";
+	    case 17: return "Partitions of integers";
+	    case 18: return "Partitions of sets";
+	    case 19: return "Combinatorial identities, bijective combinatorics";
+	    case 20: return "Combinatorial inequalities";
+	    case 30: return "q-calculus and related topics";
+	    case 40: return "Umbral calculus";
+	    case 99: return "None of the above, but in this section";
+	    case 'B': // Designs and configurations
+	    case 05: return "Block designs";
+	    case 07: return "Triple systems";
+	    case 10: return "Difference sets (number-theoretic, group-theoretic, etc.)";
+	    case 15: return "Orthogonal arrays, Latin squares, Room squares";
+	    case 20: return "Matrices (incidence, Hadamard, etc.)";
+	    case 25: return "Finite geometries";
+	    case 30: return "Other designs, configurations";
+	    case 35: return "Matroids, geometric lattices";
+	    case 40: return "Packing and covering";
+	    case 45: return "Tessellation and tiling problems";
+	    case 50: return "Polyominoes";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Graph theory
+	  switch(min)
+	    {
+	    case  5: return "Trees";
+	    case  7: return "Vertex degrees";
+	    case 10: return "Planar graphs; geometric and topological aspects of graph theory";
+	    case 12: return "Distance in graphs";
+	    case 15: return "Coloring of graphs and hypergraphs";
+	    case 17: return "Perfect graphs";
+	    case 20: return "Directed graphs (digraphs), tournaments";
+	    case 21: return "Flows in graphs";
+	    case 22: return "Signed and weighted graphs";
+	    case 25: return "Graphs and abstract algebra (groups, rings, fields, etc.)";
+	    case 30: return "Enumeration in graph theory";
+	    case 31: return "Graph polynomials";
+	    case 35: return "Extremal problems";
+	    case 38: return "Paths and cycles";
+	    case 40: return "Connectivity";
+	    case 42: return "Density (toughness, etc.)";
+	    case 45: return "Eulerian and Hamiltonian graphs";
+	    case 50: return "Graphs and linear algebra (matrices, eigenvalues, etc.)";
+	    case 51: return "Graph designs and isomomorphic decomposition";
+	    case 55: return "Generalized Ramsey theory";
+	    case 57: return "Games on graphs";
+	    case 60: return "Isomorphism problems (reconstruction conjecture, etc.) and homomorphisms (subgraph embedding, etc.)";
+	    case 62: return "Graph representations (geometric and intersection representations, etc.)";
+	    case 63: return "Infinite graphs";
+	    case 65: return "Hypergraphs";
+	    case 69: return "Dominating sets, independent sets, cliques";
+	    case 70: return "Factorization, matching, partitioning, covering and packing";
+	    case 72: return "Fractional graph theory, fuzzy graph theory";
+	    case 75: return "Structural characterization of families of graphs";
+	    case 76: return "Graph operations (line graphs, products, etc.)";
+	    case 78: return "Graph labelling (graceful graphs, bandwidth, etc.)";
+	    case 80: return "Random graphs";
+	    case 81: return "Random walks on graphs";
+	    case 82: return "Small world graphs, complex networks";
+	    case 83: return "Graph minors";
+	    case 85: return "Graph algorithms";
+	    case 90: return "Applications";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Extremal combinatorics
+	  switch(min)
+	    {
+	    case  5: return "Extremal set theory";
+	    case 10: return "Ramsey theory";
+	    case 15: return "Transversal (matching) theory";
+	    case 40: return "Probabilistic methods";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Algebraic combinatorics
+	  switch(min)
+	    {
+	    case  5: return "Symmetric functions and generalizations";
+	    case 10: return "Combinatorial aspects of representation theory";
+	    case 15: return "Combinatorial aspects of groups and algebras";
+	    case 18: return "Group actions on combinatorial structures";
+	    case 30: return "Association schemes, strongly regular graphs";
+	    case 40: return "Combinatorial aspects of commutative algebra";
+	    case 45: return "Combinatorial aspects of simplicial complexes";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case  6: // Order, lattices, ordered algebraic structures
+      switch (med)
+	{
+	case 'A': // Ordered sets
+	  switch(min)
+	    {
+	    case  5: return "Total order";
+	    case  6: return "Partial order, general";
+	    case  7: return "Combinatorics of partially ordered sets";
+	    case 11: return "Algebraic aspects of posets";
+	    case 12: return "Semilattices";
+	    case 15: return "Galois correspondences, closure operators";
+	    case 75: return "Generalizations of ordered sets";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Lattices
+	  switch(min)
+	    {
+	    case  5: return "Structure theory";
+	    case 10: return "Ideals, congruence relations";
+	    case 15: return "Representation theory";
+	    case 20: return "Varieties of lattices";
+	    case 23: return "Complete lattices, completions";
+	    case 25: return "Free lattices, projective lattices, word problems";
+	    case 30: return "Topological lattices, order topologies";
+	    case 35: return "Continuous lattices and posets, applications";
+	    case 75: return "Generalizations of lattices";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Modular lattices, complemented lattices
+	  switch(min)
+	    {
+	    case  5: return "Modular lattices, Desarguesian lattices";
+	    case 10: return "Semimodular lattices, geometric lattices";
+	    case 15: return "Complemented lattices, orthocomplemented lattices and posets";
+	    case 20: return "Complemented modular lattices, continuous geometries";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Distributive lattices
+	  switch(min)
+	    {
+	    case  5: return "Structure and representation theory";
+	    case 10: return "Complete distributivity";
+	    case 15: return "Pseudocomplemented lattices";
+	    case 20: return "Heyting algebras";
+	    case 22: return "Frames, locales";
+	    case 25: return "Post algebras";
+	    case 30: return "De Morgan algebras, Łukasiewicz algebras";
+	    case 35: return "MV-algebras";
+	    case 50: return "Lattices and duality";
+	    case 72: return "Fuzzy lattices (soft algebras) and related topics";
+	    case 75: return "Other generalizations of distributive lattices";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Boolean algebras
+	  switch(min)
+	    {
+	    case  5: return "Structure theory";
+	    case 10: return "Chain conditions, complete algebras";
+	    case 15: return "Stone spaces (Boolean spaces) and related structures";
+	    case 20: return "Ring-theoretic properties";
+	    case 25: return "Boolean algebras with additional operations (diagonalizable algebras, etc.)";
+	    case 30: return "Boolean functions";
+	    case 75: return "Generalizations of Boolean algebras";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Ordered structures
+	  switch(min)
+	    {
+	    case  5: return "Ordered semigroups and monoids";
+	    case  7: return "Quantales";
+	    case 10: return "Noether lattices";
+	    case 15: return "Ordered groups";
+	    case 20: return "Ordered abelian groups, Riesz groups, ordered linear spaces";
+	    case 25: return "Ordered rings, algebras, modules";
+	    case 30: return "Topological lattices, order topologies";
+	    case 35: return "BCK-algebras, BCI-algebras";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case  8: // General algebraic systems
+      switch (med)
+	{
+	case 'A': // Algebraic structures
+	  switch(min)
+	    {
+	    case  2: return "Relational systems, laws of composition";
+	    case  5: return "Structure theory";
+	    case 30: return "Subalgebras, congruence relations";
+	    case 35: return "Automorphisms, endomorphisms";
+	    case 40: return "Operations, polynomials, primal algebras";
+	    case 45: return "Equational compactness";
+	    case 50: return "Word problems";
+	    case 55: return "Partial algebras";
+	    case 60: return "Unary algebras";
+	    case 62: return "Finitary algebras";
+	    case 65: return "Infinitary algebras";
+	    case 68: return "Heterogeneous algebras";
+	    case 70: return "Applications of universal algebra in computer science";
+	    case 72: return "Fuzzy algebraic structures";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Varieties
+	  switch(min)
+	    {
+	    case  5: return "Equational logic, Mal'cev (Mal'tsev) conditions";
+	    case 10: return "Congruence modularity, congruence distributivity";
+	    case 15: return "Lattices of varieties";
+	    case 20: return "Free algebras";
+	    case 25: return "Products, amalgamated products, and other kinds of limits and colimits";
+	    case 26: return "Subdirect products and subdirect irreducibility";
+	    case 30: return "Injectives, projectives";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Other classes of algebras
+	  switch(min)
+	    {
+	    case  5: return "Categories of algebras";
+	    case 10: return "Axiomatic model classes";
+	    case 15: return "Quasivarieties";
+	    case 20: return "Natural dualities for classes of algebras";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 11: // General algebraic systems
+      switch (med)
+	{
+	case 'A': // Elementary number theory
+	  switch(min)
+	    {
+	    case  5: return "Multiplicative structure; Euclidean algorithm; greatest common divisors";
+	    case  7: return "Congruences; primitive roots; residue systems";
+	    case 15: return "Power residues, reciprocity";
+	    case 25: return "Arithmetic functions; related numbers; inversion formulas";
+	    case 41: return "Primes";
+	    case 51: return "Factorization; primality";
+	    case 55: return "Continued fractions";
+	    case 63: return "Radix representation; digital problems";
+	    case 67: return "Other representations";
+	    case 99: return "None of the above, but in this section	    default: return "Subcategory not implemented";";
+	    }
+	case 'B': // Sequences and sets
+	  switch(min)
+	    {
+	    case  5: return "Density, gaps, topology";
+	    case 13: return "Additive bases, including sumsets";
+	    case 25: return "Arithmetic progressions";
+	    case 30: return "Arithmetic combinatorics; higher degree uniformity";
+	    case 34: return "Representation functions";
+	    case 37: return "Recurrences";
+	    case 39: return "Fibonacci and Lucas numbers and polynomials and generalizations";
+	    case 50: return "Sequences (mod m)";
+	    case 57: return "Farey sequences; the sequences 1^k, 2^k, ...";
+	    case 65: return "Binomial coefficients; factorials; q-identities";
+	    case 68: return "Bernoulli and Euler numbers and polynomials";
+	    case 73: return "Bell and Stirling numbers";
+	    case 75: return "Other combinatorial number theory";
+	    case 83: return "Special sequences and polynomials";
+	    case 85: return "Automata sequences";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Polynomials and matrices
+	  switch(min)
+	    {
+	    case  8: return "Polynomials";
+	    case 20: return "Matrices, determinants";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Diophantine equations
+	  switch(min)
+	    {
+	    case  4: return "Linear equations";
+	    case  7: return "The Frobenius problem";
+	    case  9: return "Quadratic and bilinear equations";
+	    case 25: return "Cubic and quartic equations";
+	    case 41: return "Higher degree equations; Fermat's equation";
+	    case 45: return "Counting solutions of Diophantine equations";
+	    case 57: return "Multiplicative and norm form equations";
+	    case 59: return "Thue-Mahler equations";
+	    case 61: return "Exponential equations";
+	    case 68: return "Rational numbers as sums of fractions";
+	    case 72: return "Equations in many variables";
+	    case 75: return "Diophantine inequalities";
+	    case 79: return "Congruences in many variables";
+	    case 85: return "Representation problems";
+	    case 88: return "p-adic and power series fields";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Forms and linear algebraic groups
+	  switch(min)
+	    {
+	    case  4: return "Quadratic forms over general fields";
+	    case  8: return "Quadratic forms over local rings and fields";
+	    case 10: return "Forms over real fields";
+	    case 12: return "Quadratic forms over global rings and fields";
+	    case 16: return "General binary quadratic forms";
+	    case 20: return "General ternary and quaternary quadratic forms; forms of more than two variables";
+	    case 25: return "Sums of squares and representations by other particular quadratic forms";
+	    case 39: return "Bilinear and Hermitian forms";
+	    case 41: return "Class numbers of quadratic and Hermitian forms";
+	    case 45: return "Analytic theory (Epstein zeta functions; relations with automorphic forms and functions)";
+	    case 57: return "Classical groups";
+	    case 70: return "K-theory of quadratic and Hermitian forms";
+	    case 72: return "Galois cohomology of linear algebraic groups";
+	    case 76: return "Forms of degree higher than two";
+	    case 81: return "Algebraic theory of quadratic forms; Witt groups and rings";
+	    case 88: return "Quadratic spaces; Clifford algebras";
+	    case 95: return "p-adic theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Discontinuous groups and automorphic forms
+	  switch(min)
+	    {
+	    case  3: return "Modular and automorphic functions";
+	    case  6: return "Structure of modular groups and generalizations; arithmetic groups";
+	    case 11: return "Holomorphic modular forms of integral weight";
+	    case 12: return "Automorphic forms, one variable";
+	    case 20: return "Dedekind eta function, Dedekind sums";
+	    case 22: return "Relationship to Lie algebras and finite simple groups";
+	    case 23: return "Relations with algebraic geometry and topology";
+	    case 25: return "Hecke-Petersson operators, differential operators (one variable)";
+	    case 27: return "Theta series; Weil representation; theta correspondences";
+	    case 30: return "Fourier coefficients of automorphic forms";
+	    case 32: return "Modular correspondences, etc.";
+	    case 33: return "Congruences for modular and p-adic modular forms";
+	    case 37: return "Forms of half-integer weight; nonholomorphic modular forms";
+	    case 41: return "Automorphic forms on GL(2); Hilbert and Hilbert-Siegel modular groups and their modular and automorphic forms; Hilbert modular surfaces";
+	    case 46: return "Siegel modular groups; Siegel and Hilbert-Siegel modular and automorphic forms";
+	    case 50: return "Jacobi forms";
+	    case 52: return "Modular forms associated to Drinfel'd modules";
+	    case 55: return "Other groups and their modular and automorphic forms (several variables)";
+	    case 60: return "Hecke-Petersson operators, differential operators (several variables)";
+	    case 66: return "Langlands L-functions; one variable Dirichlet series and functional equations";
+	    case 67: return "Special values of automorphic L-series, periods of modular forms, cohomology, modular symbols";
+	    case 68: return "Dirichlet series in several complex variables associated to automorphic forms; Weyl group multiple Dirichlet series";
+	    case 70: return "Representation-theoretic methods; automorphic representations over local and global fields";
+	    case 72: return "Spectral theory; Selberg trace formula";
+	    case 75: return "Cohomology of arithmetic groups";
+	    case 80: return "Galois representations";
+	    case 85: return "p-adic theory, local fields";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // Arithmetic algebraic geometry (Diophantine geometry)
+	  switch(min)
+	    {
+	    case  5: return "Elliptic curves over global fields";
+	    case  7: return "Elliptic curves over local fields";
+	    case  9: return "Drinfel'd modules; higher-dimensional motives, etc.";
+	    case 10: return "Abelian varieties of dimension >1";
+	    case 15: return "Complex multiplication and moduli of abelian varieties";
+	    case 16: return "Elliptic and modular units";
+	    case 18: return "Arithmetic aspects of modular and Shimura varieties";
+	    case 20: return "Curves over finite and local fields";
+	    case 25: return "Varieties over finite and local fields";
+	    case 30: return "Curves of arbitrary genus or genus ≠1 over global fields";
+	    case 32: return "Dessins d'enfants, Belyĭ theory";
+	    case 35: return "Varieties over global fields";
+	    case 40: return "L-functions of varieties over global fields; Birch-Swinnerton-Dyer conjecture";
+	    case 42: return "Arithmetic mirror symmetry";
+	    case 45: return "Geometric class field theory";
+	    case 50: return "Heights";
+	    case 55: return "Polylogarithms and relations with K-theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'H': // Geometry of numbers
+	  switch(min)
+	    {
+	    case  6: return "Lattices and convex bodies";
+	    case 16: return "Nonconvex bodies";
+	    case 31: return "Lattice packing and covering";
+	    case 46: return "Products of linear forms";
+	    case 50: return "Minima of forms";
+	    case 55: return "Quadratic forms (reduction theory, extreme forms, etc.)";
+	    case 56: return "Automorphism groups of lattices";
+	    case 60: return "Mean value and transfer theorems";
+	    case 71: return "Relations with coding theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'J': // Diophantine approximation, transcendental number theory
+	  switch(min)
+	    {
+	    case  4: return "Homogeneous approximation to one number";
+	    case  6: return "Markov and Lagrange spectra and generalizations";
+	    case 13: return "Simultaneous homogeneous approximation, linear forms";
+	    case 17: return "Approximation by numbers from a fixed field";
+	    case 20: return "Inhomogeneous linear forms";
+	    case 25: return "Diophantine inequalities";
+	    case 54: return "Small fractional parts of polynomials and generalizations";
+	    case 61: return "Approximation in non-Archimedean valuations";
+	    case 68: return "Approximation to algebraic numbers";
+	    case 70: return "Continued fractions and generalizations";
+	    case 71: return "Distribution modulo one";
+	    case 72: return "Irrationality; linear independence over a field";
+	    case 81: return "Transcendence (general theory)";
+	    case 82: return "Measures of irrationality and of transcendence";
+	    case 83: return "Metric theory";
+	    case 85: return "Algebraic independence; Gel'fond's method";
+	    case 86: return "Linear forms in logarithms; Baker's method";
+	    case 87: return "Schmidt Subspace Theorem and applications";
+	    case 89: return "Transcendence theory of elliptic and abelian functions";
+	    case 91: return "Transcendence theory of other special functions";
+	    case 93: return "Transcendence theory of Drinfel'd and t-modules";
+	    case 95: return "Results involving abelian varieties";
+	    case 97: return "Analogues of methods in Nevanlinna theory (work of Vojta et al.)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'K': // Probabilistic theory: distribution modulo 1; metric theory of algorithms
+	  switch(min)
+	    {
+	    case  6: return "General theory of distribution modulo 1 ";
+	    case 16: return "Normal numbers, radix expansions, Pisot numbers, Salem numbers, good lattice points, etc.";
+	    case 31: return "Special sequences";
+	    case 36: return "Well-distributed sequences and other variations";
+	    case 38: return "Irregularities of distribution, discrepancy";
+	    case 41: return "Continuous, p-adic and abstract analogues";
+	    case 45: return "Pseudo-random numbers; Monte Carlo methods";
+	    case 50: return "Metric theory of continued fractions";
+	    case 55: return "Metric theory of other algorithms and expansions; measure and Hausdorff dimension";
+	    case 60: return "Diophantine approximation";
+	    case 65: return "Arithmetic functions";
+	    case 70: return "Harmonic analysis and almost periodicity";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'L': // Exponential sums and character sums
+	  switch(min)
+	    {
+	    case  3: return "Trigonometric and exponential sums, general";
+	    case  5: return "Gauss and Kloosterman sums; generalizations";
+	    case  7: return "Estimates on exponential sums";
+	    case 10: return "Jacobsthal and Brewer sums; other complete character sums";
+	    case 15: return "Weyl sums";
+	    case 20: return "Sums over primes";
+	    case 26: return "Sums over arbitrary intervals";
+	    case 40: return "Estimates on character sums";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'M': // Zeta and L-functions: analytic theory
+	  switch(min)
+	    {
+	    case  6: return "ζ(s) and L(s,χ)";
+	    case 20: return "Real zeros of L(s,χ); results on L(1,χ)";
+	    case 26: return "Nonreal zeros of ζ(s) and L(s,χ); Riemann and other hypotheses";
+	    case 32: return "Multiple Dirichlet series and zeta functions and multizeta values";
+	    case 35: return "Hurwitz and Lerch zeta functions";
+	    case 36: return "Selberg zeta functions and regularized determinants; applications to spectral theory, Dirichlet series, Eisenstein series, etc. Explicit formulas";
+	    case 38: return "Zeta and L-functions in characteristic p";
+	    case 41: return "Other Dirichlet series and zeta functions";
+	    case 45: return "Tauberian theorems";
+	    case 50: return "Relations with random matrices";
+	    case 55: return "Relations with noncommutative geometry";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'N': // Multiplicative number theory
+	  switch(min)
+	    {
+	    case  5: return "Distribution of primes";
+	    case 13: return "Primes in progressions";
+	    case 25: return "Distribution of integers with specified multiplicative constraints";
+	    case 30: return "Turán theory";
+	    case 32: return "Primes represented by polynomials; other multiplicative structure of polynomial values";
+	    case 35: return "Sieves";
+	    case 36: return "Applications of sieve methods";
+	    case 37: return "Asymptotic results on arithmetic functions";
+	    case 45: return "Asymptotic results on counting functions for algebraic and topological structures";
+	    case 56: return "Rate of growth of arithmetic functions";
+	    case 60: return "Distribution functions associated with additive and positive multiplicative functions";
+	    case 64: return "Other results on the distribution of values or the characterization of arithmetic functions";
+	    case 69: return "Distribution of integers in special residue classes";
+	    case 75: return "Applications of automorphic functions and forms to multiplicative problems";
+	    case 80: return "Generalized primes and integers";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'P': // Additive number theory; partitions
+	  switch(min)
+	    {
+	    case  5: return "Waring's problem and variants";
+	    case 21: return "Lattice points in specified regions";
+	    case 32: return "Goldbach-type theorems; other additive questions involving primes";
+	    case 55: return "Applications of the Hardy-Littlewood method";
+	    case 70: return "Inverse problems of additive number theory, including sumsets";
+	    case 81: return "Elementary theory of partitions";
+	    case 82: return "Analytic theory of partitions";
+	    case 83: return "Partitions; congruences and congruential restrictions";
+	    case 84: return "Partition identities; identities of Rogers-Ramanujan type";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'R': // Algebraic number theory: global fields
+	  switch(min)
+	    {
+	    case  4: return "Algebraic numbers; rings of algebraic integers";
+	    case  6: return "PV-numbers and generalizations; other special algebraic numbers; Mahler measure";
+	    case  9: return "Polynomials (irreducibility, etc.)";
+	    case 11: return "Quadratic extensions";
+	    case 16: return "Cubic and quartic extensions";
+	    case 18: return "Cyclotomic extensions";
+	    case 20: return "Other abelian and metabelian extensions";
+	    case 21: return "Other number fields";
+	    case 23: return "Iwasawa theory";
+	    case 27: return "Units and factorization";
+	    case 29: return "Class numbers, class groups, discriminants";
+	    case 32: return "Galois theory";
+	    case 33: return "Integral representations related to algebraic numbers; Galois module structure of rings of integers";
+	    case 34: return "Galois cohomology";
+	    case 37: return "Class field theory";
+	    case 39: return "Langlands-Weil conjectures, nonabelian class field theory";
+	    case 42: return "Zeta functions and L-functions of number fields";
+	    case 44: return "Distribution of prime ideals";
+	    case 45: return "Density theorems";
+	    case 47: return "Other analytic theory";
+	    case 52: return "Quaternion and other division algebras: arithmetic, zeta functions";
+	    case 54: return "Other algebras and orders, and their zeta and L-functions";
+	    case 56: return "Adèle rings and groups";
+	    case 58: return "Arithmetic theory of algebraic function fields";
+	    case 60: return "Cyclotomic function fields (class groups, Bernoulli objects, etc.)";
+	    case 65: return "Class groups and Picard groups of orders";
+	    case 70: return "K-theory of global fields";
+	    case 80: return "Totally real fields";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'S': // Algebraic number theory: local and p-adic fields
+	  switch(min)
+	    {
+	    case  5: return "Polynomials";
+	    case 15: return "Ramification and extension theory";
+	    case 20: return "Galois theory";
+	    case 23: return "Integral representations";
+	    case 25: return "Galois cohomology";
+	    case 31: return "Class field theory; p-adic formal groups";
+	    case 37: return "Langlands-Weil conjectures, nonabelian class field theory";
+	    case 40: return "Zeta functions and L-functions";
+	    case 45: return "Algebras and orders, and their zeta functions";
+	    case 70: return "K-theory of local fields";
+	    case 80: return "Other analytic theory (analogues of beta and gamma functions, p-adic integration, etc.)";
+	    case 82: return "Non-Archimedean dynamical systems";
+	    case 85: return "Other nonanalytic theory";
+	    case 90: return "Prehomogeneous vector spaces";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'T': // Finite fields and commutative rings (number-theoretic aspects)
+	  switch(min)
+	    {
+	    case  6: return "Polynomials";
+	    case 22: return "Cyclotomy";
+	    case 23: return "Exponential sums";
+	    case 24: return "Other character sums and Gauss sums";
+	    case 30: return "Structure theory";
+	    case 55: return "Arithmetic theory of polynomial rings over finite fields";
+	    case 60: return "Finite upper half-planes";
+	    case 71: return "Algebraic coding theory; cryptography";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'U': // Connections with logic
+	  switch(min)
+	    {
+	    case  5: return "Decidability";
+	    case  7: return "Ultraproducts";
+	    case  9: return "Model theory";
+	    case 10: return "Nonstandard arithmetic";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'Y': // Computational number theory
+	  switch(min)
+	    {
+	    case  5: return "Factorization";
+	    case 11: return "Primality";
+	    case 16: return "Algorithms; complexity";
+	    case 35: return "Analytic computations";
+	    case 40: return "Algebraic number theory computations";
+	    case 50: return "Computer solution of Diophantine equations";
+	    case 55: return "Calculation of integer sequences";
+	    case 60: return "Evaluation of constants";
+	    case 65: return "Continued fraction calculations";
+	    case 70: return "Values of arithmetic functions; tables";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'Z': // Miscellaneous applications of number theory
+	  switch(min)
+	    {
+	    case  5: return "Miscellaneous applications of number theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	default: return "Subcategory not implemented";
 	}
     case 14: // Algebraic geometry
