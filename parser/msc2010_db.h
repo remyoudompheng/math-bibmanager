@@ -1231,9 +1231,13 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 30: return "q-calculus and related topics";
 	    case 40: return "Umbral calculus";
 	    case 99: return "None of the above, but in this section";
-	    case 'B': // Designs and configurations
-	    case 05: return "Block designs";
-	    case 07: return "Triple systems";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Designs and configurations
+	  switch(min)
+	    {
+	    case  5: return "Block designs";
+	    case  7: return "Triple systems";
 	    case 10: return "Difference sets (number-theoretic, group-theoretic, etc.)";
 	    case 15: return "Orthogonal arrays, Latin squares, Room squares";
 	    case 20: return "Matrices (incidence, Hadamard, etc.)";
@@ -1827,6 +1831,259 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    }
 	default: return "Subcategory not implemented";
 	}
+    case 12: // Field theory and polynomials
+      switch(med)
+	{
+	case 'D': // Real and complex fields
+	  switch(min)
+	    {
+	    case  5: return "Polynomials: factorization";
+	    case 10: return "Polynomials: location of zeros (algebraic theorems)";
+	    case 15: return "Fields related with sums of squares (formally real fields, Pythagorean fields, etc.)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // General field theory
+	  switch(min)
+	    {
+	    case  5: return "Polynomials (irreducibility, etc.)";
+	    case 10: return "Special polynomials";
+	    case 12: return "Equations";
+	    case 15: return "Skew fields, division rings";
+	    case 20: return "Finite fields (field-theoretic aspects)";
+	    case 25: return "Hilbertian fields; Hilbert's irreducibility theorem";
+	    case 30: return "Field arithmetic";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Field extensions
+	  switch(min)
+	    {
+	    case  5: return "Algebraic extensions";
+	    case 10: return "Separable extensions, Galois theory";
+	    case 12: return "Inverse Galois theory";
+	    case 15: return "Inseparable extensions";
+	    case 20: return "Transcendental extensions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // Homological methods (field theory)
+	  switch(min)
+	    {
+	    case  5: return "Galois cohomology";
+	    case 10: return "Cohomological dimension";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'H': // Differential and difference algebra
+	  switch(min)
+	    {
+	    case  5: return "Differential algebra";
+	    case 10: return "Difference algebra";
+	    case 20: return "Abstract differential equations";
+	    case 25: return "p-adic differential equations";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'J': // Topological fields
+	  switch(min)
+	    {
+	    case  5: return "Normed fields";
+	    case 10: return "Valued fields";
+	    case 12: return "Formally p-adic fields";
+	    case 15: return "Ordered fields";
+	    case 17: return "Topological semifields";
+	    case 20: return "General valuation theory";
+	    case 25: return "Non-Archimedean valued fields";
+	    case 27: return "Krasner-Tate algebras";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'K': // Generalizations of fields
+	  switch(min)
+	    {
+	    case  5: return "Near-fields";
+	    case 10: return "Semifields";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'L': // Connections with logic
+	  switch(min)
+	    {
+	    case  5: return "Decidability";
+	    case 10: return "Ultraproducts";
+	    case 12: return "Model theory";
+	    case 15: return "Nonstandard arithmetic";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'Y': // Computational aspects of field theory and polynomials
+	  switch(min)
+	    {
+	    case  5: return "Computational aspects of field theory and polynomials";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 13: // Commutative algebra
+      switch(med)
+	{
+	case 'A': // General commutative ring theory
+	  switch(min)
+	    {
+	    case  2: return "Graded rings";
+	    case  5: return "Divisibility; factorizations";
+	    case 15: return "Ideals; multiplicative ideal theory";
+	    case 18: return "Valuations and their generalizations";
+	    case 30: return "Associated graded rings of ideals (Rees ring, form ring), analytic spread and related topics";
+	    case 35: return "Characteristic p methods (Frobenius endomorphism) and reduction to characteristic p; tight closure";
+	    case 50: return "Actions of groups on commutative rings; invariant theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Ring extensions and related topics
+	  switch(min)
+	    {
+	    case  2: return "Extension theory";
+	    case  5: return "Galois theory";
+	    case 10: return "Morphisms";
+	    case 21: return "Integral dependence; going up, going down";
+	    case 22: return "Integral closure of rings and ideals; integrally closed rings, related rings (Japanese, etc.)";
+	    case 25: return "Polynomials over commutative rings";
+	    case 30: return "Rings of fractions and localization";
+	    case 35: return "Completion";
+	    case 40: return "Étale and flat extensions; Henselization; Artin approximation";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Theory of modules and ideals
+	  switch(min)
+	    {
+	    case  5: return "Structure, classification theorems";
+	    case 10: return "Projective and free modules and ideals";
+	    case 11: return "Injective and flat modules and ideals";
+	    case 12: return "Torsion modules and ideals";
+	    case 13: return "Other special types";
+	    case 14: return "Cohen-Macaulay modules";
+	    case 15: return "Dimension theory, depth, related rings (catenary, etc.)";
+	    case 20: return "Class groups";
+	    case 40: return "Linkage, complete intersections and determinantal ideals";
+	    case 60: return "Module categories";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Homological methods
+	  switch(min)
+	    {
+	    case  2: return "Syzygies, resolutions, complexes";
+	    case  3: return "(Co)homology of commutative rings and algebras (e.g., Hochschild, André-Quillen, cyclic, dihedral, etc.)";
+	    case  5: return "Homological dimension";
+	    case  7: return "Homological functors on modules (Tor, Ext, etc.)";
+	    case  9: return "Derived categories";
+	    case 10: return "Deformations and infinitesimal methods";
+	    case 15: return "Grothendieck groups, K-theory";
+	    case 22: return "Homological conjectures (intersection theorems)";
+	    case 30: return "Torsion theory";
+	    case 40: return "Hilbert-Samuel and Hilbert-Kunz functions; Poincaré series";
+	    case 45: return "Local cohomology";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Chain conditions, finiteness conditions
+	  switch(min)
+	    {
+	    case  5: return "Noetherian rings and modules";
+	    case 10: return "Artinian rings and modules, finite-dimensional algebras";
+	    case 15: return "Rings and modules of finite generation or presentation; number of generators";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Arithmetic rings and other special rings
+	  switch(min)
+	    {
+	    case  5: return "Dedekind, Prüfer, Krull and Mori rings and their generalizations";
+	    case  7: return "Euclidean rings and generalizations";
+	    case 10: return "Principal ideal rings";
+	    case 15: return "Rings defined by factorization properties (e.g., atomic, factorial, half-factorial)";
+	    case 20: return "Polynomial rings and ideals; rings of integer-valued polynomials";
+	    case 25: return "Formal power series rings";
+	    case 30: return "Valuation rings";
+	    case 35: return "Witt vectors and related rings";
+	    case 40: return "Excellent rings";
+	    case 45: return "Seminormal rings";
+	    case 50: return "Rings with straightening laws, Hodge algebras";
+	    case 55: return "Stanley-Reisner face rings; simplicial complexes";
+	    case 60: return "Cluster algebras";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // Integral domains
+	  switch(min)
+	    {
+	    case  5: return "Integral domains";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'H': // Local rings and semilocal rings
+	  switch(min)
+	    {
+	    case  5: return "Regular local rings";
+	    case 10: return "Special types (Cohen-Macaulay, Gorenstein, Buchsbaum, etc.)";
+	    case 15: return "Multiplicity theory and related topics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'J': // Topological rings and modules
+	  switch(min)
+	    {
+	    case  5: return "Power series rings";
+	    case  7: return "Analytical algebras and rings";
+	    case 10: return "Complete rings, completion";
+	    case 15: return "Henselian rings";
+	    case 20: return "Global topological rings";
+	    case 25: return "Ordered rings";
+	    case 30: return "Real algebra";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'L': // Applications of logic to commutative algebra
+	  switch(min)
+	    {
+	    case  5: return "Applications of logic to commutative algebra";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'M': // Finite commutative rings
+	  switch(min)
+	    {
+	    case  5: return "Structure";
+	    case 10: return "Polynomials";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'N': // Differential algebra
+	  switch(min)
+	    {
+	    case  5: return "Modules of differentials";
+	    case 10: return "Rings of differential operators and their modules";
+	    case 15: return "Derivations";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'P': // Computational aspects and applications
+	  switch(min)
+	    {
+	    case  5: return "Polynomials, factorization";
+	    case 10: return "Gröbner bases; other bases for ideals and modules (e.g., Janet and border bases)";
+	    case 15: return "Solving polynomial systems; resultants";
+	    case 20: return "Computational homological algebra";
+	    case 25: return "Applications of commutative algebra (e.g., to statistics, control theory, optimization, etc.)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
     case 14: // Algebraic geometry
       switch (med)
 	{
@@ -2009,7 +2266,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'L': // Algebraic groups
 	  switch(min)
 	    {
-	    case 05: return "Formal groups, p-divisible groups";
+	    case  5: return "Formal groups, p-divisible groups";
 	    case 10: return "Group varieties";
 	    case 15: return "Group schemes";
 	    case 17: return "Affine algebraic groups, hyperalgebra constructions";
@@ -2023,8 +2280,8 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'M': // Special varieties
 	  switch(min)
 	    {
-	    case 05: return "Varieties defined by ring conditions (factorial, Cohen-Macaulay, seminormal)";
-	    case 06: return "Linkage";
+	    case  5: return "Varieties defined by ring conditions (factorial, Cohen-Macaulay, seminormal)";
+	    case  6: return "Linkage";
 	    case  7: return "Low codimension problems";
 	    case 10: return "Complete intersections";
 	    case 12: return "Determinantal varieties";
@@ -2087,6 +2344,354 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	  switch(min)
 	    {
 	    case  5: return "Tropical geometry";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 15: // Linear and multilinear algebra; matrix theory
+      switch (med)
+	{
+	case 'A': // Basic linear algebra
+	  switch(min)
+	    {
+	    case  3: return "Vector spaces, linear dependence, rank";
+	    case  4: return "Linear transformations, semilinear transformations";
+	    case  6: return "Linear equations";
+	    case  9: return "Matrix inversion, generalized inverses";
+	    case 12: return "Conditioning of matrices";
+	    case 15: return "Determinants, permanents, other special matrix functions";
+	    case 16: return "Matrix exponential and similar functions of matrices";
+	    case 18: return "Eigenvalues, singular values, and eigenvectors";
+	    case 21: return "Canonical forms, reductions, classification";
+	    case 22: return "Matrix pencils";
+	    case 23: return "Factorization of matrices";
+	    case 24: return "Matrix equations and identities";
+	    case 27: return "Commutativity";
+	    case 29: return "Inverse problems";
+	    case 30: return "Algebraic systems of matrices";
+	    case 39: return "Linear inequalities";
+	    case 42: return "Inequalities involving eigenvalues and eigenvectors";
+	    case 45: return "Miscellaneous inequalities involving matrices";
+	    case 54: return "Matrices over function rings in one or more variables";
+	    case 60: return "Norms of matrices, numerical range, applications of functional analysis to matrix theory";
+	    case 63: return "Quadratic and bilinear forms, inner products";
+	    case 66: return "Clifford algebras, spinors";
+	    case 69: return "Multilinear algebra, tensor products";
+	    case 72: return "Vector and tensor algebra, theory of invariants";
+	    case 75: return "Exterior algebra, Grassmann algebras";
+	    case 78: return "Other algebras built from modules";
+	    case 80: return "Max-plus and related algebras";
+	    case 83: return "Matrix completion problems";
+	    case 86: return "Linear preserver problems";
+	    case 99: return "Miscellaneous topics";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Special matrices
+	  switch(min)
+	    {
+	    case  5: return "Toeplitz, Cauchy, and related matrices";
+	    case 10: return "Orthogonal matrices";
+	    case 15: return "Fuzzy matrices";
+	    case 33: return "Matrices over special rings (quaternions, finite fields, etc.)";
+	    case 34: return "Boolean and Hadamard matrices";
+	    case 35: return "Sign pattern matrices";
+	    case 36: return "Matrices of integers";
+	    case 48: return "Positive matrices and their generalizations; cones of matrices";
+	    case 51: return "Stochastic matrices";
+	    case 52: return "Random matrices";
+	    case 57: return "Hermitian, skew-Hermitian, and related matrices";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 16: // Associative rings and algebras
+      switch (med)
+	{
+	case 'B': // General and miscellaneous
+	  switch(min)
+	    {
+	    case 50: return "Category-theoretic methods and results (except as in 16D90)";
+	    case 70: return "Applications of logic";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Modules, bimodules and ideals
+	  switch(min)
+	    {
+	    case 10: return "General module theory";
+	    case 20: return "Bimodules";
+	    case 25: return "Ideals";
+	    case 30: return "Infinite-dimensional simple rings (except as in 16Kxx)";
+	    case 40: return "Free, projective, and flat modules and ideals";
+	    case 50: return "Injective modules, self-injective rings";
+	    case 60: return "Simple and semisimple modules, primitive rings and ideals";
+	    case 70: return "Structure and classification (except as in 16Gxx), direct sum decomposition, cancellation";
+	    case 80: return "Other classes of modules and ideals";
+	    case 90: return "Module categories; module theory in a category-theoretic context; Morita equivalence and duality";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Homological methods
+	  switch(min)
+	    {
+	    case  5: return "Syzygies, resolutions, complexes";
+	    case 10: return "Homological dimension";
+	    case 20: return "Grothendieck groups, K-theory, etc.";
+	    case 30: return "Homological functors on modules (Tor, Ext, etc.)";
+	    case 35: return "Derived categories";
+	    case 40: return "(Co)homology of rings and algebras (e.g. Hochschild, cyclic, dihedral, etc.)";
+	    case 45: return "Differential graded algebras and applications";
+	    case 50: return "von Neumann regular rings and generalizations";
+	    case 60: return "Semihereditary and hereditary rings, free ideal rings, Sylvester rings, etc.";
+	    case 65: return "Homological conditions on rings (generalizations of regular, Gorenstein, Cohen-Macaulay rings, etc.)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // Representation theory of rings and algebras
+	  switch(min)
+	    {
+	    case 10: return "Representations of Artinian rings";
+	    case 20: return "Representations of quivers and partially ordered sets";
+	    case 30: return "Representations of orders, lattices, algebras over commutative rings";
+	    case 50: return "Cohen-Macaulay modules";
+	    case 60: return "Representation type (finite, tame, wild, etc.)";
+	    case 70: return "Auslander-Reiten sequences (almost split sequences) and Auslander-Reiten quivers";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'H': // Algebras and orders
+	  switch(min)
+	    {
+	    case  5: return "Separable algebras (e.g., quaternion algebras, Azumaya algebras, etc.)";
+	    case 10: return "Orders in separable algebras";
+	    case 15: return "Commutative orders";
+	    case 20: return "Lattices over orders";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'K': // Division rings and semisimple Artin rings
+	  switch(min)
+	    {
+	    case 20: return "Finite-dimensional";
+	    case 40: return "Infinite-dimensional and general";
+	    case 50: return "Brauer groups";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'L': // Local rings and generalizations
+	  switch(min)
+	    {
+	    case 30: return "Noncommutative local and semilocal rings, perfect rings";
+	    case 60: return "Quasi-Frobenius rings";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'N': // Radicals and radical properties of rings
+	  switch(min)
+	    {
+	    case 20: return "Jacobson radical, quasimultiplication";
+	    case 40: return "Nil and nilpotent radicals, sets, ideals, rings";
+	    case 60: return "Prime and semiprime rings";
+	    case 80: return "General radicals and rings";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'P': // Chain conditions, growth conditions, and other forms of finiteness
+	  switch(min)
+	    {
+	    case 10: return "Finite rings and finite-dimensional algebras";
+	    case 20: return "Artinian rings and modules";
+	    case 40: return "Noetherian rings and modules";
+	    case 50: return "Localization and Noetherian rings";
+	    case 60: return "Chain conditions on annihilators and summands: Goldie-type conditions, Krull dimension";
+	    case 70: return "Chain conditions on other classes of submodules, ideals, subrings, etc.; coherence";
+	    case 90: return "Growth rate, Gelfand-Kirillov dimension";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'R': // Rings with polynomial identity
+	  switch(min)
+	    {
+	    case 10: return "T-ideals, identities, varieties of rings and algebras";
+	    case 20: return "Semiprime p.i. rings, rings embeddable in matrices over commutative rings";
+	    case 30: return "Trace rings and invariant theory";
+	    case 40: return "Identities other than those of matrices over commutative rings";
+	    case 50: return "Other kinds of identities (generalized polynomial, rational, involution)";
+	    case 60: return "Functional identities";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'S': // Rings and algebras arising under various constructions
+	  switch(min)
+	    {
+	    case 10: return "Rings determined by universal properties (free algebras, coproducts, adjunction of inverses, etc.)";
+	    case 15: return "Finite generation, finite presentability, normal forms (diamond lemma, term-rewriting)";
+	    case 20: return "Centralizing and normalizing extensions";
+	    case 30: return "Universal enveloping algebras of Lie algebras";
+	    case 32: return "Rings of differential operators";
+	    case 34: return "Group rings, Laurent polynomial rings";
+	    case 35: return "Twisted and skew group rings, crossed products";
+	    case 36: return "Ordinary and skew polynomial rings and semigroup rings";
+	    case 37: return "Quadratic and Koszul algebras";
+	    case 38: return "Rings arising from non-commutative algebraic geometry";
+	    case 40: return "Smash products of general Hopf actions";
+	    case 50: return "Endomorphism rings; matrix rings";
+	    case 60: return "Rings of functions, subdirect products, sheaves of rings";
+	    case 70: return "Extensions of rings by ideals";
+	    case 80: return "Deformations of rings";
+	    case 85: return "Rings of fractions and localizations";
+	    case 90: return "Torsion theories; radicals on module categories";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'T': // Hopf algebras, quantum groups and related topics
+	  switch(min)
+	    {
+	    case  5: return "Hopf algebras and their applications";
+	    case 10: return "Bialgebras";
+	    case 15: return "Coalgebras and comodules; corings";
+	    case 20: return "Ring-theoretic aspects of quantum groups";
+	    case 25: return "Yang-Baxter equations";
+	    case 30: return "Connections with combinatorics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'U': // Conditions on elements
+	  switch(min)
+	    {
+	    case 10: return "Integral domains";
+	    case 20: return "Ore rings, multiplicative sets, Ore localization";
+	    case 30: return "Divisibility, noncommutative UFDs";
+	    case 60: return "Units, groups of units";
+	    case 70: return "Center, normalizer (invariant elements)";
+	    case 80: return "Generalizations of commutativity";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'W': // Rings and algebras with additional structure
+	  switch(min)
+	    {
+	    case 10: return "Rings with involution; Lie, Jordan and other nonassociative structures";
+	    case 20: return "Automorphisms and endomorphisms";
+	    case 22: return "Actions of groups and semigroups; invariant theory";
+	    case 25: return "Derivations, actions of Lie algebras";
+	    case 50: return "Graded rings and modules";
+	    case 55: return "“Super” (or “skew”) structure";
+	    case 60: return "Valuations, completions, formal power series and related constructions";
+	    case 70: return "Filtered rings; filtrational and graded techniques";
+	    case 80: return "Topological and ordered rings and modules";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'Y': // Generalizations
+	  switch(min)
+	    {
+	    case 30: return "Near-rings";
+	    case 60: return "Semirings";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'Z': // Computational aspects of associative rings
+	  switch(min)
+	    {
+	    case  5: return "Computational aspects of associative rings";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 17: // Nonassociative rings and algebras
+      switch (med)
+	{
+	case 'A': // General nonassociative rings
+	  switch(min)
+	    {
+	    case  1: return "General theory";
+	    case  5: return "Power-associative rings";
+	    case 15: return "Noncommutative Jordan algebras";
+	    case 20: return "Flexible algebras";
+	    case 30: return "Algebras satisfying other identities";
+	    case 32: return "Leibniz algebras";
+	    case 35: return "Division algebras";
+	    case 36: return "Automorphisms, derivations, other operators";
+	    case 40: return "Ternary compositions";
+	    case 42: return "Other n-ary compositions (n≥3)";
+	    case 45: return "Quadratic algebras (but not quadratic Jordan algebras)";
+	    case 50: return "Free algebras";
+	    case 60: return "Structure theory";
+	    case 65: return "Radical theory";
+	    case 70: return "Superalgebras";
+	    case 75: return "Composition algebras";
+	    case 80: return "Valued algebras";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Lie algebras and Lie superalgebras
+	  switch(min)
+	    {
+	    case  1: return "Identities, free Lie (super)algebras";
+	    case  5: return "Structure theory";
+	    case  8: return "Coadjoint orbits; nilpotent varieties";
+	    case 10: return "Representations, algebraic theory (weights)";
+	    case 15: return "Representations, analytic theory";
+	    case 20: return "Simple, semisimple, reductive (super)algebras";
+	    case 22: return "Root systems";
+	    case 25: return "Exceptional (super)algebras";
+	    case 30: return "Solvable, nilpotent (super)algebras";
+	    case 35: return "Universal enveloping (super)algebras";
+	    case 37: return "Quantum groups (quantized enveloping algebras) and related deformations";
+	    case 40: return "Automorphisms, derivations, other operators";
+	    case 45: return "Lie algebras of linear algebraic groups";
+	    case 50: return "Modular Lie (super)algebras";
+	    case 55: return "Homological methods in Lie (super)algebras";
+	    case 56: return "Cohomology of Lie (super)algebras";
+	    case 60: return "Lie (super)algebras associated with other structures (associative, Jordan, etc.)";
+	    case 62: return "Lie bialgebras; Lie coalgebras";
+	    case 63: return "Poisson algebras";
+	    case 65: return "Infinite-dimensional Lie (super)algebras";
+	    case 66: return "Lie algebras of vector fields and related (super) algebras";
+	    case 67: return "Kac-Moody (super)algebras; extended affine Lie algebras; toroidal Lie algebras";
+	    case 68: return "Virasoro and related algebras";
+	    case 69: return "Vertex operators; vertex operator algebras and related structures";
+	    case 70: return "Graded Lie (super)algebras";
+	    case 75: return "Color Lie (super)algebras";
+	    case 80: return "Applications to integrable systems";
+	    case 81: return "Applications to physics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Jordan algebras (algebras, triples and pairs)
+	  switch(min)
+	    {
+	    case  5: return "Identities and free Jordan structures";
+	    case 10: return "Structure theory";
+	    case 17: return "Radicals";
+	    case 20: return "Simple, semisimple algebras";
+	    case 27: return "Idempotents, Peirce decompositions";
+	    case 30: return "Associated groups, automorphisms";
+	    case 36: return "Associated manifolds";
+	    case 37: return "Associated geometries";
+	    case 40: return "Exceptional Jordan structures";
+	    case 50: return "Jordan structures associated with other structures";
+	    case 55: return "Finite-dimensional structures";
+	    case 60: return "Division algebras";
+	    case 65: return "Jordan structures on Banach spaces and algebras";
+	    case 70: return "Super structures";
+	    case 90: return "Applications to physics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Other nonassociative rings and algebras
+	  switch(min)
+	    {
+	    case  5: return "Alternative rings";
+	    case 10: return "Mal'cev (Mal'tsev) rings and algebras";
+	    case 15: return "Right alternative rings";
+	    case 20: return "(γ,δ)-rings, including (1,-1)-rings";
+	    case 25: return "Lie-admissible algebras";
+	    case 92: return "Genetic algebras";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
