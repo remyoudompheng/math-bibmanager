@@ -2698,6 +2698,1265 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    }
 	default: return "Subcategory not implemented";
 	}
+    case 18: // Category theory, homological algebra
+      switch (med)
+	{
+	case 'A': // General theory of categories and functors
+	  switch(min)
+	    {
+	    case  5: return "Definitions, generalizations";
+	    case 10: return "Graphs, diagram schemes, precategories";
+	    case 15: return "Foundations, relations to logic and deductive systems";
+	    case 20: return "Epimorphisms, monomorphisms, special classes of morphisms, null morphisms";
+	    case 22: return "Special properties of functors (faithful, full, etc.)";
+	    case 23: return "Natural morphisms, dinatural morphisms";
+	    case 25: return "Functor categories, comma categories";
+	    case 30: return "Limits and colimits (products, sums, directed limits, pushouts, fiber products, equalizers, kernels, ends and coends, etc.)";
+	    case 32: return "Factorization of morphisms, substructures, quotient structures, congruences, amalgams";
+	    case 35: return "Categories admitting limits (complete categories), functors preserving limits, completions";
+	    case 40: return "Adjoint functors (universal constructions, reflective subcategories, Kan extensions, etc.)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Special categories
+	  switch(min)
+	    {
+	    case  5: return "Category of sets, characterizations";
+	    case 10: return "Category of relations, additive relations";
+	    case 15: return "Embedding theorems, universal categories";
+	    case 20: return "Categories of machines, automata, operative categories";
+	    case 25: return "Topoi";
+	    case 30: return "Categories of topological spaces and continuous mappings";
+	    case 35: return "Preorders, orders and lattices (viewed as categories)";
+	    case 40: return "Groupoids, semigroupoids, semigroups, groups (viewed as categories)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Categories and theories
+	  switch(min)
+	    {
+	    case  5: return "Equational categories";
+	    case 10: return "Theories (e.g. algebraic theories), structure, and semantics";
+	    case 15: return "Triples (= standard construction, monad or triad), algebras for a triple, homology and derived functors for triples";
+	    case 20: return "Algebras and Kleisli categories associated with monads";
+	    case 30: return "Sketches and generalizations";
+	    case 35: return "Accessible and locally presentable categories";
+	    case 50: return "Categorical semantics of formal languages";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Categories with structure
+	  switch(min)
+	    {
+	    case  5: return "Double categories, 2-categories, bicategories and generalizations";
+	    case 10: return "Monoidal categories (= multiplicative categories), symmetric monoidal categories, braided categories";
+	    case 15: return "Closed categories (closed monoidal and Cartesian closed categories, etc.)";
+	    case 20: return "Enriched categories (over closed or monoidal categories)";
+	    case 25: return "Strong functors, strong adjunctions";
+	    case 30: return "Fibered categories";
+	    case 35: return "Structured objects in a category (group objects, etc.)";
+	    case 50: return "Operads";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Abelian categories
+	  switch(min)
+	    {
+	    case  5: return "Preadditive, additive categories";
+	    case 10: return "Exact categories, abelian categories";
+	    case 15: return "Grothendieck categories";
+	    case 20: return "Embedding theorems";
+	    case 25: return "Derived functors and satellites";
+	    case 30: return "Derived categories, triangulated categories";
+	    case 35: return "Localization of categories";
+	    case 40: return "Torsion theories, radicals";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Categories and geometry
+	  switch(min)
+	    {
+	    case  5: return "Local categories and functors";
+	    case 10: return "Grothendieck topologies";
+	    case 15: return "Abstract manifolds and fiber bundles";
+	    case 20: return "Presheaves and sheaves";
+	    case 25: return "Algebraic K-theory and L-theory";
+	    case 30: return "Grothendieck groups";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // Homological algebra
+	  switch(min)
+	    {
+	    case  5: return "Projectives and injectives";
+	    case 10: return "Resolutions; derived functors";
+	    case 15: return "Ext and Tor, generalizations, Künneth formula";
+	    case 20: return "Homological dimension";
+	    case 25: return "Relative homological algebra, projective classes";
+	    case 30: return "Simplicial sets, simplicial objects (in a category)";
+	    case 35: return "Chain complexes";
+	    case 40: return "Spectral sequences, hypercohomology";
+	    case 50: return "Nonabelian homological algebra";
+	    case 55: return "Homotopical algebra";
+	    case 60: return "Other (co)homology theories";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 19: // K-theory
+      switch (med)
+	{
+	case 'A': // Grothendieck groups and K0
+	  switch(min)
+	    {
+	    case 13: return "Stability for projective modules";
+	    case 15: return "Efficient generation";
+	    case 22: return "Frobenius induction, Burnside and representation rings";
+	    case 31: return "K₀ of group rings and orders";
+	    case 49: return "K₀ of other rings";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Whitehead groups and K1
+	  switch(min)
+	    {
+	    case 10: return "Stable range conditions";
+	    case 14: return "Stability for linear groups";
+	    case 28: return "K₁ of group rings and orders";
+	    case 37: return "Congruence subgroup problems";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Steinberg groups and K2
+	  switch(min)
+	    {
+	    case  9: return "Central extensions and Schur multipliers";
+	    case 20: return "Symbols, presentations and stability of K₂";
+	    case 30: return "K₂ and the Brauer group";
+	    case 40: return "Excision for K₂";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Higher algebraic K-theory
+	  switch(min)
+	    {
+	    case  6: return "Q- and plus-constructions";
+	    case 10: return "Algebraic K-theory of spaces";
+	    case 23: return "Symmetric monoidal categories";
+	    case 25: return "Karoubi-Villamayor-Gersten K-theory";
+	    case 35: return "Negative K-theory, NK and Nil";
+	    case 45: return "Higher symbols, Milnor K-theory";
+	    case 50: return "Computations of higher K-theory of rings";
+	    case 55: return "K-theory and homology; cyclic homology and cohomology";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // K-theory in geometry
+	  switch(min)
+	    {
+	    case  8: return "K-theory of schemes";
+	    case 15: return "Algebraic cycles and motivic cohomology";
+	    case 20: return "Relations with cohomology theories";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // K-theory in number theory
+	  switch(min)
+	    {
+	    case  5: return "Generalized class field theory";
+	    case 15: return "Symbols and arithmetic";
+	    case 27: return "Étale cohomology, higher regulators, zeta and L-functions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // K-theory of forms
+	  switch(min)
+	    {
+	    case  5: return "Stability for quadratic modules";
+	    case 12: return "Witt groups of rings";
+	    case 24: return "L-theory of group rings";
+	    case 38: return "Hermitian K-theory, relations with K-theory of rings";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'J': // Obstructions from topology
+	  switch(min)
+	    {
+	    case  5: return "Finiteness and other obstructions in K₀";
+	    case 10: return "Whitehead (and related) torsion";
+	    case 25: return "Surgery obstructions";
+	    case 35: return "Obstructions to group actions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'K': // K-theory and operator algebras
+	  switch(min)
+	    {
+	    case 14: return "K₀ as an ordered group, traces";
+	    case 33: return "EXT and K-homology";
+	    case 35: return "Kasparov theory (KK-theory)";
+	    case 56: return "Index theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'L': // Topological K-theory
+	  switch(min)
+	    {
+	    case 10: return "Riemann-Roch theorems, Chern characters";
+	    case 20: return "J-homomorphism, Adams operations";
+	    case 41: return "Connective K-theory, cobordism";
+	    case 47: return "Equivariant K-theory";
+	    case 50: return "Twisted K-theory; differential K-theory";
+	    case 64: return "Computations, geometric applications";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'M': // Miscellaneous applications of K-theory
+	  switch(min)
+	    {
+	    case  5: return "Miscellaneous applications of K-theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 20: // Group theory and generalizations
+      switch (med)
+	{
+	case 'A': // Foundations
+	  switch(min)
+	    {
+	    case  5: return "Axiomatics and elementary properties";
+	    case 10: return "Metamathematical considerations";
+	    case 15: return "Applications of logic to group theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Permutation groups
+	  switch(min)
+	    {
+	    case  5: return "General theory for finite groups";
+	    case  7: return "General theory for infinite groups";
+	    case 10: return "Characterization theorems";
+	    case 15: return "Primitive groups";
+	    case 20: return "Multiply transitive finite groups";
+	    case 22: return "Multiply transitive infinite groups";
+	    case 25: return "Finite automorphism groups of algebraic, geometric, or combinatorial structures";
+	    case 27: return "Infinite automorphism groups";
+	    case 30: return "Symmetric groups";
+	    case 35: return "Subgroups of symmetric groups";
+	    case 40: return "Computational methods";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Representation theory of groups
+	  switch(min)
+	    {
+	    case  5: return "Group rings of finite groups and their modules";
+	    case  7: return "Group rings of infinite groups and their modules";
+	    case  8: return "Hecke algebras and their representations";
+	    case 10: return "Integral representations of finite groups";
+	    case 11: return "p-adic representations of finite groups";
+	    case 12: return "Integral representations of infinite groups";
+	    case 15: return "Ordinary representations and characters";
+	    case 20: return "Modular representations and characters";
+	    case 25: return "Projective representations and multipliers";
+	    case 30: return "Representations of finite symmetric groups";
+	    case 32: return "Representations of infinite symmetric groups";
+	    case 33: return "Representations of finite groups of Lie type";
+	    case 34: return "Representations of sporadic groups";
+	    case 35: return "Applications of group representations to physics";
+	    case 40: return "Computational methods";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Abstract finite groups
+	  switch(min)
+	    {
+	    case  5: return "Finite simple groups and their classification";
+	    case  6: return "Simple groups: alternating groups and groups of Lie type";
+	    case  8: return "Simple groups: sporadic groups";
+	    case 10: return "Solvable groups, theory of formations, Schunck classes, Fitting classes, π-length, ranks";
+	    case 15: return "Nilpotent groups, p-groups";
+	    case 20: return "Sylow subgroups, Sylow properties, π-groups, π-structure";
+	    case 25: return "Special subgroups (Frattini, Fitting, etc.)";
+	    case 30: return "Series and lattices of subgroups";
+	    case 35: return "Subnormal subgroups";
+	    case 40: return "Products of subgroups";
+	    case 45: return "Automorphisms";
+	    case 60: return "Arithmetic and combinatorial problems";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Structure and classification of infinite or finite groups
+	  switch(min)
+	    {
+	    case  5: return "Free nonabelian groups";
+	    case  6: return "Free products, free products with amalgamation, Higman-Neumann-Neumann extensions, and generalizations";
+	    case  7: return "Subgroup theorems; subgroup growth";
+	    case  8: return "Groups acting on trees";
+	    case 10: return "Quasivarieties and varieties of groups";
+	    case 15: return "Chains and lattices of subgroups, subnormal subgroups";
+	    case 18: return "Limits, profinite groups";
+	    case 22: return "Extensions, wreath products, and other compositions";
+	    case 25: return "Local properties";
+	    case 26: return "Residual properties and generalizations; residually finite groups";
+	    case 28: return "Maximal subgroups";
+	    case 32: return "Simple groups";
+	    case 34: return "General structure theorems";
+	    case 36: return "Automorphisms of infinite groups";
+	    case 42: return "Groups with a BN-pair; buildings";
+	    case 45: return "Conjugacy classes";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Special aspects of infinite or finite groups
+	  switch(min)
+	    {
+	    case  5: return "Generators, relations, and presentations";
+	    case  6: return "Cancellation theory; application of van Kampen diagrams";
+	    case 10: return "Word problems, other decision problems, connections with logic and automata";
+	    case 11: return "Groups of finite Morley rank";
+	    case 12: return "Commutator calculus";
+	    case 14: return "Derived series, central series, and generalizations";
+	    case 16: return "Solvable groups, supersolvable groups";
+	    case 17: return "Formations of groups, Fitting classes";
+	    case 18: return "Nilpotent groups";
+	    case 19: return "Generalizations of solvable and nilpotent groups";
+	    case 22: return "Other classes of groups defined by subgroup chains";
+	    case 24: return "FC-groups and their generalizations";
+	    case 28: return "Automorphism groups of groups";
+	    case 29: return "Representations of groups as automorphism groups of algebraic systems";
+	    case 34: return "Fundamental groups and their automorphisms";
+	    case 36: return "Braid groups; Artin groups";
+	    case 38: return "Other groups related to topology or analysis";
+	    case 40: return "Associated Lie structures";
+	    case 45: return "Engel conditions";
+	    case 50: return "Periodic groups; locally finite groups";
+	    case 55: return "Reflection and Coxeter groups";
+	    case 60: return "Ordered groups";
+	    case 65: return "Geometric group theory";
+	    case 67: return "Hyperbolic groups and nonpositively curved groups";
+	    case 69: return "Asymptotic properties of groups";
+	    case 70: return "Algebraic geometry over groups; equations over groups";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // Linear algebraic groups and related topics
+	  switch(min)
+	    {
+	    case  5: return "Representation theory";
+	    case  7: return "Structure theory";
+	    case 10: return "Cohomology theory";
+	    case 15: return "Linear algebraic groups over arbitrary fields";
+	    case 20: return "Linear algebraic groups over the reals, the complexes, the quaternions";
+	    case 25: return "Linear algebraic groups over local fields and their integers";
+	    case 30: return "Linear algebraic groups over global fields and their integers";
+	    case 35: return "Linear algebraic groups over adèles and other rings and schemes";
+	    case 40: return "Linear algebraic groups over finite fields";
+	    case 41: return "Exceptional groups";
+	    case 42: return "Quantum groups (quantized function algebras) and their representations";
+	    case 43: return "Schur and q-Schur algebras";
+	    case 44: return "Kac-Moody groups";
+	    case 45: return "Applications to physics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'H': // Other groups of matrices
+	  switch(min)
+	    {
+	    case  5: return "Unimodular groups, congruence subgroups";
+	    case 10: return "Fuchsian groups and their generalizations";
+	    case 15: return "Other geometric groups, including crystallographic groups";
+	    case 20: return "Other matrix groups over fields";
+	    case 25: return "Other matrix groups over rings";
+	    case 30: return "Other matrix groups over finite fields";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'J': // Connections with homological algebra and category theory
+	  switch(min)
+	    {
+	    case  5: return "Homological methods in group theory";
+	    case  6: return "Cohomology of groups";
+	    case 15: return "Category of groups";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'K': // Abelian groups
+	  switch(min)
+	    {
+	    case  1: return "Finite abelian groups";
+	    case 10: return "Torsion groups, primary groups and generalized primary groups";
+	    case 15: return "Torsion-free groups, finite rank";
+	    case 20: return "Torsion-free groups, infinite rank";
+	    case 21: return "Mixed groups";
+	    case 25: return "Direct sums, direct products, etc.";
+	    case 27: return "Subgroups";
+	    case 30: return "Automorphisms, homomorphisms, endomorphisms, etc.";
+	    case 35: return "Extensions";
+	    case 40: return "Homological and categorical methods";
+	    case 45: return "Topological methods";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'L': // Groupoids (i.e. small categories in which all morphisms are isomorphisms)
+	  switch(min)
+	    {
+	    case  5: return "Groupoids (i.e. small categories in which all morphisms are isomorphisms)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'M': // Semigroups
+	  switch(min)
+	    {
+	    case  5: return "Free semigroups, generators and relations, word problems";
+	    case  7: return "Varieties and pseudovarieties of semigroups";
+	    case 10: return "General structure theory";
+	    case 11: return "Radical theory";
+	    case 12: return "Ideal theory";
+	    case 13: return "Arithmetic theory of monoids";
+	    case 14: return "Commutative semigroups";
+	    case 15: return "Mappings of semigroups";
+	    case 17: return "Regular semigroups";
+	    case 18: return "Inverse semigroups";
+	    case 19: return "Orthodox semigroups";
+	    case 20: return "Semigroups of transformations, etc.";
+	    case 25: return "Semigroup rings, multiplicative semigroups of rings";
+	    case 30: return "Representation of semigroups; actions of semigroups on sets";
+	    case 32: return "Algebraic monoids";
+	    case 35: return "Semigroups in automata theory, linguistics, etc.";
+	    case 50: return "Connections of semigroups with homological algebra and category theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'N': // Other generalizations of groups
+	  switch(min)
+	    {
+	    case  2: return "Sets with a single binary operation (groupoids)";
+	    case  5: return "Loops, quasigroups";
+	    case 10: return "Ternary systems (heaps, semiheaps, heapoids, etc.)";
+	    case 15: return "n-ary systems (n≥3)";
+	    case 20: return "Hypergroups";
+	    case 25: return "Fuzzy groups";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'P': // Probabilistic methods in group theory
+	  switch(min)
+	    {
+	    case  5: return "Probabilistic methods in group theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 22: // Topological groups, Lie groups
+      switch (med)
+	{
+	case 'A': // Topological and differentiable algebraic systems
+	  switch(min)
+	    {
+	    case  5: return "Structure of general topological groups";
+	    case 10: return "Analysis on general topological groups";
+	    case 15: return "Structure of topological semigroups";
+	    case 20: return "Analysis on topological semigroups";
+	    case 22: return "Topological groupoids (including differentiable and Lie groupoids)";
+	    case 25: return "Representations of general topological groups and semigroups";
+	    case 26: return "Topological semilattices, lattices and applications";
+	    case 30: return "Other topological algebraic systems and their representations";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Locally compact abelian groups (LCA groups)
+	  switch(min)
+	    {
+	    case  5: return "General properties and structure of LCA groups";
+	    case 10: return "Structure of group algebras of LCA groups";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Compact groups
+	  switch(min)
+	    {
+	    case  5: return "Compact groups";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Locally compact groups and their algebras
+	  switch(min)
+	    {
+	    case  5: return "General properties and structure of locally compact groups";
+	    case 10: return "Unitary representations of locally compact groups";
+	    case 12: return "Other representations of locally compact groups";
+	    case 15: return "Group algebras of locally compact groups";
+	    case 20: return "Representations of group algebras";
+	    case 25: return "C*-algebras and W*-algebras in relation to group representations";
+	    case 30: return "Induced representations";
+	    case 35: return "Duality theorems";
+	    case 40: return "Ergodic theory on groups";
+	    case 45: return "Automorphism groups of locally compact groups";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Lie groups
+	  switch(min)
+	    {
+	    case  5: return "Local Lie groups";
+	    case 10: return "General properties and structure of complex Lie groups";
+	    case 15: return "General properties and structure of real Lie groups";
+	    case 20: return "General properties and structure of other Lie groups";
+	    case 25: return "Nilpotent and solvable Lie groups";
+	    case 27: return "Representations of nilpotent and solvable Lie groups (special orbital integrals, non-type I representations, etc.)";
+	    case 30: return "Analysis on real and complex Lie groups";
+	    case 35: return "Analysis on p-adic Lie groups";
+	    case 40: return "Discrete subgroups of Lie groups";
+	    case 41: return "Continuous cohomology";
+	    case 43: return "Structure and representation of the Lorentz group";
+	    case 45: return "Representations of Lie and linear algebraic groups over real fields: analytic methods";
+	    case 46: return "Semisimple Lie groups and their representations";
+	    case 47: return "Representations of Lie and real algebraic groups: algebraic methods (Verma modules, etc.)";
+	    case 50: return "Representations of Lie and linear algebraic groups over local fields";
+	    case 55: return "Representations of Lie and linear algebraic groups over global fields and adèle rings";
+	    case 57: return "Geometric Langlands program: representation-theoretic aspects";
+	    case 60: return "Lie algebras of Lie groups";
+	    case 65: return "Infinite-dimensional Lie groups and their Lie algebras: general properties";
+	    case 66: return "Analysis on and representations of infinite-dimensional Lie groups";
+	    case 67: return "Loop groups and related constructions, group-theoretic treatment";
+	    case 70: return "Applications of Lie groups to physics; explicit representations";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Noncompact transformation groups
+	  switch(min)
+	    {
+	    case  5: return "General theory of group and pseudogroup actions";
+	    case 10: return "Measurable group actions";
+	    case 30: return "Homogeneous spaces";
+	    case 50: return "Groups as automorphisms of other structures";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 26: // Real functions
+      switch (med)
+	{
+	case 'A': // Functions of one variable
+	  switch(min)
+	    {
+	    case 03: return "Foundations: limits and generalizations, elementary topology of the line";
+	    case 06: return "One-variable calculus";
+	    case 09: return "Elementary functions";
+	    case 12: return "Rate of growth of functions, orders of infinity, slowly varying functions";
+	    case 15: return "Continuity and related questions (modulus of continuity, semicontinuity, discontinuities, etc.)";
+	    case 16: return "Lipschitz (Hölder) classes";
+	    case 18: return "Iteration";
+	    case 21: return "Classification of real functions; Baire classification of sets and functions";
+	    case 24: return "Differentiation (functions of one variable): general theory, generalized derivatives, mean-value theorems";
+	    case 27: return "Nondifferentiability (nondifferentiable functions, points of nondifferentiability), discontinuous derivatives";
+	    case 30: return "Singular functions, Cantor functions, functions with other special properties";
+	    case 33: return "Fractional derivatives and integrals";
+	    case 36: return "Antidifferentiation";
+	    case 39: return "Denjoy and Perron integrals, other special integrals";
+	    case 42: return "Integrals of Riemann, Stieltjes and Lebesgue type";
+	    case 45: return "Functions of bounded variation, generalizations";
+	    case 46: return "Absolutely continuous functions";
+	    case 48: return "Monotonic functions, generalizations";
+	    case 51: return "Convexity, generalizations";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Functions of several variables
+	  switch(min)
+	    {
+	    case 05: return "Continuity and differentiation questions";
+	    case 10: return "Implicit function theorems, Jacobians, transformations with several variables";
+	    case 12: return "Calculus of vector functions";
+	    case 15: return "Integration: length, area, volume";
+	    case 20: return "Integral formulas (Stokes, Gauss, Green, etc.)";
+	    case 25: return "Convexity, generalizations";
+	    case 30: return "Absolutely continuous functions, functions of bounded variation";
+	    case 35: return "Special properties of functions of several variables, Hölder conditions, etc.";
+	    case 40: return "Representation and superposition of functions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Polynomials, rational functions
+	  switch(min)
+	    {
+	    case 05: return "Polynomials: analytic properties, etc.";
+	    case 10: return "Polynomials: location of zeros";
+	    case 15: return "Rational functions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Inequalities
+	  switch(min)
+	    {
+	    case 05: return "Inequalities for trigonometric functions and polynomials";
+	    case 07: return "Inequalities involving other types of functions";
+	    case 10: return "Inequalities involving derivatives and differential and integral operators";
+	    case 15: return "Inequalities for sums, series and integrals";
+	    case 20: return "Other analytical inequalities";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Miscellaneous topics
+	  switch(min)
+	    {
+	    case 05: return "Real-analytic functions";
+	    case 10: return "C∞-functions, quasi-analytic functions";
+	    case 15: return "Calculus of functions on infinite-dimensional spaces";
+	    case 20: return "Calculus of functions taking values in infinite-dimensional spaces";
+	    case 25: return "Set-valued functions";
+	    case 30: return "Non-Archimedean analysis";
+	    case 35: return "Nonstandard analysis";
+	    case 40: return "Constructive real analysis";
+	    case 50: return "Fuzzy real analysis";
+	    case 60: return "Means";
+	    case 70: return "Real analysis on time scales or measure chains";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 28: // Measure and integration
+      switch (med)
+	{
+	case 'A': // Classical measure theory
+	  switch(min)
+	    {
+	    case 05: return "Classes of sets (Borel fields, σ-rings, etc.), measurable sets, Suslin sets, analytic sets";
+	    case 10: return "Real- or complex-valued set functions";
+	    case 12: return "Contents, measures, outer measures, capacities";
+	    case 15: return "Abstract differentiation theory, differentiation of set functions";
+	    case 20: return "Measurable and nonmeasurable functions, sequences of measurable functions, modes of convergence";
+	    case 25: return "Integration with respect to measures and other set functions";
+	    case 33: return "Spaces of measures, convergence of measures";
+	    case 35: return "Measures and integrals in product spaces";
+	    case 50: return "Integration and disintegration of measures";
+	    case 51: return "Lifting theory";
+	    case 60: return "Measures on Boolean rings, measure algebras";
+	    case 75: return "Length, area, volume, other geometric measure theory";
+	    case 78: return "Hausdorff and packing measures";
+	    case 80: return "Fractals";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Set functions, measures and integrals with values in abstract spaces
+	  switch(min)
+	    {
+	    case 05: return "Vector-valued set functions, measures and integrals";
+	    case 10: return "Group- or semigroup-valued set functions, measures and integrals";
+	    case 15: return "Set functions, measures and integrals with values in ordered spaces";
+	    case 20: return "Set-valued set functions and measures; integration of set-valued functions; measurable selections";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Set functions and measures on spaces with additional structure
+	  switch(min)
+	    {
+	    case 05: return "Integration theory via linear functionals (Radon measures, Daniell integrals, etc.), representing set functions and measures";
+	    case 10: return "Set functions and measures on topological groups or semigroups, Haar measures, invariant measures";
+	    case 15: return "Set functions and measures on topological spaces (regularity of measures, etc.)";
+	    case 20: return "Set functions and measures and integrals in infinite-dimensional spaces (Wiener measure, Gaussian measure, etc.)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Measure-theoretic ergodic theory
+	  switch(min)
+	    {
+	    case 05: return "Measure-preserving transformations";
+	    case 10: return "One-parameter continuous families of measure-preserving transformations";
+	    case 15: return "General groups of measure-preserving transformations";
+	    case 20: return "Entropy and other invariants";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Miscellaneous topics in measure theory
+	  switch(min)
+	    {
+	    case 05: return "Nonstandard measure theory";
+	    case 10: return "Fuzzy measure theory";
+	    case 15: return "Other connections with logic and set theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 30: // Functions of a complex variable
+      switch (med)
+	{
+	case 'A': // General properties
+	  switch(min)
+	    {
+	    case 05: return "Monogenic properties of complex functions (including polygenic and areolar monogenic functions)";
+	    case 10: return "Inequalities in the complex domain";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Series expansions
+	  switch(min)
+	    {
+	    case 10: return "Power series (including lacunary series)";
+	    case 20: return "Random power series";
+	    case 30: return "Boundary behavior of power series, over-convergence";
+	    case 40: return "Analytic continuation";
+	    case 50: return "Dirichlet series and other series expansions, exponential series";
+	    case 60: return "Completeness problems, closure of a system of functions";
+	    case 70: return "Continued fractions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Geometric function theory
+	  switch(min)
+	    {
+	    case 10: return "Polynomials";
+	    case 15: return "Zeros of polynomials, rational functions, and other analytic functions (e.g. zeros of functions with bounded Dirichlet integral)";
+	    case 20: return "Conformal mappings of special domains";
+	    case 25: return "Covering theorems in conformal mapping theory";
+	    case 30: return "Numerical methods in conformal mapping theory";
+	    case 35: return "General theory of conformal mappings";
+	    case 40: return "Kernel functions and applications";
+	    case 45: return "Special classes of univalent and multivalent functions (starlike, convex, bounded rotation, etc.)";
+	    case 50: return "Coefficient problems for univalent and multivalent functions";
+	    case 55: return "General theory of univalent and multivalent functions";
+	    case 62: return "Quasiconformal mappings in the plane";
+	    case 65: return "Quasiconformal mappings in Rⁿ, other generalizations";
+	    case 70: return "Extremal problems for conformal and quasiconformal mappings, variational methods";
+	    case 75: return "Extremal problems for conformal and quasiconformal mappings, other methods";
+	    case 80: return "Maximum principle; Schwarz's lemma, Lindelöf principle, analogues and generalizations; subordination";
+	    case 85: return "Capacity and harmonic measure in the complex plane";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Entire and meromorphic functions, and related topics
+	  switch(min)
+	    {
+	    case 05: return "Functional equations in the complex domain, iteration and composition of analytic functions";
+	    case 10: return "Representations of entire functions by series and integrals";
+	    case 15: return "Special classes of entire functions and growth estimates";
+	    case 20: return "Entire functions, general theory";
+	    case 30: return "Meromorphic functions, general theory";
+	    case 35: return "Distribution of values, Nevanlinna theory";
+	    case 40: return "Cluster sets, prime ends, boundary behavior";
+	    case 45: return "Bloch functions, normal functions, normal families";
+	    case 60: return "Quasi-analytic and other classes of functions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Miscellaneous topics of analysis in the complex domain
+	  switch(min)
+	    {
+	    case 05: return "Moment problems, interpolation problems";
+	    case 10: return "Approximation in the complex domain";
+	    case 15: return "Asymptotic representations in the complex domain";
+	    case 20: return "Integration, integrals of Cauchy type, integral representations of analytic functions";
+	    case 25: return "Boundary value problems";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Riemann surfaces
+	  switch(min)
+	    {
+	    case 10: return "Compact Riemann surfaces and uniformization";
+	    case 15: return "Harmonic functions on Riemann surfaces";
+	    case 20: return "Classification theory of Riemann surfaces";
+	    case 25: return "Ideal boundary theory";
+	    case 30: return "Differentials on Riemann surfaces";
+	    case 35: return "Fuchsian groups and automorphic functions";
+	    case 40: return "Kleinian groups";
+	    case 45: return "Conformal metrics (hyperbolic, Poincaré, distance functions)";
+	    case 50: return "Klein surfaces";
+	    case 60: return "Teichmüller theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // Generalized function theory
+	  switch(min)
+	    {
+	    case 06: return "Non-Archimedean function theory";
+	    case 12: return "Finely holomorphic functions and topological function theory";
+	    case 20: return "Generalizations of Bers or Vekua type (pseudoanalytic, p-analytic, etc.)";
+	    case 25: return "Discrete analytic functions";
+	    case 30: return "Other generalizations of analytic functions (including abstract-valued functions)";
+	    case 35: return "Functions of hypercomplex variables and generalized variables";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'H': // Spaces and algebras of analytic functions
+	  switch(min)
+	    {
+	    case 05: return "Bounded analytic functions";
+	    case 10: return "Hardy spaces";
+	    case 15: return "Nevanlinna class and Smirnov class";
+	    case 20: return "Bergman spaces, Fock spaces";
+	    case 25: return "Besov spaces and Qp-spaces";
+	    case 30: return "Bloch spaces";
+	    case 35: return "BMO-spaces";
+	    case 50: return "Algebras of analytic functions";
+	    case 80: return "Corona theorems";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'J': // Function theory on the disc
+	  switch(min)
+	    {
+	    case 05: return "Inner functions";
+	    case 10: return "Blaschke products";
+	    case 15: return "Singular inner functions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'K': // Universal holomorphic functions
+	  switch(min)
+	    {
+	    case 05: return "Universal Taylor series";
+	    case 10: return "Universal Dirichlet series";
+	    case 15: return "Bounded universal functions";
+	    case 20: return "Compositional universality";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'L': // Analysis on metric spaces
+	  switch(min)
+	    {
+	    case 05: return "Geometric embeddings of metric spaces";
+	    case 10: return "Quasiconformal mappings in metric spaces";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 31: // Potential theory
+      switch (med)
+	{
+	case 'A': // Two-dimensional theory
+	  switch(min)
+	    {
+	    case 05: return "Harmonic, subharmonic, superharmonic functions";
+	    case 10: return "Integral representations, integral operators, integral equations methods";
+	    case 15: return "Potentials and capacity, harmonic measure, extremal length";
+	    case 20: return "Boundary behavior (theorems of Fatou type, etc.)";
+	    case 25: return "Boundary value and inverse problems";
+	    case 30: return "Biharmonic, polyharmonic functions and equations, Poisson's equation";
+	    case 35: return "Connections with differential equations";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Higher-dimensional theory
+	  switch(min)
+	    {
+	    case 05: return "Harmonic, subharmonic, superharmonic functions";
+	    case 10: return "Integral representations, integral operators, integral equations methods";
+	    case 15: return "Potentials and capacities, extremal length";
+	    case 20: return "Boundary value and inverse problems";
+	    case 25: return "Boundary behavior";
+	    case 30: return "Biharmonic and polyharmonic equations and functions";
+	    case 35: return "Connections with differential equations";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Other generalizations
+	  switch(min)
+	    {
+	    case 05: return "Harmonic, subharmonic, superharmonic functions";
+	    case 10: return "Pluriharmonic and plurisubharmonic functions";
+	    case 12: return "Potential theory on Riemannian manifolds";
+	    case 15: return "Potentials and capacities";
+	    case 20: return "Discrete potential theory and numerical methods";
+	    case 25: return "Dirichlet spaces";
+	    case 35: return "Martin boundary theory";
+	    case 40: return "Fine potential theory";
+	    case 45: return "Other generalizations (nonlinear potential theory, etc.)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Axiomatic potential theory
+	  switch(min)
+	    {
+	    case 05: return "Axiomatic potential theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Potential theory on metric spaces
+	  switch(min)
+	    {
+	    case 05: return "Potential theory on metric spaces";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 32: // Several complex variables
+      switch (med)
+	{
+	case 'A': // Holomorphic functions of several complex variables
+	  switch(min)
+	    {
+	    case 05: return "Power series, series of functions";
+	    case 07: return "Special domains (Reinhardt, Hartogs, circular, tube)";
+	    case 10: return "Holomorphic functions";
+	    case 12: return "Multifunctions";
+	    case 15: return "Entire functions";
+	    case 17: return "Special families of functions";
+	    case 18: return "Bloch functions, normal functions";
+	    case 19: return "Normal families of functions, mappings";
+	    case 20: return "Meromorphic functions";
+	    case 22: return "Nevanlinna theory (local); growth estimates; other inequalities";
+	    case 25: return "Integral representations; canonical kernels (Szegő, Bergman, etc.)";
+	    case 26: return "Integral representations, constructed kernels (e.g. Cauchy, Fantappiè-type kernels)";
+	    case 27: return "Local theory of residues";
+	    case 30: return "Other generalizations of function theory of one complex variable (should also be assigned at least one classification number from Section 30)";
+	    case 35: return "Hp-spaces, Nevanlinna spaces";
+	    case 36: return "Bergman spaces";
+	    case 37: return "Other spaces of holomorphic functions (e.g. bounded mean oscillation (BMOA), vanishing mean oscillation (VMOA))";
+	    case 38: return "Algebras of holomorphic functions";
+	    case 40: return "Boundary behavior of holomorphic functions";
+	    case 45: return "Hyperfunctions";
+	    case 50: return "Harmonic analysis of several complex variables";
+	    case 55: return "Singular integrals";
+	    case 60: return "Zero sets of holomorphic functions";
+	    case 65: return "Banach algebra techniques";
+	    case 70: return "Functional analysis techniques";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Local analytic geometry
+	  switch(min)
+	    {
+	    case 05: return "Analytic algebras and generalizations, preparation theorems";
+	    case 10: return "Germs of analytic sets, local parametrization";
+	    case 15: return "Analytic subsets of affine space";
+	    case 20: return "Semi-analytic sets and subanalytic sets";
+	    case 25: return "Triangulation and related questions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Analytic spaces
+	  switch(min)
+	    {
+	    case 05: return "Real-analytic manifolds, real-analytic spaces";
+	    case 07: return "Real-analytic sets, complex Nash functions";
+	    case 09: return "Embedding of real analytic manifolds";
+	    case 11: return "Complex supergeometry";
+	    case 15: return "Complex spaces";
+	    case 18: return "Topology of analytic spaces";
+	    case 20: return "Normal analytic spaces";
+	    case 22: return "Embedding of analytic spaces";
+	    case 25: return "Analytic subsets and submanifolds";
+	    case 30: return "Integration on analytic sets and spaces, currents";
+	    case 35: return "Analytic sheaves and cohomology groups";
+	    case 36: return "Local cohomology of analytic spaces";
+	    case 37: return "Duality theorems";
+	    case 38: return "Sheaves of differential operators and their modules, D-modules";
+	    case 55: return "The Levi problem in complex spaces; generalizations";
+	    case 81: return "Applications to physics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Analytic continuation
+	  switch(min)
+	    {
+	    case 05: return "Domains of holomorphy";
+	    case 10: return "Envelopes of holomorphy";
+	    case 15: return "Continuation of analytic objects";
+	    case 20: return "Removable singularities";
+	    case 26: return "Riemann domains";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Holomorphic convexity
+	  switch(min)
+	    {
+	    case 05: return "Holomorphically convex complex spaces, reduction theory";
+	    case 10: return "Stein spaces, Stein manifolds";
+	    case 20: return "Polynomial convexity";
+	    case 30: return "Holomorphic and polynomial approximation, Runge pairs, interpolation";
+	    case 35: return "Global boundary behavior of holomorphic functions";
+	    case 40: return "The Levi problem";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Geometric convexity
+	  switch(min)
+	    {
+	    case 10: return "q-convexity, q-concavity";
+	    case 17: return "Other notions of convexity";
+	    case 18: return "Finite-type conditions";
+	    case 27: return "Topological consequences of geometric convexity";
+	    case 32: return "Analytical consequences of geometric convexity (vanishing theorems, etc.)";
+	    case 45: return "Invariant metrics and pseudodistances";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // Deformations of analytic structures
+	  switch(min)
+	    {
+	    case 05: return "Deformations of complex structures";
+	    case 07: return "Deformations of special (e.g. CR) structures";
+	    case 08: return "Deformations of fiber bundles";
+	    case 10: return "Deformations of submanifolds and subspaces";
+	    case 13: return "Analytic moduli problems";
+	    case 15: return "Moduli of Riemann surfaces, Teichmüller theory";
+	    case 20: return "Period matrices, variation of Hodge structure; degenerations";
+	    case 34: return "Moduli and deformations for ordinary differential equations (e.g. Knizhnik-Zamolodchikov equation)";
+	    case 81: return "Applications to physics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'H': // Holomorphic mappings and correspondences
+	  switch(min)
+	    {
+	    case 02: return "Holomorphic mappings, (holomorphic) embeddings and related questions";
+	    case 04: return "Meromorphic mappings";
+	    case 12: return "Boundary uniqueness of mappings";
+	    case 25: return "Picard-type theorems and generalizations";
+	    case 30: return "Value distribution theory in higher dimensions";
+	    case 35: return "Proper mappings, finiteness theorems";
+	    case 40: return "Boundary regularity of mappings";
+	    case 50: return "Iteration problems";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'J': // Compact analytic spaces
+	  switch(min)
+	    {
+	    case 05: return "Compactification of analytic spaces";
+	    case 10: return "Algebraic dependence theorems";
+	    case 15: return "Compact surfaces";
+	    case 17: return "Compact 3-folds";
+	    case 18: return "Compact n-folds";
+	    case 25: return "Transcendental methods of algebraic geometry";
+	    case 27: return "Compact Kähler manifolds: generalizations, classification";
+	    case 81: return "Applications to physics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'K': // Generalizations of analytic spaces
+	  switch(min)
+	    {
+	    case 05: return "Banach analytic spaces";
+	    case 07: return "Formal and graded complex spaces";
+	    case 15: return "Differentiable functions on analytic spaces, differentiable spaces";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'L': // Holomorphic fiber spaces
+	  switch(min)
+	    {
+	    case 05: return "Holomorphic bundles and generalizations";
+	    case 10: return "Sheaves and cohomology of sections of holomorphic vector bundles, general results";
+	    case 15: return "Bundle convexity";
+	    case 20: return "Vanishing theorems";
+	    case 25: return "Twistor theory, double fibrations";
+	    case 81: return "Applications to physics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'M': // Complex spaces with a group of automorphisms
+	  switch(min)
+	    {
+	    case 05: return "Complex Lie groups, automorphism groups acting on complex spaces";
+	    case 10: return "Homogeneous complex manifolds";
+	    case 12: return "Almost homogeneous manifolds and spaces";
+	    case 15: return "Hermitian symmetric spaces, bounded symmetric domains, Jordan algebras";
+	    case 17: return "Automorphism groups of Cⁿ and affine manifolds";
+	    case 25: return "Complex vector fields";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'N': // Automorphic functions
+	  switch(min)
+	    {
+	    case 05: return "General theory of automorphic functions of several complex variables";
+	    case 10: return "Automorphic forms";
+	    case 15: return "Automorphic functions in symmetric domains";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'P': // Non-Archimedean analysis
+	  switch(min)
+	    {
+	    case 05: return "Non-Archimedean analysis (should also be assigned at least one other classification number from Section 32 describing the type of problem)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'Q': // Complex manifolds
+	  switch(min)
+	    {
+	    case 05: return "Negative curvature manifolds";
+	    case 10: return "Positive curvature manifolds";
+	    case 15: return "Kähler manifolds";
+	    case 20: return "Kähler-Einstein manifolds";
+	    case 25: return "Calabi-Yau theory";
+	    case 26: return "Notions of stability";
+	    case 28: return "Stein manifolds";
+	    case 30: return "Uniformization";
+	    case 35: return "Complex manifolds as subdomains of Euclidean space";
+	    case 40: return "Embedding theorems";
+	    case 45: return "Hyperbolic and Kobayashi hyperbolic manifolds";
+	    case 55: return "Topological aspects of complex manifolds";
+	    case 57: return "Classification theorems";
+	    case 60: return "Almost complex manifolds";
+	    case 65: return "Pseudoholomorphic curves";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'S': // Singularities
+	  switch(min)
+	    {
+	    case 05: return "Local singularities";
+	    case 10: return "Invariants of analytic local rings";
+	    case 15: return "Equisingularity (topological and analytic)";
+	    case 20: return "Global theory of singularities; cohomological properties";
+	    case 22: return "Relations with arrangements of hyperplanes";
+	    case 25: return "Surface and hypersurface singularities";
+	    case 30: return "Deformations of singularities; vanishing cycles";
+	    case 35: return "Mixed Hodge theory of singular varieties";
+	    case 40: return "Monodromy; relations with differential equations and D-modules";
+	    case 45: return "Modifications; resolution of singularities";
+	    case 50: return "Topological aspects: Lefschetz theorems, topological classification, invariants";
+	    case 55: return "Milnor fibration; relations with knot theory";
+	    case 60: return "Stratifications; constructible sheaves; intersection cohomology";
+	    case 65: return "Singularities of holomorphic vector fields and foliations";
+	    case 70: return "Other operations on singularities";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'T': // Pseudoconvex domains
+	  switch(min)
+	    {
+	    case 05: return "Domains of holomorphy";
+	    case 15: return "Strongly pseudoconvex domains";
+	    case 20: return "Worm domains";
+	    case 25: return "Finite type domains";
+	    case 27: return "Geometric and analytic invariants on weakly pseudoconvex boundaries";
+	    case 35: return "Exhaustion functions";
+	    case 40: return "Peak functions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'U': // Pluripotential theory
+	  switch(min)
+	    {
+	    case 05: return "Plurisubharmonic functions and generalizations";
+	    case 10: return "Plurisubharmonic exhaustion functions";
+	    case 15: return "General pluripotential theory";
+	    case 20: return "Capacity theory and generalizations";
+	    case 25: return "Lelong numbers";
+	    case 30: return "Removable sets";
+	    case 35: return "Pluricomplex Green functions";
+	    case 40: return "Currents";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'V': // CR manifolds
+	  switch(min)
+	    {
+	    case 05: return "CR structures, CR operators, and generalizations";
+	    case 10: return "CR functions";
+	    case 15: return "CR manifolds as boundaries of domains";
+	    case 20: return "Analysis on CR manifolds";
+	    case 25: return "Extension of functions and other analytic objects from CR manifolds";
+	    case 30: return "Embeddings of CR manifolds";
+	    case 35: return "Finite type conditions on CR manifolds";
+	    case 40: return "Real submanifolds in complex manifolds";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'W': // Differential operators in several variables
+	  switch(min)
+	    {
+	    case 05: return "∂¯ and ∂¯-Neumann operators";
+	    case 10: return "∂¯b and ∂¯b-Neumann operators";
+	    case 20: return "Complex Monge-Ampère operators";
+	    case 25: return "Pseudodifferential operators in several complex variables";
+	    case 30: return "Heat kernels in several complex variables";
+	    case 50: return "Other partial differential equations of complex analysis";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 33: // Special functions
+      switch (med)
+	{
+	case 'B': // Elementary classical functions
+	  switch(min)
+	    {
+	    case 10: return "Exponential and trigonometric functions";
+	    case 15: return "Gamma, beta and polygamma functions";
+	    case 20: return "Incomplete beta and gamma functions (error functions, probability integral, Fresnel integrals)";
+	    case 30: return "Higher logarithm functions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Hypergeometric functions
+	  switch(min)
+	    {
+	    case 05: return "Classical hypergeometric functions, ₂F₁";
+	    case 10: return "Bessel and Airy functions, cylinder functions, ₀F₁";
+	    case 15: return "Confluent hypergeometric functions, Whittaker functions, ₁F₁";
+	    case 20: return "Generalized hypergeometric series, pFq";
+	    case 45: return "Orthogonal polynomials and functions of hypergeometric type (Jacobi, Laguerre, Hermite, Askey scheme, etc.)";
+	    case 47: return "Other special orthogonal polynomials and functions";
+	    case 50: return "Orthogonal polynomials and functions in several variables expressible in terms of special functions in one variable";
+	    case 52: return "Orthogonal polynomials and functions associated with root systems";
+	    case 55: return "Spherical harmonics";
+	    case 60: return "Hypergeometric integrals and functions defined by them (E, G, H and I functions)";
+	    case 65: return "Appell, Horn and Lauricella functions";
+	    case 67: return "Hypergeometric functions associated with root systems";
+	    case 70: return "Other hypergeometric functions and integrals in several variables";
+	    case 75: return "Elliptic integrals as hypergeometric functions";
+	    case 80: return "Connections with groups and algebras, and related topics";
+	    case 90: return "Applications";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Basic hypergeometric functions
+	  switch(min)
+	    {
+	    case 05: return "q-gamma functions, q-beta functions and integrals";
+	    case 15: return "Basic hypergeometric functions in one variable, rφs";
+	    case 45: return "Basic orthogonal polynomials and functions (Askey-Wilson polynomials, etc.)";
+	    case 50: return "Orthogonal polynomials and functions in several variables expressible in terms of basic hypergeometric functions in one variable";
+	    case 52: return "Basic orthogonal polynomials and functions associated with root systems (Macdonald polynomials, etc.)";
+	    case 60: return "Basic hypergeometric integrals and functions defined by them";
+	    case 65: return "Bibasic functions and multiple bases";
+	    case 67: return "Basic hypergeometric functions associated with root systems";
+	    case 70: return "Other basic hypergeometric functions and integrals in several variables";
+	    case 80: return "Connections with quantum groups, Chevalley groups, p-adic groups, Hecke algebras, and related topics";
+	    case 90: return "Applications";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Other special functions
+	  switch(min)
+	    {
+	    case 05: return "Elliptic functions and integrals";
+	    case 10: return "Lamé, Mathieu, and spheroidal wave functions";
+	    case 12: return "Mittag-Leffler functions and generalizations";
+	    case 15: return "Other wave functions";
+	    case 17: return "Painlevé-type functions";
+	    case 20: return "Other functions defined by series and integrals";
+	    case 30: return "Other functions coming from differential, difference and integral equations";
+	    case 50: return "Special functions in characteristic p (gamma functions, etc.)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Computational aspects
+	  switch(min)
+	    {
+	    case 05: return "Numerical approximation and evaluation";
+	    case 10: return "Symbolic computation (Gosper and Zeilberger algorithms, etc.)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
     default: return "Subcategory not implemented";
     }
 }
