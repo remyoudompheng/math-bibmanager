@@ -3246,9 +3246,9 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'A': // Functions of one variable
 	  switch(min)
 	    {
-	    case 03: return "Foundations: limits and generalizations, elementary topology of the line";
-	    case 06: return "One-variable calculus";
-	    case 09: return "Elementary functions";
+	    case  3: return "Foundations: limits and generalizations, elementary topology of the line";
+	    case  6: return "One-variable calculus";
+	    case  9: return "Elementary functions";
 	    case 12: return "Rate of growth of functions, orders of infinity, slowly varying functions";
 	    case 15: return "Continuity and related questions (modulus of continuity, semicontinuity, discontinuities, etc.)";
 	    case 16: return "Lipschitz (Hölder) classes";
@@ -3271,7 +3271,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'B': // Functions of several variables
 	  switch(min)
 	    {
-	    case 05: return "Continuity and differentiation questions";
+	    case  5: return "Continuity and differentiation questions";
 	    case 10: return "Implicit function theorems, Jacobians, transformations with several variables";
 	    case 12: return "Calculus of vector functions";
 	    case 15: return "Integration: length, area, volume";
@@ -3286,7 +3286,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'C': // Polynomials, rational functions
 	  switch(min)
 	    {
-	    case 05: return "Polynomials: analytic properties, etc.";
+	    case  5: return "Polynomials: analytic properties, etc.";
 	    case 10: return "Polynomials: location of zeros";
 	    case 15: return "Rational functions";
 	    case 99: return "None of the above, but in this section";
@@ -3295,8 +3295,8 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'D': // Inequalities
 	  switch(min)
 	    {
-	    case 05: return "Inequalities for trigonometric functions and polynomials";
-	    case 07: return "Inequalities involving other types of functions";
+	    case  5: return "Inequalities for trigonometric functions and polynomials";
+	    case  7: return "Inequalities involving other types of functions";
 	    case 10: return "Inequalities involving derivatives and differential and integral operators";
 	    case 15: return "Inequalities for sums, series and integrals";
 	    case 20: return "Other analytical inequalities";
@@ -3306,7 +3306,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'E': // Miscellaneous topics
 	  switch(min)
 	    {
-	    case 05: return "Real-analytic functions";
+	    case  5: return "Real-analytic functions";
 	    case 10: return "C∞-functions, quasi-analytic functions";
 	    case 15: return "Calculus of functions on infinite-dimensional spaces";
 	    case 20: return "Calculus of functions taking values in infinite-dimensional spaces";
@@ -3328,7 +3328,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'A': // Classical measure theory
 	  switch(min)
 	    {
-	    case 05: return "Classes of sets (Borel fields, σ-rings, etc.), measurable sets, Suslin sets, analytic sets";
+	    case  5: return "Classes of sets (Borel fields, σ-rings, etc.), measurable sets, Suslin sets, analytic sets";
 	    case 10: return "Real- or complex-valued set functions";
 	    case 12: return "Contents, measures, outer measures, capacities";
 	    case 15: return "Abstract differentiation theory, differentiation of set functions";
@@ -3348,7 +3348,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'B': // Set functions, measures and integrals with values in abstract spaces
 	  switch(min)
 	    {
-	    case 05: return "Vector-valued set functions, measures and integrals";
+	    case  5: return "Vector-valued set functions, measures and integrals";
 	    case 10: return "Group- or semigroup-valued set functions, measures and integrals";
 	    case 15: return "Set functions, measures and integrals with values in ordered spaces";
 	    case 20: return "Set-valued set functions and measures; integration of set-valued functions; measurable selections";
@@ -3358,7 +3358,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'C': // Set functions and measures on spaces with additional structure
 	  switch(min)
 	    {
-	    case 05: return "Integration theory via linear functionals (Radon measures, Daniell integrals, etc.), representing set functions and measures";
+	    case  5: return "Integration theory via linear functionals (Radon measures, Daniell integrals, etc.), representing set functions and measures";
 	    case 10: return "Set functions and measures on topological groups or semigroups, Haar measures, invariant measures";
 	    case 15: return "Set functions and measures on topological spaces (regularity of measures, etc.)";
 	    case 20: return "Set functions and measures and integrals in infinite-dimensional spaces (Wiener measure, Gaussian measure, etc.)";
@@ -3368,7 +3368,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'D': // Measure-theoretic ergodic theory
 	  switch(min)
 	    {
-	    case 05: return "Measure-preserving transformations";
+	    case  5: return "Measure-preserving transformations";
 	    case 10: return "One-parameter continuous families of measure-preserving transformations";
 	    case 15: return "General groups of measure-preserving transformations";
 	    case 20: return "Entropy and other invariants";
@@ -3378,7 +3378,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'E': // Miscellaneous topics in measure theory
 	  switch(min)
 	    {
-	    case 05: return "Nonstandard measure theory";
+	    case  5: return "Nonstandard measure theory";
 	    case 10: return "Fuzzy measure theory";
 	    case 15: return "Other connections with logic and set theory";
 	    case 99: return "None of the above, but in this section";
@@ -3392,7 +3392,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'A': // General properties
 	  switch(min)
 	    {
-	    case 05: return "Monogenic properties of complex functions (including polygenic and areolar monogenic functions)";
+	    case  5: return "Monogenic properties of complex functions (including polygenic and areolar monogenic functions)";
 	    case 10: return "Inequalities in the complex domain";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
@@ -3435,7 +3435,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'D': // Entire and meromorphic functions, and related topics
 	  switch(min)
 	    {
-	    case 05: return "Functional equations in the complex domain, iteration and composition of analytic functions";
+	    case  5: return "Functional equations in the complex domain, iteration and composition of analytic functions";
 	    case 10: return "Representations of entire functions by series and integrals";
 	    case 15: return "Special classes of entire functions and growth estimates";
 	    case 20: return "Entire functions, general theory";
@@ -3450,7 +3450,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'E': // Miscellaneous topics of analysis in the complex domain
 	  switch(min)
 	    {
-	    case 05: return "Moment problems, interpolation problems";
+	    case  5: return "Moment problems, interpolation problems";
 	    case 10: return "Approximation in the complex domain";
 	    case 15: return "Asymptotic representations in the complex domain";
 	    case 20: return "Integration, integrals of Cauchy type, integral representations of analytic functions";
@@ -3477,7 +3477,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'G': // Generalized function theory
 	  switch(min)
 	    {
-	    case 06: return "Non-Archimedean function theory";
+	    case  6: return "Non-Archimedean function theory";
 	    case 12: return "Finely holomorphic functions and topological function theory";
 	    case 20: return "Generalizations of Bers or Vekua type (pseudoanalytic, p-analytic, etc.)";
 	    case 25: return "Discrete analytic functions";
@@ -3489,7 +3489,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'H': // Spaces and algebras of analytic functions
 	  switch(min)
 	    {
-	    case 05: return "Bounded analytic functions";
+	    case  5: return "Bounded analytic functions";
 	    case 10: return "Hardy spaces";
 	    case 15: return "Nevanlinna class and Smirnov class";
 	    case 20: return "Bergman spaces, Fock spaces";
@@ -3504,7 +3504,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'J': // Function theory on the disc
 	  switch(min)
 	    {
-	    case 05: return "Inner functions";
+	    case  5: return "Inner functions";
 	    case 10: return "Blaschke products";
 	    case 15: return "Singular inner functions";
 	    case 99: return "None of the above, but in this section";
@@ -3513,7 +3513,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'K': // Universal holomorphic functions
 	  switch(min)
 	    {
-	    case 05: return "Universal Taylor series";
+	    case  5: return "Universal Taylor series";
 	    case 10: return "Universal Dirichlet series";
 	    case 15: return "Bounded universal functions";
 	    case 20: return "Compositional universality";
@@ -3523,7 +3523,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'L': // Analysis on metric spaces
 	  switch(min)
 	    {
-	    case 05: return "Geometric embeddings of metric spaces";
+	    case  5: return "Geometric embeddings of metric spaces";
 	    case 10: return "Quasiconformal mappings in metric spaces";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
@@ -3536,7 +3536,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'A': // Two-dimensional theory
 	  switch(min)
 	    {
-	    case 05: return "Harmonic, subharmonic, superharmonic functions";
+	    case  5: return "Harmonic, subharmonic, superharmonic functions";
 	    case 10: return "Integral representations, integral operators, integral equations methods";
 	    case 15: return "Potentials and capacity, harmonic measure, extremal length";
 	    case 20: return "Boundary behavior (theorems of Fatou type, etc.)";
@@ -3549,7 +3549,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'B': // Higher-dimensional theory
 	  switch(min)
 	    {
-	    case 05: return "Harmonic, subharmonic, superharmonic functions";
+	    case  5: return "Harmonic, subharmonic, superharmonic functions";
 	    case 10: return "Integral representations, integral operators, integral equations methods";
 	    case 15: return "Potentials and capacities, extremal length";
 	    case 20: return "Boundary value and inverse problems";
@@ -3562,7 +3562,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'C': // Other generalizations
 	  switch(min)
 	    {
-	    case 05: return "Harmonic, subharmonic, superharmonic functions";
+	    case  5: return "Harmonic, subharmonic, superharmonic functions";
 	    case 10: return "Pluriharmonic and plurisubharmonic functions";
 	    case 12: return "Potential theory on Riemannian manifolds";
 	    case 15: return "Potentials and capacities";
@@ -3577,14 +3577,14 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'D': // Axiomatic potential theory
 	  switch(min)
 	    {
-	    case 05: return "Axiomatic potential theory";
+	    case  5: return "Axiomatic potential theory";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'E': // Potential theory on metric spaces
 	  switch(min)
 	    {
-	    case 05: return "Potential theory on metric spaces";
+	    case  5: return "Potential theory on metric spaces";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
@@ -3596,8 +3596,8 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'A': // Holomorphic functions of several complex variables
 	  switch(min)
 	    {
-	    case 05: return "Power series, series of functions";
-	    case 07: return "Special domains (Reinhardt, Hartogs, circular, tube)";
+	    case  5: return "Power series, series of functions";
+	    case  7: return "Special domains (Reinhardt, Hartogs, circular, tube)";
 	    case 10: return "Holomorphic functions";
 	    case 12: return "Multifunctions";
 	    case 15: return "Entire functions";
@@ -3627,7 +3627,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'B': // Local analytic geometry
 	  switch(min)
 	    {
-	    case 05: return "Analytic algebras and generalizations, preparation theorems";
+	    case  5: return "Analytic algebras and generalizations, preparation theorems";
 	    case 10: return "Germs of analytic sets, local parametrization";
 	    case 15: return "Analytic subsets of affine space";
 	    case 20: return "Semi-analytic sets and subanalytic sets";
@@ -3638,9 +3638,9 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'C': // Analytic spaces
 	  switch(min)
 	    {
-	    case 05: return "Real-analytic manifolds, real-analytic spaces";
-	    case 07: return "Real-analytic sets, complex Nash functions";
-	    case 09: return "Embedding of real analytic manifolds";
+	    case  5: return "Real-analytic manifolds, real-analytic spaces";
+	    case  7: return "Real-analytic sets, complex Nash functions";
+	    case  9: return "Embedding of real analytic manifolds";
 	    case 11: return "Complex supergeometry";
 	    case 15: return "Complex spaces";
 	    case 18: return "Topology of analytic spaces";
@@ -3660,7 +3660,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'D': // Analytic continuation
 	  switch(min)
 	    {
-	    case 05: return "Domains of holomorphy";
+	    case  5: return "Domains of holomorphy";
 	    case 10: return "Envelopes of holomorphy";
 	    case 15: return "Continuation of analytic objects";
 	    case 20: return "Removable singularities";
@@ -3671,7 +3671,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'E': // Holomorphic convexity
 	  switch(min)
 	    {
-	    case 05: return "Holomorphically convex complex spaces, reduction theory";
+	    case  5: return "Holomorphically convex complex spaces, reduction theory";
 	    case 10: return "Stein spaces, Stein manifolds";
 	    case 20: return "Polynomial convexity";
 	    case 30: return "Holomorphic and polynomial approximation, Runge pairs, interpolation";
@@ -3695,9 +3695,9 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'G': // Deformations of analytic structures
 	  switch(min)
 	    {
-	    case 05: return "Deformations of complex structures";
-	    case 07: return "Deformations of special (e.g. CR) structures";
-	    case 08: return "Deformations of fiber bundles";
+	    case  5: return "Deformations of complex structures";
+	    case  7: return "Deformations of special (e.g. CR) structures";
+	    case  8: return "Deformations of fiber bundles";
 	    case 10: return "Deformations of submanifolds and subspaces";
 	    case 13: return "Analytic moduli problems";
 	    case 15: return "Moduli of Riemann surfaces, Teichmüller theory";
@@ -3710,8 +3710,8 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'H': // Holomorphic mappings and correspondences
 	  switch(min)
 	    {
-	    case 02: return "Holomorphic mappings, (holomorphic) embeddings and related questions";
-	    case 04: return "Meromorphic mappings";
+	    case  2: return "Holomorphic mappings, (holomorphic) embeddings and related questions";
+	    case  4: return "Meromorphic mappings";
 	    case 12: return "Boundary uniqueness of mappings";
 	    case 25: return "Picard-type theorems and generalizations";
 	    case 30: return "Value distribution theory in higher dimensions";
@@ -3724,7 +3724,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'J': // Compact analytic spaces
 	  switch(min)
 	    {
-	    case 05: return "Compactification of analytic spaces";
+	    case  5: return "Compactification of analytic spaces";
 	    case 10: return "Algebraic dependence theorems";
 	    case 15: return "Compact surfaces";
 	    case 17: return "Compact 3-folds";
@@ -3738,8 +3738,8 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'K': // Generalizations of analytic spaces
 	  switch(min)
 	    {
-	    case 05: return "Banach analytic spaces";
-	    case 07: return "Formal and graded complex spaces";
+	    case  5: return "Banach analytic spaces";
+	    case  7: return "Formal and graded complex spaces";
 	    case 15: return "Differentiable functions on analytic spaces, differentiable spaces";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
@@ -3747,7 +3747,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'L': // Holomorphic fiber spaces
 	  switch(min)
 	    {
-	    case 05: return "Holomorphic bundles and generalizations";
+	    case  5: return "Holomorphic bundles and generalizations";
 	    case 10: return "Sheaves and cohomology of sections of holomorphic vector bundles, general results";
 	    case 15: return "Bundle convexity";
 	    case 20: return "Vanishing theorems";
@@ -3759,7 +3759,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'M': // Complex spaces with a group of automorphisms
 	  switch(min)
 	    {
-	    case 05: return "Complex Lie groups, automorphism groups acting on complex spaces";
+	    case  5: return "Complex Lie groups, automorphism groups acting on complex spaces";
 	    case 10: return "Homogeneous complex manifolds";
 	    case 12: return "Almost homogeneous manifolds and spaces";
 	    case 15: return "Hermitian symmetric spaces, bounded symmetric domains, Jordan algebras";
@@ -3771,7 +3771,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'N': // Automorphic functions
 	  switch(min)
 	    {
-	    case 05: return "General theory of automorphic functions of several complex variables";
+	    case  5: return "General theory of automorphic functions of several complex variables";
 	    case 10: return "Automorphic forms";
 	    case 15: return "Automorphic functions in symmetric domains";
 	    case 99: return "None of the above, but in this section";
@@ -3780,14 +3780,14 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'P': // Non-Archimedean analysis
 	  switch(min)
 	    {
-	    case 05: return "Non-Archimedean analysis (should also be assigned at least one other classification number from Section 32 describing the type of problem)";
+	    case  5: return "Non-Archimedean analysis (should also be assigned at least one other classification number from Section 32 describing the type of problem)";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'Q': // Complex manifolds
 	  switch(min)
 	    {
-	    case 05: return "Negative curvature manifolds";
+	    case  5: return "Negative curvature manifolds";
 	    case 10: return "Positive curvature manifolds";
 	    case 15: return "Kähler manifolds";
 	    case 20: return "Kähler-Einstein manifolds";
@@ -3808,7 +3808,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'S': // Singularities
 	  switch(min)
 	    {
-	    case 05: return "Local singularities";
+	    case  5: return "Local singularities";
 	    case 10: return "Invariants of analytic local rings";
 	    case 15: return "Equisingularity (topological and analytic)";
 	    case 20: return "Global theory of singularities; cohomological properties";
@@ -3829,7 +3829,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'T': // Pseudoconvex domains
 	  switch(min)
 	    {
-	    case 05: return "Domains of holomorphy";
+	    case  5: return "Domains of holomorphy";
 	    case 15: return "Strongly pseudoconvex domains";
 	    case 20: return "Worm domains";
 	    case 25: return "Finite type domains";
@@ -3842,7 +3842,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'U': // Pluripotential theory
 	  switch(min)
 	    {
-	    case 05: return "Plurisubharmonic functions and generalizations";
+	    case  5: return "Plurisubharmonic functions and generalizations";
 	    case 10: return "Plurisubharmonic exhaustion functions";
 	    case 15: return "General pluripotential theory";
 	    case 20: return "Capacity theory and generalizations";
@@ -3856,7 +3856,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'V': // CR manifolds
 	  switch(min)
 	    {
-	    case 05: return "CR structures, CR operators, and generalizations";
+	    case  5: return "CR structures, CR operators, and generalizations";
 	    case 10: return "CR functions";
 	    case 15: return "CR manifolds as boundaries of domains";
 	    case 20: return "Analysis on CR manifolds";
@@ -3870,7 +3870,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'W': // Differential operators in several variables
 	  switch(min)
 	    {
-	    case 05: return "∂¯ and ∂¯-Neumann operators";
+	    case  5: return "∂¯ and ∂¯-Neumann operators";
 	    case 10: return "∂¯b and ∂¯b-Neumann operators";
 	    case 20: return "Complex Monge-Ampère operators";
 	    case 25: return "Pseudodifferential operators in several complex variables";
@@ -3897,7 +3897,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'C': // Hypergeometric functions
 	  switch(min)
 	    {
-	    case 05: return "Classical hypergeometric functions, ₂F₁";
+	    case  5: return "Classical hypergeometric functions, ₂F₁";
 	    case 10: return "Bessel and Airy functions, cylinder functions, ₀F₁";
 	    case 15: return "Confluent hypergeometric functions, Whittaker functions, ₁F₁";
 	    case 20: return "Generalized hypergeometric series, pFq";
@@ -3919,7 +3919,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'D': // Basic hypergeometric functions
 	  switch(min)
 	    {
-	    case 05: return "q-gamma functions, q-beta functions and integrals";
+	    case  5: return "q-gamma functions, q-beta functions and integrals";
 	    case 15: return "Basic hypergeometric functions in one variable, rφs";
 	    case 45: return "Basic orthogonal polynomials and functions (Askey-Wilson polynomials, etc.)";
 	    case 50: return "Orthogonal polynomials and functions in several variables expressible in terms of basic hypergeometric functions in one variable";
@@ -3936,7 +3936,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'E': // Other special functions
 	  switch(min)
 	    {
-	    case 05: return "Elliptic functions and integrals";
+	    case  5: return "Elliptic functions and integrals";
 	    case 10: return "Lamé, Mathieu, and spheroidal wave functions";
 	    case 12: return "Mittag-Leffler functions and generalizations";
 	    case 15: return "Other wave functions";
@@ -3950,7 +3950,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'F': // Computational aspects
 	  switch(min)
 	    {
-	    case 05: return "Numerical approximation and evaluation";
+	    case  5: return "Numerical approximation and evaluation";
 	    case 10: return "Symbolic computation (Gosper and Zeilberger algorithms, etc.)";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
