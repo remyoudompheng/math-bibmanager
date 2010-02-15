@@ -3957,6 +3957,1123 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    }
 	default: return "Subcategory not implemented";
 	}
+    case 34: // Ordinary differential equations
+      switch (med)
+	{
+	case 'A': // General theory
+	  switch(min)
+	    {
+	    case  5: return "Explicit solutions and reductions";
+	    case  7: return "Fuzzy differential equations";
+	    case  8: return "Fractional differential equations";
+	    case  9: return "Implicit equations, differential-algebraic equations";
+	    case 12: return "Initial value problems, existence, uniqueness, continuous dependence and continuation of solutions";
+	    case 25: return "Analytical theory: series, transformations, transforms, operational calculus, etc.";
+	    case 26: return "Geometric methods in differential equations";
+	    case 30: return "Linear equations and systems, general";
+	    case 33: return "Lattice differential equations";
+	    case 34: return "Nonlinear equations and systems, general";
+	    case 35: return "Differential equations of infinite order";
+	    case 36: return "Discontinuous equations";
+	    case 37: return "Differential equations with impulses";
+	    case 38: return "Hybrid systems";
+	    case 40: return "Differential inequalities";
+	    case 45: return "Theoretical approximation of solutions";
+	    case 55: return "Inverse problems";
+	    case 60: return "Differential inclusions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Boundary value problems
+	  switch(min)
+	    {
+	    case  5: return "Linear boundary value problems";
+	    case  7: return "Linear boundary value problems with nonlinear dependence on the spectral parameter";
+	    case  8: return "Parameter dependent boundary value problems";
+	    case  9: return "Boundary eigenvalue problems";
+	    case 10: return "Nonlocal and multipoint boundary value problems";
+	    case 15: return "Nonlinear boundary value problems";
+	    case 16: return "Singular nonlinear boundary value problems";
+	    case 18: return "Positive solutions of nonlinear boundary value problems";
+	    case 20: return "Weyl theory and its generalizations";
+	    case 24: return "Sturm-Liouville theory";
+	    case 27: return "Green functions";
+	    case 30: return "Special equations (Mathieu, Hill, Bessel, etc.)";
+	    case 37: return "Boundary value problems with impulses";
+	    case 40: return "Boundary value problems on infinite intervals";
+	    case 45: return "Boundary value problems on graphs and networks";
+	    case 60: return "Applications";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Qualitative theory
+	  switch(min)
+	    {
+	    case  5: return "Location of integral curves, singular points, limit cycles";
+	    case  7: return "Theory of limit cycles of polynomial and analytic vector fields (existence, uniqueness, bounds, Hilbert's 16th problem and ramifications)";
+	    case  8: return "Connections with real algebraic geometry (fewnomials, desingularization, zeros of Abelian integrals, etc.)";
+	    case 10: return "Oscillation theory, zeros, disconjugacy and comparison theory";
+	    case 11: return "Growth, boundedness";
+	    case 12: return "Monotone systems";
+	    case 14: return "Symmetries, invariants";
+	    case 15: return "Nonlinear oscillations, coupled oscillators";
+	    case 20: return "Transformation and reduction of equations and systems, normal forms";
+	    case 23: return "Bifurcation";
+	    case 25: return "Periodic solutions";
+	    case 26: return "Relaxation oscillations";
+	    case 27: return "Almost and pseudo-almost periodic solutions";
+	    case 28: return "Complex behavior, chaotic systems";
+	    case 29: return "Averaging method";
+	    case 37: return "Homoclinic and heteroclinic solutions";
+	    case 40: return "Equations and systems on manifolds";
+	    case 41: return "Equivalence, asymptotic equivalence";
+	    case 45: return "Invariant manifolds";
+	    case 46: return "Multifrequency systems";
+	    case 55: return "Hysteresis";
+	    case 60: return "Qualitative investigation and simulation of models";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Stability theory
+	  switch(min)
+	    {
+	    case  5: return "Asymptotic properties";
+	    case  6: return "Synchronization";
+	    case  8: return "Characteristic and Lyapunov exponents";
+	    case  9: return "Dichotomy, trichotomy";
+	    case 10: return "Perturbations";
+	    case 15: return "Singular perturbations";
+	    case 20: return "Stability";
+	    case 23: return "Global stability";
+	    case 30: return "Structural stability and analogous concepts";
+	    case 35: return "Stability of manifolds of solutions";
+	    case 45: return "Attractors";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Asymptotic theory
+	  switch(min)
+	    {
+	    case  5: return "Asymptotic expansions";
+	    case 10: return "Perturbations, asymptotics";
+	    case 13: return "Multiple scale methods";
+	    case 15: return "Singular perturbations, general theory";
+	    case 17: return "Canard solutions";
+	    case 18: return "Methods of nonstandard analysis";
+	    case 20: return "Singular perturbations, turning point theory, WKB methods";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Equations and systems with randomness
+	  switch(min)
+	    {
+	    case  5: return "Equations and systems with randomness";
+	    case 10: return "Bifurcation";
+	    case 15: return "Resonance phenomena";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // Differential equations in abstract spaces
+	  switch(min)
+	    {
+	    case 10: return "Linear equations";
+	    case 20: return "Nonlinear equations";
+	    case 25: return "Evolution inclusions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'H': // Control problems
+	  switch(min)
+	    {
+	    case  5: return "Control problems";
+	    case 10: return "Chaos control";
+	    case 15: return "Stabilization";
+	    case 20: return "Bifurcation control";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'K': // Functional-differential and differential-difference equations
+	  switch(min)
+	    {
+	    case  5: return "General theory";
+	    case  6: return "Linear functional-differential equations";
+	    case  7: return "Theoretical approximation of solutions";
+	    case  8: return "Spectral theory of functional-differential operators";
+	    case  9: return "Functional-differential inclusions";
+	    case 10: return "Boundary value problems";
+	    case 11: return "Oscillation theory";
+	    case 12: return "Growth, boundedness, comparison of solutions";
+	    case 13: return "Periodic solutions";
+	    case 14: return "Almost and pseudo-periodic solutions";
+	    case 17: return "Transformation and reduction of equations and systems, normal forms";
+	    case 18: return "Bifurcation theory";
+	    case 19: return "Invariant manifolds";
+	    case 20: return "Stability theory";
+	    case 21: return "Stationary solutions";
+	    case 23: return "Complex (chaotic) behavior of solutions";
+	    case 25: return "Asymptotic theory";
+	    case 26: return "Singular perturbations";
+	    case 27: return "Perturbations";
+	    case 28: return "Numerical approximation of solutions";
+	    case 29: return "Inverse problems";
+	    case 30: return "Equations in abstract spaces";
+	    case 31: return "Lattice functional-differential equations";
+	    case 32: return "Implicit equations";
+	    case 33: return "Averaging";
+	    case 34: return "Hybrid systems";
+	    case 35: return "Control problems";
+	    case 36: return "Fuzzy functional-differential equations";
+	    case 37: return "Functional-differential equations with fractional derivatives";
+	    case 38: return "Functional-differential inequalities";
+	    case 40: return "Neutral equations";
+	    case 45: return "Equations with impulses";
+	    case 50: return "Stochastic functional-differential equations";
+	    case 60: return "Qualitative investigation and simulation of models";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'L': // Ordinary differential operators
+	  switch(min)
+	    {
+	    case  5: return "General spectral theory";
+	    case 10: return "Eigenfunctions, eigenfunction expansions, completeness of eigenfunctions";
+	    case 15: return "Eigenvalues, estimation of eigenvalues, upper and lower bounds";
+	    case 16: return "Numerical approximation of eigenvalues and of other parts of the spectrum";
+	    case 20: return "Asymptotic distribution of eigenvalues, asymptotic theory of eigenfunctions";
+	    case 25: return "Scattering theory, inverse scattering";
+	    case 30: return "Nonlinear ordinary differential operators";
+	    case 40: return "Particular operators (Dirac, one-dimensional Schrödinger, etc.)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'M': // Differential equations in the complex domain
+	  switch(min)
+	    {
+	    case  3: return "Linear equations and systems";
+	    case  5: return "Entire and meromorphic solutions";
+	    case 10: return "Oscillation, growth of solutions";
+	    case 15: return "Algebraic aspects (differential-algebraic, hypertranscendence, group-theoretical)";
+	    case 25: return "Formal solutions, transform techniques";
+	    case 30: return "Asymptotics, summation methods";
+	    case 35: return "Singularities, monodromy, local behavior of solutions, normal forms";
+	    case 40: return "Stokes phenomena and connection problems (linear and nonlinear)";
+	    case 45: return "Differential equations on complex manifolds";
+	    case 50: return "Inverse problems (Riemann-Hilbert, inverse differential Galois, etc.)";
+	    case 55: return "Painlevé and other special equations; classification, hierarchies;";
+	    case 56: return "Isomonodromic deformations";
+	    case 60: return "Singular perturbation problems in the complex domain (complex WKB, turning points, steepest descent)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'N': // Dynamic equations on time scales or measure chains
+	  switch(min)
+	    {
+	    case  5: return "Dynamic equations on time scales or measure chains";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 35: // Partial differential equations
+      switch (med)
+	{
+	case 'A': // General topics
+	  switch(min)
+	    {
+	    case  1: return "Existence problems: global existence, local existence, non-existence";
+	    case  2: return "Uniqueness problems: global uniqueness, local uniqueness, non-uniqueness";
+	    case  8: return "Fundamental solutions";
+	    case  9: return "Classical solutions";
+	    case 10: return "Cauchy-Kovalevskaya theorems";
+	    case 15: return "Variational methods";
+	    case 16: return "Topological and monotonicity methods";
+	    case 17: return "Parametrices";
+	    case 18: return "Wave front sets";
+	    case 20: return "Analytic methods, singularities";
+	    case 21: return "Propagation of singularities";
+	    case 22: return "Transform methods (e.g. integral transforms)";
+	    case 23: return "Inequalities involving derivatives and differential and integral operators, inequalities for integrals";
+	    case 24: return "Methods of ordinary differential equations";
+	    case 25: return "Other special methods";
+	    case 27: return "Microlocal methods; methods of sheaf theory and homological algebra in PDE";
+	    case 30: return "Geometric theory, characteristics, transformations";
+	    case 35: return "Theoretical approximation to solutions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Qualitative properties of solutions
+	  switch(min)
+	    {
+	    case  5: return "Oscillation, zeros of solutions, mean value theorems, etc.";
+	    case  6: return "Symmetries, invariants, etc.";
+	    case  7: return "Axially symmetric solutions";
+	    case  8: return "Entire solutions";
+	    case  9: return "Positive solutions";
+	    case 10: return "Periodic solutions";
+	    case 15: return "Almost and pseudo-almost periodic solutions";
+	    case 20: return "Perturbations";
+	    case 25: return "Singular perturbations";
+	    case 27: return "Homogenization; equations in media with periodic structure";
+	    case 30: return "Dependence of solutions on initial and boundary data, parameters";
+	    case 32: return "Bifurcation";
+	    case 33: return "Critical exponents";
+	    case 34: return "Resonances";
+	    case 35: return "Stability";
+	    case 36: return "Pattern formation";
+	    case 38: return "Critical points";
+	    case 40: return "Asymptotic behavior of solutions";
+	    case 41: return "Attractors";
+	    case 42: return "Inertial manifolds";
+	    case 44: return "Blow-up";
+	    case 45: return "A priori estimates";
+	    case 50: return "Maximum principles";
+	    case 51: return "Comparison principles";
+	    case 53: return "Liouville theorems, Phragmén-Lindelöf theorems";
+	    case 60: return "Continuation and prolongation of solutions";
+	    case 65: return "Smoothness and regularity of solutions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Representations of solutions
+	  switch(min)
+	    {
+	    case  5: return "Solutions in closed form";
+	    case  6: return "Self-similar solutions";
+	    case  7: return "Traveling wave solutions";
+	    case  8: return "Soliton solutions";
+	    case  9: return "Trigonometric solutions";
+	    case 10: return "Series solutions";
+	    case 11: return "Polynomial solutions";
+	    case 15: return "Integral representations of solutions";
+	    case 20: return "Asymptotic expansions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Generalized solutions
+	  switch(min)
+	    {
+	    case 30: return "Weak solutions";
+	    case 35: return "Strong solutions";
+	    case 40: return "Viscosity solutions";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Equations and systems with constant coefficients
+	  switch(min)
+	    {
+	    case  5: return "Fundamental solutions";
+	    case 10: return "Convexity properties";
+	    case 15: return "Initial value problems";
+	    case 20: return "General theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // General first-order equations and systems
+	  switch(min)
+	    {
+	    case  5: return "Linear first-order equations";
+	    case 10: return "Initial value problems for linear first-order equations";
+	    case 15: return "Boundary value problems for linear first-order equations";
+	    case 16: return "Initial-boundary value problems for linear first-order equations";
+	    case 20: return "Nonlinear first-order equations";
+	    case 21: return "Hamilton-Jacobi equations";
+	    case 25: return "Initial value problems for nonlinear first-order equations";
+	    case 30: return "Boundary value problems for nonlinear first-order equations";
+	    case 31: return "Initial-boundary value problems for nonlinear first-order equations";
+	    case 35: return "Linear first-order systems";
+	    case 40: return "Initial value problems for linear first-order systems";
+	    case 45: return "Boundary value problems for linear first-order systems";
+	    case 46: return "Initial-boundary value problems for linear first-order systems";
+	    case 50: return "Nonlinear first-order systems";
+	    case 55: return "Initial value problems for nonlinear first-order systems";
+	    case 60: return "Boundary value problems for nonlinear first-order systems";
+	    case 61: return "Initial-boundary value problems for nonlinear first-order systems";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // General higher-order equations and systems
+	  switch(min)
+	    {
+	    case  5: return "Linear higher-order equations";
+	    case 10: return "Initial value problems for linear higher-order equations";
+	    case 15: return "Boundary value problems for linear higher-order equations";
+	    case 16: return "Initial-boundary value problems for linear higher-order equations";
+	    case 20: return "Nonlinear higher-order equations";
+	    case 25: return "Initial value problems for nonlinear higher-order equations";
+	    case 30: return "Boundary value problems for nonlinear higher-order equations";
+	    case 31: return "Initial-boundary value problems for nonlinear higher-order equations";
+	    case 35: return "Linear higher-order systems";
+	    case 40: return "Initial value problems for linear higher-order systems";
+	    case 45: return "Boundary value problems for linear higher-order systems";
+	    case 46: return "Initial-boundary value problems for linear higher-order systems";
+	    case 50: return "Nonlinear higher-order systems";
+	    case 55: return "Initial value problems for nonlinear higher-order systems";
+	    case 60: return "Boundary value problems for nonlinear higher-order systems";
+	    case 61: return "Initial-boundary value problems for nonlinear higher-order systems";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'H': // Close-to-elliptic equations and systems
+	  switch(min)
+	    {
+	    case 10: return "Hypoelliptic equations";
+	    case 20: return "Subelliptic equations";
+	    case 30: return "Quasi-elliptic equations";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'J': // Elliptic equations and systems
+	  switch(min)
+	    {
+	    case  5: return "Laplacian operator, reduced wave equation (Helmholtz equation), Poisson equation";
+	    case  8: return "Green's functions";
+	    case 10: return "Schrödinger operator";
+	    case 15: return "Second-order elliptic equations";
+	    case 20: return "Variational methods for second-order elliptic equations";
+	    case 25: return "Boundary value problems for second-order elliptic equations";
+	    case 30: return "Higher-order elliptic equations";
+	    case 35: return "Variational methods for higher-order elliptic equations";
+	    case 40: return "Boundary value problems for higher-order elliptic equations";
+	    case 46: return "First-order elliptic systems";
+	    case 47: return "Second-order elliptic systems";
+	    case 48: return "Higher-order elliptic systems";
+	    case 50: return "Variational methods for elliptic systems";
+	    case 56: return "Boundary value problems for first-order elliptic systems";
+	    case 57: return "Boundary value problems for second-order elliptic systems";
+	    case 58: return "Boundary value problems for higher-order elliptic systems";
+	    case 60: return "Nonlinear elliptic equations";
+	    case 61: return "Semilinear elliptic equations";
+	    case 62: return "Quasilinear elliptic equations";
+	    case 65: return "Nonlinear boundary value problems for linear elliptic equations";
+	    case 66: return "Nonlinear boundary value problems for nonlinear elliptic equations";
+	    case 67: return "Boundary values of solutions to elliptic equations";
+	    case 70: return "Degenerate elliptic equations";
+	    case 75: return "Singular elliptic equations";
+	    case 86: return "Linear elliptic unilateral problems and linear elliptic variational inequalities";
+	    case 87: return "Nonlinear elliptic unilateral problems and nonlinear elliptic variational inequalities";
+	    case 88: return "Systems of elliptic variational inequalities";
+	    case 91: return "Semilinear elliptic equations with Laplacian, bi-Laplacian or poly-Laplacian";
+	    case 92: return "Quasilinear elliptic equations with p-Laplacian";
+	    case 93: return "Quasilinear elliptic equations with mean curvature operator";
+	    case 96: return "Elliptic Monge-Ampère equations";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'K': // Parabolic equations and systems
+	  switch(min)
+	    {
+	    case  5: return "Heat equation";
+	    case  8: return "Heat kernel";
+	    case 10: return "Second-order parabolic equations";
+	    case 15: return "Initial value problems for second-order parabolic equations";
+	    case 20: return "Initial-boundary value problems for second-order parabolic equations";
+	    case 25: return "Higher-order parabolic equations";
+	    case 30: return "Initial value problems for higher-order parabolic equations";
+	    case 35: return "Initial-boundary value problems for higher-order parabolic equations";
+	    case 40: return "Second-order parabolic systems";
+	    case 41: return "Higher-order parabolic systems";
+	    case 45: return "Initial value problems for second-order parabolic systems";
+	    case 46: return "Initial value problems for higher-order parabolic systems";
+	    case 51: return "Initial-boundary value problems for second-order parabolic systems";
+	    case 52: return "Initial-boundary value problems for higher-order parabolic systems";
+	    case 55: return "Nonlinear parabolic equations";
+	    case 57: return "Reaction-diffusion equations";
+	    case 58: return "Semilinear parabolic equations";
+	    case 59: return "Quasilinear parabolic equations";
+	    case 60: return "Nonlinear initial value problems for linear parabolic equations";
+	    case 61: return "Nonlinear initial-boundary value problems for nonlinear parabolic equations";
+	    case 65: return "Degenerate parabolic equations";
+	    case 67: return "Singular parabolic equations";
+	    case 70: return "Ultraparabolic equations, pseudoparabolic equations, etc.";
+	    case 85: return "Linear parabolic unilateral problems and linear parabolic variational inequalities";
+	    case 86: return "Nonlinear parabolic unilateral problems and nonlinear parabolic variational inequalities";
+	    case 87: return "Systems of parabolic variational inequalities";
+	    case 90: return "Abstract parabolic equations";
+	    case 91: return "Semilinear parabolic equations with Laplacian, bi-Laplacian or poly-Laplacian";
+	    case 92: return "Quasilinear parabolic equations with p-Laplacian";
+	    case 93: return "Quasilinear parabolic equations with mean curvature operator";
+	    case 96: return "Parabolic Monge-Ampère equations";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'L': // Hyperbolic equations and systems
+	  switch(min)
+	    {
+	    case  2: return "First-order hyperbolic equations";
+	    case  3: return "Initial value problems for first-order hyperbolic equations";
+	    case  4: return "Initial-boundary value problems for first-order hyperbolic equations";
+	    case  5: return "Wave equation";
+	    case 10: return "Second-order hyperbolic equations";
+	    case 15: return "Initial value problems for second-order hyperbolic equations";
+	    case 20: return "Initial-boundary value problems for second-order hyperbolic equations";
+	    case 25: return "Higher-order hyperbolic equations";
+	    case 30: return "Initial value problems for higher-order hyperbolic equations";
+	    case 35: return "Initial-boundary value problems for higher-order hyperbolic equations";
+	    case 40: return "First-order hyperbolic systems";
+	    case 45: return "Initial value problems for first-order hyperbolic systems";
+	    case 50: return "Initial-boundary value problems for first-order hyperbolic systems";
+	    case 51: return "Second-order hyperbolic systems";
+	    case 52: return "Initial value problems for second-order hyperbolic systems";
+	    case 53: return "Initial-boundary value problems for second-order hyperbolic systems";
+	    case 55: return "Higher-order hyperbolic systems";
+	    case 56: return "Initial value problems for higher-order hyperbolic systems";
+	    case 57: return "Initial-boundary value problems for higher-order hyperbolic systems";
+	    case 60: return "Nonlinear first-order hyperbolic equations";
+	    case 65: return "Conservation laws";
+	    case 67: return "Shocks and singularities";
+	    case 70: return "Nonlinear second-order hyperbolic equations";
+	    case 71: return "Semilinear second-order hyperbolic equations";
+	    case 72: return "Quasilinear second-order hyperbolic equations";
+	    case 75: return "Nonlinear higher-order hyperbolic equations";
+	    case 76: return "Semilinear higher-order hyperbolic equations";
+	    case 77: return "Quasilinear higher-order hyperbolic equations";
+	    case 80: return "Degenerate hyperbolic equations";
+	    case 81: return "Singular hyperbolic equations";
+	    case 82: return "Pseudohyperbolic equations";
+	    case 85: return "Linear hyperbolic unilateral problems and linear hyperbolic variational inequalities";
+	    case 86: return "Nonlinear hyperbolic unilateral problems and nonlinear hyperbolic variational inequalities";
+	    case 87: return "Unilateral problems and variational inequalities for hyperbolic systems";
+	    case 90: return "Abstract hyperbolic equations";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'M': // Equations and systems of special type (mixed, composite, etc.)
+	  switch(min)
+	    {
+	    case 10: return "Equations of mixed type";
+	    case 11: return "Initial value problems for equations of mixed type";
+	    case 12: return "Boundary value problems for equations of mixed type";
+	    case 13: return "Initial-boundary value problems for equations of mixed type";
+	    case 30: return "Systems of mixed type";
+	    case 31: return "Initial value problems for systems of mixed type";
+	    case 32: return "Boundary value problems for systems of mixed type";
+	    case 33: return "Initial-boundary value problems for systems of mixed type";
+	    case 85: return "Linear unilateral problems and variational inequalities of mixed type";
+	    case 86: return "Nonlinear unilateral problems and nonlinear variational inequalities of mixed type";
+	    case 87: return "Systems of variational inequalities of mixed type";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'N': // Overdetermined systems
+	  switch(min)
+	    {
+	    case  5: return "Overdetermined systems with constant coefficients";
+	    case 10: return "Overdetermined systems with variable coefficients";
+	    case 15: return "∂¯-Neumann problem and generalizations; formal complexes";
+	    case 20: return "Overdetermined initial value problems";
+	    case 25: return "Overdetermined boundary value problems";
+	    case 30: return "Overdetermined initial-boundary value problems";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'P': // Spectral theory and eigenvalue problems
+	  switch(min)
+	    {
+	    case  5: return "General topics in linear spectral theory";
+	    case 10: return "Completeness of eigenfunctions, eigenfunction expansions";
+	    case 15: return "Estimation of eigenvalues, upper and lower bounds";
+	    case 20: return "Asymptotic distribution of eigenvalues and eigenfunctions";
+	    case 25: return "Scattering theory";
+	    case 30: return "Nonlinear eigenvalue problems, nonlinear spectral theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'Q': // Equations of mathematical physics and other areas of application
+	  switch(min)
+	    {
+	    case  5: return "Euler-Poisson-Darboux equations";
+	    case 15: return "Riemann-Hilbert problems";
+	    case 20: return "Boltzmann equations";
+	    case 30: return "Navier-Stokes equations";
+	    case 31: return "Euler equations";
+	    case 35: return "PDEs in connection with fluid mechanics";
+	    case 40: return "PDEs in connection with quantum mechanics";
+	    case 41: return "Time-dependent Schrödinger equations, Dirac equations";
+	    case 51: return "Soliton-like equations";
+	    case 53: return "KdV-like equations (Korteweg-de Vries)";
+	    case 55: return "NLS-like equations (nonlinear Schrödinger)";
+	    case 56: return "Ginzburg-Landau equations";
+	    case 60: return "PDEs in connection with optics and electromagnetic theory";
+	    case 61: return "Maxwell equations";
+	    case 62: return "PDEs in connection with statistics";
+	    case 68: return "PDEs in connection with computer science";
+	    case 70: return "PDEs in connection with mechanics of particles and systems";
+	    case 74: return "PDEs in connection with mechanics of deformable solids";
+	    case 75: return "PDEs in connection with relativity and gravitational theory";
+	    case 76: return "Einstein equations";
+	    case 79: return "PDEs in connection with classical thermodynamics and heat transfer";
+	    case 82: return "PDEs in connection with statistical mechanics";
+	    case 83: return "Vlasov-like equations";
+	    case 84: return "Fokker-Planck equations";
+	    case 85: return "PDEs in connection with astronomy and astrophysics";
+	    case 86: return "PDEs in connection with geophysics";
+	    case 90: return "PDEs in connection with mathematical programming";
+	    case 91: return "PDEs in connection with game theory, economics, social and behavioral sciences";
+	    case 92: return "PDEs in connection with biology and other natural sciences";
+	    case 93: return "PDEs in connection with control and optimization";
+	    case 94: return "PDEs in connection with information and communication";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'R': // Miscellaneous topics
+	  switch(min)
+	    {
+	    case  1: return "Partial differential equations on manifolds";
+	    case  2: return "Partial differential equations on graphs and networks (ramified or polygonal spaces)";
+	    case  3: return "Partial differential equations on Heisenberg groups, Lie groups, Carnot groups, etc.";
+	    case  5: return "Partial differential equations with discontinuous coefficients or data";
+	    case  6: return "Partial differential equations with measure";
+	    case  9: return "Integro-partial differential equations";
+	    case 10: return "Partial functional-differential equations";
+	    case 11: return "Fractional partial differential equations";
+	    case 12: return "Impulsive partial differential equations";
+	    case 13: return "Fuzzy partial differential equations";
+	    case 15: return "Partial differential equations on infinite-dimensional (e.g. function) spaces (= PDE in infinitely many variables)";
+	    case 20: return "Partial operator-differential equations (i.e., PDE on finite-dimensional spaces for abstract space valued functions)";
+	    case 25: return "Improperly posed problems";
+	    case 30: return "Inverse problems";
+	    case 35: return "Free boundary problems";
+	    case 37: return "Moving boundary problems";
+	    case 45: return "Partial differential inequalities";
+	    case 50: return "Partial differential equations of infinite order";
+	    case 60: return "Partial differential equations with randomness, stochastic partial differential equations";
+	    case 70: return "Partial differential equations with multivalued right-hand sides";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'S': // Pseudodifferential operators and other generalizations of partial differential operators
+	  switch(min)
+	    {
+	    case  5: return "Pseudodifferential operators";
+	    case 10: return "Initial value problems for pseudodifferential operators";
+	    case 11: return "Initial-boundary value problems for pseudodifferential operators";
+	    case 15: return "Boundary value problems for pseudodifferential operators";
+	    case 30: return "Fourier integral operators";
+	    case 35: return "Topological aspects: intersection cohomology, stratified sets, etc.";
+	    case 50: return "Paradifferential operators";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 37: // Dynamical systems and ergodic theory
+      switch (med)
+	{
+	case 'A': // Ergodic theory
+	  switch(min)
+	    {
+	    case  5: return "Measure-preserving transformations";
+	    case 10: return "One-parameter continuous families of measure-preserving transformations";
+	    case 15: return "General groups of measure-preserving transformations";
+	    case 17: return "Homogeneous flows";
+	    case 20: return "Orbit equivalence, cocycles, ergodic equivalence relations";
+	    case 25: return "Ergodicity, mixing, rates of mixing";
+	    case 30: return "Ergodic theorems, spectral theory, Markov operators";
+	    case 35: return "Entropy and other invariants, isomorphism, classification";
+	    case 40: return "Nonsingular (and infinite-measure preserving) transformations";
+	    case 45: return "Relations with number theory and harmonic analysis";
+	    case 50: return "Relations with probability theory and stochastic processes";
+	    case 55: return "Relations with the theory of C*-algebras";
+	    case 60: return "Dynamical systems in statistical mechanics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Topological dynamics
+	  switch(min)
+	    {
+	    case  5: return "Transformations and group actions with special properties (minimality, distality, proximality, etc.)";
+	    case 10: return "Symbolic dynamics";
+	    case 15: return "Cellular automata";
+	    case 20: return "Notions of recurrence";
+	    case 25: return "Lyapunov functions and stability; attractors, repellers";
+	    case 30: return "Index theory, Morse-Conley indices";
+	    case 35: return "Gradient-like and recurrent behavior; isolated (locally maximal) invariant sets";
+	    case 40: return "Topological entropy";
+	    case 45: return "Continua theory in dynamics";
+	    case 50: return "Multi-dimensional shifts of finite type, tiling dynamics";
+	    case 55: return "Nonautonomous dynamical systems";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Smooth dynamical systems: general theory
+	  switch(min)
+	    {
+	    case  5: return "Smooth mappings and diffeomorphisms";
+	    case 10: return "Vector fields, flows, ordinary differential equations";
+	    case 15: return "Topological and differentiable equivalence, conjugacy, invariants, moduli, classification";
+	    case 20: return "Generic properties, structural stability";
+	    case 25: return "Fixed points, periodic points, fixed-point index theory";
+	    case 27: return "Periodic orbits of vector fields and flows";
+	    case 29: return "Homoclinic and heteroclinic orbits";
+	    case 30: return "Zeta functions, (Ruelle-Frobenius) transfer operators, and other functional analytic techniques in dynamical systems";
+	    case 35: return "Orbit growth";
+	    case 40: return "Smooth ergodic theory, invariant measures";
+	    case 45: return "Dimension theory of dynamical systems";
+	    case 50: return "Approximate trajectories (pseudotrajectories, shadowing, etc.)";
+	    case 55: return "Periodic and quasiperiodic flows and diffeomorphisms";
+	    case 60: return "Nonautonomous smooth dynamical systems";
+	    case 65: return "Monotone flows";
+	    case 70: return "Attractors and repellers, topological structure";
+	    case 75: return "Stability theory";
+	    case 80: return "Symmetries, equivariant dynamical systems";
+	    case 85: return "Dynamics of group actions other than Z and R, and foliations";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Dynamical systems with hyperbolic behavior
+	  switch(min)
+	    {
+	    case  5: return "Hyperbolic orbits and sets";
+	    case 10: return "Invariant manifold theory";
+	    case 15: return "Morse-Smale systems";
+	    case 20: return "Uniformly hyperbolic systems (expanding, Anosov, Axiom A, etc.)";
+	    case 25: return "Nonuniformly hyperbolic systems (Lyapunov exponents, Pesin theory, etc.)";
+	    case 30: return "Partially hyperbolic systems and dominated splittings";
+	    case 35: return "Thermodynamic formalism, variational principles, equilibrium states";
+	    case 40: return "Dynamical systems of geometric origin and hyperbolicity (geodesic and horocycle flows, etc.)";
+	    case 45: return "Strange attractors, chaotic dynamics";
+	    case 50: return "Hyperbolic systems with singularities (billiards, etc.)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Low-dimensional dynamical systems
+	  switch(min)
+	    {
+	    case  5: return "Maps of the interval (piecewise continuous, continuous, smooth)";
+	    case 10: return "Maps of the circle";
+	    case 15: return "Combinatorial dynamics (types of periodic orbits)";
+	    case 20: return "Universality, renormalization";
+	    case 25: return "Maps of trees and graphs";
+	    case 30: return "Homeomorphisms and diffeomorphisms of planes and surfaces";
+	    case 35: return "Flows on surfaces";
+	    case 40: return "Twist maps";
+	    case 45: return "Rotation numbers and vectors";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Complex dynamical systems
+	  switch(min)
+	    {
+	    case  5: return "Relations and correspondences";
+	    case 10: return "Polynomials; rational maps; entire and meromorphic functions";
+	    case 15: return "Expanding maps; hyperbolicity; structural stability";
+	    case 20: return "Combinatorics and topology";
+	    case 25: return "Renormalization";
+	    case 30: return "Quasiconformal methods and Teichmüller theory; Fuchsian and Kleinian groups as dynamical systems";
+	    case 35: return "Conformal densities and Hausdorff dimension";
+	    case 40: return "Geometric limits";
+	    case 45: return "Holomorphic families of dynamical systems; the Mandelbrot set; bifurcations";
+	    case 50: return "Small divisors, rotation domains and linearization; Fatou and Julia sets";
+	    case 75: return "Holomorphic foliations and vector fields";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // Local and nonlocal bifurcation theory
+	  switch(min)
+	    {
+	    case  5: return "Normal forms";
+	    case 10: return "Bifurcations of singular points";
+	    case 15: return "Bifurcations of limit cycles and periodic orbits";
+	    case 20: return "Hyperbolic singular points with homoclinic trajectories";
+	    case 25: return "Bifurcations connected with nontransversal intersection";
+	    case 30: return "Infinite nonwandering sets arising in bifurcations";
+	    case 35: return "Attractors and their bifurcations";
+	    case 40: return "Symmetries, equivariant bifurcation theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'H': // Random dynamical systems
+	  switch(min)
+	    {
+	    case  5: return "Foundations, general theory of cocycles, algebraic ergodic theory";
+	    case 10: return "Generation, random and stochastic difference and differential equations";
+	    case 15: return "Multiplicative ergodic theory, Lyapunov exponents";
+	    case 20: return "Bifurcation theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'J': // Finite-dimensional Hamiltonian, Lagrangian, contact, and nonholonomic systems
+	  switch(min)
+	    {
+	    case  5: return "General theory, relations with symplectic geometry and topology";
+	    case 10: return "Symplectic mappings, fixed points";
+	    case 15: return "Symmetries, invariants, invariant manifolds, momentum maps, reduction";
+	    case 20: return "Bifurcation problems";
+	    case 25: return "Stability problems";
+	    case 30: return "Obstructions to integrability (nonintegrability criteria)";
+	    case 35: return "Completely integrable systems, topological structure of phase space, integration methods";
+	    case 40: return "Perturbations, normal forms, small divisors, KAM theory, Arnol'd diffusion";
+	    case 45: return "Periodic, homoclinic and heteroclinic orbits; variational methods, degree-theoretic methods";
+	    case 50: return "Action-minimizing orbits and measures";
+	    case 55: return "Contact systems";
+	    case 60: return "Nonholonomic dynamical systems";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'K': // Infinite-dimensional Hamiltonian systems
+	  switch(min)
+	    {
+	    case  5: return "Hamiltonian structures, symmetries, variational principles, conservation laws";
+	    case 10: return "Completely integrable systems, integrability tests, bi-Hamiltonian structures, hierarchies (KdV, KP, Toda, etc.)";
+	    case 15: return "Integration of completely integrable systems by inverse spectral and scattering methods";
+	    case 20: return "Relations with algebraic geometry, complex analysis, special functions";
+	    case 25: return "Relations with differential geometry";
+	    case 30: return "Relations with infinite-dimensional Lie algebras and other algebraic structures";
+	    case 35: return "Lie-Bäcklund and other transformations";
+	    case 40: return "Soliton theory, asymptotic behavior of solutions";
+	    case 45: return "Stability problems";
+	    case 50: return "Bifurcation problems";
+	    case 55: return "Perturbations, KAM for infinite-dimensional systems";
+	    case 60: return "Lattice dynamics";
+	    case 65: return "Hamiltonian systems on groups of diffeomorphisms and on manifolds of mappings and metrics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'L': // Infinite-dimensional dissipative dynamical systems
+	  switch(min)
+	    {
+	    case  5: return "General theory, nonlinear semigroups, evolution equations";
+	    case 10: return "Normal forms, center manifold theory, bifurcation theory";
+	    case 15: return "Stability problems";
+	    case 20: return "Symmetries";
+	    case 25: return "Inertial manifolds and other invariant attracting sets";
+	    case 30: return "Attractors and their dimensions, Lyapunov exponents";
+	    case 40: return "Invariant measures";
+	    case 45: return "Hyperbolicity; Lyapunov functions";
+	    case 50: return "Noncompact semigroups; dispersive equations; perturbations of Hamiltonian systems";
+	    case 55: return "Infinite-dimensional random dynamical systems; stochastic equations";
+	    case 60: return "Lattice dynamics";
+	    case 65: return "Special approximation methods (nonlinear Galerkin, etc.)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'M': // Approximation methods and numerical treatment of dynamical systems
+	  switch(min)
+	    {
+	    case  5: return "Simulation";
+	    case 10: return "Time series analysis";
+	    case 15: return "Symplectic integrators";
+	    case 20: return "Computational methods for bifurcation problems";
+	    case 25: return "Computational methods for ergodic theory (approximation of invariant measures, computation of Lyapunov exponents, entropy)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'N': // Applications
+	  switch(min)
+	    {
+	    case  5: return "Dynamical systems in classical and celestial mechanics";
+	    case 10: return "Dynamical systems in fluid mechanics, oceanography and meteorology";
+	    case 15: return "Dynamical systems in solid mechanics";
+	    case 20: return "Dynamical systems in other branches of physics (quantum mechanics, general relativity, laser physics)";
+	    case 25: return "Dynamical systems in biology";
+	    case 30: return "Dynamical systems in numerical analysis";
+	    case 35: return "Dynamical systems in control";
+	    case 40: return "Dynamical systems in optimization and economics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'P': // Arithmetic and non-Archimedean dynamical systems
+	  switch(min)
+	    {
+	    case  5: return "Polynomial and rational maps";
+	    case 10: return "Analytic and meromorphic maps";
+	    case 15: return "Global ground fields";
+	    case 20: return "Non-Archimedean local ground fields";
+	    case 25: return "Finite ground fields";
+	    case 30: return "Height functions; Green functions; invariant measures";
+	    case 35: return "Arithmetic properties of periodic points";
+	    case 40: return "Non-Archimedean Fatou and Julia sets";
+	    case 45: return "Families and moduli spaces";
+	    case 50: return "Dynamical systems on Berkovich spaces";
+	    case 55: return "Arithmetic dynamics on general algebraic varieties";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 39: // Difference and functional equations
+      switch (med)
+	{
+	case 'A': // Difference equations
+	  switch(min)
+	    {
+	    case  5: return "General theory";
+	    case  6: return "Linear equations";
+	    case 10: return "Difference equations, additive";
+	    case 12: return "Discrete version of topics in analysis";
+	    case 13: return "Difference equations, scaling (q-differences)";
+	    case 14: return "Partial difference equations";
+	    case 20: return "Multiplicative and other generalized difference equations, e.g. of Lyness type";
+	    case 21: return "Oscillation theory";
+	    case 22: return "Growth, boundedness, comparison of solutions";
+	    case 23: return "Periodic solutions";
+	    case 24: return "Almost periodic solutions";
+	    case 28: return "Bifurcation theory";
+	    case 30: return "Stability theory";
+	    case 33: return "Complex (chaotic) behavior of solutions";
+	    case 45: return "Equations in the complex domain";
+	    case 50: return "Stochastic difference equations";
+	    case 60: return "Applications";
+	    case 70: return "Difference operators";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Functional equations and inequalities
+	  switch(min)
+	    {
+	    case  5: return "General";
+	    case 12: return "Iteration theory, iterative and composite equations";
+	    case 22: return "Equations for real functions";
+	    case 32: return "Equations for complex functions";
+	    case 42: return "Matrix and operator equations";
+	    case 52: return "Equations for functions with more general domains and/or ranges";
+	    case 55: return "Orthogonal additivity and other conditional equations";
+	    case 62: return "Functional inequalities, including subadditivity, convexity, etc.";
+	    case 72: return "Systems of functional equations and inequalities";
+	    case 82: return "Stability, separation, extension, and related topics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 40: // Sequences, series, summability
+      switch (med)
+	{
+	case 'A': // Convergence and divergence of infinite limiting processes
+	  switch(min)
+	    {
+	    case  5: return "Convergence and divergence of series and sequences";
+	    case 10: return "Convergence and divergence of integrals";
+	    case 15: return "Convergence and divergence of continued fractions";
+	    case 20: return "Convergence and divergence of infinite products";
+	    case 25: return "Approximation to limiting values (summation of series, etc.)";
+	    case 30: return "Convergence and divergence of series and sequences of functions";
+	    case 35: return "Ideal and statistical convergence";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Multiple sequences and series
+	  switch(min)
+	    {
+	    case  5: return "Multiple sequences and series (should also be assigned at least one other classification number in this section)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // General summability methods
+	  switch(min)
+	    {
+	    case  5: return "Matrix methods";
+	    case 10: return "Integral methods";
+	    case 15: return "Function-theoretic methods (including power series methods and semicontinuous methods)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Direct theorems on summability
+	  switch(min)
+	    {
+	    case  5: return "General theorems";
+	    case  9: return "Structure of summability fields";
+	    case 10: return "Tauberian constants and oscillation limits";
+	    case 15: return "Convergence factors and summability factors";
+	    case 20: return "Summability and bounded fields of methods";
+	    case 25: return "Inclusion and equivalence theorems";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Inversion theorems
+	  switch(min)
+	    {
+	    case  5: return "Tauberian theorems, general";
+	    case 10: return "Growth estimates";
+	    case 15: return "Lacunary inversion theorems";
+	    case 20: return "Tauberian constants";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Absolute and strong summability
+	  switch(min)
+	    {
+	    case  5: return "Absolute and strong summability (should also be assigned at least one other classification number in Section 40)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // Special methods of summability
+	  switch(min)
+	    {
+	    case  5: return "Cesàro, Euler, Nörlund and Hausdorff methods";
+	    case 10: return "Abel, Borel and power series methods";
+	    case 15: return "Summability methods using statistical convergence";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'H': // Functional analytic methods in summability
+	  switch(min)
+	    {
+	    case  5: return "Functional analytic methods in summability";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'J': // Summability in abstract structures
+	  switch(min)
+	    {
+	    case  5: return "Summability in abstract structures (should also be assigned at least one other classification number in this section)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 41: // Approximations and expansions
+      switch (med)
+	{
+	case 'A': // Approximations and expansions
+	  switch(min)
+	    {
+	    case  5: return "Interpolation";
+	    case 10: return "Approximation by polynomials";
+	    case 15: return "Spline approximation";
+	    case 17: return "Inequalities in approximation (Bernstein, Jackson, Nikol'skiĭ-type inequalities)";
+	    case 20: return "Approximation by rational functions";
+	    case 21: return "Padé approximation";
+	    case 25: return "Rate of convergence, degree of approximation";
+	    case 27: return "Inverse theorems";
+	    case 28: return "Simultaneous approximation";
+	    case 29: return "Approximation with constraints";
+	    case 30: return "Approximation by other special function classes";
+	    case 35: return "Approximation by operators (in particular, by integral operators)";
+	    case 36: return "Approximation by positive operators";
+	    case 40: return "Saturation";
+	    case 44: return "Best constants";
+	    case 45: return "Approximation by arbitrary linear expressions";
+	    case 46: return "Approximation by arbitrary nonlinear expressions; widths and entropy";
+	    case 50: return "Best approximation, Chebyshev systems";
+	    case 52: return "Uniqueness of best approximation";
+	    case 55: return "Approximate quadratures";
+	    case 58: return "Series expansions (e.g. Taylor, Lidstone series, but not Fourier series)";
+	    case 60: return "Asymptotic approximations, asymptotic expansions (steepest descent, etc.)";
+	    case 63: return "Multidimensional problems (should also be assigned at least one other classification number in this section)";
+	    case 65: return "Abstract approximation theory (approximation in normed linear spaces and other abstract spaces)";
+	    case 80: return "Remainders in approximation formulas";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 42: // Harmonic analysis on Euclidean spaces
+      switch (med)
+	{
+	case 'A': // Harmonic analysis in one variable
+	  switch(min)
+	    {
+	    case  5: return "Trigonometric polynomials, inequalities, extremal problems";
+	    case 10: return "Trigonometric approximation";
+	    case 15: return "Trigonometric interpolation";
+	    case 16: return "Fourier coefficients, Fourier series of functions with special properties, special Fourier series";
+	    case 20: return "Convergence and absolute convergence of Fourier and trigonometric series";
+	    case 24: return "Summability and absolute summability of Fourier and trigonometric series";
+	    case 32: return "Trigonometric series of special types (positive coefficients, monotonic coefficients, etc.)";
+	    case 38: return "Fourier and Fourier-Stieltjes transforms and other transforms of Fourier type";
+	    case 45: return "Multipliers";
+	    case 50: return "Conjugate functions, conjugate series, singular integrals";
+	    case 55: return "Lacunary series of trigonometric and other functions; Riesz products";
+	    case 61: return "Probabilistic methods";
+	    case 63: return "Uniqueness of trigonometric expansions, uniqueness of Fourier expansions, Riemann theory, localization";
+	    case 65: return "Completeness of sets of functions";
+	    case 70: return "Trigonometric moment problems";
+	    case 75: return "Classical almost periodic functions, mean periodic functions";
+	    case 82: return "Positive definite functions";
+	    case 85: return "Convolution, factorization";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Harmonic analysis in several variables
+	  switch(min)
+	    {
+	    case  5: return "Fourier series and coefficients";
+	    case  8: return "Summability";
+	    case 10: return "Fourier and Fourier-Stieltjes transforms and other transforms of Fourier type";
+	    case 15: return "Multipliers";
+	    case 20: return "Singular and oscillatory integrals (Calderón-Zygmund, etc.)";
+	    case 25: return "Maximal functions, Littlewood-Paley theory";
+	    case 30: return "H^p-spaces";
+	    case 35: return "Function spaces arising in harmonic analysis";
+	    case 37: return "Harmonic analysis and PDE";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Nontrigonometric harmonic analysis
+	  switch(min)
+	    {
+	    case  5: return "Orthogonal functions and polynomials, general theory";
+	    case 10: return "Fourier series in special orthogonal functions (Legendre polynomials, Walsh functions, etc.)";
+	    case 15: return "General harmonic expansions, frames";
+	    case 20: return "Other transformations of harmonic type";
+	    case 25: return "Uniqueness and localization for orthogonal series";
+	    case 30: return "Completeness of sets of functions";
+	    case 40: return "Wavelets and other special systems";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 43: // Abstract harmonic analysis
+      switch (med)
+	{
+	case 'A': // Abstract harmonic analysis
+	  switch(min)
+	    {
+	    case  5: return "Measures on groups and semigroups, etc.";
+	    case  7: return "Means on groups, semigroups, etc.; amenable groups";
+	    case 10: return "Measure algebras on groups, semigroups, etc.";
+	    case 15: return "L^p-spaces and other function spaces on groups, semigroups, etc.";
+	    case 17: return "Analysis on ordered groups, H^p-theory";
+	    case 20: return "L¹-algebras on groups, semigroups, etc.";
+	    case 22: return "Homomorphisms and multipliers of function spaces on groups, semigroups, etc.";
+	    case 25: return "Fourier and Fourier-Stieltjes transforms on locally compact and other abelian groups";
+	    case 30: return "Fourier and Fourier-Stieltjes transforms on nonabelian groups and on semigroups, etc.";
+	    case 32: return "Other transforms and operators of Fourier type";
+	    case 35: return "Positive definite functions on groups, semigroups, etc.";
+	    case 40: return "Character groups and dual objects";
+	    case 45: return "Spectral synthesis on groups, semigroups, etc.";
+	    case 46: return "Special sets (thin sets, Kronecker sets, Helson sets, Ditkin sets, Sidon sets, etc.)";
+	    case 50: return "Convergence of Fourier series and of inverse transforms";
+	    case 55: return "Summability methods on groups, semigroups, etc.";
+	    case 60: return "Almost periodic functions on groups and semigroups and their generalizations (recurrent functions, distal functions, etc.); almost automorphic functions";
+	    case 62: return "Hypergroups";
+	    case 65: return "Representations of groups, semigroups, etc.";
+	    case 70: return "Analysis on specific locally compact and other abelian groups";
+	    case 75: return "Analysis on specific compact groups";
+	    case 77: return "Analysis on general compact groups";
+	    case 80: return "Analysis on other specific Lie groups";
+	    case 85: return "Analysis on homogeneous spaces";
+	    case 90: return "Spherical functions";
+	    case 95: return "Categorical methods";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
+    case 44: // Integral transforms, operational calculus
+      switch (med)
+	{
+	case 'A': // Integral transforms, operational calculus
+	  switch(min)
+	    {
+	    case  5: return "General transforms";
+	    case 10: return "Laplace transform";
+	    case 12: return "Radon transform";
+	    case 15: return "Special transforms (Legendre, Hilbert, etc.)";
+	    case 20: return "Transforms of special functions";
+	    case 30: return "Multiple transforms";
+	    case 35: return "Convolution";
+	    case 40: return "Calculus of Mikusiński and other operational calculi";
+	    case 45: return "Classical operational calculus";
+	    case 55: return "Discrete operational calculus";
+	    case 60: return "Moment problems";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
+	default: return "Subcategory not implemented";
+	}
     default: return "Subcategory not implemented";
     }
 }
