@@ -3609,7 +3609,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 25: return "Integral representations; canonical kernels (Szegő, Bergman, etc.)";
 	    case 26: return "Integral representations, constructed kernels (e.g. Cauchy, Fantappiè-type kernels)";
 	    case 27: return "Local theory of residues";
-	    case 30: return "Other generalizations of function theory of one complex variable (should also be assigned at least one classification number from Section 30)";
+	    case 30: return "Other generalizations of function theory of one complex variable";
 	    case 35: return "Hp-spaces, Nevanlinna spaces";
 	    case 36: return "Bergman spaces";
 	    case 37: return "Other spaces of holomorphic functions (e.g. bounded mean oscillation (BMOA), vanishing mean oscillation (VMOA))";
@@ -3780,7 +3780,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'P': // Non-Archimedean analysis
 	  switch(min)
 	    {
-	    case  5: return "Non-Archimedean analysis (should also be assigned at least one other classification number from Section 32 describing the type of problem)";
+	    case  5: return "Non-Archimedean analysis";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
@@ -4855,7 +4855,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'B': // Multiple sequences and series
 	  switch(min)
 	    {
-	    case  5: return "Multiple sequences and series (should also be assigned at least one other classification number in this section)";
+	    case  5: return "Multiple sequences and series";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
@@ -4893,7 +4893,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'F': // Absolute and strong summability
 	  switch(min)
 	    {
-	    case  5: return "Absolute and strong summability (should also be assigned at least one other classification number in Section 40)";
+	    case  5: return "Absolute and strong summability";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
@@ -4916,7 +4916,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'J': // Summability in abstract structures
 	  switch(min)
 	    {
-	    case  5: return "Summability in abstract structures (should also be assigned at least one other classification number in this section)";
+	    case  5: return "Summability in abstract structures";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
@@ -4950,7 +4950,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 55: return "Approximate quadratures";
 	    case 58: return "Series expansions (e.g. Taylor, Lidstone series, but not Fourier series)";
 	    case 60: return "Asymptotic approximations, asymptotic expansions (steepest descent, etc.)";
-	    case 63: return "Multidimensional problems (should also be assigned at least one other classification number in this section)";
+	    case 63: return "Multidimensional problems";
 	    case 65: return "Abstract approximation theory (approximation in normed linear spaces and other abstract spaces)";
 	    case 80: return "Remainders in approximation formulas";
 	    case 99: return "None of the above, but in this section";
