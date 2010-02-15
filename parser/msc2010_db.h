@@ -6095,46 +6095,136 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'A': // Generalities
 	  switch(min)
 	    {
+	    case  5: return "Topological spaces and generalizations (closure spaces, etc.)";
+	    case 10: return "Several topologies on one set (change of topology, comparison of topologies, lattices of topologies)";
+	    case 15: return "Syntopogeneous structures";
+	    case 20: return "Convergence in general topology (sequences, filters, limits, convergence spaces, etc.)";
+	    case 25: return "Cardinality properties (cardinal functions and inequalities, discrete subsets)";
+	    case 35: return "Consistency and independence results";
+	    case 40: return "Fuzzy topology";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'B': // Basic constructions
 	  switch(min)
 	    {
+	    case  5: return "Subspaces";
+	    case 10: return "Product spaces";
+	    case 15: return "Quotient spaces, decompositions";
+	    case 17: return "Adjunction spaces and similar constructions";
+	    case 20: return "Hyperspaces";
+	    case 30: return "Categorical methods";
+	    case 35: return "Spectra";
+	    case 40: return "Presheaves and sheaves";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'C': // Maps and general types of spaces defined by maps
 	  switch(min)
 	    {
+	    case  5: return "Continuous maps";
+	    case  8: return "Weak and generalized continuity";
+	    case 10: return "Special maps on topological spaces (open, closed, perfect, etc.)";
+	    case 15: return "Retraction";
+	    case 20: return "Extension of maps";
+	    case 25: return "Embedding";
+	    case 30: return "Real-valued functions";
+	    case 35: return "Function spaces";
+	    case 40: return "Algebraic properties of function spaces";
+	    case 45: return "C- and C*-embedding";
+	    case 50: return "Special sets defined by functions";
+	    case 55: return "Absolute neighborhood extensor, absolute extensor, absolute neighborhood retract (ANR), absolute retract spaces (general properties)";
+	    case 56: return "Shape theory";
+	    case 60: return "Set-valued maps";
+	    case 65: return "Selections";
+	    case 70: return "Entropy";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'D': // Fairly general properties
 	  switch(min)
 	    {
+	    case  5: return "Connected and locally connected spaces (general aspects)";
+	    case 10: return "Lower separation axioms (T₀, T₃, etc.)";
+	    case 15: return "Higher separation axioms (completely regular, normal, perfectly or collectionwise normal, etc.)";
+	    case 20: return "Noncompact covering properties (paracompact, Lindelöf, etc.)";
+	    case 25: return "“P-minimal” and “P-closed” spaces";
+	    case 30: return "Compactness";
+	    case 35: return "Extensions of spaces (compactifications, supercompactifications, completions, etc.)";
+	    case 40: return "Remainders";
+	    case 45: return "Local compactness, σ-compactness";
+	    case 50: return "k-spaces";
+	    case 55: return "Sequential spaces";
+	    case 60: return "Realcompactness and realcompactification";
+	    case 65: return "Separability";
+	    case 70: return "Base properties";
+	    case 80: return "Special constructions of spaces (spaces of ultrafilters, etc.)";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'E': // Spaces with richer structures
 	  switch(min)
 	    {
+	    case  5: return "Proximity structures and generalizations";
+	    case 15: return "Uniform structures and generalizations";
+	    case 17: return "Nearness spaces";
+	    case 18: return "p-spaces, M-spaces, σ-spaces, etc.";
+	    case 20: return "Stratifiable spaces, cosmic spaces, etc.";
+	    case 25: return "Semimetric spaces";
+	    case 30: return "Moore spaces";
+	    case 35: return "Metric spaces, metrizability";
+	    case 40: return "Special maps on metric spaces";
+	    case 45: return "Compact (locally compact) metric spaces";
+	    case 50: return "Complete metric spaces";
+	    case 52: return "Baire category, Baire spaces";
+	    case 55: return "Bitopologies";
+	    case 70: return "Probabilistic metric spaces";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'F': // Special properties
 	  switch(min)
 	    {
+	    case  5: return "Linearly ordered topological spaces, generalized ordered spaces, and partially ordered spaces";
+	    case 15: return "Continua and generalizations";
+	    case 35: return "Higher-dimensional local connectedness";
+	    case 45: return "Dimension theory";
+	    case 50: return "Spaces of dimension ≤1; curves, dendrites";
+	    case 55: return "Unicoherence, multicoherence";
+	    case 65: return "Topological characterizations of particular spaces";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'G': // Peculiar spaces
 	  switch(min)
 	    {
+	    case  5: return "Extremally disconnected spaces, F-spaces, etc.";
+	    case 10: return "P-spaces";
+	    case 12: return "Scattered spaces";
+	    case 15: return "Pathological spaces";
+	    case 20: return "Counterexamples";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'H': // Connections with other structures, applications
 	  switch(min)
 	    {
+	    case  5: return "Descriptive set theory (topological aspects of Borel, analytic, projective, etc. sets)";
+	    case 10: return "Topological representations of algebraic systems";
+	    case 11: return "Topological groups";
+	    case 12: return "Topological lattices, etc.";
+	    case 13: return "Topological fields, rings, etc.";
+	    case 15: return "Transformation groups and semigroups";
+	    case 20: return "Topological dynamics";
+	    case 25: return "Fixed-point and coincidence theorems";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'J': // Nonstandard topology
 	  switch(min)
 	    {
+	    case  5: return "Nonstandard topology";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	default: return "Subcategory not implemented";
@@ -6145,41 +6235,150 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'M': // Classical topics
 	  switch(min)
 	    {
+	    case  5: return "Duality";
+	    case 10: return "Dimension theory";
+	    case 15: return "Absolute neighborhood retracts";
+	    case 20: return "Fixed points and coincidences";
+	    case 25: return "Degree, winding number";
+	    case 30: return "Ljusternik-Schnirelman (Lyusternik-Shnirel'man) category of a space";
+	    case 35: return "Finite groups of transformations (including Smith theory)";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'N': // Homology and cohomology theories
 	  switch(min)
 	    {
+	    case  5: return "Čech types";
+	    case  7: return "Steenrod-Sitnikov homologies";
+	    case 10: return "Singular theory";
+	    case 15: return "K-theory";
+	    case 20: return "Generalized (extraordinary) homology and cohomology theories";
+	    case 22: return "Bordism and cobordism theories, formal group laws";
+	    case 25: return "Homology with local coefficients, equivariant cohomology";
+	    case 30: return "Sheaf cohomology";
+	    case 32: return "Orbifold cohomology";
+	    case 33: return "Intersection homology and cohomology";
+	    case 34: return "Elliptic cohomology";
+	    case 35: return "Other homology theories";
+	    case 40: return "Axioms for homology theory and uniqueness theorems";
+	    case 45: return "Products and intersections";
+	    case 91: return "Equivariant homology and cohomology";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'P': // Homotopy theory
 	  switch(min)
 	    {
+	    case  5: return "Homotopy extension properties, cofibrations";
+	    case 10: return "Homotopy equivalences";
+	    case 15: return "Classification of homotopy type";
+	    case 20: return "Eilenberg-Mac Lane spaces";
+	    case 25: return "Spanier-Whitehead duality";
+	    case 30: return "Eckmann-Hilton duality";
+	    case 35: return "Loop spaces";
+	    case 40: return "Suspensions";
+	    case 42: return "Stable homotopy theory, spectra";
+	    case 43: return "Spectra with additional structure (E∞, A∞, ring spectra, etc.)";
+	    case 45: return "H-spaces and duals";
+	    case 47: return "Infinite loop spaces";
+	    case 48: return "Loop space machines, operads";
+	    case 50: return "String topology";
+	    case 55: return "Shape theory";
+	    case 57: return "Proper homotopy theory";
+	    case 60: return "Localization and completion";
+	    case 62: return "Rational homotopy theory";
+	    case 65: return "Homotopy functors";
+	    case 91: return "Equivariant homotopy theory";
+	    case 92: return "Relations between equivariant and nonequivariant homotopy theory";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'Q': // Homotopy groups
 	  switch(min)
 	    {
+	    case  5: return "Homotopy groups, general; sets of homotopy classes";
+	    case  7: return "Shape groups";
+	    case 10: return "Stable homotopy groups";
+	    case 15: return "Whitehead products and generalizations";
+	    case 20: return "Homotopy groups of wedges, joins, and simple spaces";
+	    case 25: return "Hopf invariants";
+	    case 35: return "Operations in homotopy groups";
+	    case 40: return "Homotopy groups of spheres";
+	    case 45: return "Stable homotopy of spheres";
+	    case 50: return "J-morphism";
+	    case 51: return "v_n-periodicity";
+	    case 52: return "Homotopy groups of special spaces";
+	    case 55: return "Cohomotopy groups";
+	    case 70: return "Homotopy groups of special types";
+	    case 91: return "Equivariant homotopy groups";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'R': // Fiber spaces and bundles
 	  switch(min)
 	    {
+	    case  5: return "Fiber spaces";
+	    case 10: return "Fiber bundles";
+	    case 12: return "Transfer";
+	    case 15: return "Classification";
+	    case 20: return "Spectral sequences and homology of fiber spaces";
+	    case 25: return "Sphere bundles and vector bundles";
+	    case 35: return "Classifying spaces of groups and H-spaces";
+	    case 37: return "Maps between classifying spaces";
+	    case 40: return "Homology of classifying spaces, characteristic classes";
+	    case 45: return "Homology and homotopy of BO and BU; Bott periodicity";
+	    case 50: return "Stable classes of vector space bundles, K-theory";
+	    case 55: return "Fiberings with singularities";
+	    case 60: return "Microbundles and block bundles";
+	    case 65: return "Generalizations of fiber spaces and bundles";
+	    case 70: return "Fibrewise topology";
+	    case 80: return "Discriminantal varieties, configuration spaces";
+	    case 91: return "Equivariant fiber spaces and bundles";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'S': // Operations and obstructions
 	  switch(min)
 	    {
+	    case  5: return "Primary cohomology operations";
+	    case 10: return "Steenrod algebra";
+	    case 12: return "Dyer-Lashof operations";
+	    case 15: return "Symmetric products, cyclic products";
+	    case 20: return "Secondary and higher cohomology operations";
+	    case 25: return "K-theory operations and generalized cohomology operations";
+	    case 30: return "Massey products";
+	    case 35: return "Obstruction theory";
+	    case 36: return "Extension and compression of mappings";
+	    case 37: return "Classification of mappings";
+	    case 40: return "Sectioning fiber spaces and bundles";
+	    case 45: return "Postnikov systems, k-invariants";
+	    case 91: return "Equivariant operations and obstructions";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'T': // Spectral sequences
 	  switch(min)
 	    {
+	    case  5: return "General";
+	    case 10: return "Serre spectral sequences";
+	    case 15: return "Adams spectral sequences";
+	    case 20: return "Eilenberg-Moore spectral sequences";
+	    case 25: return "Generalized cohomology";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'U': // Applied homological algebra and category theory
 	  switch(min)
 	    {
+	    case  5: return "Abstract complexes";
+	    case 10: return "Simplicial sets and complexes";
+	    case 15: return "Chain complexes";
+	    case 20: return "Universal coefficient theorems, Bockstein operator";
+	    case 25: return "Homology of a product, Künneth formula";
+	    case 30: return "Duality";
+	    case 35: return "Abstract and axiomatic homotopy theory";
+	    case 40: return "Topological categories, foundations of homotopy theory";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	default: return "Subcategory not implemented";
@@ -6190,36 +6389,143 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'M': // Low-dimensional topology
 	  switch(min)
 	    {
+	    case  5: return "Fundamental group, presentations, free differential calculus";
+	    case  7: return "Topological methods in group theory";
+	    case 10: return "Covering spaces";
+	    case 12: return "Special coverings, e.g. branched";
+	    case 15: return "Relations with graph theory";
+	    case 20: return "Two-dimensional complexes";
+	    case 25: return "Knots and links in S³";
+	    case 27: return "Invariants of knots and 3-manifolds";
+	    case 30: return "Wild knots and surfaces, etc., wild embeddings";
+	    case 35: return "Dehn's lemma, sphere theorem, loop theorem, asphericity";
+	    case 40: return "Characterizations of E³ and S³ (Poincaré conjecture)";
+	    case 50: return "Geometric structures on low-dimensional manifolds";
+	    case 60: return "Group actions in low dimensions";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'N': // Topological manifolds
 	  switch(min)
 	    {
+	    case  5: return "Topology of E², 2-manifolds";
+	    case 10: return "Topology of general 3-manifolds";
+	    case 12: return "Topology of E³ and S³";
+	    case 13: return "Topology of E⁴, 4-manifolds";
+	    case 15: return "Topology of En, n-manifolds (4≤n≤∞)";
+	    case 16: return "Geometric structures on manifolds";
+	    case 17: return "Topology of topological vector spaces";
+	    case 20: return "Topology of infinite-dimensional manifolds";
+	    case 25: return "Shapes";
+	    case 30: return "Engulfing";
+	    case 35: return "Embeddings and immersions";
+	    case 37: return "Isotopy and pseudo-isotopy";
+	    case 40: return "Neighborhoods of submanifolds";
+	    case 45: return "Flatness and tameness";
+	    case 50: return "Sn-1⊂En, Schoenflies problem";
+	    case 55: return "Microbundles and block bundles";
+	    case 60: return "Cellularity";
+	    case 65: return "Algebraic topology of manifolds";
+	    case 70: return "Cobordism and concordance";
+	    case 75: return "General position and transversality";
+	    case 80: return "Stratifications";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'P': // Generalized manifolds
 	  switch(min)
 	    {
+	    case  5: return "Local properties of generalized manifolds";
+	    case 10: return "Poincaré duality spaces";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'Q': // PL-topology
 	  switch(min)
 	    {
+	    case  5: return "General topology of complexes";
+	    case 10: return "Simple homotopy type, Whitehead torsion, Reidemeister-Franz torsion, etc.";
+	    case 12: return "Wall finiteness obstruction for CW-cmplexes";
+	    case 15: return "Triangulating manifolds";
+	    case 20: return "Cobordism";
+	    case 25: return "Comparison of PL-structures: classification, Hauptvermutung";
+	    case 30: return "Engulfing";
+	    case 35: return "Embeddings and immersions";
+	    case 37: return "Isotopy";
+	    case 40: return "Regular neighborhoods";
+	    case 45: return "Knots and links (in high dimensions)";
+	    case 50: return "Microbundles and block bundles";
+	    case 55: return "Approximations";
+	    case 60: return "Cobordism and concordance";
+	    case 65: return "General position and transversality";
+	    case 91: return "Equivariant PL-topology";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'R': // Differential topology
 	  switch(min)
 	    {
+	    case  5: return "Triangulating";
+	    case 10: return "Smoothing";
+	    case 12: return "Smooth approximations";
+	    case 15: return "Specialized structures on manifolds (spin manifolds, framed manifolds, etc.)";
+	    case 17: return "Symplectic and contact topology";
+	    case 18: return "Topology and geometry of orbifolds";
+	    case 19: return "Algebraic topology on manifolds";
+	    case 20: return "Characteristic classes and numbers";
+	    case 22: return "Topology of vector bundles and fiber bundles";
+	    case 25: return "Vector fields, frame fields";
+	    case 27: return "Controllability of vector fields on C∞ and real-analytic manifolds";
+	    case 30: return "Foliations; geometric theory";
+	    case 32: return "Classifying spaces for foliations; Gelfand-Fuks cohomology";
+	    case 35: return "Differentiable mappings";
+	    case 40: return "Embeddings";
+	    case 42: return "Immersions";
+	    case 45: return "Singularities of differentiable mappings";
+	    case 50: return "Diffeomorphisms";
+	    case 52: return "Isotopy";
+	    case 55: return "Differentiable structures";
+	    case 56: return "Topological quantum field theories";
+	    case 57: return "Applications of global analysis to structures on manifolds, Donaldson and Seiberg-Witten invariants";
+	    case 58: return "Floer homology";
+	    case 60: return "Homotopy spheres, Poincaré conjecture";
+	    case 65: return "Surgery and handlebodies";
+	    case 67: return "Surgery obstructions, Wall groups";
+	    case 70: return "Critical points and critical submanifolds";
+	    case 75: return "O- and SO-cobordism";
+	    case 77: return "Complex cobordism (U- and SU-cobordism)";
+	    case 80: return "h- and s-cobordism";
+	    case 85: return "Equivariant cobordism";
+	    case 90: return "Other types of cobordism";
+	    case 91: return "Equivariant algebraic topology of manifolds";
+	    case 95: return "Realizing cycles by submanifolds";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'S': // Topological transformation groups
 	  switch(min)
 	    {
+	    case  5: return "Topological properties of groups of homeomorphisms or diffeomorphisms";
+	    case 10: return "Compact groups of homeomorphisms";
+	    case 15: return "Compact Lie groups of differentiable transformations";
+	    case 17: return "Finite transformation groups";
+	    case 20: return "Noncompact Lie groups of transformations";
+	    case 25: return "Groups acting on specific manifolds";
+	    case 30: return "Discontinuous groups of transformations";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'T': // Homology and homotopy of topological groups and related structures
 	  switch(min)
 	    {
+	    case  5: return "Hopf algebras";
+	    case 10: return "Homology and cohomology of Lie groups";
+	    case 15: return "Homology and cohomology of homogeneous spaces of Lie groups";
+	    case 20: return "Homotopy groups of topological groups and homogeneous spaces";
+	    case 25: return "Homology and cohomology of H-spaces";
+	    case 30: return "Bar and cobar constructions";
+	    case 35: return "Applications of Eilenberg-Moore spectral sequences";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	default: return "Subcategory not implemented";
@@ -6230,46 +6536,157 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'A': // General theory of differentiable manifolds
 	  switch(min)
 	    {
+	    case  3: return "Topos-theoretic approach to differentiable manifolds";
+	    case  5: return "Differentiable manifolds, foundations";
+	    case  7: return "Real-analytic and Nash manifolds";
+	    case 10: return "Differential forms";
+	    case 12: return "de Rham theory";
+	    case 14: return "Hodge theory";
+	    case 15: return "Exterior differential systems (Cartan theory)";
+	    case 17: return "Pfaffian systems";
+	    case 20: return "Jets";
+	    case 25: return "Currents";
+	    case 30: return "Vector distributions (subbundles of the tangent bundles)";
+	    case 32: return "Natural bundles";
+	    case 35: return "Stratified sets";
+	    case 40: return "Differential spaces";
+	    case 50: return "Supermanifolds and graded manifolds";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'B': // Infinite-dimensional manifolds
 	  switch(min)
 	    {
+	    case  5: return "Homotopy and topological questions";
+	    case 10: return "Differentiability questions";
+	    case 12: return "Questions of holomorphy";
+	    case 15: return "Fredholm structures";
+	    case 20: return "Riemannian, Finsler and other geometric structures";
+	    case 25: return "Group structures and generalizations on infinite-dimensional manifolds";
+	    case 32: return "Geometry of quantum groups";
+	    case 34: return "Noncommutative geometry (à la Connes)";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'C': // Calculus on manifolds; nonlinear operators
 	  switch(min)
 	    {
+	    case  5: return "Real-valued functions";
+	    case  6: return "Set valued and function-space valued mappings";
+	    case  7: return "Continuity properties of mappings";
+	    case 10: return "Holomorphic maps";
+	    case 15: return "Implicit function theorems; global Newton methods";
+	    case 20: return "Differentiation theory (Gateaux, Fréchet, etc.)";
+	    case 25: return "Differentiable maps";
+	    case 30: return "Fixed point theorems on manifolds";
+	    case 35: return "Integration on manifolds; measures on manifolds";
+	    case 40: return "Spectral theory; eigenvalue problems";
+	    case 50: return "Analysis on supermanifolds or graded manifolds";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'D': // Spaces and manifolds of mappings (including nonlinear versions of 46Exx)
 	  switch(min)
 	    {
+	    case  5: return "Groups of diffeomorphisms and homeomorphisms as manifolds";
+	    case  7: return "Groups and semigroups of nonlinear operators";
+	    case 10: return "Spaces of imbeddings and immersions";
+	    case 15: return "Manifolds of mappings";
+	    case 17: return "Manifolds of metrics (esp. Riemannian)";
+	    case 19: return "Group actions and symmetry properties";
+	    case 20: return "Measures (Gaussian, cylindrical, etc.) on manifolds of maps";
+	    case 25: return "Equations in function spaces; evolution equations";
+	    case 27: return "Moduli problems for differential geometric structures";
+	    case 29: return "Moduli problems for topological structures";
+	    case 30: return "Applications (in quantum mechanics (Feynman path integrals), relativity, fluid dynamics, etc.)";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'E': // Variational problems in infinite-dimensional spaces
 	  switch(min)
 	    {
+	    case  5: return "Abstract critical point theory (Morse theory, Ljusternik-Schnirelman (Lyusternik-Shnirel'man) theory, etc.)";
+	    case  7: return "Abstract bifurcation theory";
+	    case  9: return "Group-invariant bifurcation theory";
+	    case 10: return "Applications to the theory of geodesics (problems in one independent variable)";
+	    case 11: return "Critical metrics";
+	    case 12: return "Applications to minimal surfaces (problems in two independent variables)";
+	    case 15: return "Application to extremal problems in several variables; Yang-Mills functionals, etc.";
+	    case 17: return "Pareto optimality, etc., applications to economics";
+	    case 20: return "Harmonic maps, etc.";
+	    case 25: return "Applications to control theory";
+	    case 30: return "Variational principles";
+	    case 35: return "Variational inequalities (global problems)";
+	    case 40: return "Group actions";
+	    case 50: return "Applications";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'H': // Pseudogroups, differentiable groupoids and general structures on manifolds
 	  switch(min)
 	    {
+	    case  5: return "Pseudogroups and differentiable groupoids";
+	    case 10: return "Cohomology of classifying spaces for pseudogroup structures (Spencer, Gelfand-Fuks, etc.)";
+	    case 15: return "Deformations of structures";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'J': // Partial differential equations on manifolds; differential operators
 	  switch(min)
 	    {
+	    case  5: return "Elliptic equations on manifolds, general theory";
+	    case 10: return "Differential complexes; elliptic complexes";
+	    case 15: return "Relations with hyperfunctions";
+	    case 20: return "Index theory and related fixed point theorems";
+	    case 22: return "Exotic index theories";
+	    case 26: return "Elliptic genera";
+	    case 28: return "Eta-invariants, Chern-Simons invariants";
+	    case 30: return "Spectral flows";
+	    case 32: return "Boundary value problems on manifolds";
+	    case 35: return "Heat and other parabolic equation methods";
+	    case 37: return "Perturbations; asymptotics";
+	    case 40: return "Pseudodifferential and Fourier integral operators on manifolds";
+	    case 42: return "Noncommutative global analysis, noncommutative residues";
+	    case 45: return "Hyperbolic equations";
+	    case 47: return "Propagation of singularities; initial value problems";
+	    case 50: return "Spectral problems; spectral geometry; scattering theory";
+	    case 51: return "Relations between spectral theory and ergodic theory, e.g. quantum unique ergodicity";
+	    case 52: return "Determinants and determinant bundles, analytic torsion";
+	    case 53: return "Isospectrality";
+	    case 55: return "Bifurcation";
+	    case 60: return "Relations with special manifold structures (Riemannian, Finsler, etc.)";
+	    case 65: return "Diffusion processes and stochastic analysis on manifolds";
+	    case 70: return "Invariance and symmetry properties";
+	    case 72: return "Correspondences and other transformation methods (e.g. Lie-Bäcklund)";
+	    case 90: return "Applications";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'K': // Theory of singularities and catastrophe theory
 	  switch(min)
 	    {
+	    case  5: return "Critical points of functions and mappings";
+	    case 10: return "Monodromy";
+	    case 15: return "Topological properties of mappings";
+	    case 20: return "Algebraic and analytic properties of mappings";
+	    case 25: return "Stability";
+	    case 30: return "Global theory";
+	    case 35: return "Catastrophe theory";
+	    case 40: return "Classification; finite determinacy of map germs";
+	    case 45: return "Singularities of vector fields, topological aspects";
+	    case 50: return "Normal forms";
+	    case 55: return "Asymptotic behavior";
+	    case 60: return "Deformation of singularities";
+	    case 65: return "Topological invariants";
+	    case 70: return "Symmetries, equivariance";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'Z': // Applications to physics
 	  switch(min)
 	    {
+	    case  5: return "Applications to physics";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	default: return "Subcategory not implemented";
