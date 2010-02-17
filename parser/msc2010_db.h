@@ -8148,36 +8148,128 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'P': // Axiomatics, foundations, philosophy
 	  switch(min)
 	    {
+	    case  5: return "General and philosophical";
+	    case 10: return "Logical foundations of quantum mechanics; quantum logic";
+	    case 13: return "Contextuality";
+	    case 15: return "Quantum measurement theory";
+	    case 16: return "Quantum state spaces, operational and probabilistic concepts";
+	    case 20: return "Stochastic mechanics (including stochastic electrodynamics)";
+	    case 40: return "Quantum coherence, entanglement, quantum correlations";
+	    case 45: return "Quantum information, communication, networks";
+	    case 50: return "Quantum state estimation, approximate cloning";
+	    case 68: return "Quantum computation";
+	    case 70: return "Quantum coding (general)";
+	    case 94: return "Quantum cryptography";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'Q': // General mathematical topics and methods in quantum theory
 	  switch(min)
 	    {
+	    case  5: return "Closed and approximate solutions to the Schrödinger, Dirac, Klein-Gordon and other equations of quantum mechanics";
+	    case 10: return "Selfadjoint operator theory in quantum theory, including spectral analysis";
+	    case 12: return "Non-selfadjoint operator theory in quantum theory";
+	    case 15: return "Perturbation theories for operators and differential equations";
+	    case 20: return "Semiclassical techniques, including WKB and Maslov methods";
+	    case 30: return "Feynman integrals and graphs; applications of algebraic topology and algebraic geometry";
+	    case 35: return "Quantum mechanics on special spaces: manifolds, fractals, graphs, etc.";
+	    case 37: return "Quantum dots, waveguides, ratchets, etc.";
+	    case 40: return "Bethe-Salpeter and other integral equations";
+	    case 50: return "Quantum chaos";
+	    case 60: return "Supersymmetry and quantum mechanics";
+	    case 65: return "Alternative quantum mechanics";
+	    case 70: return "Differential-geometric methods, including holonomy, Berry and Hannay phases, etc.";
+	    case 80: return "Special quantum systems, such as solvable systems";
+	    case 93: return "Quantum control";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'R': // Groups and algebras in quantum theory
 	  switch(min)
 	    {
+	    case  5: return "Finite-dimensional groups and algebras motivated by physics and their representations";
+	    case 10: return "Infinite-dimensional groups and algebras motivated by physics, including Virasoro, Kac-Moody, W-algebras and other current algebras and their representations";
+	    case 12: return "Relations with integrable systems";
+	    case 15: return "Operator algebra methods";
+	    case 20: return "Covariant wave equations";
+	    case 25: return "Spinor and twistor methods";
+	    case 30: return "Coherent states";
+	    case 40: return "Symmetry breaking";
+	    case 50: return "Quantum groups and related algebraic methods";
+	    case 60: return "Noncommutative geometry";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'S': // General quantum mechanics and problems of quantization
 	  switch(min)
 	    {
+	    case  5: return "Canonical quantization, commutation relations and statistics";
+	    case 10: return "Geometry and quantization, symplectic methods";
+	    case 20: return "Stochastic quantization";
+	    case 22: return "Open systems, reduced dynamics, master equations, decoherence";
+	    case 25: return "Quantum stochastic calculus";
+	    case 30: return "Phase-space methods including Wigner distributions, etc.";
+	    case 40: return "Path integrals";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'T': // Quantum field theory; related classical field theories
 	  switch(min)
 	    {
+	    case  5: return "Axiomatic quantum field theory; operator algebras";
+	    case  8: return "Constructive quantum field theory";
+	    case 10: return "Model quantum field theories";
+	    case 13: return "Yang-Mills and other gauge theories";
+	    case 15: return "Perturbative methods of renormalization";
+	    case 16: return "Nonperturbative methods of renormalization";
+	    case 17: return "Renormalization group methods";
+	    case 18: return "Feynman diagrams";
+	    case 20: return "Quantum field theory on curved space backgrounds";
+	    case 25: return "Quantum field theory on lattices";
+	    case 27: return "Continuum limits";
+	    case 28: return "Thermal quantum field theory";
+	    case 30: return "String and superstring theories; other extended objects (e.g., branes)";
+	    case 40: return "Two-dimensional field theories, conformal field theories, etc.";
+	    case 45: return "Topological field theories";
+	    case 50: return "Anomalies";
+	    case 55: return "Casimir effect";
+	    case 60: return "Supersymmetric field theories";
+	    case 70: return "Quantization in field theory; cohomological methods";
+	    case 75: return "Noncommutative geometry methods";
+	    case 80: return "Simulation and numerical modeling";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'U': // Scattering theory
 	  switch(min)
 	    {
+	    case  5: return "2-body potential scattering theory";
+	    case 10: return "n-body potential scattering theory";
+	    case 15: return "Exactly and quasi-solvable systems";
+	    case 20: return "S-matrix theory, etc.";
+	    case 30: return "Dispersion theory, dispersion relations";
+	    case 35: return "Inelastic and multichannel scattering";
+	    case 40: return "Inverse scattering problems";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'V': // Applications to specific physical systems
 	  switch(min)
 	    {
+	    case  5: return "Strong interaction, including quantum chromodynamics";
+	    case 10: return "Electromagnetic interaction; quantum electrodynamics";
+	    case 15: return "Weak interaction";
+	    case 17: return "Gravitational interaction";
+	    case 19: return "Other fundamental interactions";
+	    case 22: return "Unified theories";
+	    case 25: return "Other elementary particle theory";
+	    case 35: return "Nuclear physics";
+	    case 45: return "Atomic physics";
+	    case 55: return "Molecular physics";
+	    case 65: return "Quantum dots";
+	    case 70: return "Many-body theory; quantum Hall effect";
+	    case 80: return "Quantum optics";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	default: return "Subcategory not implemented";
@@ -8188,16 +8280,73 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'B': // Equilibrium statistical mechanics
 	  switch(min)
 	    {
+	    case  3: return "Foundations";
+	    case  5: return "Classical equilibrium statistical mechanics (general)";
+	    case 10: return "Quantum equilibrium statistical mechanics (general)";
+	    case 20: return "Lattice systems (Ising, dimer, Potts, etc.) and systems on graphs";
+	    case 21: return "Continuum models (systems of particles, etc.)";
+	    case 23: return "Exactly solvable models; Bethe ansatz";
+	    case 24: return "Interface problems; diffusion-limited aggregation";
+	    case 26: return "Phase transitions (general)";
+	    case 27: return "Critical phenomena";
+	    case 28: return "Renormalization group methods";
+	    case 30: return "Statistical thermodynamics";
+	    case 31: return "Stochastic methods";
+	    case 35: return "Irreversible thermodynamics, including Onsager-Machlup theory";
+	    case 40: return "Kinetic theory of gases";
+	    case 41: return "Random walks, random surfaces, lattice animals, etc.";
+	    case 43: return "Percolation";
+	    case 44: return "Disordered systems (random Ising models, random Schrödinger operators, etc.)";
+	    case 80: return "Numerical methods (Monte Carlo, series resummation, etc.)";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'C': // Time-dependent statistical mechanics (dynamic and nonequilibrium)
 	  switch(min)
 	    {
+	    case  3: return "Foundations";
+	    case  5: return "Classical dynamic and nonequilibrium statistical mechanics (general)";
+	    case 10: return "Quantum dynamics and nonequilibrium statistical mechanics (general)";
+	    case 20: return "Dynamic lattice systems (kinetic Ising, etc.) and systems on graphs";
+	    case 21: return "Dynamic continuum models (systems of particles, etc.)";
+	    case 22: return "Interacting particle systems";
+	    case 23: return "Exactly solvable dynamic models";
+	    case 24: return "Interface problems; diffusion-limited aggregation";
+	    case 26: return "Dynamic and nonequilibrium phase transitions (general)";
+	    case 27: return "Dynamic critical phenomena";
+	    case 28: return "Dynamic renormalization group methods";
+	    case 31: return "Stochastic methods (Fokker-Planck, Langevin, etc.)";
+	    case 32: return "Neural nets";
+	    case 35: return "Irreversible thermodynamics, including Onsager-Machlup theory";
+	    case 40: return "Kinetic theory of gases";
+	    case 41: return "Dynamics of random walks, random surfaces, lattice animals, etc.";
+	    case 43: return "Time-dependent percolation";
+	    case 44: return "Dynamics of disordered systems (random Ising systems, etc.)";
+	    case 70: return "Transport processes";
+	    case 80: return "Numerical methods (Monte Carlo, series resummation, etc.)";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'D': // Applications to specific types of physical systems
 	  switch(min)
 	    {
+	    case  5: return "Gases";
+	    case 10: return "Plasmas";
+	    case 15: return "Liquids";
+	    case 20: return "Solids";
+	    case 25: return "Crystals";
+	    case 30: return "Random media, disordered materials (including liquid crystals and spin glasses)";
+	    case 35: return "Metals";
+	    case 37: return "Semiconductors";
+	    case 40: return "Magnetic materials";
+	    case 45: return "Ferroelectrics";
+	    case 50: return "Superfluids";
+	    case 55: return "Superconductors";
+	    case 60: return "Polymers";
+	    case 75: return "Nuclear reactor theory; neutron transport";
+	    case 77: return "Quantum wave guides, quantum wires";
+	    case 80: return "Nanostructures and nanoparticles";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	default: return "Subcategory not implemented";
@@ -8208,31 +8357,64 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'A': // Special relativity
 	  switch(min)
 	    {
+	    case  5: return "Special relativity";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'B': // Observational and experimental questions
 	  switch(min)
 	    {
+	    case  5: return "Observational and experimental questions";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'C': // General relativity
 	  switch(min)
 	    {
+	    case  5: return "Einstein's equations (general structure, canonical formalism, Cauchy problems)";
+	    case 10: return "Equations of motion";
+	    case 15: return "Exact solutions";
+	    case 20: return "Classes of solutions; algebraically special solutions, metrics with symmetries";
+	    case 22: return "Einstein-Maxwell equations";
+	    case 25: return "Approximation procedures, weak fields";
+	    case 27: return "Lattice gravity, Regge calculus and other discrete methods";
+	    case 30: return "Asymptotic procedures (radiation, news functions, ℋ-spaces, etc.)";
+	    case 35: return "Gravitational waves";
+	    case 40: return "Gravitational energy and conservation laws; groups of motions";
+	    case 45: return "Quantization of the gravitational field";
+	    case 47: return "Methods of quantum field theory";
+	    case 50: return "Electromagnetic fields";
+	    case 55: return "Macroscopic interaction of the gravitational field with matter (hydrodynamics, etc.)";
+	    case 57: return "Black holes";
+	    case 60: return "Spinor and twistor methods; Newman-Penrose formalism";
+	    case 65: return "Methods of noncommutative geometry";
+	    case 75: return "Space-time singularities, cosmic censorship, etc.";
+	    case 80: return "Analogues in lower dimensions";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'D': // Relativistic gravitational theories other than Einstein's, including asymmetric field theories
 	  switch(min)
 	    {
+	    case  5: return "Relativistic gravitational theories other than Einstein's, including asymmetric field theories";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'E': // Unified, higher-dimensional and super field theories
 	  switch(min)
 	    {
+	    case  5: return "Geometrodynamics";
+	    case 15: return "Kaluza-Klein and other higher-dimensional theories";
+	    case 30: return "String and superstring theories";
+	    case 50: return "Supergravity";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'F': // Cosmology
 	  switch(min)
 	    {
+	    case  5: return "Cosmology";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	default: return "Subcategory not implemented";
@@ -8243,6 +8425,15 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'A': // Astronomy and astrophysics
 	  switch(min)
 	    {
+	    case  4: return "General";
+	    case  5: return "Galactic and stellar dynamics";
+	    case 15: return "Galactic and stellar structure";
+	    case 20: return "Planetary atmospheres";
+	    case 25: return "Radiative transfer";
+	    case 30: return "Hydrodynamic and hydromagnetic problems";
+	    case 35: return "Statistical astronomy";
+	    case 40: return "Cosmology";
+	    case 99: return "Miscellaneous topics";
 	    default: return "Subcategory not implemented";
 	    }
 	default: return "Subcategory not implemented";
@@ -8253,6 +8444,19 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'A': // Geophysics
 	  switch(min)
 	    {
+	    case  4: return "General";
+	    case  5: return "Hydrology, hydrography, oceanography";
+	    case 10: return "Meteorology and atmospheric physics";
+	    case 15: return "Seismology";
+	    case 17: return "Global dynamics, earthquake problems";
+	    case 20: return "Potentials, prospecting";
+	    case 22: return "Inverse problems";
+	    case 25: return "Geo-electricity and geomagnetism";
+	    case 30: return "Geodesy, mapping problems";
+	    case 32: return "Geostatistics";
+	    case 40: return "Glaciology";
+	    case 60: return "Geological problems";
+	    case 99: return "Miscellaneous topics";
 	    default: return "Subcategory not implemented";
 	    }
 	default: return "Subcategory not implemented";
@@ -8261,7 +8465,70 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
       switch (med)
 	{
 	case 'B': // Operations research and management science
+	  switch(min)
+	    {
+	    case  5: return "Inventory, storage, reservoirs";
+	    case  6: return "Transportation, logistics";
+	    case 10: return "Network models, deterministic";
+	    case 15: return "Network models, stochastic";
+	    case 18: return "Communication networks";
+	    case 20: return "Traffic problems";
+	    case 22: return "Queues and service";
+	    case 25: return "Reliability, availability, maintenance, inspection";
+	    case 30: return "Production models";
+	    case 35: return "Scheduling theory, deterministic";
+	    case 36: return "Scheduling theory, stochastic";
+	    case 40: return "Search theory";
+	    case 50: return "Management decision making, including multiple objectives";
+	    case 60: return "Marketing, advertising";
+	    case 70: return "Theory of organizations, manpower planning";
+	    case 80: return "Discrete location and assignment";
+	    case 85: return "Continuous location";
+	    case 90: return "Case-oriented studies";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'C': // Mathematical programming
+	  switch(min)
+	    {
+	    case  5: return "Linear programming";
+	    case  6: return "Large-scale problems";
+	    case  8: return "Special problems of linear programming (transportation, multi-index, etc.)";
+	    case  9: return "Boolean programming";
+	    case 10: return "Integer programming";
+	    case 11: return "Mixed integer programming";
+	    case 15: return "Stochastic programming";
+	    case 20: return "Quadratic programming";
+	    case 22: return "Semidefinite programming";
+	    case 25: return "Convex programming";
+	    case 26: return "Nonconvex programming, global optimization";
+	    case 27: return "Combinatorial optimization";
+	    case 29: return "Multi-objective and goal programming";
+	    case 30: return "Nonlinear programming";
+	    case 31: return "Sensitivity, stability, parametric optimization";
+	    case 32: return "Fractional programming";
+	    case 33: return "Complementarity and equilibrium problems and variational inequalities (finite dimensions)";
+	    case 34: return "Semi-infinite programming";
+	    case 35: return "Programming involving graphs or networks";
+	    case 39: return "Dynamic programming";
+	    case 40: return "Markov and semi-Markov decision processes";
+	    case 46: return "Optimality conditions, duality";
+	    case 47: return "Minimax problems";
+	    case 48: return "Programming in abstract spaces";
+	    case 49: return "Extreme-point and pivoting methods";
+	    case 51: return "Interior-point methods";
+	    case 52: return "Methods of reduced gradient type";
+	    case 53: return "Methods of quasi-Newton type";
+	    case 55: return "Methods of successive quadratic programming type";
+	    case 56: return "Derivative-free methods and methods using generalized derivatives";
+	    case 57: return "Polyhedral combinatorics, branch-and-bound, branch-and-cut";
+	    case 59: return "Approximation methods and heuristics";
+	    case 60: return "Abstract computational complexity for mathematical programming problems";
+	    case 70: return "Fuzzy programming";
+	    case 90: return "Applications of mathematical programming";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	default: return "Subcategory not implemented";
 	}
     case 91: // Game theory, economics, social and behavioral sciences
@@ -8270,36 +8537,128 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'A': // Game theory
 	  switch(min)
 	    {
+	    case 05: return "2-person games";
+	    case 06: return "n-person games, n>2";
+	    case 10: return "Noncooperative games";
+	    case 12: return "Cooperative games";
+	    case 13: return "Games with infinitely many players";
+	    case 15: return "Stochastic games";
+	    case 18: return "Games in extensive form";
+	    case 20: return "Multistage and repeated games";
+	    case 22: return "Evolutionary games";
+	    case 23: return "Differential games";
+	    case 24: return "Positional games (pursuit and evasion, etc.)";
+	    case 25: return "Dynamic games";
+	    case 26: return "Rationality, learning";
+	    case 28: return "Signaling, communication";
+	    case 30: return "Utility theory for games";
+	    case 35: return "Decision theory for games";
+	    case 40: return "Game-theoretic models";
+	    case 43: return "Games involving graphs";
+	    case 44: return "Games involving topology or set theory";
+	    case 46: return "Combinatorial games";
+	    case 50: return "Discrete-time games";
+	    case 55: return "Games of timing";
+	    case 60: return "Probabilistic games; gambling";
+	    case 65: return "Hierarchical games";
+	    case 70: return "Spaces of games";
+	    case 80: return "Applications of game theory";
+	    case 90: return "Experimental studies";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'B': // Mathematical economics
 	  switch(min)
 	    {
+	    case 02: return "Fundamental topics (basic mathematics, methodology; applicable to economics in general)";
+	    case 06: return "Decision theory";
+	    case 08: return "Individual preferences";
+	    case 10: return "Group preferences";
+	    case 12: return "Voting theory";
+	    case 14: return "Social choice";
+	    case 15: return "Welfare economics";
+	    case 16: return "Utility theory";
+	    case 18: return "Public goods";
+	    case 24: return "Price theory and market structure";
+	    case 25: return "Asset pricing models";
+	    case 26: return "Market models (auctions, bargaining, bidding, selling, etc.)";
+	    case 30: return "Risk theory, insurance";
+	    case 32: return "Resource and cost allocation";
+	    case 38: return "Production theory, theory of the firm";
+	    case 40: return "Labor market, contracts";
+	    case 42: return "Consumer behavior, demand theory";
+	    case 44: return "Informational economics";
+	    case 50: return "General equilibrium theory";
+	    case 51: return "Dynamic stochastic general equilibrium theory";
+	    case 52: return "Special types of equilibria";
+	    case 54: return "Special types of economies";
+	    case 55: return "Economic dynamics";
+	    case 60: return "Trade models";
+	    case 62: return "Growth models";
+	    case 64: return "Macro-economic models (monetary models, models of taxation)";
+	    case 66: return "Multisectoral models";
+	    case 68: return "Matching models";
+	    case 69: return "Heterogeneous agent models";
+	    case 70: return "Stochastic models";
+	    case 72: return "Spatial models";
+	    case 74: return "Models of real-world systems";
+	    case 76: return "Environmental economics (natural resource models, harvesting, pollution, etc.)";
+	    case 80: return "Applications of statistical and quantum mechanics to economics (econophysics)";
+	    case 82: return "Statistical methods; economic indices and measures";
+	    case 84: return "Economic time series analysis";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'C': // Social and behavioral sciences: general topics
 	  switch(min)
 	    {
+	    case 05: return "Measurement theory";
+	    case 15: return "One- and multidimensional scaling";
+	    case 20: return "Clustering";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'D': // Mathematical sociology (including anthropology)
 	  switch(min)
 	    {
+	    case 10: return "Models of societies, social and urban evolution";
+	    case 20: return "Mathematical geography and demography";
+	    case 25: return "Spatial models";
+	    case 30: return "Social networks";
+	    case 35: return "Manpower systems";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'E': // Mathematical psychology
 	  switch(min)
 	    {
+	    case 10: return "Cognitive psychology";
+	    case 30: return "Psychophysics and psychophysiology; perception";
+	    case 40: return "Memory and learning";
+	    case 45: return "Measurement and performance";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'F': // Other social and behavioral sciences (mathematical treatment)
 	  switch(min)
 	    {
+	    case 10: return "History, political science";
+	    case 20: return "Linguistics";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'G': // Mathematical finance
 	  switch(min)
 	    {
+	    case 10: return "Portfolio theory";
+	    case 20: return "Derivative securities";
+	    case 30: return "Interest rates (stochastic models)";
+	    case 40: return "Credit risk";
+	    case 50: return "Corporate finance";
+	    case 60: return "Numerical methods (including Monte Carlo methods)";
+	    case 70: return "Statistical methods, econometrics";
+	    case 80: return "Financial applications of other theories (stochastic control, calculus of variations, PDE, SPDE, dynamical systems)";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	default: return "Subcategory not implemented";
@@ -8310,26 +8669,61 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'B': // Mathematical biology in general
 	  switch(min)
 	    {
+	    case 05: return "General biology and biomathematics";
+	    case 10: return "Taxonomy, cladistics, statistics";
+	    case 15: return "General biostatistics";
+	    case 20: return "Neural networks, artificial life and related topics";
+	    case 25: return "Biological rhythms and synchronization";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'C': // Physiological, cellular and medical topics
 	  switch(min)
 	    {
+	    case 05: return "Biophysics";
+	    case 10: return "Biomechanics";
+	    case 15: return "Developmental biology, pattern formation";
+	    case 17: return "Cell movement (chemotaxis, etc.)";
+	    case 20: return "Neural biology";
+	    case 30: return "Physiology (general)";
+	    case 35: return "Physiological flow";
+	    case 37: return "Cell biology";
+	    case 40: return "Biochemistry, molecular biology";
+	    case 42: return "Systems biology, networks";
+	    case 45: return "Kinetics in biochemical problems (pharmacokinetics, enzyme kinetics, etc.)";
+	    case 50: return "Medical applications (general)";
+	    case 55: return "Biomedical imaging and signal processing";
+	    case 60: return "Medical epidemiology";
+	    case 80: return "Plant biology";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'D': // Genetics and population dynamics
 	  switch(min)
 	    {
+	    case 10: return "Genetics";
+	    case 15: return "Problems related to evolution";
+	    case 20: return "Protein sequences, DNA sequences";
+	    case 25: return "Population dynamics (general)";
+	    case 30: return "Epidemiology";
+	    case 40: return "Ecology";
+	    case 50: return "Animal behavior";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'E': // Chemistry
 	  switch(min)
 	    {
+	    case 10: return "Molecular structure (graph-theoretic methods, methods of differential topology, etc.)";
+	    case 20: return "Classical flows, reactions, etc.";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'F': // Other natural sciences
 	  switch(min)
 	    {
+	    case 05: return "Other natural sciences (should also be assigned at least one other classification number in section 92)";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	default: return "Subcategory not implemented";
@@ -8340,26 +8734,98 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'A': // General
 	  switch(min)
 	    {
+	    case 05: return "Axiomatic system theory";
+	    case 10: return "General systems";
+	    case 13: return "Hierarchical systems";
+	    case 14: return "Decentralized systems";
+	    case 15: return "Large scale systems";
+	    case 30: return "Mathematical modeling (models of systems, model-matching, etc.)";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'B': // Controllability, observability, and system structure
 	  switch(min)
 	    {
+	    case 03: return "Attainable sets";
+	    case 05: return "Controllability";
+	    case 07: return "Observability";
+	    case 10: return "Canonical structure";
+	    case 11: return "System structure simplification";
+	    case 12: return "Variable structure systems";
+	    case 15: return "Realizations from input-output data";
+	    case 17: return "Transformations";
+	    case 18: return "Linearizations";
+	    case 20: return "Minimal systems representations";
+	    case 25: return "Algebraic methods";
+	    case 27: return "Geometric methods";
+	    case 28: return "Operator-theoretic methods";
+	    case 30: return "System identification";
+	    case 35: return "Sensitivity (robustness)";
+	    case 36: return "H∞-control";
+	    case 40: return "Computational methods";
+	    case 50: return "Synthesis problems";
+	    case 51: return "Design techniques (robust design, computer-aided design, etc.)";
+	    case 52: return "Feedback control";
+	    case 55: return "Pole and zero placement problems";
+	    case 60: return "Eigenvalue problems";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'C': // Control systems
 	  switch(min)
 	    {
+	    case 05: return "Linear systems";
+	    case 10: return "Nonlinear systems";
+	    case 15: return "Systems governed by ordinary differential equations";
+	    case 20: return "Systems governed by partial differential equations";
+	    case 23: return "Systems governed by functional-differential equations";
+	    case 25: return "Systems in abstract spaces";
+	    case 30: return "Systems governed by functional relations other than differential equations (such as hybrid and switching systems)";
+	    case 35: return "Multivariable systems";
+	    case 40: return "Adaptive control";
+	    case 41: return "Problems with incomplete information";
+	    case 42: return "Fuzzy control systems";
+	    case 55: return "Discrete-time systems";
+	    case 57: return "Sampled-data systems";
+	    case 62: return "Digital systems";
+	    case 65: return "Discrete event systems";
+	    case 70: return "Time-scale analysis and singular perturbations";
+	    case 73: return "Perturbations";
+	    case 80: return "Frequency-response methods";
+	    case 83: return "Control problems involving computers (process control, etc.)";
+	    case 85: return "Automated systems (robots, etc.)";
+	    case 95: return "Applications";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'D': // Stability
 	  switch(min)
 	    {
+	    case 05: return "Lyapunov and other classical stabilities (Lagrange, Poisson, L^p,l^p, etc.)";
+	    case 09: return "Robust stability";
+	    case 10: return "Popov-type stability of feedback systems";
+	    case 15: return "Stabilization of systems by feedback";
+	    case 20: return "Asymptotic stability";
+	    case 21: return "Adaptive or robust stabilization";
+	    case 25: return "Input-output approaches";
+	    case 30: return "Scalar and vector Lyapunov functions";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	case 'E': // Stochastic systems and control
 	  switch(min)
 	    {
+	    case 03: return "Stochastic systems, general";
+	    case 10: return "Estimation and detection";
+	    case 11: return "Filtering";
+	    case 12: return "System identification";
+	    case 14: return "Data smoothing";
+	    case 15: return "Stochastic stability";
+	    case 20: return "Optimal stochastic control";
+	    case 24: return "Least squares and related methods";
+	    case 25: return "Other computational methods";
+	    case 35: return "Stochastic learning and adaptive control";
+	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
 	default: return "Subcategory not implemented";
