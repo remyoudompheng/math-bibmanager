@@ -881,6 +881,13 @@ static const char* msc2010_print_medium(const int maj, const char med)
     case 90: // Operations research, mathematical programming
       switch (med)
 	{
+	case 'B': return "Operations research and management science";
+	case 'C': return "Mathematical programming";
+	default: return "Subcategory not implemented";
+	}
+    case 91: // Game theory, economics, social and behavioral sciences
+      switch (med)
+	{
 	case 'A': return "Game theory";
 	case 'B': return "Mathematical economics";
 	case 'C': return "Social and behavioral sciences: general topics";
@@ -888,11 +895,6 @@ static const char* msc2010_print_medium(const int maj, const char med)
 	case 'E': return "Mathematical psychology";
 	case 'F': return "Other social and behavioral sciences (mathematical treatment)";
 	case 'G': return "Mathematical finance";
-	default: return "Subcategory not implemented";
-	}
-    case 91: // Game theory, economics, social and behavioral sciences
-      switch (med)
-	{
 	default: return "Subcategory not implemented";
 	}
     case 92: // Biology and other natural sciences
@@ -6694,7 +6696,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
     case 60: // Probability theory and stochastic processes
       switch (med)
 	{
-	case 'A': return "Foundations of probability theory";
+	case 'A': // Foundations of probability theory
 	  switch(min)
 	    {
 	    case  5: return "Axioms; other general questions";
@@ -6703,7 +6705,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'B': return "Probability theory on algebraic and topological structures";
+	case 'B': // Probability theory on algebraic and topological structures
 	  switch(min)
 	    {
 	    case  5: return "Probability measures on topological spaces";
@@ -6715,21 +6717,21 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'C': return "Combinatorial probability";
+	case 'C': // Combinatorial probability
 	  switch(min)
 	    {
 	    case  5: return "Combinatorial probability";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'D': return "Geometric probability and stochastic geometry";
+	case 'D': // Geometric probability and stochastic geometry
 	  switch(min)
 	    {
 	    case  5: return "Geometric probability and stochastic geometry";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'E': return "Distribution theory";
+	case 'E': // Distribution theory
 	  switch(min)
 	    {
 	    case  5: return "Distributions: general theory";
@@ -6739,7 +6741,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'F': return "Limit theorems";
+	case 'F': // Limit theorems
 	  switch(min)
 	    {
 	    case  5: return "Central limit and other weak theorems";
@@ -6751,7 +6753,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'G': return "Stochastic processes";
+	case 'G': // Stochastic processes
 	  switch(min)
 	    {
 	    case  5: return "Foundations of stochastic processes";
@@ -6782,7 +6784,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'H': return "Stochastic analysis";
+	case 'H': // Stochastic analysis
 	  switch(min)
 	    {
 	    case  5: return "Stochastic integrals";
@@ -6797,7 +6799,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'J': return "Markov processes";
+	case 'J': // Markov processes
 	  switch(min)
 	    {
 	    case  5: return "Discrete-time Markov processes on general state spaces";
@@ -6824,7 +6826,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'K': return "Special processes";
+	case 'K': // Special processes
 	  switch(min)
 	    {
 	    case  5: return "Renewal theory";
@@ -6844,7 +6846,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
     case 62: // Statistics
       switch (med)
 	{
-	case 'A': return "Foundational and philosophical topics";
+	case 'A': // Foundational and philosophical topics
 	  switch(min)
 	    {
 	    case  1: return "Foundations and philosophical topics";
@@ -6852,7 +6854,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'B': return "Sufficiency and information";
+	case 'B': // Sufficiency and information
 	  switch(min)
 	    {
 	    case  5: return "Sufficient statistics and fields";
@@ -6862,7 +6864,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'C': return "Decision theory";
+	case 'C': // Decision theory
 	  switch(min)
 	    {
 	    case  5: return "General considerations";
@@ -6876,14 +6878,14 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'D': return "Sampling theory, sample surveys";
+	case 'D': // Sampling theory, sample surveys
 	  switch(min)
 	    {
 	    case  5: return "Sampling theory, sample surveys";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'E': return "Distribution theory";
+	case 'E': // Distribution theory
 	  switch(min)
 	    {
 	    case 10: return "Characterization and structure theory";
@@ -6894,7 +6896,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'F': return "Parametric inference";
+	case 'F': // Parametric inference
 	  switch(min)
 	    {
 	    case  3: return "Hypothesis testing";
@@ -6911,7 +6913,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'G': return "Nonparametric inference";
+	case 'G': // Nonparametric inference
 	  switch(min)
 	    {
 	    case  5: return "Estimation";
@@ -6928,7 +6930,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'H': return "Multivariate analysis";
+	case 'H': // Multivariate analysis
 	  switch(min)
 	    {
 	    case  5: return "Characterization and structure theory";
@@ -6945,7 +6947,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'J': return "Linear inference, regression";
+	case 'J': // Linear inference, regression
 	  switch(min)
 	    {
 	    case  2: return "General nonlinear regression";
@@ -6959,7 +6961,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'K': return "Design of experiments";
+	case 'K': // Design of experiments
 	  switch(min)
 	    {
 	    case  5: return "Optimal designs";
@@ -6971,7 +6973,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'L': return "Sequential methods";
+	case 'L': // Sequential methods
 	  switch(min)
 	    {
 	    case  5: return "Sequential design";
@@ -6983,7 +6985,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'M': return "Inference from stochastic processes";
+	case 'M': // Inference from stochastic processes
 	  switch(min)
 	    {
 	    case  2: return "Markov processes: hypothesis testing";
@@ -7000,7 +7002,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'N': return "Survival analysis and censored data";
+	case 'N': // Survival analysis and censored data
 	  switch(min)
 	    {
 	    case  1: return "Censored data models";
@@ -7011,7 +7013,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'P': return "Applications";
+	case 'P': // Applications
 	  switch(min)
 	    {
 	    case  5: return "Applications to actuarial sciences and financial mathematics";
@@ -7025,7 +7027,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'Q': return "Statistical tables";
+	case 'Q': // Statistical tables
 	  switch(min)
 	    {
 	    case  5: return "Statistical tables";
@@ -7037,14 +7039,14 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
     case 65: // Numerical analysis
       switch (med)
 	{
-	case 'A': return "Tables";
+	case 'A': // Tables
 	  switch(min)
 	    {
 	    case  5: return "Tables";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'B': return "Acceleration of convergence";
+	case 'B': // Acceleration of convergence
 	  switch(min)
 	    {
 	    case  5: return "Extrapolation to the limit, deferred corrections";
@@ -7053,7 +7055,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'C': return "Probabilistic methods, simulation and stochastic differential equations";
+	case 'C': // Probabilistic methods, simulation and stochastic differential equations
 	  switch(min)
 	    {
 	    case  5: return "Monte Carlo methods";
@@ -7067,7 +7069,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'D': return "Numerical approximation and computational geometry (primarily algorithms)";
+	case 'D': // Numerical approximation and computational geometry (primarily algorithms)
 	  switch(min)
 	    {
 	    case  5: return "Interpolation";
@@ -7084,14 +7086,14 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'E': return "Numerical methods in complex analysis (potential theory, etc.)";
+	case 'E': // Numerical methods in complex analysis (potential theory, etc.)
 	  switch(min)
 	    {
 	    case  5: return "Numerical methods in complex analysis (potential theory, etc.)";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'F': return "Numerical linear algebra";
+	case 'F': // Numerical linear algebra
 	  switch(min)
 	    {
 	    case  5: return "Direct methods for linear systems and matrix inversion";
@@ -7110,7 +7112,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'G': return "Error analysis and interval analysis";
+	case 'G': // Error analysis and interval analysis
 	  switch(min)
 	    {
 	    case 20: return "Algorithms with automatic result verification";
@@ -7120,7 +7122,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'H': return "Nonlinear algebraic or transcendental equations";
+	case 'H': // Nonlinear algebraic or transcendental equations
 	  switch(min)
 	    {
 	    case  4: return "Roots of polynomial equations";
@@ -7131,7 +7133,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'J': return "Numerical analysis in abstract spaces";
+	case 'J': // Numerical analysis in abstract spaces
 	  switch(min)
 	    {
 	    case  5: return "General theory";
@@ -7143,7 +7145,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'K': return "Mathematical programming, optimization and variational techniques";
+	case 'K': // Mathematical programming, optimization and variational techniques
 	  switch(min)
 	    {
 	    case  5: return "Mathematical programming methods";
@@ -7152,7 +7154,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'L': return "Ordinary differential equations";
+	case 'L': // Ordinary differential equations
 	  switch(min)
 	    {
 	    case  3: return "Functional-differential equations";
@@ -7174,7 +7176,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'M': return "Partial differential equations, initial value and time-dependent initial-boundary value problems";
+	case 'M': // Partial differential equations, initial value and time-dependent initial-boundary value problems
 	  switch(min)
 	    {
 	    case  6: return "Finite difference methods";
@@ -7197,7 +7199,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'N': return "Partial differential equations, boundary value problems";
+	case 'N': // Partial differential equations, boundary value problems
 	  switch(min)
 	    {
 	    case  6: return "Finite difference methods";
@@ -7221,7 +7223,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'P': return "Numerical problems in dynamical systems";
+	case 'P': // Numerical problems in dynamical systems
 	  switch(min)
 	    {
 	    case 10: return "Hamiltonian systems including symplectic integrators";
@@ -7231,7 +7233,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'Q': return "Difference and functional equations, recurrence relations";
+	case 'Q': // Difference and functional equations, recurrence relations
 	  switch(min)
 	    {
 	    case 10: return "Difference equations";
@@ -7240,7 +7242,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'R': return "Integral equations, integral transforms";
+	case 'R': // Integral equations, integral transforms
 	  switch(min)
 	    {
 	    case 10: return "Integral transforms";
@@ -7250,14 +7252,14 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'S': return "Graphical methods";
+	case 'S': // Graphical methods
 	  switch(min)
 	    {
 	    case  5: return "Graphical methods";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'T': return "Numerical methods in Fourier analysis";
+	case 'T': // Numerical methods in Fourier analysis
 	  switch(min)
 	    {
 	    case 40: return "Trigonometric approximation and interpolation";
@@ -7266,7 +7268,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'Y': return "Computer aspects of numerical algorithms";
+	case 'Y': // Computer aspects of numerical algorithms
 	  switch(min)
 	    {
 	    case  4: return "Algorithms for computer arithmetic, etc.";
@@ -7277,7 +7279,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'Z': return "Applications to physics";
+	case 'Z': // Applications to physics
 	  switch(min)
 	    {
 	    case  5: return "Applications to physics";
@@ -7289,7 +7291,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
     case 68: // Computer science
       switch (med)
 	{
-	case 'M': return "Computer system organization";
+	case 'M': // Computer system organization
 	  switch(min)
 	    {
 	    case  1: return "General";
@@ -7303,7 +7305,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'N': return "Software";
+	case 'N': // Software
 	  switch(min)
 	    {
 	    case  1: return "General";
@@ -7317,7 +7319,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'P': return "Theory of data";
+	case 'P': // Theory of data
 	  switch(min)
 	    {
 	    case  1: return "General";
@@ -7330,7 +7332,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'Q': return "Theory of computing";
+	case 'Q': // Theory of computing
 	  switch(min)
 	    {
 	    case  1: return "General";
@@ -7355,7 +7357,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'R': return "Discrete mathematics in relation to computer science";
+	case 'R': // Discrete mathematics in relation to computer science
 	  switch(min)
 	    {
 	    case  1: return "General";
@@ -7365,7 +7367,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'T': return "Artificial intelligence";
+	case 'T': // Artificial intelligence
 	  switch(min)
 	    {
 	    case  1: return "General";
@@ -7384,7 +7386,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'U': return "Computing methodologies and applications";
+	case 'U': // Computing methodologies and applications
 	  switch(min)
 	    {
 	    case  1: return "General";
@@ -7397,7 +7399,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'W': return "Algorithms";
+	case 'W': // Algorithms
 	  switch(min)
 	    {
 	    case  1: return "General";
@@ -7419,14 +7421,14 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
     case 70: // Mechanics of particles and systems
       switch (med)
 	{
-	case 'A': return "Axiomatics, foundations";
+	case 'A': // Axiomatics, foundations
 	  switch(min)
 	    {
 	    case  5: return "Axiomatics, foundations";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'B': return "Kinematics";
+	case 'B': // Kinematics
 	  switch(min)
 	    {
 	    case  5: return "Kinematics of a particle";
@@ -7435,14 +7437,14 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'C': return "Statics";
+	case 'C': // Statics
 	  switch(min)
 	    {
 	    case 20: return "Statics";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'E': return "Dynamics of a rigid body and of multibody systems";
+	case 'E': // Dynamics of a rigid body and of multibody systems
 	  switch(min)
 	    {
 	    case  5: return "Motion of the gyroscope";
@@ -7458,7 +7460,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'F': return "Dynamics of a system of particles, including celestial mechanics";
+	case 'F': // Dynamics of a system of particles, including celestial mechanics
 	  switch(min)
 	    {
 	    case  5: return "Two-body problems";
@@ -7475,7 +7477,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'G': return "General models, approaches, and methods";
+	case 'G': // General models, approaches, and methods
 	  switch(min)
 	    {
 	    case 10: return "Generalized coordinates; event, impulse-energy, configuration, state, or phase space";
@@ -7489,7 +7491,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'H': return "Hamiltonian and Lagrangian mechanics";
+	case 'H': // Hamiltonian and Lagrangian mechanics
 	  switch(min)
 	    {
 	    case  3: return "Lagrange's equations";
@@ -7512,7 +7514,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'J': return "Linear vibration theory";
+	case 'J': // Linear vibration theory
 	  switch(min)
 	    {
 	    case 10: return "Modal analysis";
@@ -7524,7 +7526,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'K': return "Nonlinear dynamics";
+	case 'K': // Nonlinear dynamics
 	  switch(min)
 	    {
 	    case  5: return "Phase plane analysis, limit cycles";
@@ -7546,35 +7548,35 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'L': return "Random vibrations";
+	case 'L': // Random vibrations
 	  switch(min)
 	    {
 	    case  5: return "Random vibrations";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'M': return "Orbital mechanics";
+	case 'M': // Orbital mechanics
 	  switch(min)
 	    {
 	    case 20: return "Orbital mechanics";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'P': return "Variable mass, rockets";
+	case 'P': // Variable mass, rockets
 	  switch(min)
 	    {
 	    case  5: return "Variable mass, rockets";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'Q': return "Control of mechanical systems";
+	case 'Q': // Control of mechanical systems
 	  switch(min)
 	    {
 	    case  5: return "Control of mechanical systems";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'S': return "Classical field theories";
+	case 'S': // Classical field theories
 	  switch(min)
 	    {
 	    case  5: return "Lagrangian formalism and Hamiltonian formalism";
@@ -7589,7 +7591,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
     case 74: // Mechanics of deformable solids
       switch (med)
 	{
-	case 'A': return "Generalities, axiomatics, foundations of continuum mechanics of solids";
+	case 'A': // Generalities, axiomatics, foundations of continuum mechanics of solids
 	  switch(min)
 	    {
 	    case  5: return "Kinematics of deformation";
@@ -7608,7 +7610,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'B': return "Elastic materials";
+	case 'B': // Elastic materials
 	  switch(min)
 	    {
 	    case  5: return "Classical linear elasticity";
@@ -7618,7 +7620,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'C': return "Plastic materials, materials of stress-rate and internal-variable type";
+	case 'C': // Plastic materials, materials of stress-rate and internal-variable type
 	  switch(min)
 	    {
 	    case  5: return "Small-strain, rate-independent theories (including rigid-plastic and elasto-plastic materials)";
@@ -7628,7 +7630,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'D': return "Materials of strain-rate type and history type, other materials with memory (including elastic materials with viscous damping, various viscoelastic materials)";
+	case 'D': // Materials of strain-rate type and history type, other materials with memory (including elastic materials with viscous damping, various viscoelastic materials)
 	  switch(min)
 	    {
 	    case  5: return "Linear constitutive equations";
@@ -7636,7 +7638,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'E': return "Material properties given special treatment";
+	case 'E': // Material properties given special treatment
 	  switch(min)
 	    {
 	    case  5: return "Inhomogeneity";
@@ -7650,7 +7652,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'F': return "Coupling of solid mechanics with other effects";
+	case 'F': // Coupling of solid mechanics with other effects
 	  switch(min)
 	    {
 	    case  5: return "Thermal effects";
@@ -7661,7 +7663,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'G': return "Equilibrium (steady-state) problems";
+	case 'G': // Equilibrium (steady-state) problems
 	  switch(min)
 	    {
 	    case  5: return "Explicit solutions";
@@ -7682,7 +7684,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'H': return "Dynamical problems";
+	case 'H': // Dynamical problems
 	  switch(min)
 	    {
 	    case  5: return "Explicit solutions";
@@ -7701,7 +7703,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'J': return "Waves";
+	case 'J': // Waves
 	  switch(min)
 	    {
 	    case  5: return "Linear waves";
@@ -7715,7 +7717,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'K': return "Thin bodies, structures";
+	case 'K': // Thin bodies, structures
 	  switch(min)
 	    {
 	    case  5: return "Strings";
@@ -7728,7 +7730,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'L': return "Special subfields of solid mechanics";
+	case 'L': // Special subfields of solid mechanics
 	  switch(min)
 	    {
 	    case  5: return "Geophysical solid mechanics";
@@ -7737,7 +7739,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'M': return "Special kinds of problems";
+	case 'M': // Special kinds of problems
 	  switch(min)
 	    {
 	    case  5: return "Control, switches and devices (“smart materials”)";
@@ -7748,7 +7750,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'N': return "Phase transformations in solids";
+	case 'N': // Phase transformations in solids
 	  switch(min)
 	    {
 	    case  5: return "Crystals";
@@ -7760,7 +7762,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'P': return "Optimization";
+	case 'P': // Optimization
 	  switch(min)
 	    {
 	    case  5: return "Compliance or weight optimization";
@@ -7770,7 +7772,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'Q': return "Homogenization, determination of effective properties";
+	case 'Q': // Homogenization, determination of effective properties
 	  switch(min)
 	    {
 	    case  5: return "Homogenization in equilibrium problems";
@@ -7780,7 +7782,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'R': return "Fracture and damage";
+	case 'R': // Fracture and damage
 	  switch(min)
 	    {
 	    case  5: return "Brittle damage";
@@ -7790,7 +7792,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'S': return "Numerical methods";
+	case 'S': // Numerical methods
 	  switch(min)
 	    {
 	    case  5: return "Finite element methods";
@@ -7809,7 +7811,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
     case 76: // Fluid mechanics
       switch (med)
 	{
-	case 'A': return "Foundations, constitutive equations, rheology";
+	case 'A': // Foundations, constitutive equations, rheology
 	  switch(min)
 	    {
 	    case  2: return "Foundations of fluid mechanics";
@@ -7821,7 +7823,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'B': return "Incompressible inviscid fluids";
+	case 'B': // Incompressible inviscid fluids
 	  switch(min)
 	    {
 	    case  3: return "Existence, uniqueness, and regularity theory";
@@ -7840,7 +7842,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'D': return "Incompressible viscous fluids";
+	case 'D': // Incompressible viscous fluids
 	  switch(min)
 	    {
 	    case  3: return "Existence, uniqueness, and regularity theory";
@@ -7860,7 +7862,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'E': return "Hydrodynamic stability";
+	case 'E': // Hydrodynamic stability
 	  switch(min)
 	    {
 	    case  5: return "Parallel shear flows";
@@ -7876,7 +7878,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'F': return "Turbulence";
+	case 'F': // Turbulence
 	  switch(min)
 	    {
 	    case  2: return "Fundamentals";
@@ -7897,42 +7899,42 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'G': return "General aerodynamics and subsonic flows";
+	case 'G': // General aerodynamics and subsonic flows
 	  switch(min)
 	    {
 	    case 25: return "General aerodynamics and subsonic flows";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'H': return "Transonic flows";
+	case 'H': // Transonic flows
 	  switch(min)
 	    {
 	    case  5: return "Transonic flows";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'J': return "Supersonic flows";
+	case 'J': // Supersonic flows
 	  switch(min)
 	    {
 	    case 20: return "Supersonic flows";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'K': return "Hypersonic flows";
+	case 'K': // Hypersonic flows
 	  switch(min)
 	    {
 	    case  5: return "Hypersonic flows";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'L': return "Shock waves and blast waves";
+	case 'L': // Shock waves and blast waves
 	  switch(min)
 	    {
 	    case  5: return "Shock waves and blast waves";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'M': return "Basic methods in fluid mechanics";
+	case 'M': // Basic methods in fluid mechanics
 	  switch(min)
 	    {
 	    case 10: return "Finite element methods";
@@ -7954,7 +7956,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'N': return "Compressible fluids and gas dynamics, general";
+	case 'N': // Compressible fluids and gas dynamics, general
 	  switch(min)
 	    {
 	    case 10: return "Existence, uniqueness, and regularity theory";
@@ -7965,21 +7967,21 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'P': return "Rarefied gas flows, Boltzmann equation";
+	case 'P': // Rarefied gas flows, Boltzmann equation
 	  switch(min)
 	    {
 	    case  5: return "Rarefied gas flows, Boltzmann equation";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'Q': return "Hydro- and aero-acoustics";
+	case 'Q': // Hydro- and aero-acoustics
 	  switch(min)
 	    {
 	    case  5: return "Hydro- and aero-acoustics";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'R': return "Diffusion and convection";
+	case 'R': // Diffusion and convection
 	  switch(min)
 	    {
 	    case  5: return "Forced convection";
@@ -7988,14 +7990,14 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'S': return "Flows in porous media; filtration; seepage";
+	case 'S': // Flows in porous media; filtration; seepage
 	  switch(min)
 	    {
 	    case  5: return "Flows in porous media; filtration; seepage";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'T': return "Two-phase and multiphase flows";
+	case 'T': // Two-phase and multiphase flows
 	  switch(min)
 	    {
 	    case 10: return "Liquid-gas two-phase flows, bubbly flows";
@@ -8006,42 +8008,42 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'U': return "Rotating fluids";
+	case 'U': // Rotating fluids
 	  switch(min)
 	    {
 	    case  5: return "Rotating fluids";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'V': return "Reaction effects in flows";
+	case 'V': // Reaction effects in flows
 	  switch(min)
 	    {
 	    case  5: return "Reaction effects in flows";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'W': return "Magnetohydrodynamics and electrohydrodynamics";
+	case 'W': // Magnetohydrodynamics and electrohydrodynamics
 	  switch(min)
 	    {
 	    case  5: return "Magnetohydrodynamics and electrohydrodynamics";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'X': return "Ionized gas flow in electromagnetic fields; plasmic flow";
+	case 'X': // Ionized gas flow in electromagnetic fields; plasmic flow
 	  switch(min)
 	    {
 	    case  5: return "Ionized gas flow in electromagnetic fields; plasmic flow";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'Y': return "Quantum hydrodynamics and relativistic hydrodynamics";
+	case 'Y': // Quantum hydrodynamics and relativistic hydrodynamics
 	  switch(min)
 	    {
 	    case  5: return "Quantum hydrodynamics and relativistic hydrodynamics";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'Z': return "Biological fluid mechanics";
+	case 'Z': // Biological fluid mechanics
 	  switch(min)
 	    {
 	    case  5: return "Physiological flows";
@@ -8054,7 +8056,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
     case 78: // Optics, electromagnetic theory
       switch (med)
 	{
-	case 'A': return "General";
+	case 'A': // General
 	  switch(min)
 	    {
 	    case  2: return "Foundations";
@@ -8079,7 +8081,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "Miscellaneous topics";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'M': return "Basic methods";
+	case 'M': // Basic methods
 	  switch(min)
 	    {
 	    case  5: return "Method of moments";
@@ -8105,7 +8107,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
     case 80: // Classical thermodynamics, heat transfer
       switch (med)
 	{
-	case 'A': return "Thermodynamics and heat transfer";
+	case 'A': // Thermodynamics and heat transfer
 	  switch(min)
 	    {
 	    case  5: return "Foundations";
@@ -8121,7 +8123,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
-	case 'M': return "Basic methods";
+	case 'M': // Basic methods
 	  switch(min)
 	    {
 	    case 10: return "Finite element methods";
@@ -8143,111 +8145,253 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
     case 81: // Quantum theory
       switch (med)
 	{
-	case 'P': return "Axiomatics, foundations, philosophy";
-	case 'Q': return "General mathematical topics and methods in quantum theory";
-	case 'R': return "Groups and algebras in quantum theory";
-	case 'S': return "General quantum mechanics and problems of quantization";
-	case 'T': return "Quantum field theory; related classical field theories";
-	case 'U': return "Scattering theory";
-	case 'V': return "Applications to specific physical systems";
+	case 'P': // Axiomatics, foundations, philosophy
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'Q': // General mathematical topics and methods in quantum theory
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'R': // Groups and algebras in quantum theory
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'S': // General quantum mechanics and problems of quantization
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'T': // Quantum field theory; related classical field theories
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'U': // Scattering theory
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'V': // Applications to specific physical systems
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
 	default: return "Subcategory not implemented";
 	}
     case 82: // Statistical mechanics, structure of matter
       switch (med)
 	{
-	case 'B': return "Equilibrium statistical mechanics";
-	case 'C': return "Time-dependent statistical mechanics (dynamic and nonequilibrium)";
-	case 'D': return "Applications to specific types of physical systems";
+	case 'B': // Equilibrium statistical mechanics
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Time-dependent statistical mechanics (dynamic and nonequilibrium)
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Applications to specific types of physical systems
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
 	default: return "Subcategory not implemented";
 	}
     case 83: // Relativity and gravitational theory
       switch (med)
 	{
-	case 'A': return "Special relativity";
-	case 'B': return "Observational and experimental questions";
-	case 'C': return "General relativity";
-	case 'D': return "Relativistic gravitational theories other than Einstein's, including asymmetric field theories";
-	case 'E': return "Unified, higher-dimensional and super field theories";
-	case 'F': return "Cosmology";
+	case 'A': // Special relativity
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Observational and experimental questions
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // General relativity
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Relativistic gravitational theories other than Einstein's, including asymmetric field theories
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Unified, higher-dimensional and super field theories
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Cosmology
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
 	default: return "Subcategory not implemented";
 	}
     case 85: // Astronomy and astrophysics
       switch (med)
 	{
-	case 'A': return "Astronomy and astrophysics";
+	case 'A': // Astronomy and astrophysics
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
 	default: return "Subcategory not implemented";
 	}
     case 86: // Geophysics
       switch (med)
 	{
-	case 'A': return "Geophysics";
+	case 'A': // Geophysics
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
 	default: return "Subcategory not implemented";
 	}
     case 90: // Operations research, mathematical programming
       switch (med)
 	{
-	case 'A': return "Game theory";
-	case 'B': return "Mathematical economics";
-	case 'C': return "Social and behavioral sciences: general topics";
-	case 'D': return "Mathematical sociology (including anthropology)";
-	case 'E': return "Mathematical psychology";
-	case 'F': return "Other social and behavioral sciences (mathematical treatment)";
-	case 'G': return "Mathematical finance";
+	case 'B': // Operations research and management science
+	case 'C': // Mathematical programming
 	default: return "Subcategory not implemented";
 	}
     case 91: // Game theory, economics, social and behavioral sciences
       switch (med)
 	{
+	case 'A': // Game theory
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Mathematical economics
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Social and behavioral sciences: general topics
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Mathematical sociology (including anthropology)
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Mathematical psychology
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Other social and behavioral sciences (mathematical treatment)
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'G': // Mathematical finance
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
 	default: return "Subcategory not implemented";
 	}
     case 92: // Biology and other natural sciences
       switch (med)
 	{
-	case 'B': return "Mathematical biology in general";
-	case 'C': return "Physiological, cellular and medical topics";
-	case 'D': return "Genetics and population dynamics";
-	case 'E': return "Chemistry";
-	case 'F': return "Other natural sciences";
+	case 'B': // Mathematical biology in general
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Physiological, cellular and medical topics
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Genetics and population dynamics
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Chemistry
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'F': // Other natural sciences
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
 	default: return "Subcategory not implemented";
 	}
     case 93: // Systems theory; control
       switch (med)
 	{
-	case 'A': return "General";
-	case 'B': return "Controllability, observability, and system structure";
-	case 'C': return "Control systems";
-	case 'D': return "Stability";
-	case 'E': return "Stochastic systems and control";
+	case 'A': // General
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'B': // Controllability, observability, and system structure
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'C': // Control systems
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'D': // Stability
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
+	case 'E': // Stochastic systems and control
+	  switch(min)
+	    {
+	    default: return "Subcategory not implemented";
+	    }
 	default: return "Subcategory not implemented";
 	}
     case 94: // Information and communication, circuits
       switch (med)
 	{
-	case 'A': return "Communication, information";
-	case 'B': return "Theory of error-correcting codes and error-detecting codes";
-	case 'C': return "Circuits, networks";
-	case 'D': return "Fuzzy sets and logic (in connection with questions of Section 94)";
+	case 'A': // Communication, information
+	case 'B': // Theory of error-correcting codes and error-detecting codes
+	case 'C': // Circuits, networks
+	case 'D': // Fuzzy sets and logic (in connection with questions of Section 94)
 	default: return "Subcategory not implemented";
 	}
     case 97: // Mathematics education
       switch (med)
 	{
-	case 'A': return "General, mathematics and education";
-	case 'B': return "Educational policy and systems";
-	case 'C': return "Psychology of mathematics education, research in mathematics education";
-	case 'D': return "Education and instruction in mathematics";
-	case 'E': return "Foundations of mathematics";
-	case 'F': return "Arithmetic, number theory";
-	case 'G': return "Geometry";
-	case 'H': return "Algebra";
-	case 'I': return "Analysis";
-	case 'K': return "Combinatorics, graph theory, probability theory, statistics";
-	case 'M': return "Mathematical modeling, applications of mathematics";
-	case 'N': return "Numerical mathematics";
-	case 'P': return "Computer science";
-	case 'Q': return "Computer science education";
-	case 'R': return "Computer science applications";
-	case 'U': return "Educational material and media, educational technology";
+	case 'A': // General, mathematics and education
+	case 'B': // Educational policy and systems
+	case 'C': // Psychology of mathematics education, research in mathematics education
+	case 'D': // Education and instruction in mathematics
+	case 'E': // Foundations of mathematics
+	case 'F': // Arithmetic, number theory
+	case 'G': // Geometry
+	case 'H': // Algebra
+	case 'I': // Analysis
+	case 'K': // Combinatorics, graph theory, probability theory, statistics
+	case 'M': // Mathematical modeling, applications of mathematics
+	case 'N': // Numerical mathematics
+	case 'P': // Computer science
+	case 'Q': // Computer science education
+	case 'R': // Computer science applications
+	case 'U': // Educational material and media, educational technology
 	default: return "Subcategory not implemented";
 	}
     default: return "Subcategory not implemented";
