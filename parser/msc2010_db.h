@@ -8537,8 +8537,8 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'A': // Game theory
 	  switch(min)
 	    {
-	    case 05: return "2-person games";
-	    case 06: return "n-person games, n>2";
+	    case  5: return "2-person games";
+	    case  6: return "n-person games, n>2";
 	    case 10: return "Noncooperative games";
 	    case 12: return "Cooperative games";
 	    case 13: return "Games with infinitely many players";
@@ -8570,9 +8570,9 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'B': // Mathematical economics
 	  switch(min)
 	    {
-	    case 02: return "Fundamental topics (basic mathematics, methodology; applicable to economics in general)";
-	    case 06: return "Decision theory";
-	    case 08: return "Individual preferences";
+	    case  2: return "Fundamental topics (basic mathematics, methodology; applicable to economics in general)";
+	    case  6: return "Decision theory";
+	    case  8: return "Individual preferences";
 	    case 10: return "Group preferences";
 	    case 12: return "Voting theory";
 	    case 14: return "Social choice";
@@ -8612,7 +8612,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'C': // Social and behavioral sciences: general topics
 	  switch(min)
 	    {
-	    case 05: return "Measurement theory";
+	    case  5: return "Measurement theory";
 	    case 15: return "One- and multidimensional scaling";
 	    case 20: return "Clustering";
 	    case 99: return "None of the above, but in this section";
@@ -8669,7 +8669,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'B': // Mathematical biology in general
 	  switch(min)
 	    {
-	    case 05: return "General biology and biomathematics";
+	    case  5: return "General biology and biomathematics";
 	    case 10: return "Taxonomy, cladistics, statistics";
 	    case 15: return "General biostatistics";
 	    case 20: return "Neural networks, artificial life and related topics";
@@ -8680,7 +8680,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'C': // Physiological, cellular and medical topics
 	  switch(min)
 	    {
-	    case 05: return "Biophysics";
+	    case  5: return "Biophysics";
 	    case 10: return "Biomechanics";
 	    case 15: return "Developmental biology, pattern formation";
 	    case 17: return "Cell movement (chemotaxis, etc.)";
@@ -8722,7 +8722,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'F': // Other natural sciences
 	  switch(min)
 	    {
-	    case 05: return "Other natural sciences (should also be assigned at least one other classification number in section 92)";
+	    case  5: return "Other natural sciences";
 	    case 99: return "None of the above, but in this section";
 	    default: return "Subcategory not implemented";
 	    }
@@ -8734,7 +8734,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'A': // General
 	  switch(min)
 	    {
-	    case 05: return "Axiomatic system theory";
+	    case  5: return "Axiomatic system theory";
 	    case 10: return "General systems";
 	    case 13: return "Hierarchical systems";
 	    case 14: return "Decentralized systems";
@@ -8746,9 +8746,9 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'B': // Controllability, observability, and system structure
 	  switch(min)
 	    {
-	    case 03: return "Attainable sets";
-	    case 05: return "Controllability";
-	    case 07: return "Observability";
+	    case  3: return "Attainable sets";
+	    case  5: return "Controllability";
+	    case  7: return "Observability";
 	    case 10: return "Canonical structure";
 	    case 11: return "System structure simplification";
 	    case 12: return "Variable structure systems";
@@ -8774,7 +8774,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'C': // Control systems
 	  switch(min)
 	    {
-	    case 05: return "Linear systems";
+	    case  5: return "Linear systems";
 	    case 10: return "Nonlinear systems";
 	    case 15: return "Systems governed by ordinary differential equations";
 	    case 20: return "Systems governed by partial differential equations";
@@ -8801,8 +8801,8 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'D': // Stability
 	  switch(min)
 	    {
-	    case 05: return "Lyapunov and other classical stabilities (Lagrange, Poisson, L^p,l^p, etc.)";
-	    case 09: return "Robust stability";
+	    case  5: return "Lyapunov and other classical stabilities (Lagrange, Poisson, L^p,l^p, etc.)";
+	    case  9: return "Robust stability";
 	    case 10: return "Popov-type stability of feedback systems";
 	    case 15: return "Stabilization of systems by feedback";
 	    case 20: return "Asymptotic stability";
@@ -8815,7 +8815,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	case 'E': // Stochastic systems and control
 	  switch(min)
 	    {
-	    case 03: return "Stochastic systems, general";
+	    case  3: return "Stochastic systems, general";
 	    case 10: return "Estimation and detection";
 	    case 11: return "Filtering";
 	    case 12: return "System identification";
@@ -8834,30 +8834,290 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
       switch (med)
 	{
 	case 'A': // Communication, information
+	  switch(min)
+	    {
+	    case  5: return "Communication theory";
+	    case  8: return "Image processing (compression, reconstruction, etc.)";
+	    case 11: return "Application of orthogonal and other special functions";
+	    case 12: return "Signal theory (characterization, reconstruction, filtering, etc.)";
+	    case 13: return "Detection theory";
+	    case 14: return "Modulation and demodulation";
+	    case 15: return "Information theory, general";
+	    case 17: return "Measures of information, entropy";
+	    case 20: return "Sampling theory";
+	    case 24: return "Coding theorems (Shannon theory)";
+	    case 29: return "Source coding";
+	    case 34: return "Rate-distortion theory";
+	    case 40: return "Channel models (including quantum)";
+	    case 45: return "Prefix, length-variable, comma-free codes";
+	    case 50: return "Theory of questionnaires";
+	    case 55: return "Shift register sequences and sequences over finite alphabets";
+	    case 60: return "Cryptography";
+	    case 62: return "Authentication and secret sharing";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'B': // Theory of error-correcting codes and error-detecting codes
+	  switch(min)
+	    {
+	    case  5: return "Linear codes, general";
+	    case 10: return "Convolutional codes";
+	    case 12: return "Combined modulation schemes (including trellis codes)";
+	    case 15: return "Cyclic codes";
+	    case 20: return "Burst-correcting codes";
+	    case 25: return "Combinatorial codes";
+	    case 27: return "Geometric methods (including applications of algebraic geometry)";
+	    case 30: return "Majority codes";
+	    case 35: return "Decoding";
+	    case 40: return "Arithmetic codes";
+	    case 50: return "Synchronization error-correcting codes";
+	    case 60: return "Other types of codes";
+	    case 65: return "Bounds on codes";
+	    case 70: return "Error probability";
+	    case 75: return "Applications of the theory of convex sets and geometry of numbers (covering radius, etc.)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'C': // Circuits, networks
+	  switch(min)
+	    {
+	    case  5: return "Analytic circuit theory";
+	    case 10: return "Switching theory, application of Boolean algebra; Boolean functions";
+	    case 12: return "Fault detection; testing";
+	    case 15: return "Applications of graph theory";
+	    case 30: return "Applications of design theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'D': // Fuzzy sets and logic (in connection with questions of Section 94)
+	  switch(min)
+	    {
+	    case  5: return "Fuzzy sets and logic (in connection with questions of Section 94)";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	default: return "Subcategory not implemented";
 	}
     case 97: // Mathematics education
       switch (med)
 	{
 	case 'A': // General, mathematics and education
+	  switch(min)
+	    {
+	    case 10: return "Comprehensive works, reference books";
+	    case 20: return "Recreational mathematics, games";
+	    case 30: return "History of mathematics and mathematics education";
+	    case 40: return "Mathematics and society";
+	    case 50: return "Bibliographies";
+	    case 70: return "Theses and postdoctoral theses";
+	    case 80: return "Popularization of mathematics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'B': // Educational policy and systems
+	  switch(min)
+	    {
+	    case 10: return "Educational research and planning";
+	    case 20: return "General education";
+	    case 30: return "Vocational education";
+	    case 40: return "Higher education";
+	    case 50: return "Teacher education";
+	    case 60: return "Adult and further education";
+	    case 70: return "Syllabuses, educational standards";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'C': // Psychology of mathematics education, research in mathematics education
+	  switch(min)
+	    {
+	    case 10: return "Comprehensive works";
+	    case 20: return "Affective behavior";
+	    case 30: return "Cognitive processes, learning theories";
+	    case 40: return "Intelligence and aptitudes";
+	    case 50: return "Language and verbal communities";
+	    case 60: return "Sociological aspects of learning";
+	    case 70: return "Teaching-learning processes";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'D': // Education and instruction in mathematics
+	  switch(min)
+	    {
+	    case 10: return "Comprehensive works, comparative studies";
+	    case 20: return "Philosophical and theoretical contributions (maths didactics)";
+	    case 30: return "Objectives and goals";
+	    case 40: return "Teaching methods and classroom techniques";
+	    case 50: return "Teaching problem solving and heuristic strategies";
+	    case 60: return "Student assessment, achievement control and rating";
+	    case 70: return "Learning difficulties and student errors";
+	    case 80: return "Teaching units and draft lessons";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'E': // Foundations of mathematics
+	  switch(min)
+	    {
+	    case 10: return "Comprehensive works";
+	    case 20: return "Philosophy and mathematics";
+	    case 30: return "Logic";
+	    case 40: return "Language of mathematics";
+	    case 50: return "Reasoning and proving in the mathematics classroom";
+	    case 60: return "Sets, relations, set theory";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'F': // Arithmetic, number theory
+	  switch(min)
+	    {
+	    case 10: return "Comprehensive works";
+	    case 20: return "Pre-numerical stage, concept of numbers";
+	    case 30: return "Natural numbers";
+	    case 40: return "Integers, rational numbers";
+	    case 50: return "Real numbers, complex numbers";
+	    case 60: return "Number theory";
+	    case 70: return "Measures and units";
+	    case 80: return "Ratio and proportion, percentages";
+	    case 90: return "Real life mathematics, practical arithmetic";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'G': // Geometry
+	  switch(min)
+	    {
+	    case 10: return "Comprehensive works";
+	    case 20: return "Informal geometry";
+	    case 30: return "Areas and volumes";
+	    case 40: return "Plane and solid geometry";
+	    case 50: return "Transformation geometry";
+	    case 60: return "Plane and spherical trigonometry";
+	    case 70: return "Analytic geometry. Vector algebra";
+	    case 80: return "Descriptive geometry";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'H': // Algebra
+	  switch(min)
+	    {
+	    case 10: return "Comprehensive works";
+	    case 20: return "Elementary algebra";
+	    case 30: return "Equations and inequalities";
+	    case 40: return "Groups, rings, fields";
+	    case 50: return "Ordered algebraic structures";
+	    case 60: return "Linear algebra";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'I': // Analysis
+	  switch(min)
+	    {
+	    case 10: return "Comprehensive works";
+	    case 20: return "Mappings and functions";
+	    case 30: return "Sequences and series";
+	    case 40: return "Differential calculus";
+	    case 50: return "Integral calculus";
+	    case 60: return "Functions of several variables";
+	    case 70: return "Functional equations";
+	    case 80: return "Complex analysis";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'K': // Combinatorics, graph theory, probability theory, statistics
+	  switch(min)
+	    {
+	    case 10: return "Comprehensive works";
+	    case 20: return "Combinatorics";
+	    case 30: return "Graph theory";
+	    case 40: return "Descriptive statistics";
+	    case 50: return "Probability theory";
+	    case 60: return "Distributions and stochastic processes";
+	    case 70: return "Foundations and methodology of statistics";
+	    case 80: return "Applied statistics";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'M': // Mathematical modeling, applications of mathematics
+	  switch(min)
+	    {
+	    case 10: return "Modeling and interdisciplinarity";
+	    case 20: return "Mathematics in vocational training and career education";
+	    case 30: return "Financial and insurance mathematics";
+	    case 40: return "Operations research, economics";
+	    case 50: return "Physics, astronomy, technology, engineering";
+	    case 60: return "Biology, chemistry, medicine";
+	    case 70: return "Behavioral and social sciences";
+	    case 80: return "Arts, music, language, architecture";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'N': // Numerical mathematics
+	  switch(min)
+	    {
+	    case 10: return "Comprehensive works";
+	    case 20: return "Rounding, estimation, theory of errors";
+	    case 30: return "Numerical algebra";
+	    case 40: return "Numerical analysis";
+	    case 50: return "Interpolation and approximation";
+	    case 60: return "Mathematical programming";
+	    case 70: return "Discrete mathematics";
+	    case 80: return "Mathematical software, computer programs";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'P': // Computer science
+	  switch(min)
+	    {
+	    case 10: return "Comprehensive works";
+	    case 20: return "Theory of computer science";
+	    case 30: return "System software";
+	    case 40: return "Programming languages";
+	    case 50: return "Programming techniques";
+	    case 60: return "Hardware";
+	    case 70: return "Computer science and society";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'Q': // Computer science education
+	  switch(min)
+	    {
+	    case 10: return "Comprehensive works";
+	    case 20: return "Affective aspects in teaching computer science";
+	    case 30: return "Cognitive processes";
+	    case 40: return "Sociological aspects";
+	    case 50: return "Objectives";
+	    case 60: return "Teaching methods and classroom techniques";
+	    case 70: return "Student assessment";
+	    case 80: return "Teaching units";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'R': // Computer science applications
+	  switch(min)
+	    {
+	    case 10: return "Comprehensive works, collections of programs";
+	    case 20: return "Applications in mathematics";
+	    case 30: return "Applications in sciences";
+	    case 40: return "Artificial intelligence";
+	    case 50: return "Data bases, information systems";
+	    case 60: return "Computer graphics";
+	    case 70: return "User programs, administrative applications";
+	    case 80: return "Recreational computing";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	case 'U': // Educational material and media, educational technology
+	  switch(min)
+	    {
+	    case 10: return "Comprehensive works";
+	    case 20: return "Textbooks. Textbook research";
+	    case 30: return "Teachers' manuals and planning aids";
+	    case 40: return "Problem books. Competitions. Examinations";
+	    case 50: return "Computer assisted instruction; e-learning";
+	    case 60: return "Manipulative materials";
+	    case 70: return "Technological tools, calculators";
+	    case 80: return "Audiovisual media";
+	    case 99: return "None of the above, but in this section";
+	    default: return "Subcategory not implemented";
+	    }
 	default: return "Subcategory not implemented";
 	}
     default: return "Subcategory not implemented";
