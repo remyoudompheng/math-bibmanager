@@ -34,9 +34,12 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
 {
   // Menu item callbacks
   Gtk::MenuItem* mi_refresh = 0;
+  Gtk::MenuItem* mi_about = 0;
   Gtk::MenuItem* mi_quit = 0;
   uidef->get_widget("mi_refresh", mi_refresh);
   mi_refresh->signal_activate().connect( sigc::mem_fun(*this, &MainWindow::refresh_library) );
+  uidef->get_widget("mi_about", mi_about);
+  mi_about->signal_activate().connect( sigc::mem_fun(*this, &MainWindow::_on_about_activate) );
   uidef->get_widget("mi_quit", mi_quit);
   mi_quit->signal_activate().connect( sigc::mem_fun(*this, &MainWindow::_on_quit_activate) );
 
@@ -179,7 +182,19 @@ void MainWindow::_on_treemsc_cursor_changed()
   list_filtered->refilter();
 }
 
-// File Menu item callbacks
+// Menu item callbacks
+void MainWindow::_on_about_activate()
+{
+  Gtk::AboutDialog dialog;
+  dialog.set_program_name(PACKAGE_NAME);
+  dialog.set_version(PACKAGE_VERSION);
+  dialog.set_authors(list<string>(1, PACKAGE_AUTHORS));
+  // dialog.set_license(PACKAGE_LICENSE);
+  dialog.set_copyright(PACKAGE_COPYRIGHT);
+
+  dialog.run();
+}
+
 void MainWindow::_on_quit_activate()
 {
   Gtk::Main::quit();

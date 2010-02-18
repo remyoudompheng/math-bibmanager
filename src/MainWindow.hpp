@@ -85,6 +85,7 @@ protected:
   LibColumns *cols_proto;
   MscColumns *msccols_proto;
 
+  void _on_about_activate();
   void _on_quit_activate();
 };
 

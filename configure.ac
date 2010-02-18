@@ -7,6 +7,12 @@ AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([src/main.cpp])
 AC_CONFIG_HEADERS([config.h])
 
+AH_TEMPLATE([PACKAGE_AUTHORS], [Define to the authors of the package])
+AH_TEMPLATE([PACKAGE_COPYRIGHT], [Define to the copyright notice
+	of the package])
+AC_DEFINE(PACKAGE_AUTHORS, ["Rémy Oudompheng"])
+AC_DEFINE(PACKAGE_COPYRIGHT, ["Copyright 2010, Rémy Oudompheng"])
+
 # Checks for programs.
 AC_PROG_CC
 AC_PROG_CXX
@@ -35,6 +41,6 @@ AC_TYPE_SIZE_T
 AC_HEADER_MAJOR
 
 AC_CONFIG_FILES([Makefile
-                 src/Makefile
-                 parser/Makefile])
+		 src/Makefile
+		 parser/Makefile])
 AC_OUTPUT
