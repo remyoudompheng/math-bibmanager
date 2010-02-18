@@ -1,5 +1,8 @@
+version 0.2:
+
+
 version 0.1.1:
- + support more MSC categories
+ + full support for MSC2010 classification
  + fix: make article list sortable
  + fix: processing of one-digit MSC tags
 

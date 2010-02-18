@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.61])
-AC_INIT([math-bibmanager], [0.1.1], [oudomphe@math.unice.fr])
+AC_INIT([math-bibmanager], [0.2], [oudomphe@math.unice.fr])
 AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([src/main.cpp])
 AC_CONFIG_HEADERS([config.h])
