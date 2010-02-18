@@ -32,8 +32,11 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
     uidef(refGlade),
     msc_filter("")
 {
-  // File Menu item callbacks
+  // Menu item callbacks
+  Gtk::MenuItem* mi_refresh = 0;
   Gtk::MenuItem* mi_quit = 0;
+  uidef->get_widget("mi_refresh", mi_refresh);
+  mi_refresh->signal_activate().connect( sigc::mem_fun(*this, &MainWindow::refresh_library) );
   uidef->get_widget("mi_quit", mi_quit);
   mi_quit->signal_activate().connect( sigc::mem_fun(*this, &MainWindow::_on_quit_activate) );
 
@@ -63,7 +66,15 @@ MainWindow::~MainWindow()
 // Bibliography tree
 void MainWindow::open_library(string dirpath)
 {
+  library_path = dirpath;
   library = MathLibrary(dirpath.c_str());
+  update_tree();
+}
+
+void MainWindow::refresh_library()
+{
+  if (library_path.empty()) return;
+  library = MathLibrary(library_path.c_str());
   update_tree();
 }
 
@@ -101,6 +112,8 @@ void MainWindow::fill_msc(LibraryMSC source)
   LibraryMSC::iteratoriii it3;
   MSC2010Entry ploum;
   stringstream s; s.fill('0');
+
+  msc_store->clear();
 
   // Root node
   prow = msc_store->append();

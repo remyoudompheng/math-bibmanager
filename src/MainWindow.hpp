@@ -77,9 +77,11 @@ protected:
   Gtk::TreeView* treemsc;
   std::string msc_filter;
   bool tree_filter_by_msc(Gtk::TreeModel::const_iterator iter);
+  void refresh_library();
   void _on_treemsc_cursor_changed();
 
   MathLibrary library;
+  std::string library_path;
   LibColumns *cols_proto;
   MscColumns *msccols_proto;
 
