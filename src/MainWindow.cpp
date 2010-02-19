@@ -33,9 +33,12 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
     msc_filter("")
 {
   // Menu item callbacks
+  Gtk::MenuItem* mi_open = 0;
   Gtk::MenuItem* mi_refresh = 0;
   Gtk::MenuItem* mi_about = 0;
   Gtk::MenuItem* mi_quit = 0;
+  uidef->get_widget("mi_open", mi_open);
+  mi_open->signal_activate().connect( sigc::mem_fun(*this, &MainWindow::_on_open_activate) );
   uidef->get_widget("mi_refresh", mi_refresh);
   mi_refresh->signal_activate().connect( sigc::mem_fun(*this, &MainWindow::refresh_library) );
   uidef->get_widget("mi_about", mi_about);
@@ -183,6 +186,21 @@ void MainWindow::_on_treemsc_cursor_changed()
 }
 
 // Menu item callbacks
+void MainWindow::_on_open_activate()
+{
+  Gtk::FileChooserDialog dialog("Choose a library folder",
+				Gtk::FILE_CHOOSER_ACTION_SELECT_FOLDER);
+  dialog.add_button(Gtk::Stock::CANCEL, Gtk::RESPONSE_CANCEL);
+  dialog.add_button(Gtk::Stock::OPEN, Gtk::RESPONSE_OK);
+
+  int result = dialog.run();
+  if (result == Gtk::RESPONSE_OK)
+    {
+      library_path = dialog.get_filename();
+      refresh_library();
+    }
+}
+
 void MainWindow::_on_about_activate()
 {
   Gtk::AboutDialog dialog;

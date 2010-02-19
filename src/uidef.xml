@@ -22,15 +22,22 @@
                   <object class="GtkMenu" id="menu1">
                     <property name="visible">True</property>
                     <child>
-                      <object class="GtkMenuItem" id="mi_refresh">
+                      <object class="GtkMenuItem" id="mi_open">
                         <property name="visible">True</property>
-                        <property name="label" translatable="yes">_Refresh</property>
+                        <property name="label" translatable="yes">_Open folder...</property>
                         <property name="use_underline">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkSeparatorMenuItem" id="separatormenuitem1">
                         <property name="visible">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="mi_refresh">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">_Refresh</property>
+                        <property name="use_underline">True</property>
                       </object>
                     </child>
                   </object>

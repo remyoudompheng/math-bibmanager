@@ -51,7 +51,7 @@ main (int argc, char *argv[])
     {0, 0, 0, 0}
   };
   char c;
-  string library_dir = LIBRARY_PATH;
+  string library_dir = "";
   c = getopt_long(argc, argv, "d:V", longopts, &optind);
 
   switch(c) {
@@ -83,7 +83,7 @@ main (int argc, char *argv[])
 
   MainWindow *window_main = 0;
   refGlade->get_widget_derived("window_main", window_main);
-  window_main->open_library(library_dir);
+  if (!(library_dir.empty())) window_main->open_library(library_dir);
   if (window_main) {
     window_main->show_all();
     kit.run(*window_main);
