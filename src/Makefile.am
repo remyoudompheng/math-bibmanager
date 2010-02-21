@@ -8,7 +8,8 @@ main.cpp: UIDefinition.h
 
 mathbib_SOURCES = main.cpp UIDefinition.h \
 	MainWindow.cpp MainWindow.hpp \
-	BibPopup.cpp BibPopup.hpp
+	BibPopup.cpp BibPopup.hpp \
+	TreeBib.cpp TreeBib.hpp
 
 mathbib_CPPFLAGS = $(GTKMM_CFLAGS) -I../parser
 
