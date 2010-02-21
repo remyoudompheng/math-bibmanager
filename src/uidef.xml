@@ -73,7 +73,7 @@
               <object class="GtkScrolledWindow" id="scroll_tree">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="hscrollbar_policy">never</property>
+                <property name="hscrollbar_policy">automatic</property>
                 <property name="vscrollbar_policy">automatic</property>
                 <child>
                   <object class="GtkTreeView" id="tree_msc">
@@ -96,7 +96,6 @@
               </object>
               <packing>
                 <property name="resize">False</property>
-                <property name="shrink">True</property>
               </packing>
             </child>
             <child>
@@ -180,10 +179,6 @@
                   </object>
                 </child>
               </object>
-              <packing>
-                <property name="resize">True</property>
-                <property name="shrink">True</property>
-              </packing>
             </child>
           </object>
           <packing>
