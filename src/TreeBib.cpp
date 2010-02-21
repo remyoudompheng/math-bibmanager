@@ -29,7 +29,8 @@ using namespace std;
 
 TreeViewBib::TreeViewBib(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade)
   : Gtk::TreeView(cobject),
-    msc_filter("")
+    msc_filter(""),
+    builder(refGlade)
 {
   cols_proto = new LibColumns();
   list_widget = Gtk::ListStore::create(*cols_proto);
@@ -38,7 +39,6 @@ TreeViewBib::TreeViewBib(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builde
   list_filtered = Gtk::TreeModelFilter::create(list_widget);
   list_filtered->set_visible_func( sigc::mem_fun(*this, &TreeViewBib::tree_filter_by_msc) );
   set_model(Gtk::TreeModelSort::create(list_filtered));
-  //signal_button_press_event().connect( sigc::mem_fun(*this, &TreeViewBib::_on_tree_button_pressed), false);
 }
 
 TreeViewBib::~TreeViewBib() {}
@@ -77,7 +77,7 @@ bool TreeViewBib::tree_filter_by_msc(Gtk::TreeModel::const_iterator iter)
   return false;
 }
 
-bool TreeViewBib::_on_button_press_event(GdkEventButton* event)
+bool TreeViewBib::on_button_press_event(GdkEventButton* event)
 // Called for clicks in the article list TreeView
 {
   bool res = TreeView::on_button_press_event(event);
@@ -92,7 +92,8 @@ bool TreeViewBib::_on_button_press_event(GdkEventButton* event)
 	{
 	  Gtk::TreeIter iter = list_filtered->get_iter(tpath);
 	  BibEntry info = (*iter)[cols_proto->bibentry];
-	  BibEntryPopup popupmenu(info);
+	  popupmenu.initialise(info);
+	  popupmenu.show_all();
 	  popupmenu.popup(event->button, event->time);
 	}
     }

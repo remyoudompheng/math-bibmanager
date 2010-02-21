@@ -25,7 +25,9 @@
 
 #include "BibPopup.hpp"
 
-BibEntryPopup::BibEntryPopup() {}
+BibEntryPopup::BibEntryPopup()
+{
+}
 
 BibEntryPopup::BibEntryPopup(BibEntry source)
 {
@@ -34,10 +36,11 @@ BibEntryPopup::BibEntryPopup(BibEntry source)
 
 BibEntryPopup::~BibEntryPopup() {}
 
-void BibEntryPopup::initialise(BibEntry source) 
+void BibEntryPopup::initialise(BibEntry source)
 {
   entry = source;
-  Gtk::Menu_Helpers::MenuList& children = this->items();
+  Gtk::Menu_Helpers::MenuList& children = items();
+  children.clear();
 
   if( !(source.doi.empty()) )
     {
@@ -48,8 +51,8 @@ void BibEntryPopup::initialise(BibEntry source)
   if( !(source.arxiv.empty()) )
     {
       children.push_back(Gtk::Menu_Helpers::MenuElem(
-        "Open article on _arXiv:" + source.arxiv,
-        sigc::mem_fun(*this, &BibEntryPopup::_on_arxiv_activate) ));
+	"Open article on _arXiv:" + source.arxiv,
+	sigc::mem_fun(*this, &BibEntryPopup::_on_arxiv_activate) ));
     }
 
   show_all();

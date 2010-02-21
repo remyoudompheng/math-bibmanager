@@ -55,14 +55,16 @@ protected:
     Gtk::TreeModelColumn<BibEntry> bibentry;
   };
 
+  Glib::RefPtr<Gtk::Builder> builder;
   Glib::RefPtr<Gtk::ListStore> list_widget;
   Glib::RefPtr<Gtk::TreeModelFilter> list_filtered;
-
+  BibEntryPopup popupmenu;
+  
   std::string msc_filter;
   LibColumns *cols_proto;
 
   bool tree_filter_by_msc(Gtk::TreeModel::const_iterator iter);
-  virtual bool _on_button_press_event(GdkEventButton* event);
+  virtual bool on_button_press_event(GdkEventButton* event);
 };
 
 #endif //!TREE_BIB_H
