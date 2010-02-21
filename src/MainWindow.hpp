@@ -59,9 +59,7 @@ protected:
   Glib::RefPtr<Gtk::TreeStore> msc_store;
   TreeViewBib* treev;
   Gtk::TreeView* treemsc;
-  bool tree_filter_by_msc(Gtk::TreeModel::const_iterator iter);
   void refresh_library();
-  bool _on_tree_button_pressed(GdkEventButton* event);
   void _on_treemsc_cursor_changed();
 
   MathLibrary library;

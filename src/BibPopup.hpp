@@ -34,7 +34,7 @@ class BibEntryPopup : public Gtk::Menu
 public:
   BibEntryPopup();
   BibEntryPopup(BibEntry source);
-  ~BibEntryPopup();
+  virtual ~BibEntryPopup();
 
   void initialise(BibEntry source);
 

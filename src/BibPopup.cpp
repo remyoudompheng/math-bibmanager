@@ -37,7 +37,6 @@ BibEntryPopup::~BibEntryPopup() {}
 void BibEntryPopup::initialise(BibEntry source) 
 {
   entry = source;
-
   Gtk::Menu_Helpers::MenuList& children = this->items();
 
   if( !(source.doi.empty()) )
@@ -52,6 +51,8 @@ void BibEntryPopup::initialise(BibEntry source)
         "Open article on _arXiv:" + source.arxiv,
         sigc::mem_fun(*this, &BibEntryPopup::_on_arxiv_activate) ));
     }
+
+  show_all();
 }
 
 // Callbacks

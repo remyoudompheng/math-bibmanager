@@ -62,7 +62,7 @@ protected:
   LibColumns *cols_proto;
 
   bool tree_filter_by_msc(Gtk::TreeModel::const_iterator iter);
-  bool _on_tree_button_pressed(GdkEventButton* event);
+  virtual bool _on_button_press_event(GdkEventButton* event);
 };
 
 #endif //!TREE_BIB_H
