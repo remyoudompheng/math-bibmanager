@@ -19,7 +19,50 @@
  *
  */
 
+#ifndef TREE_BIB_H
+#define TREE_BIB_H
+
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
 
+#include <gtkmm.h>
+#include <library.hpp>
+#include "BibPopup.hpp"
+
+class TreeViewBib : public Gtk::TreeView
+{
+public:
+  TreeViewBib(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade);
+  virtual ~TreeViewBib();
+
+  void set_filter(std::string filter);
+  void update_tree(MathLibrary library);
+
+protected:
+  class LibColumns : public Gtk::TreeModel::ColumnRecord
+  {
+  public:
+    LibColumns() {
+      add(author); add(title); add(source);
+      add(msc); add(bibentry);
+    }
+
+    Gtk::TreeModelColumn<Glib::ustring> author; // 0
+    Gtk::TreeModelColumn<Glib::ustring> title;  // 1
+    Gtk::TreeModelColumn<Glib::ustring> source; // 2
+    Gtk::TreeModelColumn<Glib::ustring> msc;    // 3
+    Gtk::TreeModelColumn<BibEntry> bibentry;
+  };
+
+  Glib::RefPtr<Gtk::ListStore> list_widget;
+  Glib::RefPtr<Gtk::TreeModelFilter> list_filtered;
+
+  std::string msc_filter;
+  LibColumns *cols_proto;
+
+  bool tree_filter_by_msc(Gtk::TreeModel::const_iterator iter);
+  bool _on_tree_button_pressed(GdkEventButton* event);
+};
+
+#endif //!TREE_BIB_H

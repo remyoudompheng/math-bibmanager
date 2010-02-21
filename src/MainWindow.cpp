@@ -29,8 +29,7 @@ using namespace std;
 
 MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade)
   : Gtk::Window(cobject),
-    uidef(refGlade),
-    msc_filter("")
+    uidef(refGlade)
 {
   // Menu item callbacks
   Gtk::MenuItem* mi_open = 0;
@@ -47,15 +46,7 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
   mi_quit->signal_activate().connect( sigc::mem_fun(*this, &MainWindow::_on_quit_activate) );
 
   // Tree View
-  Gtk::TreeView* treev = 0;
-  uidef->get_widget("tree_docs", treev);
-  cols_proto = new LibColumns();
-  list_widget = Gtk::ListStore::create(*cols_proto);
-
-  // Filters for the bibliography list
-  list_filtered = Gtk::TreeModelFilter::create(list_widget);
-  list_filtered->set_visible_func( sigc::mem_fun(*this, &MainWindow::tree_filter_by_msc) );
-  treev->set_model(Gtk::TreeModelSort::create(list_filtered));
+  uidef->get_widget_derived("tree_docs", treev);
 
   // MSC Classification
   uidef->get_widget("tree_msc", treemsc);
@@ -92,18 +83,7 @@ void MainWindow::fill_tree(MathLibrary source)
 
 void MainWindow::update_tree()
 {
-  list_widget->clear();
-  set<BibEntry>::iterator it;
-  Gtk::TreeIter itt;
-  for(it = library.entries.begin(); it != library.entries.end(); it++)
-    {
-      itt = list_widget->append();
-      (*itt)[cols_proto->author] = it->author;
-      (*itt)[cols_proto->title] = it->title;
-      (*itt)[cols_proto->msc] = it->msc;
-      (*itt)[cols_proto->source] = it->so;
-      (*itt)[cols_proto->bibentry] = (*it);
-    }
+  treev->update_tree(library);
 
   LibraryMSC msc_tags(library);
   fill_msc(msc_tags);
@@ -162,18 +142,7 @@ void MainWindow::fill_msc(LibraryMSC source)
     }
 }
 
-bool MainWindow::tree_filter_by_msc(Gtk::TreeModel::const_iterator iter)
-{
-  BibEntry b = (*iter)[cols_proto->bibentry];
-  list<MSC2010Entry> l = b.msc_list;
-  for(list<MSC2010Entry>::iterator i = l.begin(); i != l.end(); i++)
-    {
-      if(!i->str().compare(0, msc_filter.length(), msc_filter))
-	return true;
-    }
-  return false;
-}
-
+// Widget callbacks
 void MainWindow::_on_treemsc_cursor_changed()
 {
   Gtk::TreeModel::Path path;
@@ -181,8 +150,7 @@ void MainWindow::_on_treemsc_cursor_changed()
   treemsc->get_cursor(path, focus_column);
   Gtk::TreeIter iter = msc_store->get_iter(path);
   // Set filter appropriately
-  msc_filter = (*iter)[msccols_proto->filter];
-  list_filtered->refilter();
+  treev->set_filter((*iter)[msccols_proto->filter]);
 }
 
 // Menu item callbacks

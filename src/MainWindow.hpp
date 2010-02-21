@@ -30,21 +30,7 @@
 #include <string>
 #include <library.hpp>
 #include <msc2010.hpp>
-
-class LibColumns : public Gtk::TreeModel::ColumnRecord
-{
-public:
-  LibColumns() {
-    add(author); add(title); add(source);
-    add(msc); add(bibentry);
-  }
-
-  Gtk::TreeModelColumn<Glib::ustring> author; // 0
-  Gtk::TreeModelColumn<Glib::ustring> title;  // 1
-  Gtk::TreeModelColumn<Glib::ustring> source; // 2
-  Gtk::TreeModelColumn<Glib::ustring> msc;    // 3
-  Gtk::TreeModelColumn<BibEntry> bibentry;
-};
+#include "TreeBib.hpp"
 
 class MscColumns : public Gtk::TreeModel::ColumnRecord
 {
@@ -70,19 +56,16 @@ public:
 
 protected:
   Glib::RefPtr<Gtk::Builder> uidef;
-  Glib::RefPtr<Gtk::ListStore> list_widget;
-  Glib::RefPtr<Gtk::TreeModelFilter> list_filtered;
-
   Glib::RefPtr<Gtk::TreeStore> msc_store;
+  TreeViewBib* treev;
   Gtk::TreeView* treemsc;
-  std::string msc_filter;
   bool tree_filter_by_msc(Gtk::TreeModel::const_iterator iter);
   void refresh_library();
+  bool _on_tree_button_pressed(GdkEventButton* event);
   void _on_treemsc_cursor_changed();
 
   MathLibrary library;
   std::string library_path;
-  LibColumns *cols_proto;
   MscColumns *msccols_proto;
 
   void _on_open_activate();

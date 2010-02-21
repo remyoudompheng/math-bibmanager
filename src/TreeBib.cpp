@@ -23,3 +23,79 @@
 #include <config.h>
 #endif
 
+#include "TreeBib.hpp"
+
+using namespace std;
+
+TreeViewBib::TreeViewBib(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade)
+  : Gtk::TreeView(cobject),
+    msc_filter("")
+{
+  cols_proto = new LibColumns();
+  list_widget = Gtk::ListStore::create(*cols_proto);
+
+  // Filters for the bibliography list
+  list_filtered = Gtk::TreeModelFilter::create(list_widget);
+  list_filtered->set_visible_func( sigc::mem_fun(*this, &TreeViewBib::tree_filter_by_msc) );
+  set_model(Gtk::TreeModelSort::create(list_filtered));
+  signal_button_press_event().connect( sigc::mem_fun(*this, &TreeViewBib::_on_tree_button_pressed), false);
+}
+
+TreeViewBib::~TreeViewBib() {}
+
+void TreeViewBib::set_filter(std::string filter)
+{
+  msc_filter = filter;
+  list_filtered->refilter();
+}
+
+void TreeViewBib::update_tree(MathLibrary library)
+{
+  list_widget->clear();
+  set<BibEntry>::iterator it;
+  Gtk::TreeIter itt;
+  for(it = library.entries.begin(); it != library.entries.end(); it++)
+    {
+      itt = list_widget->append();
+      (*itt)[cols_proto->author] = it->author;
+      (*itt)[cols_proto->title] = it->title;
+      (*itt)[cols_proto->msc] = it->msc;
+      (*itt)[cols_proto->source] = it->so;
+      (*itt)[cols_proto->bibentry] = (*it);
+    }
+}
+
+bool TreeViewBib::tree_filter_by_msc(Gtk::TreeModel::const_iterator iter)
+{
+  BibEntry b = (*iter)[cols_proto->bibentry];
+  list<MSC2010Entry> l = b.msc_list;
+  for(list<MSC2010Entry>::iterator i = l.begin(); i != l.end(); i++)
+    {
+      if(!i->str().compare(0, msc_filter.length(), msc_filter))
+	return true;
+    }
+  return false;
+}
+
+bool TreeViewBib::_on_tree_button_pressed(GdkEventButton* event)
+// Called for clicks in the article list TreeView
+{
+  if ((event->type == GDK_BUTTON_PRESS) && (event->button == 3))
+    {
+      // Right button was pressed
+      Gtk::TreeModel::Path tpath;
+      Gtk::TreeViewColumn *col;
+      int cx, cy;
+      if (get_path_at_pos((int)event->x, (int)event->y, tpath, col, cx, cy))
+	{
+	  Gtk::TreeIter iter = list_filtered->get_iter(tpath);
+	  BibEntry info = (*iter)[cols_proto->bibentry];
+	  BibEntryPopup popupmenu;
+	  popupmenu.initialise( info );
+	  popupmenu.popup(event->button, event->time);
+	  return true;
+	}
+    }
+  return false;
+}
+
