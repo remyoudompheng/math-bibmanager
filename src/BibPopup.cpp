@@ -61,8 +61,10 @@ void BibEntryPopup::initialise(BibEntry source)
 // Callbacks
 void BibEntryPopup::_on_doi_activate()
 {
+  gtk_show_uri(NULL, ("http://dx.doi.org/" + entry.doi).c_str(), GDK_CURRENT_TIME, NULL);
 }
 
 void BibEntryPopup::_on_arxiv_activate()
 {
+  gtk_show_uri(NULL, ("http://arxiv.org/abs/" + entry.arxiv).c_str(), GDK_CURRENT_TIME, NULL);
 }

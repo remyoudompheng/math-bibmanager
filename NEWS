@@ -1,6 +1,7 @@
 version 0.2:
  + add Open, Refresh button
  + add About dialog
+ + add context menu
 
 version 0.1.1:
  + full support for MSC2010 classification
