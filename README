@@ -12,3 +12,9 @@ entries and display them as a list. It also displays a tree representing
 all MSC (Mathematical Subject Classification) tags appearing in the
 .zb files, and allows selective display of articles matching a given
 classification.
+
+Dependencies:
+
+ * GTKMM 2.16 or later
+
+ * GVFS to be able to open URIs
