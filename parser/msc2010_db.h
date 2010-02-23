@@ -1455,7 +1455,7 @@ static const char* msc2010_print_minor(const int maj, const char med, const int 
 	    }
 	default: return "Subcategory not implemented";
 	}
-    case 11: // General algebraic systems
+    case 11: // Number theory
       switch (med)
 	{
 	case 'A': // Elementary number theory
