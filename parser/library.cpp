@@ -47,7 +47,9 @@ extern "C" int read_entry(const char *path,
 {
   string spath = path;
   if (spath.compare(spath.size() - 3, 3, ".zb") == 0) {
+#ifdef DEBUG
     cout << spath << endl;
+#endif
     entries_ptr->insert(BibEntry(path));
   }
   return 0;
