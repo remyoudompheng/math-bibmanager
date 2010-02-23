@@ -44,6 +44,12 @@ void BibEntryPopup::initialise(BibEntry source)
   Gtk::Menu_Helpers::MenuList& children = items();
   children.clear();
 
+  if( !(source.docpath.empty()) )
+    {
+      children.push_back(Gtk::Menu_Helpers::MenuElem(
+	"_View document",
+	sigc::mem_fun(*this, &BibEntryPopup::_on_open_activate) ));
+    }
   if( !(source.doi.empty()) )
     {
       children.push_back(Gtk::Menu_Helpers::MenuElem(
@@ -61,6 +67,19 @@ void BibEntryPopup::initialise(BibEntry source)
 }
 
 // Callbacks
+void BibEntryPopup::_on_open_activate()
+{
+  GError *gerr = NULL;
+  bool ok = gtk_show_uri(get_screen()->gobj(),
+			 ("file://" + entry.docpath).c_str(),
+			 gtk_get_current_event_time(), &gerr);
+  if (!ok)
+    {
+      Glib::Error err(gerr);
+      cout << "Error opening document: " << err.what() << endl;
+    }
+}
+
 void BibEntryPopup::_on_doi_activate()
 {
   GError *gerr = NULL;

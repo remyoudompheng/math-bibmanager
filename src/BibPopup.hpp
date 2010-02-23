@@ -40,8 +40,9 @@ public:
 
 protected:
   BibEntry entry;
+  void _on_open_activate();
   void _on_doi_activate();
   void _on_arxiv_activate();
-}; 
+};
 
 #endif //!BIB_POPUP_H

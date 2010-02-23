@@ -23,6 +23,7 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <sys/stat.h>
 
 using namespace std;
 
@@ -86,6 +87,33 @@ BibEntry::BibEntry(const char* filename)
   }
 
   parse_msc_entries();
+
+  // Look for an associated file
+  string f(filename);
+  size_t lastdot = f.find_last_of(".");
+  if (lastdot != string::npos) {
+    f = f.substr(0, lastdot);
+    struct stat statinfo;
+    string document = f + ".pdf";
+    if (! stat(document.c_str(), &statinfo)
+	&& S_ISREG(statinfo.st_mode))
+      {
+#ifdef DEBUG
+	cout << "Found pdf file: " << document << endl;
+#endif
+	docpath = document;
+      }
+    // Look for a DjVu file
+    document = f + ".djvu";
+    if (! stat(document.c_str(), &statinfo)
+	&& S_ISREG(statinfo.st_mode))
+      {
+#ifdef DEBUG
+	cout << "Found djvu file: " << document << endl;
+#endif
+	docpath = document;
+      }
+  }
 }
 
 BibEntry::~BibEntry() {}

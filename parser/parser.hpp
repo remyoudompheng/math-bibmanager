@@ -41,6 +41,8 @@ public:
 
   std::string an, author, title, la, so, year, dt, msc, ut, ci, ab, rv;
   std::string url, doi, arxiv;
+  // Path of the associated document
+  std::string docpath;
   std::list<MSC2010Entry> msc_list;
   void print_me() const;
   bool operator< (const BibEntry b) const;
