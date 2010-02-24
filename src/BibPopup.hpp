@@ -33,16 +33,20 @@ class BibEntryPopup : public Gtk::Menu
 {
 public:
   BibEntryPopup();
+  BibEntryPopup(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade);
   BibEntryPopup(BibEntry source);
   virtual ~BibEntryPopup();
 
   void initialise(BibEntry source);
 
 protected:
+  Glib::RefPtr<Gtk::Builder> ui_builder;
+
   BibEntry entry;
   void _on_open_activate();
   void _on_doi_activate();
   void _on_arxiv_activate();
+  void _on_amsrefs_activate();
 };
 
 #endif //!BIB_POPUP_H

@@ -31,6 +31,14 @@ BibEntryPopup::BibEntryPopup()
 {
 }
 
+BibEntryPopup::BibEntryPopup(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade)
+  : ui_builder(refGlade)
+{
+  Gtk::TextView *src_view;
+  refGlade->get_widget("srcwin_text", src_view);
+  src_view->modify_font(Pango::FontDescription("monospace"));
+}
+
 BibEntryPopup::BibEntryPopup(BibEntry source)
 {
   initialise(source);
@@ -62,6 +70,10 @@ void BibEntryPopup::initialise(BibEntry source)
 	"Open article on _arXiv:" + source.arxiv,
 	sigc::mem_fun(*this, &BibEntryPopup::_on_arxiv_activate) ));
     }
+
+  children.push_back(Gtk::Menu_Helpers::MenuElem(
+    "Create AMSRefs entry",
+    sigc::mem_fun(*this, &BibEntryPopup::_on_amsrefs_activate) ));
 
   show_all();
 }
@@ -104,4 +116,18 @@ void BibEntryPopup::_on_arxiv_activate()
       Glib::Error err(gerr);
       cout << "Error while lauching browser: " << err.what() << endl;
     }
+}
+
+void BibEntryPopup::_on_amsrefs_activate()
+{
+  Gtk::Dialog *dialog;
+  ui_builder->get_widget("srcwin", dialog);
+  dialog->set_title("Entry in AMSrefs format");
+
+  Glib::RefPtr<Gtk::TextBuffer> buf = Glib::RefPtr<Gtk::TextBuffer>::cast_dynamic(ui_builder->get_object("srcwin_buf"));
+  buf->set_text(entry.amsrefs());
+
+  dialog->signal_response().connect( sigc::hide(sigc::mem_fun(*dialog, &Gtk::Widget::hide_all)) );
+  dialog->show_all();
+  dialog->run();
 }

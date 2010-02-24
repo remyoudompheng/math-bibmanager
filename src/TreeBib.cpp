@@ -39,6 +39,9 @@ TreeViewBib::TreeViewBib(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builde
   list_filtered = Gtk::TreeModelFilter::create(list_widget);
   list_filtered->set_visible_func( sigc::mem_fun(*this, &TreeViewBib::tree_filter_by_msc) );
   set_model(Gtk::TreeModelSort::create(list_filtered));
+
+  // Popupmenu
+  refGlade->get_widget_derived("popup_docs", popupmenu);
 }
 
 TreeViewBib::~TreeViewBib() {}
@@ -92,9 +95,9 @@ bool TreeViewBib::on_button_press_event(GdkEventButton* event)
 	{
 	  Gtk::TreeIter iter = list_filtered->get_iter(tpath);
 	  BibEntry info = (*iter)[cols_proto->bibentry];
-	  popupmenu.initialise(info);
-	  popupmenu.show_all();
-	  popupmenu.popup(event->button, event->time);
+	  popupmenu->initialise(info);
+	  popupmenu->show_all();
+	  popupmenu->popup(event->button, event->time);
 	}
     }
 
