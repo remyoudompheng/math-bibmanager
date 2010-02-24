@@ -54,6 +54,11 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
   msc_store = Gtk::TreeStore::create(*msccols_proto);
   treemsc->set_model(msc_store);
   treemsc->signal_cursor_changed().connect( sigc::mem_fun(*this, &MainWindow::_on_treemsc_cursor_changed) );
+
+  // Set code dialog font to monospace
+  Gtk::TextView *src_view;
+  refGlade->get_widget("srcwin_text", src_view);
+  src_view->modify_font(Pango::FontDescription("monospace"));
 }
 
 MainWindow::~MainWindow()

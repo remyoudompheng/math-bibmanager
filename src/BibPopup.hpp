@@ -39,8 +39,10 @@ public:
 
   void initialise(BibEntry source);
 
-protected:
   Glib::RefPtr<Gtk::Builder> ui_builder;
+
+protected:
+  void new_item(const Glib::ustring label, const sigc::slot<void> slot);
 
   BibEntry entry;
   void _on_open_activate();

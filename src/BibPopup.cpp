@@ -31,20 +31,17 @@ BibEntryPopup::BibEntryPopup()
 {
 }
 
-BibEntryPopup::BibEntryPopup(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade)
-  : ui_builder(refGlade)
-{
-  Gtk::TextView *src_view;
-  refGlade->get_widget("srcwin_text", src_view);
-  src_view->modify_font(Pango::FontDescription("monospace"));
-}
-
 BibEntryPopup::BibEntryPopup(BibEntry source)
 {
   initialise(source);
 }
 
 BibEntryPopup::~BibEntryPopup() {}
+
+void BibEntryPopup::new_item(const Glib::ustring label,	const sigc::slot<void> slot)
+{
+  items().push_back(Gtk::Menu_Helpers::MenuElem(label, slot));
+}
 
 void BibEntryPopup::initialise(BibEntry source)
 {

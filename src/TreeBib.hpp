@@ -58,7 +58,7 @@ protected:
   Glib::RefPtr<Gtk::Builder> builder;
   Glib::RefPtr<Gtk::ListStore> list_widget;
   Glib::RefPtr<Gtk::TreeModelFilter> list_filtered;
-  BibEntryPopup *popupmenu;
+  BibEntryPopup popupmenu;
 
   std::string msc_filter;
   LibColumns *cols_proto;
