@@ -1,0 +1,11 @@
+<ui>
+  <menubar name="bar">
+    <menu action="LibraryMenu">
+      <menuitem action="LibOpen"/>
+      <separator/>
+      <menuitem action="LibRefresh"/>
+    </menu>
+    <menuitem action="About"/>
+    <menuitem action="Quit"/>
+  </menubar>
+</ui>
