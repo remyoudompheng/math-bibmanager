@@ -24,33 +24,36 @@
 #endif
 
 #include "MainWindow.hpp"
+#include "UImenubar.h"
 
 using namespace std;
-
-inline void add_item_to_menu(Gtk::Menu_Helpers::MenuList list, const string label,
-		      const sigc::slot<void> callback)
-{
-  list.push_back(Gtk::Menu_Helpers::MenuElem(label, callback));
-}
 
 MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade)
   : Gtk::Window(cobject),
     uidef(refGlade)
 {
   // Menu item callbacks
-  Gtk::Menu menu_library;
-  add_item_to_menu(menu_library.items(), "_Open...",
-		   sigc::mem_fun(*this, &MainWindow::_on_open_activate));
-  add_item_to_menu(menu_library.items(), "_Refresh",
-		   sigc::mem_fun(*this, &MainWindow::refresh_library));
-  Gtk::MenuBar *menu_bar;
-  uidef->get_widget("menubar", menu_bar);
-  menu_bar->items().push_back(Gtk::Menu_Helpers::MenuElem("Library", menu_library));
-  menu_library.show_all();
-  add_item_to_menu(menu_bar->items(), "_About...",
-		   sigc::mem_fun(*this, &MainWindow::_on_about_activate) );
-  add_item_to_menu(menu_bar->items(), "_Quit",
-		   sigc::mem_fun(*this, &MainWindow::_on_quit_activate) );
+  Glib::RefPtr<Gtk::ActionGroup> ref_actgroup = Gtk::ActionGroup::create();
+  Glib::RefPtr<Gtk::UIManager> ref_uiman = Gtk::UIManager::create();
+  ref_actgroup->add(Gtk::Action::create("LibraryMenu", "Library"));
+  ref_actgroup->add(Gtk::Action::create("LibOpen", "_Open folder..."),
+		    sigc::mem_fun(*this, &MainWindow::_on_open_activate));
+  ref_actgroup->add(Gtk::Action::create("LibRefresh", "_Refresh"),
+		    sigc::mem_fun(*this, &MainWindow::refresh_library));
+  ref_actgroup->add(Gtk::Action::create("About", "_About..."),
+		    sigc::mem_fun(*this, &MainWindow::_on_about_activate));
+  ref_actgroup->add(Gtk::Action::create("Quit", "_Quit"),
+		    sigc::mem_fun(*this, &MainWindow::_on_quit_activate));
+
+  ref_uiman->insert_action_group(ref_actgroup);
+  ref_uiman->add_ui_from_string(menubar_ui);
+  Gtk::Widget* menubar = ref_uiman->get_widget("/bar");
+
+  // Put menubar in vbox
+  Gtk::VBox *box;
+  uidef->get_widget("vbox_big", box);
+  box->pack_start(*menubar, Gtk::PACK_SHRINK);
+  box->reorder_child(*menubar, 0);
 
   // Tree View
   uidef->get_widget_derived("tree_docs", treev);
