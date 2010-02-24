@@ -180,5 +180,5 @@ string BibEntry::amsrefs() const
   s << "  journal={" << so << "}," << endl;
   s << "}" << endl;
 
-  return s.str()
+  return s.str();
 }
