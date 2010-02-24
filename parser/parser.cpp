@@ -168,3 +168,17 @@ bool BibEntry::operator<(const BibEntry b) const
 {
   return (an < b.an);
 }
+
+string BibEntry::amsrefs() const
+{
+  ostringstream s(ostringstream::out);
+  // should behave differently depending on document type
+  s << "\bib{" << an << "}{article{" << endl;
+  s << "  author={" << author << "}," << endl;
+  s << "  title={" << title << "}," << endl;
+  s << "  date={" << year << "}," << endl;
+  s << "  journal={" << so << "}," << endl;
+  s << "}" << endl;
+
+  return s.str()
+}

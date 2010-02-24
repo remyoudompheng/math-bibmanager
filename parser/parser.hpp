@@ -45,6 +45,7 @@ public:
   std::string docpath;
   std::list<MSC2010Entry> msc_list;
   void print_me() const;
+  std::string amsrefs() const;
   bool operator< (const BibEntry b) const;
 
 private:
