@@ -27,7 +27,8 @@
 
 using namespace std;
 
-bool get_field(string line, string & field, string delim, string* & tmp)
+bool get_field(const string line, string & field,
+	       const string delim, string* & tmp)
 {
   size_t t = delim.length();
   if ( (line.length() >= t) && !line.compare(0, t, delim) )

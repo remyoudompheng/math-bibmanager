@@ -44,7 +44,7 @@ public:
   virtual ~MathLibrary();
   std::set<BibEntry> entries;
 
-  void print_me();
+  void print_me() const;
 private:
 };
 
@@ -52,7 +52,7 @@ class LibraryMSC
 {
 public:
   LibraryMSC();
-  LibraryMSC(MathLibrary library);
+  LibraryMSC(const MathLibrary library);
 
   std::map<int, std::map<char, std::map<int,MSC2010Entry> > > msc_tree;
 

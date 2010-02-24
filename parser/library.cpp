@@ -57,7 +57,7 @@ extern "C" int read_entry(const char *path,
 
 MathLibrary::~MathLibrary() {}
 
-void MathLibrary::print_me()
+void MathLibrary::print_me() const
 {
   set<BibEntry>::iterator iter;
   for (iter = entries.begin(); iter != entries.end(); iter++)
@@ -72,7 +72,7 @@ LibraryMSC::LibraryMSC()
 }
 
 // Create a list of tags fom a library
-LibraryMSC::LibraryMSC(MathLibrary library)
+LibraryMSC::LibraryMSC(const MathLibrary library)
 {
   msc_tree.clear();
 
