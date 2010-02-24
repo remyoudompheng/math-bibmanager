@@ -91,14 +91,14 @@ bool TreeViewBib::on_button_press_event(GdkEventButton* event)
       Gtk::TreeModel::Path tpath;
       Gtk::TreeViewColumn *col;
       int cx, cy;
-      if (get_path_at_pos((int)event->x, (int)event->y, tpath, col, cx, cy))
-	{
-	  Gtk::TreeIter iter = list_filtered->get_iter(tpath);
-	  BibEntry info = (*iter)[cols_proto->bibentry];
-	  popupmenu->initialise(info);
-	  popupmenu->show_all();
-	  popupmenu->popup(event->button, event->time);
-	}
+      //      if (get_path_at_pos((int)event->x, (int)event->y, tpath, col, cx, cy))
+      //	{
+      //      Gtk::TreeIter iter = list_filtered->get_iter(tpath);
+      Gtk::TreeIter iter = get_selection()->get_selected();
+      BibEntry info = (*iter)[cols_proto->bibentry];
+      popupmenu->initialise(info);
+      popupmenu->show_all();
+      popupmenu->popup(event->button, event->time);
     }
 
   return res;
