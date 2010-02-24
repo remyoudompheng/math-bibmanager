@@ -24,6 +24,7 @@
 #endif
 
 #include "BibPopup.hpp"
+#include <gtk/gtk.h>
 
 using namespace std;
 

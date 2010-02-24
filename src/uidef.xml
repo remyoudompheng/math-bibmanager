@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <interface>
-  <!-- interface-requires gtk+ 2.12 -->
+  <requires lib="gtk+" version="2.14"/>
   <!-- interface-naming-policy project-wide -->
   <object class="GtkWindow" id="window_main">
     <property name="title" translatable="yes">Math Bibliography Manager</property>
@@ -10,9 +10,6 @@
       <object class="GtkVBox" id="vbox_big">
         <property name="visible">True</property>
         <property name="orientation">vertical</property>
-        <child>
-          <placeholder/>
-        </child>
         <child>
           <object class="GtkHPaned" id="hpan">
             <property name="visible">True</property>
