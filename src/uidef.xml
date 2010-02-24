@@ -9,7 +9,15 @@
     <child>
       <object class="GtkVBox" id="vbox_big">
         <property name="visible">True</property>
-        <property name="orientation">vertical</property>
+	<child>
+	  <object class="GtkMenuBar" id="menubar">
+	    <property name="visible">True</property>
+	  </object>
+	  <packing>
+	    <property name="expand">False</property>
+	    <property name="position">0</property>
+	  </packing>
+	</child>
         <child>
           <object class="GtkHPaned" id="hpan">
             <property name="visible">True</property>
@@ -159,7 +167,6 @@
     <child internal-child="vbox">
       <object class="GtkVBox" id="srcwin_vbox">
         <property name="visible">True</property>
-        <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child>
           <object class="GtkScrolledWindow" id="srcwin_scroll">

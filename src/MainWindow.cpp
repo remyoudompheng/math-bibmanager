@@ -43,15 +43,14 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
 		   sigc::mem_fun(*this, &MainWindow::_on_open_activate));
   add_item_to_menu(menu_library.items(), "_Refresh",
 		   sigc::mem_fun(*this, &MainWindow::refresh_library));
-  Gtk::MenuBar menu_bar;
-  menu_bar.items().push_back(Gtk::Menu_Helpers::MenuElem("Library", menu_library));
-  add_item_to_menu(menu_bar.items(), "_About...",
+  Gtk::MenuBar *menu_bar;
+  uidef->get_widget("menubar", menu_bar);
+  menu_bar->items().push_back(Gtk::Menu_Helpers::MenuElem("Library", menu_library));
+  menu_library.show_all();
+  add_item_to_menu(menu_bar->items(), "_About...",
 		   sigc::mem_fun(*this, &MainWindow::_on_about_activate) );
-  add_item_to_menu(menu_bar.items(), "_Quit",
+  add_item_to_menu(menu_bar->items(), "_Quit",
 		   sigc::mem_fun(*this, &MainWindow::_on_quit_activate) );
-  Gtk::VBox *vbox;
-  uidef->get_widget("vbox_big", vbox);
-  vbox->pack_start(menu_bar, Gtk::PACK_SHRINK);
 
   // Tree View
   uidef->get_widget_derived("tree_docs", treev);
@@ -67,6 +66,7 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
   Gtk::TextView *src_view;
   refGlade->get_widget("srcwin_text", src_view);
   src_view->modify_font(Pango::FontDescription("monospace"));
+  show_all();
 }
 
 MainWindow::~MainWindow()
