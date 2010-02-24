@@ -51,26 +51,22 @@ void BibEntryPopup::initialise(BibEntry source)
 
   if( !(source.docpath.empty()) )
     {
-      children.push_back(Gtk::Menu_Helpers::MenuElem(
-	"_View document",
-	sigc::mem_fun(*this, &BibEntryPopup::_on_open_activate) ));
+      new_item("_View document",
+	sigc::mem_fun(*this, &BibEntryPopup::_on_open_activate) );
     }
   if( !(source.doi.empty()) )
     {
-      children.push_back(Gtk::Menu_Helpers::MenuElem(
-	"Open _DOI in browser (" + source.doi + ")",
-	sigc::mem_fun(*this, &BibEntryPopup::_on_doi_activate) ));
+      new_item("Open _DOI in browser (" + source.doi + ")",
+	sigc::mem_fun(*this, &BibEntryPopup::_on_doi_activate) );
     }
   if( !(source.arxiv.empty()) )
     {
-      children.push_back(Gtk::Menu_Helpers::MenuElem(
-	"Open article on _arXiv:" + source.arxiv,
-	sigc::mem_fun(*this, &BibEntryPopup::_on_arxiv_activate) ));
+      new_item("Open article on _arXiv:" + source.arxiv,
+	sigc::mem_fun(*this, &BibEntryPopup::_on_arxiv_activate) );
     }
 
-  children.push_back(Gtk::Menu_Helpers::MenuElem(
-    "Create AMSRefs entry",
-    sigc::mem_fun(*this, &BibEntryPopup::_on_amsrefs_activate) ));
+  new_item("Create AMSRefs entry",
+    sigc::mem_fun(*this, &BibEntryPopup::_on_amsrefs_activate) );
 
   show_all();
 }

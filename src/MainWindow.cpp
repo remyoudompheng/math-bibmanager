@@ -27,23 +27,31 @@
 
 using namespace std;
 
+inline void add_item_to_menu(Gtk::Menu_Helpers::MenuList list, const string label,
+		      const sigc::slot<void> callback)
+{
+  list.push_back(Gtk::Menu_Helpers::MenuElem(label, callback));
+}
+
 MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade)
   : Gtk::Window(cobject),
     uidef(refGlade)
 {
   // Menu item callbacks
-  Gtk::MenuItem* mi_open = 0;
-  Gtk::MenuItem* mi_refresh = 0;
-  Gtk::MenuItem* mi_about = 0;
-  Gtk::MenuItem* mi_quit = 0;
-  uidef->get_widget("mi_open", mi_open);
-  mi_open->signal_activate().connect( sigc::mem_fun(*this, &MainWindow::_on_open_activate) );
-  uidef->get_widget("mi_refresh", mi_refresh);
-  mi_refresh->signal_activate().connect( sigc::mem_fun(*this, &MainWindow::refresh_library) );
-  uidef->get_widget("mi_about", mi_about);
-  mi_about->signal_activate().connect( sigc::mem_fun(*this, &MainWindow::_on_about_activate) );
-  uidef->get_widget("mi_quit", mi_quit);
-  mi_quit->signal_activate().connect( sigc::mem_fun(*this, &MainWindow::_on_quit_activate) );
+  Gtk::Menu menu_library;
+  add_item_to_menu(menu_library.items(), "_Open...",
+		   sigc::mem_fun(*this, &MainWindow::_on_open_activate));
+  add_item_to_menu(menu_library.items(), "_Refresh",
+		   sigc::mem_fun(*this, &MainWindow::refresh_library));
+  Gtk::MenuBar menu_bar;
+  menu_bar.items().push_back(Gtk::Menu_Helpers::MenuElem("Library", menu_library));
+  add_item_to_menu(menu_bar.items(), "_About...",
+		   sigc::mem_fun(*this, &MainWindow::_on_about_activate) );
+  add_item_to_menu(menu_bar.items(), "_Quit",
+		   sigc::mem_fun(*this, &MainWindow::_on_quit_activate) );
+  Gtk::VBox *vbox;
+  uidef->get_widget("vbox_big", vbox);
+  vbox->pack_start(menu_bar, Gtk::PACK_SHRINK);
 
   // Tree View
   uidef->get_widget_derived("tree_docs", treev);
