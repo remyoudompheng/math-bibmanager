@@ -205,7 +205,10 @@
   </object>
   <object class="GtkDialog" id="srcwin">
     <property name="border_width">5</property>
-    <property name="type_hint">normal</property>
+    <property name="modal">True</property>
+    <property name="default_width">600</property>
+    <property name="default_height">450</property>
+    <property name="type_hint">dialog</property>
     <property name="has_separator">False</property>
     <child internal-child="vbox">
       <object class="GtkVBox" id="srcwin_vbox">
@@ -222,6 +225,8 @@
               <object class="GtkTextView" id="srcwin_text">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
+                <property name="editable">False</property>
+                <property name="cursor_visible">False</property>
                 <property name="buffer">srcwin_buf</property>
               </object>
             </child>

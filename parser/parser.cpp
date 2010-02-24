@@ -173,7 +173,7 @@ string BibEntry::amsrefs() const
 {
   ostringstream s(ostringstream::out);
   // should behave differently depending on document type
-  s << "\\bib{" << an << "}{article{" << endl;
+  s << "\\bib{" << an << "}{article}{" << endl;
   s << "  author={" << author << "}," << endl;
   s << "  title={" << title << "}," << endl;
   s << "  date={" << year << "}," << endl;
