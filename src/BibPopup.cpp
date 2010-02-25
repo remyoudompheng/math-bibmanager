@@ -27,6 +27,10 @@
 #include <gtk/gtk.h>
 #include <assert.h>
 
+#if GTK_VERSION_LT(2,14)
+#include <cstdlib>
+#endif
+
 using namespace std;
 
 BibEntryPopup::BibEntryPopup()
@@ -51,13 +55,11 @@ void BibEntryPopup::initialise(BibEntry source)
   Gtk::Menu_Helpers::MenuList& children = items();
   children.clear();
 
-#if GTK_VERSION_GE(2,14)
   if( !(source.docpath.empty()) )
     {
       new_item("_View document",
 	sigc::mem_fun(*this, &BibEntryPopup::_on_open_activate) );
     }
-#endif
   if( !(source.doi.empty()) )
     {
 #if GTK_VERSION_GE(2,14)
@@ -83,9 +85,9 @@ void BibEntryPopup::initialise(BibEntry source)
 }
 
 // Callbacks
-#if GTK_VERSION_GE(2,14)
 void BibEntryPopup::_on_open_activate()
 {
+#if GTK_VERSION_GE(2,14)
   GError *gerr = NULL;
   bool ok = gtk_show_uri(get_screen()->gobj(),
 			 ("file://" + entry.docpath).c_str(),
@@ -95,8 +97,13 @@ void BibEntryPopup::_on_open_activate()
       Glib::Error err(gerr);
       cout << "Error opening document: " << err.what() << endl;
     }
+#else
+  const char* command = ("xdg-open " + entry.docpath).c_str();
+  system(command);
+#endif
 }
 
+#if GTK_VERSION_GE(2,14)
 void BibEntryPopup::_on_doi_activate()
 {
   GError *gerr = NULL;

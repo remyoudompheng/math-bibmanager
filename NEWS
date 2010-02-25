@@ -3,6 +3,7 @@ version 0.2:
  + add About dialog
  + add context menu
  + implement opening PDF files (uses default viewer)
+ + ensure compatibility with GTK 2.12
 
 version 0.1.1:
  + full support for MSC2010 classification

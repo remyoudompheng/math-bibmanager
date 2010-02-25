@@ -46,8 +46,8 @@ protected:
   void new_item(const Glib::ustring label, const sigc::slot<void> slot);
 
   BibEntry entry;
-#if GTK_VERSION_GE(2,14)
   void _on_open_activate();
+#if GTK_VERSION_GE(2,14)
   void _on_doi_activate();
   void _on_arxiv_activate();
 #endif

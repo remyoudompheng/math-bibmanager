@@ -25,6 +25,7 @@
 
 #include "MainWindow.hpp"
 #include "UImenubar.h"
+#include <sstream>
 
 using namespace std;
 

@@ -15,6 +15,6 @@ classification.
 
 Dependencies:
 
- * GTKMM 2.14 or later
+ * GTKMM 2.12 or later
 
  * GVFS to be able to open URIs
