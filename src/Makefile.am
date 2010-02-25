@@ -1,4 +1,4 @@
-bin_PROGRAMS = mathbib
+bin_PROGRAMS = mathkaba
 
 EXTRA_DIST = uidef.xml menubar.ui
 
