@@ -46,10 +46,9 @@ AC_ARG_ENABLE(debug,
 	[with_debug=yes],
 	[])
 AS_IF([test "x$with_debug" == xyes],
-	AC_DEFINE(DEBUG, 1,
-		  [Enable debugging output]),
+	AC_DEFINE(DEBUG, 1, [Enable debugging output]),
+	AC_DEFINE(NDEBUG, 1, [Disable debugging output])
 	)
-
 
 AC_CONFIG_FILES([Makefile
 		 src/Makefile

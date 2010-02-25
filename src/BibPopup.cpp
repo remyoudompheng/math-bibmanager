@@ -25,6 +25,7 @@
 
 #include "BibPopup.hpp"
 #include <gtk/gtk.h>
+#include <assert.h>
 
 using namespace std;
 
@@ -50,22 +51,31 @@ void BibEntryPopup::initialise(BibEntry source)
   Gtk::Menu_Helpers::MenuList& children = items();
   children.clear();
 
+#if GTK_VERSION_GE(2,14)
   if( !(source.docpath.empty()) )
     {
       new_item("_View document",
 	sigc::mem_fun(*this, &BibEntryPopup::_on_open_activate) );
     }
+#endif
   if( !(source.doi.empty()) )
     {
+#if GTK_VERSION_GE(2,14)
       new_item("Open _DOI in browser (" + source.doi + ")",
 	sigc::mem_fun(*this, &BibEntryPopup::_on_doi_activate) );
+#endif
+      new_item("_Copy link to DOI (" + source.doi + ")",
+	sigc::mem_fun(*this, &BibEntryPopup::_on_copy_doi_activate) );
     }
   if( !(source.arxiv.empty()) )
     {
+#if GTK_VERSION_GE(2,14)
       new_item("Open article on _arXiv:" + source.arxiv,
 	sigc::mem_fun(*this, &BibEntryPopup::_on_arxiv_activate) );
+#endif
+      new_item("Copy _link to arXiv:" + source.arxiv,
+	sigc::mem_fun(*this, &BibEntryPopup::_on_copy_arxiv_activate) );
     }
-
   new_item("Create AMSRefs entry",
     sigc::mem_fun(*this, &BibEntryPopup::_on_amsrefs_activate) );
 
@@ -73,6 +83,7 @@ void BibEntryPopup::initialise(BibEntry source)
 }
 
 // Callbacks
+#if GTK_VERSION_GE(2,14)
 void BibEntryPopup::_on_open_activate()
 {
   GError *gerr = NULL;
@@ -110,6 +121,21 @@ void BibEntryPopup::_on_arxiv_activate()
       Glib::Error err(gerr);
       cout << "Error while lauching browser: " << err.what() << endl;
     }
+}
+#endif
+
+void BibEntryPopup::_on_copy_doi_activate()
+{
+  Glib::RefPtr<Gtk::Clipboard> clip = Gtk::Clipboard::get(GDK_SELECTION_PRIMARY);
+  assert(clip);
+  clip->set_text("http://dx.doi.org/" + entry.doi);
+}
+
+void BibEntryPopup::_on_copy_arxiv_activate()
+{
+  Glib::RefPtr<Gtk::Clipboard> clip = Gtk::Clipboard::get(GDK_SELECTION_PRIMARY);
+  assert(clip);
+  clip->set_text("http://arxiv.org/abs/" + entry.arxiv);
 }
 
 void BibEntryPopup::_on_amsrefs_activate()

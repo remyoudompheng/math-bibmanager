@@ -27,6 +27,7 @@
 #endif
 
 #include <gtkmm.h>
+#include <gtk/gtk.h>
 #include <parser.hpp>
 
 class BibEntryPopup : public Gtk::Menu
@@ -45,9 +46,13 @@ protected:
   void new_item(const Glib::ustring label, const sigc::slot<void> slot);
 
   BibEntry entry;
+#if GTK_VERSION_GE(2,14)
   void _on_open_activate();
   void _on_doi_activate();
   void _on_arxiv_activate();
+#endif
+  void _on_copy_doi_activate();
+  void _on_copy_arxiv_activate();
   void _on_amsrefs_activate();
 };
 
