@@ -1,13 +1,17 @@
-mathbib
+Mathkaba
 A bibliography manager for mathematicians.
 
 This program is aimed at managing a collection of mathematical articles.
 To use it, you should have a hierarchy of directories containing
 .zb files with a copy of a ZentralBlatt entry (in ASCII format).
 
+You should have PDF of DjVu files along with the .zb files: if GTK 2.14
+or later is available, standard mechanisms will be used to select
+an appropriate viewer, if not, xdg-open will be used, if available.
+
 By calling
-  mathbib -d <path>
-mathbib will explore the directory <path> in search of bibliography
+  mathkaba -d <path>
+Mathkaba will explore the directory <path> in search of bibliography
 entries and display them as a list. It also displays a tree representing
 all MSC (Mathematical Subject Classification) tags appearing in the
 .zb files, and allows selective display of articles matching a given
