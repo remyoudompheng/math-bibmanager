@@ -9,14 +9,14 @@ UIDefinition.h: uidef.xml
 main.cpp: UIDefinition.h
 MainWindow.cpp: UImenubar.h
 
-mathbib_SOURCES = main.cpp UIDefinition.h UImenubar.h \
+mathkaba_SOURCES = main.cpp UIDefinition.h UImenubar.h \
 	MainWindow.cpp MainWindow.hpp \
 	BibPopup.cpp BibPopup.hpp \
 	TreeBib.cpp TreeBib.hpp
 
-mathbib_CPPFLAGS = $(GTKMM_CFLAGS) -I../parser
+mathkaba_CPPFLAGS = $(GTKMM_CFLAGS) -I../parser
 
-mathbib_LDADD = $(GTKMM_LIBS) \
+mathkaba_LDADD = $(GTKMM_LIBS) \
 	$(top_srcdir)/parser/libparser.a
 
 clean-local:
