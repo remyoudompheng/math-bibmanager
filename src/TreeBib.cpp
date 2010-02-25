@@ -35,6 +35,17 @@ TreeViewBib::TreeViewBib(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builde
   cols_proto = new LibColumns();
   list_widget = Gtk::ListStore::create(*cols_proto);
 
+  // Set sort indicators
+  Glib::RefPtr<Glib::Object> col_author, col_title, col_source, col_msc;
+  col_author = refGlade->get_object("treecol_author");
+  col_title = refGlade->get_object("treecol_title");
+  col_source = refGlade->get_object("treecol_source");
+  col_msc = refGlade->get_object("treecol_msc");
+  Glib::RefPtr<Gtk::TreeViewColumn>::cast_dynamic(col_author)->set_sort_column(cols_proto->author);
+  Glib::RefPtr<Gtk::TreeViewColumn>::cast_dynamic(col_title)->set_sort_column(cols_proto->title);
+  Glib::RefPtr<Gtk::TreeViewColumn>::cast_dynamic(col_source)->set_sort_column(cols_proto->source);
+  Glib::RefPtr<Gtk::TreeViewColumn>::cast_dynamic(col_msc)->set_sort_column(cols_proto->msc);
+
   // Filters for the bibliography list
   list_filtered = Gtk::TreeModelFilter::create(list_widget);
   list_filtered->set_visible_func( sigc::mem_fun(*this, &TreeViewBib::tree_filter_by_msc) );

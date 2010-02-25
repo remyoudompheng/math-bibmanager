@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <interface>
-  <requires lib="gtk+" version="2.14"/>
+  <requires lib="gtk+" version="2.12"/>
   <!-- interface-naming-policy project-wide -->
   <object class="GtkWindow" id="window_main">
     <property name="title" translatable="yes">Math Bibliography Manager</property>
@@ -63,7 +63,6 @@
                         <property name="clickable">True</property>
                         <property name="reorderable">True</property>
                         <property name="sort_indicator">True</property>
-                        <property name="sort_column_id">0</property>
                         <child>
                           <object class="GtkCellRendererText" id="treerender_author"/>
                           <attributes>
@@ -81,7 +80,6 @@
                         <property name="clickable">True</property>
                         <property name="reorderable">True</property>
                         <property name="sort_indicator">True</property>
-                        <property name="sort_column_id">1</property>
                         <child>
                           <object class="GtkCellRendererText" id="treerender_title"/>
                           <attributes>
@@ -97,7 +95,6 @@
                         <property name="clickable">True</property>
                         <property name="reorderable">True</property>
                         <property name="sort_indicator">True</property>
-                        <property name="sort_column_id">3</property>
                         <child>
                           <object class="GtkCellRendererText" id="treerender_msc"/>
                           <attributes>
@@ -114,7 +111,6 @@
                         <property name="reorderable">True</property>
                         <property name="sort_indicator">True</property>
                         <property name="sort_order">descending</property>
-                        <property name="sort_column_id">2</property>
                         <child>
                           <object class="GtkCellRendererText" id="treerender_source"/>
                           <attributes>
