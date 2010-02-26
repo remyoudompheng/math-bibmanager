@@ -5,6 +5,11 @@ This program is aimed at managing a collection of mathematical articles.
 To use it, you should have a hierarchy of directories containing
 .zb files with a copy of a ZentralBlatt entry (in ASCII format).
 
+Fields arxiv, doi, and url can be added to the .zb file in order
+to remember the arxiv identifier, the DOI (Digital Object Identifier)
+or an URL where the document can be found: these fields allow the program
+to give easy access to the file.
+
 You should have PDF of DjVu files along with the .zb files: if GTK 2.14
 or later is available, standard mechanisms will be used to select
 an appropriate viewer, if not, xdg-open will be used, if available.

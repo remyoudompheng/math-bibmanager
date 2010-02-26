@@ -1,3 +1,6 @@
+version 0.2.1:
+ + support url: field
+
 version 0.2:
  + add Open, Refresh button
  + add About dialog

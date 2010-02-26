@@ -48,9 +48,11 @@ protected:
   BibEntry entry;
   void _on_open_activate();
 #if GTK_VERSION_GE(2,14)
+  void _on_url_activate();
   void _on_doi_activate();
   void _on_arxiv_activate();
 #endif
+  void _on_copy_url_activate();
   void _on_copy_doi_activate();
   void _on_copy_arxiv_activate();
   void _on_amsrefs_activate();

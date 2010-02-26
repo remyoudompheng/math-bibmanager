@@ -60,6 +60,15 @@ void BibEntryPopup::initialise(BibEntry source)
       new_item("_View document",
 	sigc::mem_fun(*this, &BibEntryPopup::_on_open_activate) );
     }
+  if( !(source.url.empty()) )
+    {
+#if GTK_VERSION_GE(2,14)
+      new_item("Open _URL in browser",
+	sigc::mem_fun(*this, &BibEntryPopup::_on_url_activate) );
+#endif
+      new_item("_Copy link",
+	sigc::mem_fun(*this, &BibEntryPopup::_on_copy_url_activate) );
+    }
   if( !(source.doi.empty()) )
     {
 #if GTK_VERSION_GE(2,14)
@@ -104,6 +113,18 @@ void BibEntryPopup::_on_open_activate()
 }
 
 #if GTK_VERSION_GE(2,14)
+void BibEntryPopup::_on_url_activate()
+{
+  GError *gerr = NULL;
+  bool ok = gtk_show_uri(get_screen()->gobj(), entry.url.c_str(),
+			 gtk_get_current_event_time(), &gerr);
+  if (!ok)
+    {
+      Glib::Error err(gerr);
+      cout << "Error while lauching browser: " << err.what() << endl;
+    }
+}
+
 void BibEntryPopup::_on_doi_activate()
 {
   GError *gerr = NULL;
@@ -130,6 +151,13 @@ void BibEntryPopup::_on_arxiv_activate()
     }
 }
 #endif
+
+void BibEntryPopup::_on_copy_url_activate()
+{
+  Glib::RefPtr<Gtk::Clipboard> clip = Gtk::Clipboard::get(GDK_SELECTION_PRIMARY);
+  assert(clip);
+  clip->set_text(entry.url);
+}
 
 void BibEntryPopup::_on_copy_doi_activate()
 {
