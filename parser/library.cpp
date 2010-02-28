@@ -64,6 +64,28 @@ MathLibrary::MathLibrary(const char* path)
   ftw(path, read_entry, DEPTHBUF);
 }
 #else
+MathLibrary::MathLibrary(const char* path)
+{
+  try {
+    std::string p = path;
+    Glib::Dir directory(p);
+    for(Glib::DirIterator it = directory.begin();
+	it != directory.end(); it++)
+      {
+	if ((*it).compare((*it).size() - 3, 3, ".zb") == 0)
+	  {
+#ifdef DEBUG
+	    cout << p << *it << endl;
+#endif
+	    entries.insert(BibEntry((p + *it).c_str()));
+	  }
+      }
+  }
+  catch(const Glib::FileError& ex) {
+    std::cerr << "FileError: " << ex.what() << std::endl;
+    return;
+  }
+}
 #endif
 
 void MathLibrary::print_me() const
