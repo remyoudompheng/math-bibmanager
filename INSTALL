@@ -1,0 +1,20 @@
+Install mathkaba, run
+
+  ./configure
+  make
+  make install
+
+Additional command line parameters can be given to configure, such as
+
+  --prefix=PREFIX : sets the installation prefix
+  --enable-debug  : configure with debugging options
+
+Environement variables like CXXFLAGS and CPPFLAGS may also be useful.
+
+Cross-compilation for MS Windows using mingw32
+----------------------------------------------
+
+If you are using mingw32 to perform a cross-compilation towards MS
+Windows, a typical ./configure invocation may look like:
+
+  ./configure --host=i486-mingw32
