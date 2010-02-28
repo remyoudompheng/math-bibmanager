@@ -30,11 +30,6 @@
 #include "msc2010.hpp"
 #include <set>
 #include <map>
-#include <ftw.h>
-
-extern "C" int read_entry(const char *path,
-		      const struct stat *sb,
-		      int typeflag);
 
 class MathLibrary
 {

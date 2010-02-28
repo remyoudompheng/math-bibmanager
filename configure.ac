@@ -28,10 +28,12 @@ m4_ifndef([PKG_PROG_PKG_CONFIG],
   ACLOCAL="aclocal -I/other/macro/dir" before running autoreconf.])])
 PKG_PROG_PKG_CONFIG()
 PKG_CHECK_MODULES([GTK2], [gtk+-2.0 >= 2.12])
+PKG_CHECK_MODULES([GLIBMM], [glibmm-2.4])
 PKG_CHECK_MODULES([GTKMM], [gtkmm-2.4 >= 2.12])
 
 # Checks for header files.
-AC_CHECK_HEADER(ftw.h)
+AC_CHECK_HEADERS([ftw.h], [], [have_ftw_h=no])
+AM_CONDITIONAL([NO_FTW_H], [test x$have_ftw_h = xno])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_HEADER_STDBOOL

@@ -22,6 +22,12 @@
 #include "library.hpp"
 #include <iostream>
 
+#ifdef HAVE_FTW_H
+#include <ftw.h>
+#else
+#include <glibmm.h>
+#endif
+
 using namespace std;
 
 #define DEPTHBUF 10
@@ -33,13 +39,9 @@ MathLibrary::MathLibrary()
   entries = set<BibEntry>();
 }
 
-// Initialise a library from the zb files in a directory
-MathLibrary::MathLibrary(const char* path)
-{
-  entries_ptr = &(this->entries);
-  ftw(path, read_entry, DEPTHBUF);
-}
+MathLibrary::~MathLibrary() {}
 
+#ifdef HAVE_FTW_H
 // Helper function
 extern "C" int read_entry(const char *path,
 		      const struct stat *sb,
@@ -55,7 +57,14 @@ extern "C" int read_entry(const char *path,
   return 0;
 }
 
-MathLibrary::~MathLibrary() {}
+// Initialise a library from the zb files in a directory
+MathLibrary::MathLibrary(const char* path)
+{
+  entries_ptr = &(this->entries);
+  ftw(path, read_entry, DEPTHBUF);
+}
+#else
+#endif
 
 void MathLibrary::print_me() const
 {
