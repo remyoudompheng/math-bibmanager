@@ -8,11 +8,12 @@ libparser_a_SOURCES = \
 check_PROGRAMS = test_parser
 test_parser_SOURCES = test_parser.cpp parser.hpp
 test_parser_CPPFLAGS = -DDEBUG
-test_parser_LDADD = libparser.a
 
 if NO_FTW_H
-  mathkaba_CPPFLAGS = $(GLIBMM_CFLAGS) -I../parser
+  libparser_a_CPPFLAGS = $(GLIBMM_CFLAGS)
   test_parser_LDADD = $(GLIBMM_LIBS) libparser.a
+else
+  test_parser_LDADD = libparser.a
 endif
 
 EXTRA_DIST = test.zb

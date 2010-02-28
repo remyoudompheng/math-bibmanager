@@ -45,12 +45,8 @@ AC_HEADER_MAJOR
 AC_ARG_ENABLE(debug,
 	AC_HELP_STRING([--enable-debug],
 		       [Enable debugging output]),
-	[with_debug=yes],
-	[])
-AS_IF([test "x$with_debug" == xyes],
-	AC_DEFINE(DEBUG, 1, [Enable debugging output]),
-	AC_DEFINE(NDEBUG, 1, [Disable debugging output])
-	)
+	[CXXFLAGS="$CXXFLAGS -DDEBUG"],
+	[CXXFLAGS="$CXXFLAGS -DNDEBUG"])
 
 AC_CONFIG_FILES([Makefile
 		 src/Makefile

@@ -16,8 +16,9 @@ mathkaba_SOURCES = main.cpp UIDefinition.h UImenubar.h \
 
 mathkaba_CPPFLAGS = $(GTKMM_CFLAGS) -I../parser
 
-mathkaba_LDADD = $(GTKMM_LIBS) \
-	$(top_srcdir)/parser/libparser.a
+mathkaba_LDADD = \
+	$(top_srcdir)/parser/libparser.a \
+	$(GTKMM_LIBS)
 
 clean-local:
 	rm -f UIDefinition.h UImenubar.h
