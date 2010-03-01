@@ -47,7 +47,7 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
 		    sigc::mem_fun(*this, &MainWindow::_on_quit_activate));
 
   ref_uiman->insert_action_group(ref_actgroup);
-  ref_uiman->add_ui_from_string(menubar_ui);
+  ref_uiman->add_ui_from_string(Glib::ustring(menubar_ui, menubar_ui_len));
   Gtk::Widget* menubar = ref_uiman->get_widget("/bar");
 
   // Put menubar in vbox
