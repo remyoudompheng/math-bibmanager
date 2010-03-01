@@ -41,6 +41,7 @@ public:
 
   void print_me() const;
 private:
+  void add_from_directory(std::string path);
 };
 
 class LibraryMSC

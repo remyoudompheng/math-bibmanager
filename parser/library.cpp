@@ -39,6 +39,11 @@ MathLibrary::MathLibrary()
   entries = set<BibEntry>();
 }
 
+MathLibrary::MathLibrary(const char* path)
+{
+  add_from_directory(path);
+}
+
 MathLibrary::~MathLibrary() {}
 
 #ifdef HAVE_FTW_H
@@ -58,20 +63,26 @@ extern "C" int read_entry(const char *path,
 }
 
 // Initialise a library from the zb files in a directory
-MathLibrary::MathLibrary(const char* path)
+void MathLibrary::add_from_directory(std::string path)
 {
   entries_ptr = &(this->entries);
-  ftw(path, read_entry, DEPTHBUF);
+  ftw(path.c_str(), read_entry, DEPTHBUF);
 }
 #else
-MathLibrary::MathLibrary(const char* path)
+void MathLibrary::add_from_directory(std::string p)
 {
+  // Recursively adds file from a directory. This doesn't check for
+  // infinite loops due to symlinks.
   try {
-    std::string p = path;
     Glib::Dir directory(p);
     for(Glib::DirIterator it = directory.begin();
 	it != directory.end(); it++)
       {
+	if (Glib::file_test(p + G_DIR_SEPARATOR + *it, Glib::FILE_TEST_IS_DIR))
+	  {
+	    add_from_directory(p + G_DIR_SEPARATOR + *it);
+	  }
+	else
 	if ((*it).compare((*it).size() - 3, 3, ".zb") == 0)
 	  {
 #ifdef DEBUG
