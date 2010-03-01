@@ -31,6 +31,7 @@
 
 #include <iostream>
 #include <string>
+#include <cassert>
 using namespace std;
 
 #define LIBRARY_PATH "/home/oudomphe/textes/articles"
@@ -66,20 +67,10 @@ main (int argc, char *argv[])
   }
 
   Gtk::Main kit(argc, argv);
+  Glib::ustring uidef(uidef_xml, uidef_xml_len);
   Glib::RefPtr<Gtk::Builder> refGlade = Gtk::Builder::create();
-  try {
-    refGlade->add_from_string(uidef_xml);
-  }
-  catch(const Gtk::BuilderError& ex)
-    {
-      std::cerr << "BuilderError: " << ex.what() << std::endl;
-      return 1;
-    }
-  catch(const Glib::MarkupError& ex)
-    {
-      std::cerr << "MarkupError: " << ex.what() << std::endl;
-      return 1;
-    }
+  bool ok = refGlade->add_from_string(uidef);
+  assert(ok);
 
   MainWindow *window_main = 0;
   refGlade->get_widget_derived("window_main", window_main);
