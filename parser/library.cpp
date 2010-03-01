@@ -75,9 +75,9 @@ MathLibrary::MathLibrary(const char* path)
 	if ((*it).compare((*it).size() - 3, 3, ".zb") == 0)
 	  {
 #ifdef DEBUG
-	    cout << p << *it << endl;
+	    cout << p << G_DIR_SEPARATOR << *it << endl;
 #endif
-	    entries.insert(BibEntry((p + *it).c_str()));
+	    entries.insert(BibEntry((p + G_DIR_SEPARATOR + *it).c_str()));
 	  }
       }
   }
