@@ -45,8 +45,8 @@ AC_HEADER_MAJOR
 AC_ARG_ENABLE(debug,
 	AC_HELP_STRING([--enable-debug],
 		       [Enable debugging output]),
-	[CXXFLAGS="$CXXFLAGS -DDEBUG"],
-	[CXXFLAGS="$CXXFLAGS -DNDEBUG"])
+	[CPPFLAGS="$CPPFLAGS -DDEBUG"],
+	[CPPFLAGS="$CPPFLAGS -DNDEBUG"])
 
 AC_CONFIG_FILES([Makefile
 		 src/Makefile
