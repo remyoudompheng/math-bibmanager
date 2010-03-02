@@ -162,7 +162,7 @@ void BibEntry::print_me() const
   cout << endl;
 }
 
-bool BibEntry::operator<(const BibEntry b) const
+bool BibEntry::operator<(const BibEntry & b) const
 {
   return (an < b.an);
 }

@@ -48,11 +48,11 @@ class LibraryMSC
 {
 public:
   LibraryMSC();
-  LibraryMSC(const MathLibrary library);
+  LibraryMSC(const MathLibrary & library);
 
   std::map<int, std::map<char, std::map<int,MSC2010Entry> > > msc_tree;
 
-  void insert_from_bibentry(const BibEntry entry);
+  void insert_from_bibentry(const BibEntry & entry);
 
   typedef std::map<int, std::map<char, std::map<int,MSC2010Entry> > >::iterator iteratori;
   typedef std::map<char, std::map<int,MSC2010Entry> >::iterator iteratorii;

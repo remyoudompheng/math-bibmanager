@@ -114,7 +114,7 @@ LibraryMSC::LibraryMSC()
 }
 
 // Create a list of tags fom a library
-LibraryMSC::LibraryMSC(const MathLibrary library)
+LibraryMSC::LibraryMSC(const MathLibrary & library)
 {
   msc_tree.clear();
 
@@ -127,7 +127,7 @@ LibraryMSC::LibraryMSC(const MathLibrary library)
     }
 }
 
-void LibraryMSC::insert_from_bibentry(const BibEntry entry)
+void LibraryMSC::insert_from_bibentry(const BibEntry & entry)
 {
   list<MSC2010Entry> l = entry.msc_list;
   list<MSC2010Entry>::iterator it;
