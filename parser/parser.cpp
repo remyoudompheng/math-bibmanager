@@ -123,13 +123,11 @@ void BibEntry::parse_msc_entries()
 {
   size_t start = msc.find_first_not_of(" *");
   stringstream s;
-  MSC2010Entry ent;
   if (start != string::npos) {
     s.str(msc.substr(start));
     while (s.good())
       {
-	s >> ent;
-	msc_list.push_back(ent);
+	msc_list.push_back(MSC2010Entry(s));
       }
   }
 }

@@ -29,8 +29,8 @@ using namespace std;
 
 TreeViewBib::TreeViewBib(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& refGlade)
   : Gtk::TreeView(cobject),
-    msc_filter(""),
-    builder(refGlade)
+    builder(refGlade),
+    msc_filter("")
 {
   cols_proto = new LibColumns();
   list_widget = Gtk::ListStore::create(*cols_proto);
@@ -100,8 +100,8 @@ bool TreeViewBib::on_button_press_event(GdkEventButton* event)
     {
       // Right button was pressed
       Gtk::TreeModel::Path tpath;
-      Gtk::TreeViewColumn *col;
-      int cx, cy;
+      // Gtk::TreeViewColumn *col;
+      // int cx, cy;
       //      if (get_path_at_pos((int)event->x, (int)event->y, tpath, col, cx, cy))
       //	{
       //      Gtk::TreeIter iter = list_filtered->get_iter(tpath);

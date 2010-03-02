@@ -32,7 +32,8 @@
 class MSC2010Entry
 {
 public:
-  MSC2010Entry();
+  MSC2010Entry() {}
+  MSC2010Entry(std::istream &in);
   MSC2010Entry(std::string str);
   MSC2010Entry(int maj, char med, int min);
   int maj;

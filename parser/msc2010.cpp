@@ -26,14 +26,17 @@
 
 using namespace std;
 
-MSC2010Entry::MSC2010Entry()
+MSC2010Entry::MSC2010Entry(istream &in)
 {
+  string token;
+  in >> token;
+  assign(token);
 }
 
 MSC2010Entry::MSC2010Entry(int min, char med, int maj)
-  : min(min),
+  : maj(maj),
     med(med),
-    maj(maj)
+    min(min)
 {
 }
 
@@ -54,6 +57,7 @@ istream& operator>> (istream &in, MSC2010Entry & ent)
   string token;
   in >> token;
   ent.assign(token);
+  return in;
 }
 
 std::string MSC2010Entry::str() const
@@ -82,4 +86,3 @@ std::string MSC2010Entry::print_minor() const
   string s = msc2010_print_minor(maj, med, min);
   return s;
 }
-
