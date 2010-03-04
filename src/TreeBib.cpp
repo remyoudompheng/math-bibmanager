@@ -81,6 +81,7 @@ void TreeViewBib::update_tree(MathLibrary library)
 
 bool TreeViewBib::tree_filter_by_msc(Gtk::TreeModel::const_iterator iter)
 {
+  if (msc_filter.empty()) return true;
   BibEntry b = (*iter)[cols_proto->bibentry];
   list<MSC2010Entry> l = b.msc_list;
   for(list<MSC2010Entry>::iterator i = l.begin(); i != l.end(); i++)
