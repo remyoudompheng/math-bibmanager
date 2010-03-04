@@ -2,6 +2,7 @@ version 0.2.1:
  + support url: field
  + experimental support for Windows builds (using MinGW)
  + fix: GlibMarkupErrors due to buffer overflows
+ + fix: articles without MSC are not shown
 
 version 0.2:
  + add Open, Refresh button
