@@ -10,6 +10,10 @@ to remember the arxiv identifier, the DOI (Digital Object Identifier)
 or an URL where the document can be found: these fields allow the program
 to give easy access to the file.
 
+The new Zentralblatt 2010 syntax includes a li field which can be used
+to hold links to electronic articles: it should contain tokens like
+"doi:***" or "arxiv:***".
+
 You should have PDF of DjVu files along with the .zb files: if GTK 2.14
 or later is available, standard mechanisms will be used to select
 an appropriate viewer, if not, xdg-open will be used, if available.
