@@ -32,6 +32,25 @@
 #include <list>
 #include "msc2010.hpp"
 
+
+class Link
+{
+public:
+  enum proto {
+    URL,
+    DOI,
+    ARXIV
+  };
+
+  Link(std::istream &in);
+  proto type;
+  std::string id;
+  std::string url;
+
+  friend std::istream& operator>> (std::istream &in, Link & ent);
+};
+std::istream& operator>> (std::istream &in, Link & ent);
+
 class BibEntry
 {
 public:
@@ -40,6 +59,8 @@ public:
   virtual ~BibEntry();
 
   std::string an, author, title, la, so, year, dt, msc, ut, ci, ab, rv;
+  std::string link;
+  std::list<Link> links;
   std::string url, doi, arxiv;
   // Path of the associated document
   std::string docpath;
@@ -50,6 +71,7 @@ public:
 
 private:
   void parse_msc_entries();
+  void translate_links();
 };
 
 #endif //!PARSER_H

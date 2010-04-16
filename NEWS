@@ -1,3 +1,6 @@
+version 0.2.2:
+ + support li: field from Zentralblatt 2010
+
 version 0.2.1:
  + support url: field
  + experimental support for Windows builds (using MinGW)

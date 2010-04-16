@@ -51,10 +51,12 @@ protected:
   void _on_url_activate();
   void _on_doi_activate();
   void _on_arxiv_activate();
+  void _on_link_activate(const Link l);
 #endif
   void _on_copy_url_activate();
   void _on_copy_doi_activate();
   void _on_copy_arxiv_activate();
+  void _on_copy_link_activate(const Link l);
   void _on_amsrefs_activate();
 };
 

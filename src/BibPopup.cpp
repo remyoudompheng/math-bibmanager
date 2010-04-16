@@ -87,6 +87,16 @@ void BibEntryPopup::initialise(BibEntry source)
       new_item("Copy _link to arXiv:" + source.arxiv,
 	sigc::mem_fun(*this, &BibEntryPopup::_on_copy_arxiv_activate) );
     }
+  for(std::list<Link>::iterator i = source.links.begin();
+      i != source.links.end(); i++)
+    {
+#if GTK_VERSION_GE(2,14)
+      new_item("Open link to "+ i->id,
+	       sigc::bind(sigc::mem_fun(*this, &BibEntryPopup::_on_link_activate), *i));
+#endif
+      new_item("Copy _link to " + i->id,
+	       sigc::bind(sigc::mem_fun(*this, &BibEntryPopup::_on_copy_link_activate), *i));
+    }
   new_item("Create AMSRefs entry",
     sigc::mem_fun(*this, &BibEntryPopup::_on_amsrefs_activate) );
 
@@ -150,6 +160,18 @@ void BibEntryPopup::_on_arxiv_activate()
       cout << "Error while lauching browser: " << err.what() << endl;
     }
 }
+
+void BibEntryPopup::_on_link_activate(const Link l)
+{
+  GError *gerr = NULL;
+  bool ok = gtk_show_uri(get_screen()->gobj(), l.url.c_str(),
+			 gtk_get_current_event_time(), &gerr);
+  if (!ok)
+    {
+      Glib::Error err(gerr);
+      cout << "Error while lauching browser: " << err.what() << endl;
+    }
+}
 #endif
 
 void BibEntryPopup::_on_copy_url_activate()
@@ -171,6 +193,13 @@ void BibEntryPopup::_on_copy_arxiv_activate()
   Glib::RefPtr<Gtk::Clipboard> clip = Gtk::Clipboard::get(GDK_SELECTION_PRIMARY);
   assert(clip);
   clip->set_text("http://arxiv.org/abs/" + entry.arxiv);
+}
+
+void BibEntryPopup::_on_copy_link_activate(const Link l)
+{
+  Glib::RefPtr<Gtk::Clipboard> clip = Gtk::Clipboard::get(GDK_SELECTION_PRIMARY);
+  assert(clip);
+  clip->set_text(l.url);
 }
 
 void BibEntryPopup::_on_amsrefs_activate()

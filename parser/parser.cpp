@@ -77,6 +77,9 @@ BibEntry::BibEntry(const char* filename)
     if (get_field(l, ut, "ut: ", current)) continue;
     if (get_field(l, rv, "rv: ", current)) continue;
 
+    // new in Zentralblatt 2010
+    if (get_field(l, link, "li: ", current)) continue;
+
     if (get_field(l, doi, "doi: ", current)) continue;
     if (get_field(l, url, "url: ", current)) continue;
     if (get_field(l, arxiv, "arxiv: ", current)) continue;
@@ -88,6 +91,8 @@ BibEntry::BibEntry(const char* filename)
   }
 
   parse_msc_entries();
+
+  translate_links();
 
   // Look for an associated file
   string f(filename);
@@ -118,6 +123,17 @@ BibEntry::BibEntry(const char* filename)
 }
 
 BibEntry::~BibEntry() {}
+
+void BibEntry::translate_links()
+{
+  links.clear();
+  stringstream s(link);
+  while(s.good())
+    {
+      Link l(s);
+      if( !(l.url.empty()) ) links.push_back(l);
+    }
+}
 
 void BibEntry::parse_msc_entries()
 {
@@ -179,4 +195,25 @@ string BibEntry::amsrefs() const
   s << "}" << endl;
 
   return s.str();
+}
+
+// Link processing
+Link::Link(std::istream &in)
+{
+  std::string token, subtoken;
+  std::string *useless = NULL;
+  in >> token;
+
+  if (get_field(token, subtoken, "doi:", useless))
+    {
+      type = DOI;
+      id = token;
+      url = "http://dx.doi.org/" + subtoken;
+    }
+  if (get_field(token, subtoken, "arxiv:", useless))
+    {
+      type = ARXIV;
+      id = token;
+      url = "http://arxiv.org/abs/" + subtoken;
+    }
 }
