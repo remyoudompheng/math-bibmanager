@@ -117,8 +117,8 @@ void BibEntryPopup::_on_open_activate()
       cout << "Error opening document: " << err.what() << endl;
     }
 #else
-  const char* command = ("xdg-open " + entry.docpath).c_str();
-  system(command);
+  std::string command = "xdg-open " + entry.docpath;
+  system(command.c_str());
 #endif
 }
 
