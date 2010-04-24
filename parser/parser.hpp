@@ -37,7 +37,7 @@ class Link
 {
 public:
   enum proto {
-    URL,
+    HTTP,
     DOI,
     ARXIV
   };

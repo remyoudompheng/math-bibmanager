@@ -216,4 +216,10 @@ Link::Link(std::istream &in)
       id = token;
       url = "http://arxiv.org/abs/" + subtoken;
     }
+  if (get_field(token, subtoken, "http:", useless))
+    {
+      type = HTTP;
+      url = "http:" + subtoken;
+      id = url;
+    }
 }
