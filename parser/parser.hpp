@@ -37,9 +37,11 @@ class Link
 {
 public:
   enum proto {
+    UNKNOWN,
     HTTP,
     DOI,
-    ARXIV
+    ARXIV,
+    NUMDAM
   };
 
   Link(std::istream &in);

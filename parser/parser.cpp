@@ -209,17 +209,31 @@ Link::Link(std::istream &in)
       type = DOI;
       id = token;
       url = "http://dx.doi.org/" + subtoken;
+      return;
     }
   if (get_field(token, subtoken, "arxiv:", useless))
     {
       type = ARXIV;
       id = token;
       url = "http://arxiv.org/abs/" + subtoken;
+      return;
+    }
+  if (get_field(token, subtoken, "numdam:", useless))
+    {
+      type = NUMDAM;
+      url = "http://www.numdam.org/item?id=" + subtoken;
+      id = token;
+      return;
     }
   if (get_field(token, subtoken, "http:", useless))
     {
       type = HTTP;
       url = "http:" + subtoken;
       id = url;
+      return;
     }
+
+  type = UNKNOWN;
+  if( isalnum(token[0]) )
+    cerr << "Unknown link id: " << token << endl;
 }
