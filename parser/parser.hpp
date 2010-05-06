@@ -41,7 +41,8 @@ public:
     HTTP,
     DOI,
     ARXIV,
-    NUMDAM
+    NUMDAM,
+    CRELLE
   };
 
   Link(std::istream &in);

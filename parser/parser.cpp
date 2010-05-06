@@ -225,6 +225,13 @@ Link::Link(std::istream &in)
       id = token;
       return;
     }
+  if (get_field(token, subtoken, "crelle:", useless))
+    {
+      type = CRELLE;
+      url = "http://resolver.sub.uni-goettingen.de/purl?" + subtoken;
+      id = token;
+      return;
+    }
   if (get_field(token, subtoken, "http:", useless))
     {
       type = HTTP;
