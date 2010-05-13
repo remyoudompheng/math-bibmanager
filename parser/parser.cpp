@@ -180,7 +180,14 @@ void BibEntry::print_me() const
 
 bool BibEntry::operator<(const BibEntry & b) const
 {
-  return (an < b.an);
+  if (an < b.an)
+    {
+      return true;
+    }
+  else
+    {
+      return (docpath < b.docpath);
+    }
 }
 
 string BibEntry::amsrefs() const
