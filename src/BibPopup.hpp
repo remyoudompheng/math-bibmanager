@@ -22,10 +22,6 @@
 #ifndef BIB_POPUP_H
 #define BIB_POPUP_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include <gtkmm.h>
 #include <gtk/gtk.h>
 #include <parser.hpp>

@@ -24,10 +24,6 @@
 #ifndef PARSER_H
 #define PARSER_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include <string>
 #include <list>
 #include "msc2010.hpp"

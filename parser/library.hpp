@@ -22,10 +22,6 @@
 #ifndef LIBRARY_H
 #define LIBRARY_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include "parser.hpp"
 #include "msc2010.hpp"
 #include <set>

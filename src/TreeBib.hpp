@@ -22,10 +22,6 @@
 #ifndef TREE_BIB_H
 #define TREE_BIB_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include <gtkmm.h>
 #include <library.hpp>
 #include "BibPopup.hpp"

@@ -22,10 +22,6 @@
 #ifndef MSC2010_H
 #define MSC2010_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include <string>
 #include <iostream>
 
