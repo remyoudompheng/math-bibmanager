@@ -1,4 +1,8 @@
-include_directories(${GLIBMM_INCLUDE_DIRS})
+if(${HAVE_FTW_H})
+    add_definitions(-DHAVE_FTW_H)
+else()
+    include_directories(${GLIBMM_INCLUDE_DIRS})
+endif()
 
 add_library(parser
     library.cpp library.hpp

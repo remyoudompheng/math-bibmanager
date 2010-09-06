@@ -7,7 +7,9 @@ PROJECT(mathkaba)
 
 # package version
 SET(MATHKABA_VERSION "0.2.2")
-configure_file(config.h.cmake config.h)
+
+Include(CheckIncludeFile)
+check_include_file(ftw.h HAVE_FTW_H)
 
 # utilities
 find_program(XXD xxd)
@@ -21,6 +23,7 @@ pkg_check_modules(GTKMM REQUIRED gtkmm-2.4>=2.12)
 include_directories(${CMAKE_BINARY_DIR} ${CMAKE_SOURCE_DIR}/parser)
 link_directories(${CMAKE_BINARY_DIR}/parser)
 
+configure_file(config.h.cmake config.h)
 add_subdirectory(parser)
 add_subdirectory(src)
 

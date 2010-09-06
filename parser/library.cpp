@@ -20,6 +20,7 @@
  */
 
 #include "library.hpp"
+#include <config.h>
 #include <iostream>
 
 #ifdef HAVE_FTW_H
