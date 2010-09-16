@@ -1,4 +1,5 @@
 include_directories(${GTKMM_INCLUDE_DIRS} ${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_SOURCE_DIR}/parser)
+link_directories(${GTKMM_LIBRARY_DIRS})
 
 add_custom_command(OUTPUT UImenubar.h
     COMMAND ${XXD} -i menubar.ui | ${SED} 's/unsigned char/const char/' > ${CMAKE_CURRENT_BINARY_DIR}/UImenubar.h
